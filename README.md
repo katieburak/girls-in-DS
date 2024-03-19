@@ -1,1 +1,1 @@
-# girls-in-DS
+# Girls in Data Science Summer Camp
