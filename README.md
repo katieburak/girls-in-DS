@@ -3,7 +3,7 @@
 ## General Information
 
 - Dates: July 8-10, 2024
-- Time: 9am-3pm 
+- Time: 10am-3pm 
 - Location: TBD
 - Instructor: Katie Burak (Contact: kburak@stat.ubc.ca)
 
