@@ -14,3 +14,7 @@ Lunch will be provided each day for the participants.
 - Day 1: Introduction to data science, data wrangling and data visualization
 - Day 2: Exploratory data analysis, descriptive statistics and biases in sampling and data representation
 - Day 3: Machine learning fundamentals, answering predictive questions (regression, classification, decision tree)
+
+## References 
+
+[Data Science: A First Introduction](https://datasciencebook.ca/)
