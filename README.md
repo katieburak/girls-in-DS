@@ -15,7 +15,7 @@ Lunch will be provided each day for the participants.
 ## Topic Overview
 
 - Day 1: Introduction to data science, data wrangling and data visualization
-- Day 2: Exploratory data analysis, descriptive statistics and design of experiments
+- Day 2: Exploratory data analysis, descriptive statistics, observational studies vs. experiments, sampling biases
 - Day 3: Machine learning fundamentals, answering predictive questions (regression, classification, decision tree)
 
 ## References 
