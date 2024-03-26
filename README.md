@@ -27,6 +27,6 @@ Lunch will be provided each day for the participants.
 ## Sponsors
 
 We would like to thank the following organizations for supporting this initiative:
-- [Data Science Institute](https://dsi.ubc.ca/)
-- [Masters of Data Science Program](https://masterdatascience.ubc.ca/)
+- [UBC Data Science Institute](https://dsi.ubc.ca/)
+- [UBC Masters of Data Science Program](https://masterdatascience.ubc.ca/)
 - [UBC Department of Statistics](https://www.stat.ubc.ca/)
