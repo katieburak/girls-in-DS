@@ -23,10 +23,3 @@ Lunch will be provided each day for the participants.
 [Data Science: A First Introduction](https://datasciencebook.ca/)
 
 > Thank you to UBC's Department of Statistics, Master of Data Science Program and Data Science Institute for helping to make this event possible.
-
-## Sponsors
-
-We would like to thank the following organizations for supporting this initiative:
-- [UBC Data Science Institute](https://dsi.ubc.ca/)
-- [UBC Masters of Data Science Program](https://masterdatascience.ubc.ca/)
-- [UBC Department of Statistics](https://www.stat.ubc.ca/)
