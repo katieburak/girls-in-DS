@@ -26,11 +26,10 @@ Lunch will be provided each day for the participants.
 
 | Day                 | Topic             | 
 |--------------------------|---------------------|
-| Day 1 | Katie Burak         |
+| Day 1 | Introduction to data science, basics of Jupyter and R, data wrangling and data visualization         |
 | Day 2 | Ekaterina (Kate) Manskaia | 
 | Day 3 | Armin Saadat Boroujeni | 
-| TA                       | Julian Camilo Becerra Leon | 
-| TA                       | Seyed Nima Hashemi | 
+
 ## References 
 
 - [Data Science: A First Introduction](https://datasciencebook.ca/)
