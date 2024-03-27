@@ -15,7 +15,7 @@ Lunch will be provided each day for the participants.
 ## Topic Overview
 
 - Day 1: Introduction to data science, basics of Jupyter and R, data wrangling and data visualization
-- Day 2: Introduction to statistical inference and sampling, exploratory data analysis, descriptive statistics, observational studies vs. experiments
+- Day 2: Measures of central tendency and spread, introduction to statistical inference and sampling, observational studies vs. experiments
 - Day 3: Machine learning fundamentals, answering predictive questions (regression, classification, decision tree)
 
 ## References 
