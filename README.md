@@ -20,7 +20,8 @@ Lunch will be provided each day for the participants.
 
 ## References 
 
-[Data Science: A First Introduction](https://datasciencebook.ca/)
-[Modern Dive](https://moderndive.com/index.html)
+- [Data Science: A First Introduction](https://datasciencebook.ca/)
+- [Modern Dive](https://moderndive.com/index.html)
+- [Mathematics for the Liberal Arts - Module 10: Statistics: Collecting Data](https://courses.lumenlearning.com/waymakermath4libarts/)
 
 > Thank you to UBC's Department of Statistics, Master of Data Science Program and Data Science Institute for helping to make this event possible.
