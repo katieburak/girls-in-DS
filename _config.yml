@@ -1,7 +1,7 @@
 # Book settings
 title: Girls in Data Science
 author: Katie Burak
-# logo: lectures/img/UBC_MDS_logo.png
+logo: notes/img/logo.png
 # exclude_patterns: ["archives/*", "feedback/*", "source/*", "release/*","solution/*"]
 
 repository:
