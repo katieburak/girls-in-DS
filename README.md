@@ -15,11 +15,12 @@ Lunch will be provided each day for the participants.
 ## Topic Overview
 
 - Day 1: Introduction to data science, basics of Jupyter and R, data wrangling and data visualization
-- Day 2: Exploratory data analysis, descriptive statistics, observational studies vs. experiments, sampling biases
+- Day 2: Measures of central tendency and spread, introduction to statistical inference and sampling, observational studies vs. experiments
 - Day 3: Machine learning fundamentals, answering predictive questions (regression, classification, decision tree)
 
 ## References 
 
 [Data Science: A First Introduction](https://datasciencebook.ca/)
+[Modern Dive](https://moderndive.com/index.html)
 
 > Thank you to UBC's Department of Statistics, Master of Data Science Program and Data Science Institute for helping to make this event possible.
