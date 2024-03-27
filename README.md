@@ -24,11 +24,11 @@ Lunch will be provided each day for the participants.
 | Day 2 | Measures of central tendency and spread, introduction to statistical inference and sampling, observational studies vs. experiments | 
 | Day 3| Machine learning fundamentals, answering predictive questions (regression, classification, decision tree)| 
 
-| Position                 | Name                | 
+| Day                 | Topic             | 
 |--------------------------|---------------------|
-| Lecture & lab instructor | Katie Burak         |
-| TA                       | Ekaterina (Kate) Manskaia | 
-| TA                       | Armin Saadat Boroujeni | 
+| Day 1 | Katie Burak         |
+| Day 2 | Ekaterina (Kate) Manskaia | 
+| Day 3 | Armin Saadat Boroujeni | 
 | TA                       | Julian Camilo Becerra Leon | 
 | TA                       | Seyed Nima Hashemi | 
 ## References 
