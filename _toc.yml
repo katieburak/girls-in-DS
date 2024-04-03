@@ -9,6 +9,7 @@ parts:
   chapters:
   - file: notes/day1.ipynb
   - file: notes/day2.ipynb
+  - file: notes/day3.ipynb
 # - caption: Solutions
 #   chapters:
 #   - file: solution/lab1_solution.ipynb
