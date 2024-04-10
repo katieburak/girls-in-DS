@@ -314,10 +314,6 @@ document.write(`
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#classification">1. Classification</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-kind-of-data-analysis-question-is-this">What kind of data analysis question is this?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#training-and-test-sets">1.1 Training and Test Sets</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#golden-rule-of-machine-learning-statistics">Golden Rule of Machine Learning / Statistics:</a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#k-nearest-neighbours-classification">1.2 K-nearest neighbours classification</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-would-the-predicted-class-be">What would the predicted class be?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#we-can-go-beyond-2-predictors">We can go beyond 2 predictors!</a></li>
@@ -342,15 +338,20 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#choosing-k-or-tuning-the-model">1.6 Choosing K (or, “tuning’’ the model)</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#training-and-test-sets">1.6 Training and Test Sets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#golden-rule-of-machine-learning-statistics">Golden Rule of Machine Learning / Statistics:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#choosing-k-or-tuning-the-model">1.7 Choosing K (or, “tuning’’ the model)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-validation">Cross-Validation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#underfitting-overfitting">Underfitting &amp; Overfitting</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Underfitting &amp; Overfitting</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Underfitting &amp; Overfitting</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-performance-metrics">1.7 Compute performance metrics</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-performance-metrics">1.8 Compute performance metrics</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-big-picture">The Big Picture</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question">Question</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#activity">Activity</a></li>
 </ul>
 </li>
@@ -359,8 +360,8 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#regression">2. Regression</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#k-nearest-neighbours-regression">2.1 K nearest neighbours regression</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-evaluation-and-tuning">2.2 Model Evaluation and Tuning</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#is-our-model-any-good">Is our model any good?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#final-model-from-k-nn-regression">Final model from k-nn regression</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#is-our-model-any-good">Is our model any good?</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#final-model-from-k-nn-regression">Final model from k-nn regression</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#discussion-which-of-the-following-is-overfitting-underfitting">Discussion: Which of the following is overfitting? Underfitting?</a></li>
 </ul>
 </li>
@@ -393,38 +394,44 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ──────────────────────── tidyverse 2.0.0 ──
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ────────────────────────── tidyverse 2.0.0 ──
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dplyr    </span> 1.1.3     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">readr    </span> 2.1.4
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">forcats  </span> 1.0.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">stringr  </span> 1.5.0
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">lubridate</span> 1.9.2     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tibble   </span> 3.2.1
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">purrr    </span> 1.0.2     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tidyr    </span> 1.3.0
-── <span class=" -Color -Color-Bold">Conflicts</span> ────────────────────────────────────────── tidyverse_conflicts() ──
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ──────────────────────────────────────────── tidyverse_conflicts() ──
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">filter()</span> masks <span class=" -Color -Color-Blue">stats</span>::filter()
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">lag()</span>    masks <span class=" -Color -Color-Blue">stats</span>::lag()
 <span class=" -Color -Color-Cyan">ℹ</span> Use the conflicted package (<span class=" -Color -Color-Blue">&lt;http://conflicted.r-lib.org/&gt;</span>) to force all conflicts to become errors
-── <span class=" -Color -Color-Bold">Attaching packages</span> ────────────────────────────────────── tidymodels 1.1.1 ──
-
-<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">broom       </span> 1.0.5     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">rsample     </span> 1.2.0
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching packages</span> ──────────────────────────────────────── tidymodels 1.1.1 ──
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">broom       </span> 1.0.5     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">rsample     </span> 1.2.0
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dials       </span> 1.2.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tune        </span> 1.1.2
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">infer       </span> 1.0.4     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">workflows   </span> 1.1.3
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">modeldata   </span> 1.2.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">workflowsets</span> 1.0.1
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">parsnip     </span> 1.1.1     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">yardstick   </span> 1.2.0
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">recipes     </span> 1.0.8     
-
-── <span class=" -Color -Color-Bold">Conflicts</span> ───────────────────────────────────────── tidymodels_conflicts() ──
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ─────────────────────────────────────────── tidymodels_conflicts() ──
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">scales</span>::<span class=" -Color -Color-Green">discard()</span> masks <span class=" -Color -Color-Blue">purrr</span>::discard()
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">filter()</span>   masks <span class=" -Color -Color-Blue">stats</span>::filter()
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">recipes</span>::<span class=" -Color -Color-Green">fixed()</span>  masks <span class=" -Color -Color-Blue">stringr</span>::fixed()
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">lag()</span>      masks <span class=" -Color -Color-Blue">stats</span>::lag()
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">yardstick</span>::<span class=" -Color -Color-Green">spec()</span> masks <span class=" -Color -Color-Blue">readr</span>::spec()
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">recipes</span>::<span class=" -Color -Color-Green">step()</span>   masks <span class=" -Color -Color-Blue">stats</span>::step()
-<span class=" -Color -Color-Blue">•</span> Learn how to get started at <span class=" -Color -Color-Green">https://www.tidymodels.org/start/</span>
-
-
-Attaching package: ‘palmerpenguins’
-
-
-The following object is masked from ‘package:modeldata’:
+<span class=" -Color -Color-Blue">•</span> Use <span class=" -Color -Color-Green">tidymodels_prefer()</span> to resolve common conflicts.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Attaching package: ‘palmerpenguins’
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The following object is masked from ‘package:modeldata’:
 
     penguins
 </pre></div>
@@ -456,27 +463,6 @@ The following object is masked from ‘package:modeldata’:
 <center><img src="https://datasciencebook.ca/_main_files/figure-html/05-multiknn-3-1.png" width="700"/></center><section id="what-kind-of-data-analysis-question-is-this">
 <h2>What kind of data analysis question is this?<a class="headerlink" href="#what-kind-of-data-analysis-question-is-this" title="Permalink to this heading">#</a></h2>
 <p>Descriptive, exploratory, predictive, inferential, causal, or mechanistic?</p>
-</section>
-<section id="training-and-test-sets">
-<h2>1.1 Training and Test Sets<a class="headerlink" href="#training-and-test-sets" title="Permalink to this heading">#</a></h2>
-<p>When building a machine learning model, typically we start by dividing our data into two sets:</p>
-<ol class="arabic simple">
-<li><p>Training set</p></li>
-<li><p>Test set</p></li>
-</ol>
-<p>The <strong>training set</strong> is a subset of our data that is used is to train or teach our model to perform sort of predictive task. Then, using our <strong>test set</strong>, we can evaluate how well our model performs on unseen data.</p>
-<p>There are two important things to do when splitting data.</p>
-<ol class="arabic simple">
-<li><p><strong>Shuffling:</strong> randomly reorder the data before splitting</p></li>
-<li><p><strong>Stratification:</strong> make sure the two split subsets of data have roughly equal proportions of the different labels</p></li>
-</ol>
-<center>
-<img src="https://datasciencebook.ca/img/classification2/training_test.png" width="1100"/>
-</center><section id="golden-rule-of-machine-learning-statistics">
-<h3>Golden Rule of Machine Learning / Statistics:<a class="headerlink" href="#golden-rule-of-machine-learning-statistics" title="Permalink to this heading">#</a></h3>
-<p><strong>Don’t use your testing data to train your model!</strong></p>
-<p>Showing your classifier the labels of evaluation data is like cheating on a test; it’ll look more accurate than it really is.</p>
-</section>
 </section>
 <section id="k-nearest-neighbours-classification">
 <h2>1.2 K-nearest neighbours classification<a class="headerlink" href="#k-nearest-neighbours-classification" title="Permalink to this heading">#</a></h2>
@@ -573,12 +559,15 @@ Source: https://www.r-bloggers.com/2019/06/a-gentle-introduction-to-tidymodels/<
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">569</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">12</span>
-<span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">────────────────────────────────────────────────────────</span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">──────────────────────────────────────────────────────────</span>
 <span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
 <span class=" -Color -Color-Red">chr</span>  (1): Class
 <span class=" -Color -Color-Green">dbl</span> (11): ID, Radius, Texture, Perimeter, Area, Smoothness, Compactness, Con...
-
-<span class=" -Color -Color-Cyan">ℹ</span> Use `spec()` to retrieve the full column specification for this data.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">ℹ</span> Use `spec()` to retrieve the full column specification for this data.
 <span class=" -Color -Color-Cyan">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
 </pre></div>
 </div>
@@ -629,24 +618,35 @@ Source: https://www.r-bloggers.com/2019/06/a-gentle-introduction-to-tidymodels/<
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Recipe</span> <span class=" -Color -Color-Cyan">──────────────────────────────────────────────────────────────────────</span>
-
-
-
-── Inputs 
-
-Number of variables by role
-
-outcome:   1
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Recipe</span> <span class=" -Color -Color-Cyan">────────────────────────────────────────────────────────────────────────</span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── Inputs 
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of variables by role
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>outcome:   1
 predictor: 2
-
-
-
-── Operations 
-
-<span class=" -Color -Color-Cyan">•</span> Centering for: <span class=" -Color -Color-Blue">all_predictors()</span>
-
-<span class=" -Color -Color-Cyan">•</span> Scaling for: <span class=" -Color -Color-Blue">all_predictors()</span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── Operations 
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">•</span> Centering for: <span class=" -Color -Color-Blue">all_predictors()</span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">•</span> Scaling for: <span class=" -Color -Color-Blue">all_predictors()</span>
 </pre></div>
 </div>
 </div>
@@ -704,17 +704,17 @@ Computational engine: kknn
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>══ Workflow ════════════════════════════════════════════════════════════════════
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>══ Workflow ══════════════════════════════════════════════════════════════════════
 Preprocessor: Recipe
 Model: nearest_neighbor()
 
-── Preprocessor ────────────────────────────────────────────────────────────────
+── Preprocessor ──────────────────────────────────────────────────────────────────
 2 Recipe Steps
 
 • step_center()
 • step_scale()
 
-── Model ───────────────────────────────────────────────────────────────────────
+── Model ─────────────────────────────────────────────────────────────────────────
 K-Nearest Neighbor Model Specification (classification)
 
 Main Arguments:
@@ -839,17 +839,36 @@ Computational engine: kknn
 <li><p>What if a classifier never guess positive except for the very few observations it is super confident in? What metric is affected?</p></li>
 </ul>
 <p>To add evaluation into our classification pipeline, we:</p>
-<ol class="arabic simple">
-<li><p>Split our data into two subsets: <em>training data</em> and <em>testing data</em> (discussed above).</p></li>
-<li><p>Build the model &amp; choose K using training data only (sometimes called tuning)</p></li>
-<li><p>Compute performance metrics (accuracy, precision, recall, etc.) by predicting labels on testing data only</p></li>
-</ol>
-<p>We’ll now talk steps 2 and 3.</p>
+<p>i.) Split our data into two subsets: <em>training data</em> and <em>testing data</em> (discussed above).</p>
+<p>ii.) Build the model &amp; choose K using training data only (sometimes called tuning)</p>
+<p>iii.) Compute performance metrics (accuracy, precision, recall, etc.) by predicting labels on testing data only</p>
+<p>We’ll now talk about these steps below.</p>
 </section>
+</section>
+</section>
+<section id="training-and-test-sets">
+<h2>1.6 Training and Test Sets<a class="headerlink" href="#training-and-test-sets" title="Permalink to this heading">#</a></h2>
+<p>When building a machine learning model, typically we start by dividing our data into two sets:</p>
+<ol class="arabic simple">
+<li><p>Training set</p></li>
+<li><p>Test set</p></li>
+</ol>
+<p>The <strong>training set</strong> is a subset of our data that is used is to train or teach our model to perform sort of predictive task. Then, using our <strong>test set</strong>, we can evaluate how well our model performs on unseen data.</p>
+<p>There are two important things to do when splitting data.</p>
+<ol class="arabic simple">
+<li><p><strong>Shuffling:</strong> randomly reorder the data before splitting</p></li>
+<li><p><strong>Stratification:</strong> make sure the two split subsets of data have roughly equal proportions of the different labels</p></li>
+</ol>
+<center>
+<img src="https://datasciencebook.ca/img/classification2/training_test.png" width="1100"/>
+</center><section id="golden-rule-of-machine-learning-statistics">
+<h3>Golden Rule of Machine Learning / Statistics:<a class="headerlink" href="#golden-rule-of-machine-learning-statistics" title="Permalink to this heading">#</a></h3>
+<p><strong>Don’t use your testing data to train your model!</strong></p>
+<p>Showing your classifier the labels of evaluation data is like cheating on a test; it’ll look more accurate than it really is.</p>
 </section>
 </section>
 <section id="choosing-k-or-tuning-the-model">
-<h2>1.6 Choosing K (or, “tuning’’ the model)<a class="headerlink" href="#choosing-k-or-tuning-the-model" title="Permalink to this heading">#</a></h2>
+<h2>1.7 Choosing K (or, “tuning’’ the model)<a class="headerlink" href="#choosing-k-or-tuning-the-model" title="Permalink to this heading">#</a></h2>
 <p><strong>Choosing K is part of training.</strong> We want to choose K to maximize performance, but:</p>
 <ul class="simple">
 <li><p>we can’t use test data to evaluate performance (cheating!)</p></li>
@@ -892,14 +911,260 @@ Computational engine: kknn
 </center></section>
 </section>
 <section id="compute-performance-metrics">
-<h2>1.7 Compute performance metrics<a class="headerlink" href="#compute-performance-metrics" title="Permalink to this heading">#</a></h2>
+<h2>1.8 Compute performance metrics<a class="headerlink" href="#compute-performance-metrics" title="Permalink to this heading">#</a></h2>
 <p>The role of the test data:</p>
 <center>
 <img src="https://datasciencebook.ca/img/classification2/ML-paradigm-test.png" width="1700"/>
 </center><section id="the-big-picture">
 <h3>The Big Picture<a class="headerlink" href="#the-big-picture" title="Permalink to this heading">#</a></h3>
 <center>
-<img align="left" src="https://datasciencebook.ca/img/classification2/train-test-overview.png" width="1200"/></center></section>
+<img align="left" src="https://datasciencebook.ca/img/classification2/train-test-overview.png" width="1200"/></center><p>Now, let’s put it all together and look into how to go about this process in R. First let’s split our data into training and test sets:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Split data</span>
+
+<span class="nf">set.seed</span><span class="p">(</span><span class="m">123</span><span class="p">)</span><span class="w"> </span><span class="c1"># set seed for reproducibility</span>
+
+<span class="n">tumor_split</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">initial_split</span><span class="p">(</span><span class="n">tumors</span><span class="p">,</span><span class="w"> </span><span class="n">prop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.75</span><span class="p">,</span><span class="w"> </span><span class="n">strata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Class</span><span class="p">)</span>
+<span class="n">tumor_train</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">training</span><span class="p">(</span><span class="n">tumor_split</span><span class="p">)</span><span class="w"> </span><span class="c1"># training set </span>
+<span class="n">tumor_test</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">testing</span><span class="p">(</span><span class="n">tumor_split</span><span class="p">)</span><span class="w"> </span><span class="c1"># testing set </span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>What is the proportion of malignant tumors in our training set?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">tumor_proportions</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tumor_train</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">                      </span><span class="nf">group_by</span><span class="p">(</span><span class="n">Class</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">                      </span><span class="nf">summarize</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">n</span><span class="p">())</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">                      </span><span class="nf">mutate</span><span class="p">(</span><span class="n">percent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="o">*</span><span class="n">n</span><span class="o">/</span><span class="nf">nrow</span><span class="p">(</span><span class="n">tumor_train</span><span class="p">))</span>
+
+<span class="n">tumor_proportions</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 2 × 3</caption>
+<thead>
+	<tr><th scope=col>Class</th><th scope=col>n</th><th scope=col>percent</th></tr>
+	<tr><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>M</td><td>159</td><td>37.32394</td></tr>
+	<tr><td>B</td><td>267</td><td>62.67606</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<ul class="simple">
+<li><p>Standardize the <strong>training</strong> data:</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">tumor_recipe</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">recipe</span><span class="p">(</span><span class="n">Class</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">Smoothness</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Concavity</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tumor_train</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">step_scale</span><span class="p">(</span><span class="nf">all_predictors</span><span class="p">())</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">step_center</span><span class="p">(</span><span class="nf">all_predictors</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Instead of specifying <span class="math notranslate nohighlight">\(K\)</span> in our model specification, we can set <code class="docutils literal notranslate"><span class="pre">neighbors</span> <span class="pre">=</span> <span class="pre">tune()</span></code> to later select the optimal <span class="math notranslate nohighlight">\(K\)</span> using cross-validation.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">tumor_model</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">nearest_neighbor</span><span class="p">(</span><span class="n">weight_func</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;rectangular&quot;</span><span class="p">,</span>
+<span class="w">                              </span><span class="n">neighbors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">tune</span><span class="p">())</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">                  </span><span class="nf">set_engine</span><span class="p">(</span><span class="s">&quot;kknn&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">                  </span><span class="nf">set_mode</span><span class="p">(</span><span class="s">&quot;classification&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>After, we can use the <code class="docutils literal notranslate"><span class="pre">tune_grid</span></code> function in our workflow for a range of potential values for <span class="math notranslate nohighlight">\(K\)</span> and fit the model with the training data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">tumor_vfold</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">vfold_cv</span><span class="p">(</span><span class="n">tumor_train</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="n">strata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Class</span><span class="p">)</span>
+
+<span class="n">k_vals</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">tibble</span><span class="p">(</span><span class="n">neighbors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">seq</span><span class="p">(</span><span class="n">from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">))</span>
+
+<span class="n">knn_fit</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">workflow</span><span class="p">()</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">add_recipe</span><span class="p">(</span><span class="n">tumor_recipe</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">add_model</span><span class="p">(</span><span class="n">tumor_model</span><span class="p">)</span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">tune_grid</span><span class="p">(</span><span class="n">resamples</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tumor_vfold</span><span class="p">,</span><span class="w"> </span><span class="n">grid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k_vals</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">collect_metrics</span><span class="p">()</span>
+
+<span class="n">accuracies</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">knn_fit</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">.metric</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;accuracy&quot;</span><span class="p">)</span>
+
+<span class="nf">head</span><span class="p">(</span><span class="n">accuracies</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 6 × 7</caption>
+<thead>
+	<tr><th scope=col>neighbors</th><th scope=col>.metric</th><th scope=col>.estimator</th><th scope=col>mean</th><th scope=col>n</th><th scope=col>std_err</th><th scope=col>.config</th></tr>
+	<tr><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td> 1</td><td>accuracy</td><td>binary</td><td>0.8146831</td><td>5</td><td>0.01200095</td><td>Preprocessor1_Model01</td></tr>
+	<tr><td> 6</td><td>accuracy</td><td>binary</td><td>0.8381591</td><td>5</td><td>0.01257422</td><td>Preprocessor1_Model02</td></tr>
+	<tr><td>11</td><td>accuracy</td><td>binary</td><td>0.8570393</td><td>5</td><td>0.01579200</td><td>Preprocessor1_Model03</td></tr>
+	<tr><td>16</td><td>accuracy</td><td>binary</td><td>0.8476542</td><td>5</td><td>0.01797876</td><td>Preprocessor1_Model04</td></tr>
+	<tr><td>21</td><td>accuracy</td><td>binary</td><td>0.8593922</td><td>5</td><td>0.01603193</td><td>Preprocessor1_Model05</td></tr>
+	<tr><td>26</td><td>accuracy</td><td>binary</td><td>0.8617178</td><td>5</td><td>0.01581638</td><td>Preprocessor1_Model06</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">accuracy_vs_k</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">accuracies</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">neighbors</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mean</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_line</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">labs</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Neighbors&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Accuracy Estimate&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span><span class="p">))</span>
+
+<span class="n">accuracy_vs_k</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/77a38502204bbbcd89831d7d7603063a4db64c5587acf58a19d343efadbfc257.png" src="../_images/77a38502204bbbcd89831d7d7603063a4db64c5587acf58a19d343efadbfc257.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">best_k</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">accuracies</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">        </span><span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">mean</span><span class="p">))</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">        </span><span class="nf">head</span><span class="p">(</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">        </span><span class="nf">pull</span><span class="p">(</span><span class="n">neighbors</span><span class="p">)</span>
+<span class="n">best_k</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">76</div></div>
+</div>
+<p>Let’s fit our model with <span class="math notranslate nohighlight">\(K=11\)</span>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">tumor_model</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">nearest_neighbor</span><span class="p">(</span><span class="n">weight_func</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;rectangular&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">neighbors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">best_k</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">set_engine</span><span class="p">(</span><span class="s">&quot;kknn&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">set_mode</span><span class="p">(</span><span class="s">&quot;classification&quot;</span><span class="p">)</span>
+
+<span class="n">tumor_fit</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">workflow</span><span class="p">()</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">add_recipe</span><span class="p">(</span><span class="n">tumor_recipe</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">add_model</span><span class="p">(</span><span class="n">tumor_model</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">fit</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tumor_train</span><span class="p">)</span>
+
+<span class="n">tumor_fit</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>══ Workflow [trained] ════════════════════════════════════════════════════════════
+Preprocessor: Recipe
+Model: nearest_neighbor()
+
+── Preprocessor ──────────────────────────────────────────────────────────────────
+2 Recipe Steps
+
+• step_scale()
+• step_center()
+
+── Model ─────────────────────────────────────────────────────────────────────────
+
+Call:
+kknn::train.kknn(formula = ..y ~ ., data = data, ks = min_rows(76,     data, 5), kernel = ~&quot;rectangular&quot;)
+
+Type of response variable: nominal
+Minimal misclassification: 0.1408451
+Best kernel: rectangular
+Best k: 76
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Now, we can make predictions on our test set!</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">tumor_test_predictions</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">predict</span><span class="p">(</span><span class="n">tumor_fit</span><span class="p">,</span><span class="w"> </span><span class="n">tumor_test</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">bind_cols</span><span class="p">(</span><span class="n">tumor_test</span><span class="p">)</span>
+
+<span class="nf">head</span><span class="p">(</span><span class="n">tumor_test_predictions</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 6 × 13</caption>
+<thead>
+	<tr><th scope=col>.pred_class</th><th scope=col>ID</th><th scope=col>Class</th><th scope=col>Radius</th><th scope=col>Texture</th><th scope=col>Perimeter</th><th scope=col>Area</th><th scope=col>Smoothness</th><th scope=col>Compactness</th><th scope=col>Concavity</th><th scope=col>Concave_points</th><th scope=col>Symmetry</th><th scope=col>Fractal_dimension</th></tr>
+	<tr><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>M</td><td>  842302</td><td>M</td><td> 1.8850310</td><td>-1.3580985</td><td> 2.30157548</td><td> 1.9994782</td><td> 1.306536657</td><td> 2.61436466</td><td> 2.10767182</td><td> 2.2940576</td><td> 2.7482041</td><td> 1.93531174</td></tr>
+	<tr><td>M</td><td>  844359</td><td>M</td><td> 1.3677798</td><td> 0.3225990</td><td> 1.36712237</td><td> 1.2740985</td><td> 0.518184279</td><td> 0.02119633</td><td> 0.50910429</td><td> 1.1956637</td><td> 0.2622449</td><td>-0.01471753</td></tr>
+	<tr><td>B</td><td>  846226</td><td>M</td><td> 0.9705309</td><td> 0.6935565</td><td> 1.32248289</td><td> 0.7928538</td><td>-1.255608570</td><td> 0.86461162</td><td> 0.43960136</td><td> 0.9446458</td><td> 0.4448934</td><td> 1.01621788</td></tr>
+	<tr><td>M</td><td>84667401</td><td>M</td><td>-0.2563890</td><td> 1.0303468</td><td> 0.04579378</td><td>-0.3212099</td><td> 1.433548984</td><td> 3.29380018</td><td> 2.02330963</td><td> 1.6155484</td><td> 1.1237639</td><td> 3.27519557</td></tr>
+	<tr><td>B</td><td>  848406</td><td>M</td><td> 0.5794890</td><td> 0.8464951</td><td> 0.48028471</td><td> 0.4521186</td><td> 0.614538459</td><td>-0.42688790</td><td> 0.09208668</td><td> 0.7042770</td><td> 0.2072887</td><td>-0.09887552</td></tr>
+	<tr><td>B</td><td> 8510824</td><td>B</td><td>-1.2495113</td><td>-1.6298085</td><td>-1.25381027</td><td>-0.9935473</td><td> 0.001375499</td><td>-0.88641259</td><td>-0.87966023</td><td>-0.7962020</td><td>-0.7285828</td><td>-0.34415178</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<p>Finally, we can look at evaluation measures for our model such as accuracy.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">tumor_test_predictions</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">metrics</span><span class="p">(</span><span class="n">truth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Class</span><span class="p">,</span><span class="w"> </span><span class="n">estimate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">.pred_class</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">.metric</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;accuracy&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 1 × 3</caption>
+<thead>
+	<tr><th scope=col>.metric</th><th scope=col>.estimator</th><th scope=col>.estimate</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>accuracy</td><td>binary</td><td>0.8251748</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<p>Take a look at the confusion matrix below. Using the table, verify that the accuracy was computed correctly.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">confusion</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tumor_test_predictions</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">             </span><span class="nf">conf_mat</span><span class="p">(</span><span class="n">truth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Class</span><span class="p">,</span><span class="w"> </span><span class="n">estimate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">.pred_class</span><span class="p">)</span>
+<span class="n">confusion</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>          Truth
+Prediction  M  B
+         M 34  6
+         B 19 84
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="question">
+<h3>Question<a class="headerlink" href="#question" title="Permalink to this heading">#</a></h3>
+<p>What are the precision and recall for the classifier on the test data?</p>
+</section>
 <section id="activity">
 <h3>Activity<a class="headerlink" href="#activity" title="Permalink to this heading">#</a></h3>
 <p>In a group, discuss the following prompts.</p>
@@ -913,8 +1178,64 @@ Computational engine: kknn
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="regression">
 <h1>2. Regression<a class="headerlink" href="#regression" title="Permalink to this heading">#</a></h1>
-<p>What if we want to predict a quantitative value instead of a class label?</p>
-<img align="left" src="https://datasciencebook.ca/_main_files/figure-html/07-edaRegr-1.png" width="600"/><p>E.g.: predict the price of a 2000 square foot home (from this reduced dataset)</p>
+<p>What if we want to predict a quantitative value instead of a class label? Say, the sale price of a home.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read in the data</span>
+
+<span class="n">housing</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;data/housing.csv&quot;</span><span class="p">)</span>
+
+<span class="nf">head</span><span class="p">(</span><span class="n">housing</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">932</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">9</span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">──────────────────────────────────────────────────────────</span>
+<span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
+<span class=" -Color -Color-Red">chr</span> (3): city, zip, type
+<span class=" -Color -Color-Green">dbl</span> (6): beds, baths, sqft, price, latitude, longitude
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">ℹ</span> Use `spec()` to retrieve the full column specification for this data.
+<span class=" -Color -Color-Cyan">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
+</pre></div>
+</div>
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 6 × 9</caption>
+<thead>
+	<tr><th scope=col>city</th><th scope=col>zip</th><th scope=col>beds</th><th scope=col>baths</th><th scope=col>sqft</th><th scope=col>type</th><th scope=col>price</th><th scope=col>latitude</th><th scope=col>longitude</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>SACRAMENTO</td><td>z95838</td><td>2</td><td>1</td><td> 836</td><td>Residential</td><td>59222</td><td>38.63191</td><td>-121.4349</td></tr>
+	<tr><td>SACRAMENTO</td><td>z95823</td><td>3</td><td>1</td><td>1167</td><td>Residential</td><td>68212</td><td>38.47890</td><td>-121.4310</td></tr>
+	<tr><td>SACRAMENTO</td><td>z95815</td><td>2</td><td>1</td><td> 796</td><td>Residential</td><td>68880</td><td>38.61830</td><td>-121.4438</td></tr>
+	<tr><td>SACRAMENTO</td><td>z95815</td><td>2</td><td>1</td><td> 852</td><td>Residential</td><td>69307</td><td>38.61684</td><td>-121.4391</td></tr>
+	<tr><td>SACRAMENTO</td><td>z95824</td><td>2</td><td>1</td><td> 797</td><td>Residential</td><td>81900</td><td>38.51947</td><td>-121.4358</td></tr>
+	<tr><td>SACRAMENTO</td><td>z95841</td><td>3</td><td>1</td><td>1122</td><td>Condo      </td><td>89921</td><td>38.66260</td><td>-121.3278</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">housing</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqft</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">price</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.4</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">xlab</span><span class="p">(</span><span class="s">&quot;House size (square feet)&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">ylab</span><span class="p">(</span><span class="s">&quot;Price (USD)&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">dollar_format</span><span class="p">())</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">16</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/d6040fc85aa6f16f295ec8707b5716abd08b870c5753c5518289726e4e5838cf.png" src="../_images/d6040fc85aa6f16f295ec8707b5716abd08b870c5753c5518289726e4e5838cf.png" />
+</div>
+</div>
+<p>E.g.: predict the price of a 2000 square foot home (from this reduced dataset)</p>
 <img align="left" src="https://datasciencebook.ca/_main_files/figure-html/07-small-eda-regr-1.png" width="600"/><ul class="simple">
 <li><p>You can see that we have no observations of a house of size exactly 2,000 square feet</p>
 <ul>
@@ -963,12 +1284,7 @@ Computational engine: kknn
 </td>
 <td><img src="img/rmse.jpg" width="250"/></td>
 </tr>
-</table></section>
-<section id="final-model-from-k-nn-regression">
-<h3>Final model from k-nn regression<a class="headerlink" href="#final-model-from-k-nn-regression" title="Permalink to this heading">#</a></h3>
-<p>For this model, RMSPE is 91,620.4. How can we interpret this?</p>
-<img src="https://datasciencebook.ca/_main_files/figure-html/07-predict-all-1.png" width="700"/><p>Roughly, prices tend to be +/- $90,000 off that line (not that great).</p>
-<p>We choose <span class="math notranslate nohighlight">\(K\)</span> roughly the same way as before:</p>
+</table><p>We choose <span class="math notranslate nohighlight">\(K\)</span> roughly the same way as before:</p>
 <ol class="arabic simple">
 <li><p>Cross validation:</p>
 <ul class="simple">
@@ -981,6 +1297,173 @@ Computational engine: kknn
 <li><p>Train model on whole training dataset (not split into folds)</p></li>
 <li><p>Evaluate how good the predictions are using the test data</p></li>
 </ol>
+<p>The process is very similar to what we learned for classification, except for a few minor changes to our model:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Split the data</span>
+
+<span class="nf">set.seed</span><span class="p">(</span><span class="m">123</span><span class="p">)</span>
+
+<span class="n">housing_split</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">initial_split</span><span class="p">(</span><span class="n">housing</span><span class="p">,</span><span class="w"> </span><span class="n">prop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.75</span><span class="p">,</span><span class="w"> </span><span class="n">strata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">price</span><span class="p">)</span>
+<span class="n">housing_train</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">training</span><span class="p">(</span><span class="n">housing_split</span><span class="p">)</span>
+<span class="n">housing_test</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">testing</span><span class="p">(</span><span class="n">housing_split</span><span class="p">)</span>
+
+<span class="c1"># Standardize the training data</span>
+
+<span class="n">housing_recipe</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">recipe</span><span class="p">(</span><span class="n">price</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">sqft</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">housing_train</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">step_scale</span><span class="p">(</span><span class="nf">all_predictors</span><span class="p">())</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">step_center</span><span class="p">(</span><span class="nf">all_predictors</span><span class="p">())</span>
+
+<span class="c1"># Specify the regression model </span>
+
+<span class="n">housing_model</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">nearest_neighbor</span><span class="p">(</span><span class="n">weight_func</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;rectangular&quot;</span><span class="p">,</span>
+<span class="w">                              </span><span class="n">neighbors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">tune</span><span class="p">())</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">set_engine</span><span class="p">(</span><span class="s">&quot;kknn&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">set_mode</span><span class="p">(</span><span class="s">&quot;regression&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1"># Note we change this to regression instead of classification</span>
+
+<span class="c1"># Set the folds for cross validation</span>
+
+<span class="n">housing_vfold</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">vfold_cv</span><span class="p">(</span><span class="n">housing_train</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="n">strata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">price</span><span class="p">)</span>
+
+<span class="c1"># Define our workflow </span>
+
+<span class="n">housing_wkflw</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">workflow</span><span class="p">()</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">add_recipe</span><span class="p">(</span><span class="n">housing_recipe</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">add_model</span><span class="p">(</span><span class="n">housing_model</span><span class="p">)</span>
+
+<span class="n">housing_wkflw</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>══ Workflow ══════════════════════════════════════════════════════════════════════
+Preprocessor: Recipe
+Model: nearest_neighbor()
+
+── Preprocessor ──────────────────────────────────────────────────────────────────
+2 Recipe Steps
+
+• step_scale()
+• step_center()
+
+── Model ─────────────────────────────────────────────────────────────────────────
+K-Nearest Neighbor Model Specification (regression)
+
+Main Arguments:
+  neighbors = tune()
+  weight_func = rectangular
+
+Computational engine: kknn 
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Using cross-validation, we search a grid of potential values for <span class="math notranslate nohighlight">\(K\)</span> between 1 and 200:</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">gridvals</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">tibble</span><span class="p">(</span><span class="n">neighbors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">seq</span><span class="p">(</span><span class="n">from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">200</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">))</span>
+
+<span class="n">housing_results</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">housing_wkflw</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">tune_grid</span><span class="p">(</span><span class="n">resamples</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">housing_vfold</span><span class="p">,</span><span class="w"> </span><span class="n">grid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gridvals</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">collect_metrics</span><span class="p">()</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">.metric</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;rmse&quot;</span><span class="p">)</span>
+
+<span class="c1"># show only the row of minimum RMSPE</span>
+<span class="n">housing_min</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">housing_results</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">mean</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nf">min</span><span class="p">(</span><span class="n">mean</span><span class="p">))</span>
+
+<span class="n">housing_min</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 1 × 7</caption>
+<thead>
+	<tr><th scope=col>neighbors</th><th scope=col>.metric</th><th scope=col>.estimator</th><th scope=col>mean</th><th scope=col>n</th><th scope=col>std_err</th><th scope=col>.config</th></tr>
+	<tr><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>52</td><td>rmse</td><td>standard</td><td>86615.41</td><td>5</td><td>5486.112</td><td>Preprocessor1_Model18</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<p>It looks like <span class="math notranslate nohighlight">\(K=52\)</span> gives us the lowest RMSE! Now, let’s evaluate how our model performs on unseen testing data using RMSPE:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">kmin</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">52</span>
+
+<span class="n">housing_spec</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">nearest_neighbor</span><span class="p">(</span><span class="n">weight_func</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;rectangular&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">neighbors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kmin</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">set_engine</span><span class="p">(</span><span class="s">&quot;kknn&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">set_mode</span><span class="p">(</span><span class="s">&quot;regression&quot;</span><span class="p">)</span>
+
+<span class="n">housing_fit</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">workflow</span><span class="p">()</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">add_recipe</span><span class="p">(</span><span class="n">housing_recipe</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">add_model</span><span class="p">(</span><span class="n">housing_spec</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">fit</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">housing_train</span><span class="p">)</span>
+
+<span class="n">housing_summary</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">housing_fit</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">predict</span><span class="p">(</span><span class="n">housing_test</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">bind_cols</span><span class="p">(</span><span class="n">housing_test</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">metrics</span><span class="p">(</span><span class="n">truth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">price</span><span class="p">,</span><span class="w"> </span><span class="n">estimate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">.pred</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">.metric</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&#39;rmse&#39;</span><span class="p">)</span>
+
+<span class="n">housing_summary</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 1 × 3</caption>
+<thead>
+	<tr><th scope=col>.metric</th><th scope=col>.estimator</th><th scope=col>.estimate</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>rmse</td><td>standard</td><td>83214.71</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Predicted values on our test data</span>
+
+<span class="n">housing_preds</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">predict</span><span class="p">(</span><span class="n">housing_fit</span><span class="p">,</span><span class="w"> </span><span class="n">housing_test</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">bind_cols</span><span class="p">(</span><span class="n">housing_test</span><span class="p">)</span>
+
+<span class="c1"># Plot the fitted regression line</span>
+
+<span class="n">plot_final</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">housing</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqft</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">price</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.4</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_line</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">housing_preds</span><span class="p">,</span>
+<span class="w">            </span><span class="n">mapping</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqft</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">.pred</span><span class="p">),</span>
+<span class="w">            </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;steelblue&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="n">linewidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">xlab</span><span class="p">(</span><span class="s">&quot;House size (square feet)&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">ylab</span><span class="p">(</span><span class="s">&quot;Price (USD)&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">dollar_format</span><span class="p">())</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">ggtitle</span><span class="p">(</span><span class="nf">paste0</span><span class="p">(</span><span class="s">&quot;K = &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">kmin</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span><span class="p">))</span>
+
+<span class="n">plot_final</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/874969b72f8c10dd3c549a08eb472236aa9291f49f4fbcd4a128a5901e2dbb87.png" src="../_images/874969b72f8c10dd3c549a08eb472236aa9291f49f4fbcd4a128a5901e2dbb87.png" />
+</div>
+</div>
+<section id="final-model-from-k-nn-regression">
+<h4>Final model from k-nn regression<a class="headerlink" href="#final-model-from-k-nn-regression" title="Permalink to this heading">#</a></h4>
+<p>For this model, RMSPE is 83,214.71. How can we interpret this?</p>
+<blockquote>
+<div><p>Roughly, prices tend to be +/- $83,214.71 off that line (not that great).</p>
+</div></blockquote>
+</section>
 <section id="discussion-which-of-the-following-is-overfitting-underfitting">
 <h4>Discussion: Which of the following is overfitting? Underfitting?<a class="headerlink" href="#discussion-which-of-the-following-is-overfitting-underfitting" title="Permalink to this heading">#</a></h4>
 <img src="https://datasciencebook.ca/_main_files/figure-html/07-howK-1.png" width="600"/></section>
@@ -1052,10 +1535,6 @@ Computational engine: kknn
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#classification">1. Classification</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-kind-of-data-analysis-question-is-this">What kind of data analysis question is this?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#training-and-test-sets">1.1 Training and Test Sets</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#golden-rule-of-machine-learning-statistics">Golden Rule of Machine Learning / Statistics:</a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#k-nearest-neighbours-classification">1.2 K-nearest neighbours classification</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-would-the-predicted-class-be">What would the predicted class be?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#we-can-go-beyond-2-predictors">We can go beyond 2 predictors!</a></li>
@@ -1080,15 +1559,20 @@ Computational engine: kknn
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#choosing-k-or-tuning-the-model">1.6 Choosing K (or, “tuning’’ the model)</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#training-and-test-sets">1.6 Training and Test Sets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#golden-rule-of-machine-learning-statistics">Golden Rule of Machine Learning / Statistics:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#choosing-k-or-tuning-the-model">1.7 Choosing K (or, “tuning’’ the model)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-validation">Cross-Validation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#underfitting-overfitting">Underfitting &amp; Overfitting</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Underfitting &amp; Overfitting</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Underfitting &amp; Overfitting</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-performance-metrics">1.7 Compute performance metrics</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-performance-metrics">1.8 Compute performance metrics</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-big-picture">The Big Picture</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question">Question</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#activity">Activity</a></li>
 </ul>
 </li>
@@ -1097,8 +1581,8 @@ Computational engine: kknn
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#regression">2. Regression</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#k-nearest-neighbours-regression">2.1 K nearest neighbours regression</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-evaluation-and-tuning">2.2 Model Evaluation and Tuning</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#is-our-model-any-good">Is our model any good?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#final-model-from-k-nn-regression">Final model from k-nn regression</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#is-our-model-any-good">Is our model any good?</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#final-model-from-k-nn-regression">Final model from k-nn regression</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#discussion-which-of-the-following-is-overfitting-underfitting">Discussion: Which of the following is overfitting? Underfitting?</a></li>
 </ul>
 </li>
