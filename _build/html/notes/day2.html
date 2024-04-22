@@ -67,6 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notes/day2';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Day 3 - Girls in Data Science" href="day3.html" />
     <link rel="prev" title="Day 1 - Girls in Data Science" href="day1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -157,6 +158,9 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Day 2 - Girls in Data Science</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="day3.html">Day 3 - Girls in Data Science</a></li>
 
 
 </ul>
@@ -330,31 +334,23 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#e-g-we-want-to-know-the-average-width-of-a-species-of-sea-star">E.g.: we want to know the average width of a species of sea star</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">What is statistical inference?</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">E.g.: we want to know the average width of a species of sea star</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">What is statistical inference?</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">E.g.: we want to know the average width of a species of sea star</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-inference-in-the-wild-market-assessment">Examples of inference in the wild: market assessment</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-inference-in-the-wild-a-b-testing">Examples of inference in the wild: A/B testing</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-inference-in-the-wild-market-assessment">Examples of inference in the wild: market assessment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-inference-in-the-wild-a-b-testing">Examples of inference in the wild: A/B testing</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sampling">2.2 Sampling</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Exercise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Exercise</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-sampling-bias">Types of Sampling Bias</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Exercise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Exercise</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#observational-studies-vs-experiments">2.3 Observational Studies vs. Experiments</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#observational-studies">Observational Studies</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#experiments">Experiments</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Exercise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Exercise</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation">2.4 Estimation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Estimation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Exercise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Estimation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Exercise</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-simulation-experiment">Virtual simulation experiment</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#our-virtual-ubc-students-population">Our virtual UBC students (population)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#drawing-a-single-sample-of-size-40">Drawing a single sample of size 40</a></li>
@@ -389,14 +385,14 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ─────────────────────────────────────────── tidyverse 2.0.0 ──
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ──────────────────────── tidyverse 2.0.0 ──
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dplyr    </span> 1.1.3     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">readr    </span> 2.1.4
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">forcats  </span> 1.0.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">stringr  </span> 1.5.0
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">lubridate</span> 1.9.2     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tibble   </span> 3.2.1
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">purrr    </span> 1.0.2     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tidyr    </span> 1.3.0
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ───────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ────────────────────────────────────────── tidyverse_conflicts() ──
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">filter()</span> masks <span class=" -Color -Color-Blue">stats</span>::filter()
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">lag()</span>    masks <span class=" -Color -Color-Blue">stats</span>::lag()
 <span class=" -Color -Color-Cyan">ℹ</span> Use the conflicted package (<span class=" -Color -Color-Blue">&lt;http://conflicted.r-lib.org/&gt;</span>) to force all conflicts to become errors
@@ -543,7 +539,7 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">200</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">8</span>
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">───────────────────────────────────────────────────────────────────────────</span>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">────────────────────────────────────────────────────────</span>
 <span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
 <span class=" -Color -Color-Red">chr</span> (7): name, channel_Info, Category, Posts, Followers, Avg. Likes, Eng Rate
 <span class=" -Color -Color-Green">dbl</span> (1): rank
@@ -743,22 +739,7 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
 <p><strong>Why?:</strong> It’s often expensive or not possible to measure the whole population.</p>
 <section id="e-g-we-want-to-know-the-average-width-of-a-species-of-sea-star">
 <h3>E.g.: we want to know the average width of a species of sea star<a class="headerlink" href="#e-g-we-want-to-know-the-average-width-of-a-species-of-sea-star" title="Permalink to this heading">#</a></h3>
-<img src="img/intro-inf-1.png" width=1100></section>
-</section>
-<section id="id2">
-<h2>What is statistical inference?<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
-<p>Statistical inference is the process of using a <em>sample</em> to make conclusions about a wider <em>population</em> the sample came from.</p>
-<p><strong>Why?</strong> It’s often expensive or not possible to measure the whole population.</p>
-<section id="id3">
-<h3>E.g.: we want to know the average width of a species of sea star<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
-<img src="img/intro-inf-2.png" width=1100></section>
-<section id="id4">
-<h3>What is statistical inference?<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
-<p>Statistical inference is the process of using a <em>sample</em> to make conclusions about a wider <em>population</em> the sample came from.</p>
-<p><strong>Why?:</strong> It’s often expensive or not possible to measure the whole population.</p>
-<section id="id5">
-<h4>E.g.: we want to know the average width of a species of sea star<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
-<img src="img/intro-inf-4.png" width=1100><ul class="simple">
+<img src="img/intro-inf-1.png" width=1100><img src="img/intro-inf-2.png" width=1100><img src="img/intro-inf-4.png" width=1100><ul class="simple">
 <li><p><strong>Population:</strong> collection of all possible observations + their frequency/count</p>
 <ul>
 <li><p>e.g. the widths of the entire population of sea stars</p></li>
@@ -779,20 +760,19 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
 </section>
 </section>
 <section id="examples-of-inference-in-the-wild-market-assessment">
-<h3>Examples of inference in the wild: market assessment<a class="headerlink" href="#examples-of-inference-in-the-wild-market-assessment" title="Permalink to this heading">#</a></h3>
+<h2>Examples of inference in the wild: market assessment<a class="headerlink" href="#examples-of-inference-in-the-wild-market-assessment" title="Permalink to this heading">#</a></h2>
 <p>What proportion of undergraduate students have an iphone?</p>
 <img img align="left" src="https://media.wired.com/photos/5b22c5c4b878a15e9ce80d92/master/w_582,c_limit/iphonex-TA.jpg" width="500"/></section>
 <section id="examples-of-inference-in-the-wild-a-b-testing">
-<h3>Examples of inference in the wild: A/B testing<a class="headerlink" href="#examples-of-inference-in-the-wild-a-b-testing" title="Permalink to this heading">#</a></h3>
+<h2>Examples of inference in the wild: A/B testing<a class="headerlink" href="#examples-of-inference-in-the-wild-a-b-testing" title="Permalink to this heading">#</a></h2>
 <p>Which of the 2 website designs will lead to more customer engagement (measured by click-through-rate, for example)?</p>
 <img img align="left" src="https://images.ctfassets.net/zw48pl1isxmc/4QYN7VubAAgEAGs0EuWguw/165749ef2fa01c1c004b6a167fd27835/ab-testing.png" width="600"/></section>
-</section>
 <section id="sampling">
 <h2>2.2 Sampling<a class="headerlink" href="#sampling" title="Permalink to this heading">#</a></h2>
 <p>When we are collecting a sample, we aim for that sample to be representative of the population of interest.</p>
 <p>A sample is <strong>biased</strong> if certain individuals in the population have a higher chance of being selected.</p>
-<section id="id6">
-<h3>Exercise<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<section id="id2">
+<h3>Exercise<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <p>In groups, brainstorm a variety of sampling strategies or scenarios that might result in a biased sample.</p>
 </section>
 <section id="types-of-sampling-bias">
@@ -806,8 +786,8 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
 <li><p>Recall bias: responder might not accurately recall certain events (e.g., asking someone about something that happened years ago)</p></li>
 </ul>
 </section>
-<section id="id7">
-<h3>Exercise<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<section id="id3">
+<h3>Exercise<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
 <p>For the following scenarios, identify a source of potential sampling bias:</p>
 <ul class="simple">
 <li><p>A telephone survey calls and asks you if you will support a local politician in the upcoming election.</p></li>
@@ -839,8 +819,8 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
 <li><p>With randomization, researchers can make more definitive causal statements (e.g., variable A caused an increase in variable B).</p></li>
 </ul>
 </section>
-<section id="id8">
-<h3>Exercise<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<section id="id4">
+<h3>Exercise<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
 <p>Identify the following scenarios as either an observational study or an experiment:</p>
 <p>a) Students are randomly assigned into two groups, where in group A they have homework assignments and in group B they do not. Their performance on a final exam is compared to assess the impact of homework on student performance.</p>
 <p>b) You investigate the relationship between air pollution in different major cities over the years by analyzing existing records.</p>
@@ -854,13 +834,13 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
 <p>This quantitative property is called a <strong>population parameter</strong></p>
 <p><strong>Question:</strong> What <em>proportion</em> (a quantitative population parameter!) of UBC  undergrads have an iphone?
 <img align="left" src="img/sampling.001.jpeg" width="700"/></p>
-<section id="id9">
-<h3>Estimation<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
+<section id="id5">
+<h3>Estimation<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
 <p>Step 1: randomly select a subset (a <em>sample</em>) and ask them if they have an iPhone</p>
 <p>Step 2: calculate the proportion in our sample (a <em>statistic</em> or <em>point estimate</em>) and use it as an estimate of the true population proportion.</p>
 <img align="left" src="img/sampling.002.jpeg" width="700"/></section>
-<section id="id10">
-<h3>Exercise<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<section id="id6">
+<h3>Exercise<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
 <p>In groups, take a “population” of candies from the front of the room.</p>
 <ul class="simple">
 <li><p>Take a sample of size <span class="math notranslate nohighlight">\(n=5\)</span> and record the fraction of red candies you observe.</p></li>
@@ -1128,6 +1108,15 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
         <p class="prev-next-title">Day 1 - Girls in Data Science</p>
       </div>
     </a>
+    <a class="right-next"
+       href="day3.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Day 3 - Girls in Data Science</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -1171,31 +1160,23 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#e-g-we-want-to-know-the-average-width-of-a-species-of-sea-star">E.g.: we want to know the average width of a species of sea star</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">What is statistical inference?</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">E.g.: we want to know the average width of a species of sea star</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">What is statistical inference?</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">E.g.: we want to know the average width of a species of sea star</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-inference-in-the-wild-market-assessment">Examples of inference in the wild: market assessment</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-inference-in-the-wild-a-b-testing">Examples of inference in the wild: A/B testing</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-inference-in-the-wild-market-assessment">Examples of inference in the wild: market assessment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-inference-in-the-wild-a-b-testing">Examples of inference in the wild: A/B testing</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sampling">2.2 Sampling</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Exercise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Exercise</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-sampling-bias">Types of Sampling Bias</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Exercise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Exercise</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#observational-studies-vs-experiments">2.3 Observational Studies vs. Experiments</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#observational-studies">Observational Studies</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#experiments">Experiments</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Exercise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Exercise</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation">2.4 Estimation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Estimation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Exercise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Estimation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Exercise</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-simulation-experiment">Virtual simulation experiment</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#our-virtual-ubc-students-population">Our virtual UBC students (population)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#drawing-a-single-sample-of-size-40">Drawing a single sample of size 40</a></li>
