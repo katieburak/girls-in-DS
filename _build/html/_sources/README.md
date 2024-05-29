@@ -19,7 +19,7 @@ Lunch will be provided each day for the participants.
 |--------------------------|---------------------|
 | Day 1 | Introduction to data science, basics of Jupyter and R, data wrangling and data visualization         |
 | Day 2 | Measures of central tendency and spread, statistical inference and sampling, observational studies vs. experiments | 
-| Day 3 | Machine learning fundamentals, answering predictive questions (regression, classification, decision tree) | 
+| Day 3 | Machine learning fundamentals, answering predictive questions (regression, classification) | 
 
 A Jupyter notebook of the material is available [here](https://katieburak.github.io/girls-in-DS/notes/day2.html).
 
@@ -28,5 +28,6 @@ A Jupyter notebook of the material is available [here](https://katieburak.github
 - [Data Science: A First Introduction](https://datasciencebook.ca/)
 - [Modern Dive](https://moderndive.com/index.html)
 - [Mathematics for the Liberal Arts - Module 10: Statistics: Collecting Data](https://courses.lumenlearning.com/waymakermath4libarts/)
+- Certain content (particularly some of the teaching material) comes from [UBC's DSCI 100 - Introduction to Data Science course](https://github.com/ubc-dsci/dsci-100-student).
 
 > Thank you to UBC's Department of Statistics, Master of Data Science Program, Data Science Institute and PIMS for helping to make this event possible.
