@@ -30,11 +30,12 @@ A Jupyter notebook of the material is available [here](https://katieburak.github
 - [Mathematics for the Liberal Arts - Module 10: Statistics: Collecting Data](https://courses.lumenlearning.com/waymakermath4libarts/)
 - Certain content (particularly some of the teaching material) comes from [UBC's DSCI 100 - Introduction to Data Science course](https://github.com/ubc-dsci/dsci-100-student).
 
-> Thank you to UBC's Department of Statistics, Master of Data Science Program, Data Science Institute and PIMS for helping to make this event possible.
-
 ## License
 
 License
 © 2024 Katie Burak
 
 Software licensed under the MIT License, non-software content licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License. See the license file for more information.
+
+
+> Thank you to UBC's Department of Statistics, Master of Data Science Program, Data Science Institute and PIMS for helping to make this event possible.
