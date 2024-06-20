@@ -10,6 +10,7 @@ statistics. This camp is offered for girls and other gender minorities in grades
 - Location: [MacLeod (MCLD) - 3018](https://learningspaces.ubc.ca/classrooms/mcld-3018) (room #3018 on the third floor)
 > [Google maps link](https://www.google.com/maps/place/MacLeod+Building/@49.2624698,-123.2505937,17.44z/data=!4m6!3m5!1s0x548672ca2ddce785:0xeed9111ae157bfb6!8m2!3d49.2616108!4d-123.2494107!16s%2Fg%2F11bwnyc39c?hl=en-US&entry=ttu) to the MacLeod Building 
 - Instructor: Katie Burak (Contact: kburak@stat.ubc.ca)
+- Mentors: Jenny Lee, Mona Zhu 
 
 Lunch will be provided each day for the participants.
 
