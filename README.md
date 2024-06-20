@@ -33,7 +33,7 @@ A Jupyter notebook of the material is available [here](https://katieburak.github
 ## License
 
 License
-© 2024 Katie Burak
+© 2024 Katie Burak, Jenny Lee and Mona Zhu 
 
 Software licensed under the MIT License, non-software content licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License. See the license file for more information.
 
