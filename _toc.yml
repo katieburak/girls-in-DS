@@ -2,25 +2,14 @@ format: jb-book
 root: README
 parts:
 - caption: Welcome
-  chapters:
-  - file: lectures/lecture0_introduction
-  - file: lecture_learning_objectives
-- caption: Lectures
+- caption: Notes
   chapters:
   - file: notes/day1.ipynb
   - file: notes/day2.ipynb
   - file: notes/day3.ipynb
 # - caption: Solutions
 #   chapters:
-#   - file: solution/lab1_solution.ipynb
-#   - file: solution/lab2_solution.ipynb
-#   - file: solution/lab4_solution.ipynb
-#   - file: solution/quiz1.ipynb
-#   - file: solution/quiz2.md
-# - caption: Practice quizzes
-#   chapters:
-#   - file: solution/old_quiz1a.md
-#   - file: solution/old_quiz1b.md
-#   - file: solution/old_quiz2a.md
-#   - file: solution/old_quiz2b.md
+#   - file: solution/worksheet1_solution.ipynb
+#   - file: solution/worksheet2_solution.ipynb
+#   - file: solution/worksheet3_solution.ipynb
 
