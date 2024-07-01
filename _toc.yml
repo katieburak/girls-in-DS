@@ -1,7 +1,6 @@
 format: jb-book
 root: README
 parts:
-- caption: Welcome
 - caption: Notes
   chapters:
   - file: notes/day1.ipynb
