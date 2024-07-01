@@ -3,7 +3,7 @@ title: Girls in Data Science
 author: Katie Burak
 copyright: "2024"  # Copyright year to be placed in the footer
 logo: notes/img/logo.png
-exclude_patterns: ["archive/*", "source/*", "release/*", "lectures/teacher*"]
+exclude_patterns: ["solution/*", "worksheets/*", "release/*", "lectures/teacher*"]
 
 repository:
  url: https://github.com/katieburak/girls-in-DS

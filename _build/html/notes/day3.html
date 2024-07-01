@@ -53,7 +53,6 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -150,7 +149,15 @@ const thebe_selector_output = ".output, .cell_output"
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lectures</span></p>
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../README.html">
+                    Girls in Data Science Summer Camp
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="day1.html">Day 1 - Girls in Data Science</a></li>
 
@@ -203,6 +210,53 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="header-article-item">
 
 <div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/katieburak/girls-in-DS" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/katieburak/girls-in-DS/issues/new?title=Issue%20on%20page%20%2Fnotes/day3.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
 
 
 
@@ -394,31 +448,31 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ──────────────────────── tidyverse 2.0.0 ──
-<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dplyr    </span> 1.1.3     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">readr    </span> 2.1.4
-<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">forcats  </span> 1.0.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">stringr  </span> 1.5.0
-<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">lubridate</span> 1.9.2     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tibble   </span> 3.2.1
-<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">purrr    </span> 1.0.2     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tidyr    </span> 1.3.0
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ────────────────────────────────────────────────────────── tidyverse 2.0.0 ──
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dplyr    </span> 1.1.4     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">readr    </span> 2.1.5
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">forcats  </span> 1.0.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">stringr  </span> 1.5.1
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">lubridate</span> 1.9.3     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tibble   </span> 3.2.1
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">purrr    </span> 1.0.2     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tidyr    </span> 1.3.1
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ────────────────────────────────────────── tidyverse_conflicts() ──
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ──────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">filter()</span> masks <span class=" -Color -Color-Blue">stats</span>::filter()
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">lag()</span>    masks <span class=" -Color -Color-Blue">stats</span>::lag()
 <span class=" -Color -Color-Cyan">ℹ</span> Use the conflicted package (<span class=" -Color -Color-Blue">&lt;http://conflicted.r-lib.org/&gt;</span>) to force all conflicts to become errors
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching packages</span> ────────────────────────────────────── tidymodels 1.1.1 ──
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching packages</span> ──────────────────────────────────────────────────────────────────────── tidymodels 1.2.0 ──
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">broom       </span> 1.0.5     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">rsample     </span> 1.2.0
-<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dials       </span> 1.2.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tune        </span> 1.1.2
-<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">infer       </span> 1.0.4     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">workflows   </span> 1.1.3
-<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">modeldata   </span> 1.2.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">workflowsets</span> 1.0.1
-<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">parsnip     </span> 1.1.1     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">yardstick   </span> 1.2.0
-<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">recipes     </span> 1.0.8     
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">broom       </span> 1.0.6      <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">rsample     </span> 1.2.1 
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dials       </span> 1.2.1      <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tune        </span> 1.2.1 
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">infer       </span> 1.0.7      <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">workflows   </span> 1.1.4 
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">modeldata   </span> 1.4.0      <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">workflowsets</span> 1.1.0 
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">parsnip     </span> 1.2.1      <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">yardstick   </span> 1.3.1 
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">recipes     </span> 1.0.10     
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ───────────────────────────────────────── tidymodels_conflicts() ──
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ─────────────────────────────────────────────────────────────────────────── tidymodels_conflicts() ──
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">scales</span>::<span class=" -Color -Color-Green">discard()</span> masks <span class=" -Color -Color-Blue">purrr</span>::discard()
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">filter()</span>   masks <span class=" -Color -Color-Blue">stats</span>::filter()
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">recipes</span>::<span class=" -Color -Color-Green">fixed()</span>  masks <span class=" -Color -Color-Blue">stringr</span>::fixed()
@@ -561,7 +615,7 @@ Source: https://www.r-bloggers.com/2019/06/a-gentle-introduction-to-tidymodels/<
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">569</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">12</span>
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">────────────────────────────────────────────────────────</span>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">──────────────────────────────────────────────────────────────────────────────────────────</span>
 <span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
 <span class=" -Color -Color-Red">chr</span>  (1): Class
 <span class=" -Color -Color-Green">dbl</span> (11): ID, Radius, Texture, Perimeter, Area, Smoothness, Compactness, Con...
@@ -604,7 +658,7 @@ Source: https://www.r-bloggers.com/2019/06/a-gentle-introduction-to-tidymodels/<
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">prep()</span></code> function computes everything so that the preprocessing steps can be executed</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">bake()</span></code> function takes a recipe and applies it to data and returns data</p></li>
-<li><p>visit <a class="reference external" href="https://recipes.tidymodels.org/reference/index.html">https://recipes.tidymodels.org/reference/index.html</a> to see all the preprocessing steps</p></li>
+<li><p>visit https://recipes.tidymodels.org/reference/index.html to see all the preprocessing steps</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -621,7 +675,7 @@ Source: https://www.r-bloggers.com/2019/06/a-gentle-introduction-to-tidymodels/<
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Recipe</span> <span class=" -Color -Color-Cyan">──────────────────────────────────────────────────────────────────────</span>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Recipe</span> <span class=" -Color -Color-Cyan">────────────────────────────────────────────────────────────────────────────────────────────────────────</span>
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
@@ -704,17 +758,17 @@ Computational engine: kknn
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>══ Workflow ════════════════════════════════════════════════════════════════════
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>══ Workflow ══════════════════════════════════════════════════════════════════════════════════════════════════════
 Preprocessor: Recipe
 Model: nearest_neighbor()
 
-── Preprocessor ────────────────────────────────────────────────────────────────
+── Preprocessor ──────────────────────────────────────────────────────────────────────────────────────────────────
 2 Recipe Steps
 
 • step_center()
 • step_scale()
 
-── Model ───────────────────────────────────────────────────────────────────────
+── Model ─────────────────────────────────────────────────────────────────────────────────────────────────────────
 K-Nearest Neighbor Model Specification (classification)
 
 Main Arguments:
@@ -894,7 +948,7 @@ Computational engine: kknn
 <center>
 <img width="1000" src="img/under_over_fitting.png">
 </center>
-<p>Source: <a class="reference external" href="http://kerckhoffs.schaathun.net/FPIA/Slides/09OF.pdf">http://kerckhoffs.schaathun.net/FPIA/Slides/09OF.pdf</a></p>
+<p>Source: http://kerckhoffs.schaathun.net/FPIA/Slides/09OF.pdf</p>
 </section>
 <section id="id1">
 <h3>Underfitting &amp; Overfitting<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
@@ -1034,7 +1088,7 @@ Computational engine: kknn
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a4c54bb66e5e624437b6d92bd4ce3cbcefa1db498c1313f8fb432a0423faf548.png" src="../_images/a4c54bb66e5e624437b6d92bd4ce3cbcefa1db498c1313f8fb432a0423faf548.png" />
+<img alt="../_images/aaa5a6e733b40594e9a46eceaf7ac88464fa407f6984dd99f91365ba7ab21d74.png" src="../_images/aaa5a6e733b40594e9a46eceaf7ac88464fa407f6984dd99f91365ba7ab21d74.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1050,7 +1104,10 @@ Computational engine: kknn
 <div class="cell_output docutils container">
 <div class="output text_html">21</div></div>
 </div>
-<p>Let’s fit our model with our “best” <span class="math notranslate nohighlight">\(K\)</span> value:</p>
+<p>Let’s fit our model with our “best” <span class="math notranslate nohighlight">\(K\)</span> value.</p>
+<blockquote>
+<div><p><em>Note: In the worksheet, we will provide you with a <span class="math notranslate nohighlight">\(K\)</span> value to use and you won’t need to perform cross-validation, but it is still good to understand the motivation behind it!</em></p>
+</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">tumor_model</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">nearest_neighbor</span><span class="p">(</span><span class="n">weight_func</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;rectangular&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">neighbors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">best_k</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
@@ -1067,17 +1124,17 @@ Computational engine: kknn
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>══ Workflow [trained] ══════════════════════════════════════════════════════════
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>══ Workflow [trained] ════════════════════════════════════════════════════════════════════════════════════════════
 Preprocessor: Recipe
 Model: nearest_neighbor()
 
-── Preprocessor ────────────────────────────────────────────────────────────────
+── Preprocessor ──────────────────────────────────────────────────────────────────────────────────────────────────
 2 Recipe Steps
 
 • step_scale()
 • step_center()
 
-── Model ───────────────────────────────────────────────────────────────────────
+── Model ─────────────────────────────────────────────────────────────────────────────────────────────────────────
 
 Call:
 kknn::train.kknn(formula = ..y ~ ., data = data, ks = min_rows(21,     data, 5), kernel = ~&quot;rectangular&quot;)
@@ -1193,7 +1250,7 @@ Prediction  M  B
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">932</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">9</span>
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">────────────────────────────────────────────────────────</span>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">──────────────────────────────────────────────────────────────────────────────────────────</span>
 <span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
 <span class=" -Color -Color-Red">chr</span> (3): city, zip, type
 <span class=" -Color -Color-Green">dbl</span> (6): beds, baths, sqft, price, latitude, longitude
@@ -1232,11 +1289,12 @@ Prediction  M  B
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d6040fc85aa6f16f295ec8707b5716abd08b870c5753c5518289726e4e5838cf.png" src="../_images/d6040fc85aa6f16f295ec8707b5716abd08b870c5753c5518289726e4e5838cf.png" />
+<img alt="../_images/07a74448a5175b75d7283fff74c34c564a1ccba5290c67baf8b893cb6fa60fae.png" src="../_images/07a74448a5175b75d7283fff74c34c564a1ccba5290c67baf8b893cb6fa60fae.png" />
 </div>
 </div>
 <p>E.g.: predict the price of a 2000 square foot home (from this reduced dataset)</p>
-<img align="left" src="https://datasciencebook.ca/_main_files/figure-html/07-small-eda-regr-1.png" width="600"/><ul class="simple">
+<a class="reference internal image-reference" href="https://datasciencebook.ca/_main_files/figure-html/07-small-eda-regr-1.png"><img alt="https://datasciencebook.ca/_main_files/figure-html/07-small-eda-regr-1.png" class="align-left" src="https://datasciencebook.ca/_main_files/figure-html/07-small-eda-regr-1.png" style="width: 600px;" /></a>
+<ul class="simple">
 <li><p>You can see that we have no observations of a house of size exactly 2,000 square feet</p>
 <ul>
 <li><p>What are some ways you might predict the price?</p></li>
@@ -1246,9 +1304,12 @@ Prediction  M  B
 <section id="k-nearest-neighbours-regression">
 <h2>2.1 K nearest neighbours regression<a class="headerlink" href="#k-nearest-neighbours-regression" title="Permalink to this heading">#</a></h2>
 <p>As in k-nn classification, we find the <span class="math notranslate nohighlight">\(k\)</span>-nearest neighbours (here <span class="math notranslate nohighlight">\(k=5\)</span>) in terms of the predictors</p>
-<img align="left" src="https://datasciencebook.ca/_main_files/figure-html/07-knn3-example-1.png" width="600"/><p>Then we average the values for the <span class="math notranslate nohighlight">\(k\)</span>-nearest neighbours, and use that as the prediction:</p>
-<img align="left" src="https://datasciencebook.ca/_main_files/figure-html/07-predictedViz-knn-1.png" width="600"/><p>If we do that for a range of house sizes, we can draw the curve of predictions:</p>
-<img src="https://datasciencebook.ca/_main_files/figure-html/07-predict-all-1.png" width="600"/><ul class="simple">
+<a class="reference internal image-reference" href="https://datasciencebook.ca/_main_files/figure-html/07-knn3-example-1.png"><img alt="https://datasciencebook.ca/_main_files/figure-html/07-knn3-example-1.png" class="align-left" src="https://datasciencebook.ca/_main_files/figure-html/07-knn3-example-1.png" style="width: 600px;" /></a>
+<p>Then we average the values for the <span class="math notranslate nohighlight">\(k\)</span>-nearest neighbours, and use that as the prediction:</p>
+<a class="reference internal image-reference" href="https://datasciencebook.ca/_main_files/figure-html/07-predictedViz-knn-1.png"><img alt="https://datasciencebook.ca/_main_files/figure-html/07-predictedViz-knn-1.png" class="align-left" src="https://datasciencebook.ca/_main_files/figure-html/07-predictedViz-knn-1.png" style="width: 600px;" /></a>
+<p>If we do that for a range of house sizes, we can draw the curve of predictions:</p>
+<a class="reference internal image-reference" href="https://datasciencebook.ca/_main_files/figure-html/07-predict-all-1.png"><img alt="https://datasciencebook.ca/_main_files/figure-html/07-predict-all-1.png" src="https://datasciencebook.ca/_main_files/figure-html/07-predict-all-1.png" style="width: 600px;" /></a>
+<ul class="simple">
 <li><p>You can imagine doing this for all the possible input values and coming up with predictions everywhere</p></li>
 <li><p>Connecting all these predictions with a line</p></li>
 <li><p>one benefit is that it handles non-linearity well.</p></li>
@@ -1262,7 +1323,8 @@ Prediction  M  B
 <li><p>How do we choose <code class="docutils literal notranslate"><span class="pre">k</span></code>?</p></li>
 </ol>
 <p>The same general strategy as in classification works here!</p>
-<img align="left" src="https://datasciencebook.ca/img/classification2/train-test-overview.png" width="700"/><section id="is-our-model-any-good">
+<a class="reference internal image-reference" href="https://datasciencebook.ca/img/classification2/train-test-overview.png"><img alt="https://datasciencebook.ca/img/classification2/train-test-overview.png" class="align-left" src="https://datasciencebook.ca/img/classification2/train-test-overview.png" style="width: 700px;" /></a>
+<section id="is-our-model-any-good">
 <h3>Is our model any good?<a class="headerlink" href="#is-our-model-any-good" title="Permalink to this heading">#</a></h3>
 <p><b><font color="blue">The blue line</font></b> depicts our predictions from k-nn regression. <b><font color="red">The red lines</font></b> depict the error in our predictions, i.e., the difference between the <span class="math notranslate nohighlight">\(i^\text{th}\)</span> test data response and our prediction <span class="math notranslate nohighlight">\(\hat{y}_i\)</span>:</p>
 <center>
@@ -1336,17 +1398,17 @@ Prediction  M  B
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>══ Workflow ════════════════════════════════════════════════════════════════════
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>══ Workflow ══════════════════════════════════════════════════════════════════════════════════════════════════════
 Preprocessor: Recipe
 Model: nearest_neighbor()
 
-── Preprocessor ────────────────────────────────────────────────────────────────
+── Preprocessor ──────────────────────────────────────────────────────────────────────────────────────────────────
 2 Recipe Steps
 
 • step_scale()
 • step_center()
 
-── Model ───────────────────────────────────────────────────────────────────────
+── Model ─────────────────────────────────────────────────────────────────────────────────────────────────────────
 K-Nearest Neighbor Model Specification (regression)
 
 Main Arguments:
@@ -1454,7 +1516,7 @@ Computational engine: kknn
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/874969b72f8c10dd3c549a08eb472236aa9291f49f4fbcd4a128a5901e2dbb87.png" src="../_images/874969b72f8c10dd3c549a08eb472236aa9291f49f4fbcd4a128a5901e2dbb87.png" />
+<img alt="../_images/c6ba7b74d7249888dbf545267b0d5d8662cc0f0eec380a2ed3becb1df1252eef.png" src="../_images/c6ba7b74d7249888dbf545267b0d5d8662cc0f0eec380a2ed3becb1df1252eef.png" />
 </div>
 </div>
 <section id="final-model-from-k-nn-regression">
@@ -1466,7 +1528,8 @@ Computational engine: kknn
 </section>
 <section id="discussion-which-of-the-following-is-overfitting-underfitting">
 <h4>Discussion: Which of the following is overfitting? Underfitting?<a class="headerlink" href="#discussion-which-of-the-following-is-overfitting-underfitting" title="Permalink to this heading">#</a></h4>
-<img src="https://datasciencebook.ca/_main_files/figure-html/07-howK-1.png" width="600"/></section>
+<a class="reference internal image-reference" href="https://datasciencebook.ca/_main_files/figure-html/07-howK-1.png"><img alt="https://datasciencebook.ca/_main_files/figure-html/07-howK-1.png" src="https://datasciencebook.ca/_main_files/figure-html/07-howK-1.png" style="width: 600px;" /></a>
+</section>
 </section>
 </section>
 </section>
@@ -1614,7 +1677,7 @@ By Katie Burak
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2024.
       <br/>
     
   </p>

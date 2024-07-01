@@ -53,7 +53,6 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -151,7 +150,15 @@ const thebe_selector_output = ".output, .cell_output"
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lectures</span></p>
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../README.html">
+                    Girls in Data Science Summer Camp
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="day1.html">Day 1 - Girls in Data Science</a></li>
 
@@ -204,6 +211,53 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="header-article-item">
 
 <div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/katieburak/girls-in-DS" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/katieburak/girls-in-DS/issues/new?title=Issue%20on%20page%20%2Fnotes/day2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
 
 
 
@@ -385,14 +439,14 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ──────────────────────── tidyverse 2.0.0 ──
-<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dplyr    </span> 1.1.3     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">readr    </span> 2.1.4
-<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">forcats  </span> 1.0.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">stringr  </span> 1.5.0
-<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">lubridate</span> 1.9.2     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tibble   </span> 3.2.1
-<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">purrr    </span> 1.0.2     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tidyr    </span> 1.3.0
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ────────────────────────────────────────────────────────── tidyverse 2.0.0 ──
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dplyr    </span> 1.1.4     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">readr    </span> 2.1.5
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">forcats  </span> 1.0.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">stringr  </span> 1.5.1
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">lubridate</span> 1.9.3     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tibble   </span> 3.2.1
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">purrr    </span> 1.0.2     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tidyr    </span> 1.3.1
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ────────────────────────────────────────── tidyverse_conflicts() ──
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ──────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">filter()</span> masks <span class=" -Color -Color-Blue">stats</span>::filter()
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">lag()</span>    masks <span class=" -Color -Color-Blue">stats</span>::lag()
 <span class=" -Color -Color-Cyan">ℹ</span> Use the conflicted package (<span class=" -Color -Color-Blue">&lt;http://conflicted.r-lib.org/&gt;</span>) to force all conflicts to become errors
@@ -466,7 +520,7 @@ vs. skewed) and <strong>outliers</strong>.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/f31e4ca58963e5faa0d6b7897ffc3ce28e305f9b71bede7c7a5e4dc6c2990cbc.png" src="../_images/f31e4ca58963e5faa0d6b7897ffc3ce28e305f9b71bede7c7a5e4dc6c2990cbc.png" />
+<img alt="../_images/9350df4161f25f48ca9182d4414895f7ce286b5e46bfedeb0689f107258eedb7.png" src="../_images/9350df4161f25f48ca9182d4414895f7ce286b5e46bfedeb0689f107258eedb7.png" />
 </div>
 </div>
 </section>
@@ -505,7 +559,7 @@ vs. skewed) and <strong>outliers</strong>.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ce11e24685750ab48a37ad8c6c87d97ff7693bbfc6398711a77c2664459709b4.png" src="../_images/ce11e24685750ab48a37ad8c6c87d97ff7693bbfc6398711a77c2664459709b4.png" />
+<img alt="../_images/29a14d07cc8ee47db656fbf8722055eab05e021147e9d85e2976b1f6643ce5ce.png" src="../_images/29a14d07cc8ee47db656fbf8722055eab05e021147e9d85e2976b1f6643ce5ce.png" />
 </div>
 </div>
 </section>
@@ -539,7 +593,7 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">200</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">8</span>
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">────────────────────────────────────────────────────────</span>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">──────────────────────────────────────────────────────────────────────────────────────────</span>
 <span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
 <span class=" -Color -Color-Red">chr</span> (7): name, channel_Info, Category, Posts, Followers, Avg. Likes, Eng Rate
 <span class=" -Color -Color-Green">dbl</span> (1): rank
@@ -561,7 +615,7 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/8557cde125bf2c98988c1c8e11bad675fb685111efae4f08cc51d72350eebb03.png" src="../_images/8557cde125bf2c98988c1c8e11bad675fb685111efae4f08cc51d72350eebb03.png" />
+<img alt="../_images/3fc0e9143c59830cd1bcf6ef4b8326b6f2c4d1ad2d72150f37490ca435f4ed59.png" src="../_images/3fc0e9143c59830cd1bcf6ef4b8326b6f2c4d1ad2d72150f37490ca435f4ed59.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -590,7 +644,7 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/9bc026871f5fb6a8b59ddd37ffffabcec141864f41504c4bb40800a3fdeebb98.png" src="../_images/9bc026871f5fb6a8b59ddd37ffffabcec141864f41504c4bb40800a3fdeebb98.png" />
+<img alt="../_images/c9b502c15a06a66e894fb57304b32a33f31ef7e31ef8ec9cccc585862c9501a6.png" src="../_images/c9b502c15a06a66e894fb57304b32a33f31ef7e31ef8ec9cccc585862c9501a6.png" />
 </div>
 </div>
 <p>The red and blue points may be potential outliers. The red point represents the account with the highest number of posts (101800). Although this account has the highest number of posts, they do not have that many followers. Also, the blue point represents the account with the highest number of followers (Instagram), which doesn’t have that many posts, but has the most followers.</p>
@@ -608,7 +662,7 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/4d80adbb60615d31481febfcd91c9aadcac3ba7eb36dbbb76f1b7912709aef96.png" src="../_images/4d80adbb60615d31481febfcd91c9aadcac3ba7eb36dbbb76f1b7912709aef96.png" />
+<img alt="../_images/32c96ba123cfbc30157450948a7e808f0e8facb3563db7445d1c63dca9da7fdd.png" src="../_images/32c96ba123cfbc30157450948a7e808f0e8facb3563db7445d1c63dca9da7fdd.png" />
 </div>
 </div>
 </section>
@@ -671,7 +725,7 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/3a47bc6421378e9bbe5db8d36e22699e438c4a1cd25edf27c36ff8609582d19b.png" src="../_images/3a47bc6421378e9bbe5db8d36e22699e438c4a1cd25edf27c36ff8609582d19b.png" />
+<img alt="../_images/744e35d4d551af8557f4434b2352ab18b2b01cd726ad1e773301a0104acaf852.png" src="../_images/744e35d4d551af8557f4434b2352ab18b2b01cd726ad1e773301a0104acaf852.png" />
 </div>
 </div>
 <p>When looking at the spread of a distribution, we can use the standard deviation, interquartile range (IQR) or range (difference between maximum and minimum observation).</p>
@@ -721,7 +775,7 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/52408fa4a459e4fc5eb79f984607c333f6140962a6957257078608a937455b05.png" src="../_images/52408fa4a459e4fc5eb79f984607c333f6140962a6957257078608a937455b05.png" />
+<img alt="../_images/9a637adc197b1e39c9cd15f52820841aae779e31f2b205c085e8fc5fdf7faf2b.png" src="../_images/9a637adc197b1e39c9cd15f52820841aae779e31f2b205c085e8fc5fdf7faf2b.png" />
 </div>
 </div>
 </section>
@@ -739,7 +793,10 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
 <p><strong>Why?:</strong> It’s often expensive or not possible to measure the whole population.</p>
 <section id="e-g-we-want-to-know-the-average-width-of-a-species-of-sea-star">
 <h3>E.g.: we want to know the average width of a species of sea star<a class="headerlink" href="#e-g-we-want-to-know-the-average-width-of-a-species-of-sea-star" title="Permalink to this heading">#</a></h3>
-<img src="img/intro-inf-1.png" width=1100><img src="img/intro-inf-2.png" width=1100><img src="img/intro-inf-4.png" width=1100><ul class="simple">
+<a class="reference internal image-reference" href="../_images/intro-inf-11.png"><img alt="../_images/intro-inf-11.png" src="../_images/intro-inf-11.png" style="width: 1100px;" /></a>
+<a class="reference internal image-reference" href="../_images/intro-inf-21.png"><img alt="../_images/intro-inf-21.png" src="../_images/intro-inf-21.png" style="width: 1100px;" /></a>
+<a class="reference internal image-reference" href="../_images/intro-inf-41.png"><img alt="../_images/intro-inf-41.png" src="../_images/intro-inf-41.png" style="width: 1100px;" /></a>
+<ul class="simple">
 <li><p><strong>Population:</strong> collection of all possible observations + their frequency/count</p>
 <ul>
 <li><p>e.g. the widths of the entire population of sea stars</p></li>
@@ -762,11 +819,13 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
 <section id="examples-of-inference-in-the-wild-market-assessment">
 <h2>Examples of inference in the wild: market assessment<a class="headerlink" href="#examples-of-inference-in-the-wild-market-assessment" title="Permalink to this heading">#</a></h2>
 <p>What proportion of undergraduate students have an iphone?</p>
-<img img align="left" src="https://media.wired.com/photos/5b22c5c4b878a15e9ce80d92/master/w_582,c_limit/iphonex-TA.jpg" width="500"/></section>
+<a class="reference internal image-reference" href="https://media.wired.com/photos/5b22c5c4b878a15e9ce80d92/master/w_582,c_limit/iphonex-TA.jpg"><img alt="https://media.wired.com/photos/5b22c5c4b878a15e9ce80d92/master/w_582,c_limit/iphonex-TA.jpg" class="align-left" src="https://media.wired.com/photos/5b22c5c4b878a15e9ce80d92/master/w_582,c_limit/iphonex-TA.jpg" style="width: 500px;" /></a>
+</section>
 <section id="examples-of-inference-in-the-wild-a-b-testing">
 <h2>Examples of inference in the wild: A/B testing<a class="headerlink" href="#examples-of-inference-in-the-wild-a-b-testing" title="Permalink to this heading">#</a></h2>
 <p>Which of the 2 website designs will lead to more customer engagement (measured by click-through-rate, for example)?</p>
-<img img align="left" src="https://images.ctfassets.net/zw48pl1isxmc/4QYN7VubAAgEAGs0EuWguw/165749ef2fa01c1c004b6a167fd27835/ab-testing.png" width="600"/></section>
+<a class="reference internal image-reference" href="https://images.ctfassets.net/zw48pl1isxmc/4QYN7VubAAgEAGs0EuWguw/165749ef2fa01c1c004b6a167fd27835/ab-testing.png"><img alt="https://images.ctfassets.net/zw48pl1isxmc/4QYN7VubAAgEAGs0EuWguw/165749ef2fa01c1c004b6a167fd27835/ab-testing.png" class="align-left" src="https://images.ctfassets.net/zw48pl1isxmc/4QYN7VubAAgEAGs0EuWguw/165749ef2fa01c1c004b6a167fd27835/ab-testing.png" style="width: 600px;" /></a>
+</section>
 <section id="sampling">
 <h2>2.2 Sampling<a class="headerlink" href="#sampling" title="Permalink to this heading">#</a></h2>
 <p>When we are collecting a sample, we aim for that sample to be representative of the population of interest.</p>
@@ -833,12 +892,13 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
 <p>A particular inferential problem where we try to <em>estimate a quantitative property</em> of the population</p>
 <p>This quantitative property is called a <strong>population parameter</strong></p>
 <p><strong>Question:</strong> What <em>proportion</em> (a quantitative population parameter!) of UBC  undergrads have an iphone?
-<img align="left" src="img/sampling.001.jpeg" width="700"/></p>
+<a class="reference internal" href="../_images/sampling.0011.jpeg"><img alt="../_images/sampling.0011.jpeg" class="align-left" src="../_images/sampling.0011.jpeg" style="width: 700px;" /></a></p>
 <section id="id5">
 <h3>Estimation<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
 <p>Step 1: randomly select a subset (a <em>sample</em>) and ask them if they have an iPhone</p>
 <p>Step 2: calculate the proportion in our sample (a <em>statistic</em> or <em>point estimate</em>) and use it as an estimate of the true population proportion.</p>
-<img align="left" src="img/sampling.002.jpeg" width="700"/></section>
+<a class="reference internal image-reference" href="../_images/sampling.0021.jpeg"><img alt="../_images/sampling.0021.jpeg" class="align-left" src="../_images/sampling.0021.jpeg" style="width: 700px;" /></a>
+</section>
 <section id="id6">
 <h3>Exercise<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
 <p>In groups, take a “population” of candies from the front of the room.</p>
@@ -1038,7 +1098,7 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/e413b07a01104ecae004d65a1100924afa44355e4ea904079b33a21e17223e51.png" src="../_images/e413b07a01104ecae004d65a1100924afa44355e4ea904079b33a21e17223e51.png" />
+<img alt="../_images/faf1641859896f10d941b8b4fa296a07fc4f91ab0d8e0bbe92be04bb0414f8c7.png" src="../_images/faf1641859896f10d941b8b4fa296a07fc4f91ab0d8e0bbe92be04bb0414f8c7.png" />
 </div>
 </div>
 <p>Ok, so we noticed that there is variability from sample to sample. But what if we were to increase the sample size from <span class="math notranslate nohighlight">\(40\)</span> to <span class="math notranslate nohighlight">\(400\)</span>? What do we think will happen?</p>
@@ -1056,7 +1116,7 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/0d024bc3a251a72bb9e8cb59c59bd07a07aac27da9717a2cf76a992a2f25425e.png" src="../_images/0d024bc3a251a72bb9e8cb59c59bd07a07aac27da9717a2cf76a992a2f25425e.png" />
+<img alt="../_images/e2256f0bc3c525271dfc813aca935f0d31993e370fe50c4e43ed1f17b2332c4a.png" src="../_images/e2256f0bc3c525271dfc813aca935f0d31993e370fe50c4e43ed1f17b2332c4a.png" />
 </div>
 </div>
 <p>To summarize:</p>
@@ -1211,7 +1271,7 @@ By Katie Burak
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2024.
       <br/>
     
   </p>

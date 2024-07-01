@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Day 1 &#8212; Girls in Data Science</title>
+    <title>Day 1 - Girls in Data Science &#8212; Girls in Data Science</title>
   
   
   
@@ -53,7 +53,6 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -149,10 +148,26 @@ const thebe_selector_output = ".output, .cell_output"
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lectures</span></p>
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../README.html">
+                    Girls in Data Science Summer Camp
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../notes/day1.html">Day 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../notes/day2.html">Day 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/day1.html">Day 1 - Girls in Data Science</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../notes/day2.html">Day 2 - Girls in Data Science</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../notes/day3.html">Day 3 - Girls in Data Science</a></li>
+
+
 </ul>
 
     </div>
@@ -194,6 +209,53 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="header-article-item">
 
 <div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/katieburak/girls-in-DS" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/katieburak/girls-in-DS/issues/new?title=Issue%20on%20page%20%2Fdocs/notes/day1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
 
 
 
@@ -289,7 +351,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Day 1</h1>
+    <h1>Day 1 - Girls in Data Science</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -299,51 +361,53 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Day 1 - Girls in Data Science</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#team-introduction">Team Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ice-breaker-activity">Ice Breaker Activity</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#day-1-learning-objectives">Day 1 Learning Objectives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#we-ve-got-a-lot-to-do-let-s-get-started">We’ve got a lot to do - let’s get started!</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started-with-jupyter-r">1. Getting started with Jupyter &amp; R</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#text-cells">1.1. Text Cells</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-cells">1.2. Code Cells</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-jupyter-notebooks">1.3. Writing Jupyter Notebooks</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#day-1-learning-objectives">Day 1 Learning Objectives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#we-ve-got-a-lot-to-do-let-s-get-started">We’ve got a lot to do - let’s get started!</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">1.4. Comments</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#errors">1.5. Errors</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-your-work">1.6 Saving your work</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numbers">1.7 Numbers</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic">1.8 Arithmetic</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#names">1.9 Names</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started-with-jupyter-r">1. Getting started with Jupyter &amp; R</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#text-cells">1.1. Text Cells</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-cells">1.2. Code Cells</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-jupyter-notebooks">1.3. Writing Jupyter Notebooks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">1.4. Comments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#errors">1.5. Errors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-your-work">1.6 Saving your work</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numbers">1.7 Numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic">1.8 Arithmetic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#names">1.9 Names</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Exercise</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">1.10 Functions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#packages">1.11 Packages</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#looking-for-help">1.12 Looking for Help</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">1.10 Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#packages">1.11 Packages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#looking-for-help">1.12 Looking for Help</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-data-science">2. Introduction to Data Science</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-data-science-exactly">What <em>is</em> data science exactly?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-are-we-using-programming-languages-to-do-data-analysis">Why are we using programming languages to do data analysis?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-in-tabular-data">2.1 Reading in Tabular Data</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-importing-data">Loading/importing data</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#different-ways-to-locate-a-file-dataset">Different ways to locate a file / dataset</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-data-science">2. Introduction to Data Science</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-data-science-exactly">What <em>is</em> data science exactly?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-are-we-using-programming-languages-to-do-data-analysis">Why are we using programming languages to do data analysis?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-in-tabular-data">2.1 Reading in Tabular Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-importing-data">Loading/importing data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#different-ways-to-locate-a-file-dataset">Different ways to locate a file / dataset</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-wrangling">2.2 Data Wrangling!</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-tidy-data">What is Tidy Data?</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#true-or-false-the-instagram-data-set-is-tidy">True or False: The Instagram data set is tidy</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-wrangling">2.2 Data Wrangling!</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-tidy-data">What is Tidy Data?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#true-or-false-the-instagram-data-set-is-tidy">True or False: The Instagram data set is tidy</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-for-tidying-and-wrangling-data">Tools for tidying and wrangling data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mutate">2.1.1 Mutate</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select">2.1.2 Select</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filter">2.1.3 Filter</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#many-operations-in-the-same-sequence">Many operations in the same sequence</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#slice">2.1.4 Slice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pipe-operator">2.1.4 Pipe Operator</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-save-intermediate-objects">(A) Save intermediate objects</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#disadvantages">Disadvantages:</a></li>
 </ul>
@@ -356,21 +420,23 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#advantage">Advantage:</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-and-summarizing-via-group-by-summarize">2.1.4 Grouping and summarizing via <code class="docutils literal notranslate"><span class="pre">group_by</span></code> + <code class="docutils literal notranslate"><span class="pre">summarize</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-and-summarizing-via-group-by-summarize">2.1.5 Grouping and summarizing via <code class="docutils literal notranslate"><span class="pre">group_by</span></code> + <code class="docutils literal notranslate"><span class="pre">summarize</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Exercise</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-visualization">3. Data Visualization</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#designing-a-visualization-ask-a-question-then-answer-it">Designing a visualization: ask a question, then answer it</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-visualizations-in-r">Creating visualizations in R</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-variables">Types of variables</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Exercise</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#histograms">Histograms</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scatter-plots">Scatter Plots</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bar-plots">Bar Plots</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-few-rules-of-thumb-for-creating-effective-visualizations">A few rules of thumb for creating effective visualizations</a><ul class="nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-visualization">3. Data Visualization</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#designing-a-visualization-ask-a-question-then-answer-it">Designing a visualization: ask a question, then answer it</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-visualizations-in-r">3.1 Creating visualizations in R</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-variables">Types of variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Exercise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#histograms">3.1.1 Histograms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scatter-plots">3.1.2 Scatter Plots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bar-plots">3.1.3 Bar Plots</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rules-of-thumb">3.2 Rules of Thumb</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rule-of-thumb-no-tables-pie-charts-3d">Rule of Thumb: No tables / pie charts / 3D</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Rule of Thumb: No tables / pie charts / 3D</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rule-of-thumb-use-simple-colourblind-friendly-colour-palettes">Rule of Thumb: Use simple, colourblind-friendly colour palettes</a></li>
@@ -379,6 +445,9 @@ document.write(`
 </ul>
 </li>
 </ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -389,9 +458,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="day-1">
-<h1>Day 1<a class="headerlink" href="#day-1" title="Permalink to this heading">#</a></h1>
-<img src="img/programming_women.jpg" width=800>
+  <section class="tex2jax_ignore mathjax_ignore" id="day-1-girls-in-data-science">
+<h1>Day 1 - Girls in Data Science<a class="headerlink" href="#day-1-girls-in-data-science" title="Permalink to this heading">#</a></h1>
+<a class="reference internal image-reference" href="../../_images/programming_women.jpg"><img alt="../../_images/programming_women.jpg" src="../../_images/programming_women.jpg" style="width: 800px;" /></a>
 <p><em>Photos/Images by #WOCinTech/#WOCinTech Chat (<a class="reference external" href="https://creativecommons.org/licenses/by/2.0/">CC-BY</a>)</em></p>
 <section id="team-introduction">
 <h2>Team Introduction<a class="headerlink" href="#team-introduction" title="Permalink to this heading">#</a></h2>
@@ -400,7 +469,8 @@ document.write(`
 <li><p>Data Science Mentors:</p></li>
 </ul>
 <p>Thank you to our sponsors!</p>
-<p><img src="img/sponsor1.png" width=100> <img src="img/sponsor2.png" width=100> <img src="img/sponsor3.png" width=100></p>
+<p><a class="reference internal" href="../../_images/sponsor1.png"><img alt="../../_images/sponsor1.png" src="../../_images/sponsor1.png" style="width: 100px;" /></a> <a class="reference internal" href="../../_images/sponsor2.png"><img alt="../../_images/sponsor2.png" src="../../_images/sponsor2.png" style="width: 100px;" /></a> <a class="reference internal" href="../../_images/sponsor3.png"><img alt="../../_images/sponsor3.png" src="../../_images/sponsor3.png" style="width: 100px;" /></a></p>
+<p><img alt="" src="https://media.pims.math.ca/logos/webhorizfullsmall.png" /></p>
 </section>
 <section id="ice-breaker-activity">
 <h2>Ice Breaker Activity<a class="headerlink" href="#ice-breaker-activity" title="Permalink to this heading">#</a></h2>
@@ -417,21 +487,23 @@ document.write(`
 <li><p>Learn the essentials of the R programming language</p></li>
 <li><p>Basics of data manipulation and data visualization in R</p></li>
 </ul>
-</section>
 <section id="we-ve-got-a-lot-to-do-let-s-get-started">
-<h2>We’ve got a lot to do - let’s get started!<a class="headerlink" href="#we-ve-got-a-lot-to-do-let-s-get-started" title="Permalink to this heading">#</a></h2>
-<img src="https://media.giphy.com/media/6onMzNPjtFeCI/giphy.gif" width="800"></section>
-<section id="getting-started-with-jupyter-r">
-<h2>1. Getting started with Jupyter &amp; R<a class="headerlink" href="#getting-started-with-jupyter-r" title="Permalink to this heading">#</a></h2>
+<h3>We’ve got a lot to do - let’s get started!<a class="headerlink" href="#we-ve-got-a-lot-to-do-let-s-get-started" title="Permalink to this heading">#</a></h3>
+<a class="reference internal image-reference" href="https://media.giphy.com/media/6onMzNPjtFeCI/giphy.gif"><img alt="https://media.giphy.com/media/6onMzNPjtFeCI/giphy.gif" src="https://media.giphy.com/media/6onMzNPjtFeCI/giphy.gif" style="width: 800px;" /></a>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="getting-started-with-jupyter-r">
+<h1>1. Getting started with Jupyter &amp; R<a class="headerlink" href="#getting-started-with-jupyter-r" title="Permalink to this heading">#</a></h1>
 <p>This webpage is called a Jupyter notebook. A notebook is a place to write computer code for analysis, view the results of the analysis, as well as to narrate the analysis with rich formatted text.</p>
 <section id="text-cells">
-<h3>1.1. Text Cells<a class="headerlink" href="#text-cells" title="Permalink to this heading">#</a></h3>
+<h2>1.1. Text Cells<a class="headerlink" href="#text-cells" title="Permalink to this heading">#</a></h2>
 <p>In a notebook, each rectangle containing text or code is called a <em>cell</em>.</p>
 <p>Text cells (like this one) can be edited by double-clicking on them. They’re written in a simple format called <a class="reference external" href="http://daringfireball.net/projects/markdown/syntax">Markdown</a> to add formatting and section headings.</p>
 <p>After you edit a text cell, click the “run cell” button at the top that looks like ▶ to confirm any changes. (Try not to delete the instructions of the lab.)</p>
 </section>
 <section id="code-cells">
-<h3>1.2. Code Cells<a class="headerlink" href="#code-cells" title="Permalink to this heading">#</a></h3>
+<h2>1.2. Code Cells<a class="headerlink" href="#code-cells" title="Permalink to this heading">#</a></h2>
 <p>Other cells contain code in the R language. Running a code cell will execute all of the code it contains.</p>
 <p>To run the code in a cell, first click on that cell to activate it.  It will be highlighted with a blue rectangle to the left of it when activated.  Next, either press Run ▶ or hold down the <code class="docutils literal notranslate"><span class="pre">shift</span></code> key and press <code class="docutils literal notranslate"><span class="pre">return</span></code> or <code class="docutils literal notranslate"><span class="pre">enter</span></code>.
 print(“Hello, World!”)
@@ -467,11 +539,11 @@ Try running the next cell:</p>
 </div>
 </section>
 <section id="writing-jupyter-notebooks">
-<h3>1.3. Writing Jupyter Notebooks<a class="headerlink" href="#writing-jupyter-notebooks" title="Permalink to this heading">#</a></h3>
+<h2>1.3. Writing Jupyter Notebooks<a class="headerlink" href="#writing-jupyter-notebooks" title="Permalink to this heading">#</a></h2>
 <p>You can use Jupyter notebooks for your own projects or documents.  When you make your own notebook, you’ll need to create your own cells for text and code.</p>
 <p>To add a cell, click the + button in the menu bar of this tab.  The newly created cell will start out as a code cell.  You can change it to a text cell by clicking inside it so it’s highlighted, clicking the drop-down box next to the restart and run all button (⏩) in the menu bar of this tab, and changing it from “Code” to “Markdown”.</p>
 <section id="exercise">
-<h4>Exercise<a class="headerlink" href="#exercise" title="Permalink to this heading">#</a></h4>
+<h3>Exercise<a class="headerlink" href="#exercise" title="Permalink to this heading">#</a></h3>
 <p>Add a code cell below this one.  Write code in it that prints out:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>My name is ____!
 </pre></div>
@@ -481,7 +553,7 @@ Try running the next cell:</p>
 </section>
 </section>
 <section id="comments">
-<h3>1.4. Comments<a class="headerlink" href="#comments" title="Permalink to this heading">#</a></h3>
+<h2>1.4. Comments<a class="headerlink" href="#comments" title="Permalink to this heading">#</a></h2>
 <p>Below you see lines like this in code cells:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Test cell; please do not change!
 </pre></div>
@@ -505,7 +577,7 @@ Try running the next cell:</p>
 </div>
 </section>
 <section id="errors">
-<h3>1.5. Errors<a class="headerlink" href="#errors" title="Permalink to this heading">#</a></h3>
+<h2>1.5. Errors<a class="headerlink" href="#errors" title="Permalink to this heading">#</a></h2>
 <p>R is a language, and like natural human languages, it has rules.  It differs from natural language in two important ways:</p>
 <ol class="arabic simple">
 <li><p>The rules are <em>simple</em>.  You can learn most of them in a few weeks and gain reasonable proficiency with the language in a semester.</p></li>
@@ -521,17 +593,17 @@ Try running the next cell:</p>
 </div>
 </div>
 </div>
-<p><img alt="ws1_error_image.png" src="../../_images/ws1_error_image1.png" /></p>
+<p><img alt="ws1_error_image.png" src="../../_images/ws1_error_image.png" /></p>
 <p>There’s a lot of terminology in programming languages, but you don’t need to know it all in order to program effectively. Even though the error message can seem cryptic, if you read it carefully you’ll often find hints as to what went wrong. For example, above, you’ll see the message <code class="docutils literal notranslate"><span class="pre">unexpected</span> <span class="pre">end</span> <span class="pre">of</span> <span class="pre">input</span></code> (among a lot of other technical jargon). In other words, R reached the end of the line of code, and wasn’t expecting to reach the end – it thinks there is still something missing!</p>
 <p>Of course, even if you do your best to interpret the error message, sometimes you may get stuck figuring out what went wrong and how to fix it. In that case, ask a neighbor or a TA for help.</p>
 <p>Try to fix the code above so that you can run the cell and see the intended message instead of an error.</p>
 </section>
 <section id="saving-your-work">
-<h3>1.6 Saving your work<a class="headerlink" href="#saving-your-work" title="Permalink to this heading">#</a></h3>
+<h2>1.6 Saving your work<a class="headerlink" href="#saving-your-work" title="Permalink to this heading">#</a></h2>
 <p>Its important to save your work often so you don’t lose your progress! At the top of the screen, go to the <strong>File</strong> menu then <strong>Save Notebook</strong>. Also, there are keyboard shorcuts for saving your work too: control + s on Windows, or command + s on Mac. Once you’ve saved your work, you will see a message at the bottom of the screen that says <strong>Saving completed</strong>.</p>
 </section>
 <section id="numbers">
-<h3>1.7 Numbers<a class="headerlink" href="#numbers" title="Permalink to this heading">#</a></h3>
+<h2>1.7 Numbers<a class="headerlink" href="#numbers" title="Permalink to this heading">#</a></h2>
 <p>Quantitative information arises everywhere in data science. In addition to representing commands to print out lines, our R code can represent numbers and methods of combining numbers. The expression <code class="docutils literal notranslate"><span class="pre">3.2500</span></code> evaluates to the number 3.25. (Run the cell and see.)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -557,7 +629,7 @@ Try running the next cell:</p>
 <p>Above, you should see that the three numbers (2, 3, and 4) are printed out. In R, simply inputting numbers and running the cell will generate all the numbers that you listed.</p>
 </section>
 <section id="arithmetic">
-<h3>1.8 Arithmetic<a class="headerlink" href="#arithmetic" title="Permalink to this heading">#</a></h3>
+<h2>1.8 Arithmetic<a class="headerlink" href="#arithmetic" title="Permalink to this heading">#</a></h2>
 <p>The line in the next cell performs some mathemtical operations. Run them!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -589,7 +661,7 @@ Try running the next cell:</p>
 <p>Many basic arithmetic operations are built in to R.  <a class="reference external" href="https://www.statmethods.net/management/operators.html">This webpage</a> describes all the arithmetic operators used in the course.  You can refer back to this webpage as you need throughout the term.</p>
 </section>
 <section id="names">
-<h3>1.9 Names<a class="headerlink" href="#names" title="Permalink to this heading">#</a></h3>
+<h2>1.9 Names<a class="headerlink" href="#names" title="Permalink to this heading">#</a></h2>
 <p>In natural language, we have terminology that lets us quickly reference very complicated concepts.  We don’t say, “That’s a large mammal with brown fur and sharp teeth!”  Instead, we just say, “Bear!”</p>
 <p>Similarly, an effective strategy for writing code is to define names for data as we compute it, like a lawyer would define terms for complex ideas at the start of a legal document to simplify the rest of the writing.</p>
 <p>In R, we do this with <em>objects</em>. An object has a name on the left side of an <code class="docutils literal notranslate"><span class="pre">&lt;-</span></code> sign and an expression to be evaluated on the right.</p>
@@ -611,6 +683,9 @@ Try running the next cell:</p>
 <div class="cell_output docutils container">
 <div class="output text_html">10</div></div>
 </div>
+<blockquote>
+<div><p>Note: You can also use an <code class="docutils literal notranslate"><span class="pre">=</span></code> sign for assignment</p>
+</div></blockquote>
 <p>When naming objects in R there are some rules:</p>
 <ol class="arabic simple">
 <li><p>Names in R can have letters (upper- and lower-case letters are both okay and count as different letters e.g. “Answer” and “answer” will be treated as different objects), underscores, dots, and numbers.</p></li>
@@ -634,7 +709,6 @@ Try running the next cell:</p>
 <p>Another common pattern is that a series of lines in a single cell will build up a complex computation in stages, naming the intermediate results.</p>
 <p><strong>However</strong>, names are very important for making your code <em>readable</em> to yourself and others.  The cell above is shorter, but it’s totally useless without an explanation of what it does.</p>
 <p>There is also cultural style associated with different programming languages. In the modern R style, object names should use only lowercase letters, numbers, and <code class="docutils literal notranslate"><span class="pre">_</span></code>. Underscores (<code class="docutils literal notranslate"><span class="pre">_</span></code>) are typically used to separate words within a name (<em>e.g.</em>, <code class="docutils literal notranslate"><span class="pre">answer_one</span></code>).</p>
-</section>
 <section id="id1">
 <h3>Exercise<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <p>Question: How old will you be in 2050?</p>
@@ -672,8 +746,9 @@ Try running the next cell:</p>
 <div class="output text_html">23</div></div>
 </div>
 <p>Try to use the <code class="docutils literal notranslate"><span class="pre">min</span></code> function now to find the smallest number!</p>
+</section>
 <section id="packages">
-<h3>1.11 Packages<a class="headerlink" href="#packages" title="Permalink to this heading">#</a></h3>
+<h2>1.11 Packages<a class="headerlink" href="#packages" title="Permalink to this heading">#</a></h2>
 <p>R has many built-in functions, but we can also use functions that are stored within packages created by other R users. We are going to use a package, called <code class="docutils literal notranslate"><span class="pre">tidyverse</span></code>, to load, modify and plot data.
 This package has already been installed for you. Later in the course you will learn how to install packages so you are free to bring in other tools as you need them for your data analysis.</p>
 <p>To use the functions from a package you first need to load it using the <code class="docutils literal notranslate"><span class="pre">library</span></code> function. This needs to be done once per notebook (and a good rule of thumb is to do this at the very top of your notebook so it is easy to see what packages your R code depends on).</p>
@@ -684,15 +759,15 @@ This package has already been installed for you. Later in the course you will le
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ─────────────────────────────────────────── tidyverse 2.0.0 ──
-<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dplyr    </span> 1.1.3     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">readr    </span> 2.1.4
-<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">forcats  </span> 1.0.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">stringr  </span> 1.5.0
-<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">ggplot2  </span> 3.4.4     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tibble   </span> 3.2.1
-<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">lubridate</span> 1.9.2     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tidyr    </span> 1.3.0
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ────────────────────────────────────────────────────────── tidyverse 2.0.0 ──
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dplyr    </span> 1.1.4     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">readr    </span> 2.1.5
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">forcats  </span> 1.0.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">stringr  </span> 1.5.1
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">ggplot2  </span> 3.5.1     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tibble   </span> 3.2.1
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">lubridate</span> 1.9.3     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tidyr    </span> 1.3.1
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">purrr    </span> 1.0.2     
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ───────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ──────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">filter()</span> masks <span class=" -Color -Color-Blue">stats</span>::filter()
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">lag()</span>    masks <span class=" -Color -Color-Blue">stats</span>::lag()
 <span class=" -Color -Color-Cyan">ℹ</span> Use the conflicted package (<span class=" -Color -Color-Blue">&lt;http://conflicted.r-lib.org/&gt;</span>) to force all conflicts to become errors
@@ -705,7 +780,7 @@ This package has already been installed for you. Later in the course you will le
 </div></blockquote>
 </section>
 <section id="looking-for-help">
-<h3>1.12 Looking for Help<a class="headerlink" href="#looking-for-help" title="Permalink to this heading">#</a></h3>
+<h2>1.12 Looking for Help<a class="headerlink" href="#looking-for-help" title="Permalink to this heading">#</a></h2>
 <p>No one, even experienced, professional programmers remember what every function does, nor do they remember every possible function argument/option. So both experienced and new programmers (like you!) need to look things up, A LOT!</p>
 <p>One of the most efficient places to look for help on how a function works is the <strong>R help files</strong>. Let’s say we wanted to pull up the help file for the <code class="docutils literal notranslate"><span class="pre">toupper()</span></code> function. We can do this by typing a question mark in front of the function we want to know more about. Remove the hashtag and run the cell below to find out more about <code class="docutils literal notranslate"><span class="pre">toupper()</span></code>.</p>
 <div class="cell docutils container">
@@ -724,10 +799,10 @@ This package has already been installed for you. Later in the course you will le
 <p>Beyond the R help files there are many resources that you can use to find help. <a class="reference external" href="https://stackoverflow.com/">Stack overflow</a>, an online forum, is a great place to go and ask questions such as how to perform a complicated task in R or why a specific error message is popping up. Oftentimes, a previous user will have already asked your question of interest and received helpful advice from fellow R users.</p>
 </section>
 </section>
-<section id="introduction-to-data-science">
-<h2>2. Introduction to Data Science<a class="headerlink" href="#introduction-to-data-science" title="Permalink to this heading">#</a></h2>
+<section class="tex2jax_ignore mathjax_ignore" id="introduction-to-data-science">
+<h1>2. Introduction to Data Science<a class="headerlink" href="#introduction-to-data-science" title="Permalink to this heading">#</a></h1>
 <section id="what-is-data-science-exactly">
-<h3>What <em>is</em> data science exactly?<a class="headerlink" href="#what-is-data-science-exactly" title="Permalink to this heading">#</a></h3>
+<h2>What <em>is</em> data science exactly?<a class="headerlink" href="#what-is-data-science-exactly" title="Permalink to this heading">#</a></h2>
 <p><strong>Data science</strong> is the use of <em>reproducible</em> and <em>auditable</em> processes to obtain value (i.e., insight) from data.</p>
 <p>Every good data analysis begins with a question—like the above—that you aim to answer using data. As it turns out, there are actually a number of different types of question regarding data:</p>
 <ul class="simple">
@@ -751,7 +826,7 @@ This package has already been installed for you. Later in the course you will le
 </ul>
 </section>
 <section id="why-are-we-using-programming-languages-to-do-data-analysis">
-<h3>Why are we using programming languages to do data analysis?<a class="headerlink" href="#why-are-we-using-programming-languages-to-do-data-analysis" title="Permalink to this heading">#</a></h3>
+<h2>Why are we using programming languages to do data analysis?<a class="headerlink" href="#why-are-we-using-programming-languages-to-do-data-analysis" title="Permalink to this heading">#</a></h2>
 <p float="left">   
     <img src="https://www.r-project.org/Rlogo.png" width="150" />  VS. 
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/516px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png" width="150" />
@@ -770,10 +845,11 @@ This package has already been installed for you. Later in the course you will le
 <li><p>Using a programming language is like baking with a recipe:</p>
 <ul>
 <li><p>Ingredients = data</p>
-<img src ="https://www.thespruceeats.com/thmb/FYR4bNLrj304CEaE2aSGPYzygzY=/4680x2632/smart/filters:no_upscale()/greek-butter-cookies-1705307-step-01-5bfef717c9e77c00510e3bf9.jpg" style ="width:500px;"/>
+<img alt="https://www.thespruceeats.com/thmb/FYR4bNLrj304CEaE2aSGPYzygzY=/4680x2632/smart/filters:no_upscale()/greek-butter-cookies-1705307-step-01-5bfef717c9e77c00510e3bf9.jpg" src="https://www.thespruceeats.com/thmb/FYR4bNLrj304CEaE2aSGPYzygzY=/4680x2632/smart/filters:no_upscale()/greek-butter-cookies-1705307-step-01-5bfef717c9e77c00510e3bf9.jpg" />
 </li>
 <li><p>Recipe = code</p>
-  <img src ="https://cdn.pixabay.com/photo/2014/12/21/23/28/recipe-575434_640.png" style="width: 500px;"/></li>
+<img alt="https://cdn.pixabay.com/photo/2014/12/21/23/28/recipe-575434_640.png" src="https://cdn.pixabay.com/photo/2014/12/21/23/28/recipe-575434_640.png" />
+</li>
 </ul>
 </li>
 </ul>
@@ -784,9 +860,9 @@ This package has already been installed for you. Later in the course you will le
 <p><strong>In the data science workflow</strong> (source: Grolemund &amp; Wickham, <a class="reference external" href="https://r4ds.had.co.nz/">R for Data Science</a>)</p>
 <center><img src="https://d33wubrfki0l68.cloudfront.net/571b056757d68e6df81a3e3853f54d3c76ad6efc/32d37/diagrams/data-science.png" style="width: 700px"/></center></section>
 <section id="reading-in-tabular-data">
-<h3>2.1 Reading in Tabular Data<a class="headerlink" href="#reading-in-tabular-data" title="Permalink to this heading">#</a></h3>
+<h2>2.1 Reading in Tabular Data<a class="headerlink" href="#reading-in-tabular-data" title="Permalink to this heading">#</a></h2>
 <section id="loading-importing-data">
-<h4>Loading/importing data<a class="headerlink" href="#loading-importing-data" title="Permalink to this heading">#</a></h4>
+<h3>Loading/importing data<a class="headerlink" href="#loading-importing-data" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>4 most common ways to do this in Data Science</p>
 <ol class="arabic simple">
@@ -800,7 +876,7 @@ This package has already been installed for you. Later in the course you will le
 <p>It is important to read in data carefully and check results after! This will help reduce bugs and speed up your analyses down the road… think of it as tying your shoes before you run; not exciting, but if done wrong it will trip you up later!</p>
 </section>
 <section id="different-ways-to-locate-a-file-dataset">
-<h4>Different ways to locate a file / dataset<a class="headerlink" href="#different-ways-to-locate-a-file-dataset" title="Permalink to this heading">#</a></h4>
+<h3>Different ways to locate a file / dataset<a class="headerlink" href="#different-ways-to-locate-a-file-dataset" title="Permalink to this heading">#</a></h3>
 <p><strong>Local (on your computer)</strong></p>
 <ul>
 <li><p>An <em>absolute</em> path locates a file with respect to the “root” folder on a computer</p>
@@ -860,7 +936,7 @@ This package has already been installed for you. Later in the course you will le
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">200</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">8</span>
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">───────────────────────────────────────────────────────────────────────────</span>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">──────────────────────────────────────────────────────────────────────────────────────────</span>
 <span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
 <span class=" -Color -Color-Red">chr</span> (7): name, channel_Info, Category, Posts, Followers, Avg. Likes, Eng Rate
 <span class=" -Color -Color-Green">dbl</span> (1): rank
@@ -996,11 +1072,35 @@ This package has already been installed for you. Later in the course you will le
 <li><p>followers</p></li>
 <li><p>Eng Rate (calculates the account’s engagement rate by dividing the total number of likes and comments received by the total number of followers, expressed as a percentage).</p></li>
 </ul>
+<p>Without looking at the entire data set, we can find out attributes of our data such as the number of rows, columns, or overall dimension.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Number of rows</span>
+<span class="nf">nrow</span><span class="p">(</span><span class="n">insta</span><span class="p">)</span>
+
+<span class="c1"># Number of columns</span>
+<span class="nf">ncol</span><span class="p">(</span><span class="n">insta</span><span class="p">)</span>
+
+<span class="c1"># Dimension </span>
+
+<span class="nf">dim</span><span class="p">(</span><span class="n">insta</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">200</div><div class="output text_html">7</div><div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>200</li><li>7</li></ol>
+</div></div>
+</div>
 </section>
 </section>
 <section id="data-wrangling">
-<h3>2.2 Data Wrangling!<a class="headerlink" href="#data-wrangling" title="Permalink to this heading">#</a></h3>
-<img src="https://raw.githubusercontent.com/allisonhorst/stats-illustrations/main/rstats-artwork/dplyr_wrangling.png" width="700"/>
+<h2>2.2 Data Wrangling!<a class="headerlink" href="#data-wrangling" title="Permalink to this heading">#</a></h2>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/allisonhorst/stats-illustrations/main/rstats-artwork/dplyr_wrangling.png"><img alt="https://raw.githubusercontent.com/allisonhorst/stats-illustrations/main/rstats-artwork/dplyr_wrangling.png" src="https://raw.githubusercontent.com/allisonhorst/stats-illustrations/main/rstats-artwork/dplyr_wrangling.png" style="width: 700px;" /></a>
 <p><a class="reference external" href="https://github.com/allisonhorst/stats-illustrations/tree/main/rstats-artwork">The cartoon illustrations are by Allison Horst</a></p>
 <ul class="simple">
 <li><p>In the real world, when you get data, it’s usually <em>very messy</em></p>
@@ -1014,19 +1114,19 @@ This package has already been installed for you. Later in the course you will le
 <li><p>you need to make your data <strong>“tidy”</strong></p></li>
 </ul>
 <section id="what-is-tidy-data">
-<h4>What is Tidy Data?<a class="headerlink" href="#what-is-tidy-data" title="Permalink to this heading">#</a></h4>
-<img src="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/tidydata_1.jpg" width=800>
+<h3>What is Tidy Data?<a class="headerlink" href="#what-is-tidy-data" title="Permalink to this heading">#</a></h3>
+<a class="reference internal image-reference" href="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/tidydata_1.jpg"><img alt="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/tidydata_1.jpg" src="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/tidydata_1.jpg" style="width: 800px;" /></a>
 <p><em>Illustrations from the <a class="reference external" href="https://www.openscapes.org/">Openscapes</a> blog <a class="reference external" href="https://www.openscapes.org/blog/2020/10/12/tidy-data/">Tidy Data for reproducibility, efficiency, and collaboration</a> by Julia Lowndes and Allison Horst”</em></p>
-<img src="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/tidydata_2.jpg" width=800></section>
+<a class="reference internal image-reference" href="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/tidydata_2.jpg"><img alt="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/tidydata_2.jpg" src="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/tidydata_2.jpg" style="width: 800px;" /></a>
+</section>
 <section id="true-or-false-the-instagram-data-set-is-tidy">
-<h4>True or False: The Instagram data set is tidy<a class="headerlink" href="#true-or-false-the-instagram-data-set-is-tidy" title="Permalink to this heading">#</a></h4>
+<h3>True or False: The Instagram data set is tidy<a class="headerlink" href="#true-or-false-the-instagram-data-set-is-tidy" title="Permalink to this heading">#</a></h3>
 <p><strong>True!</strong></p>
 <ul class="simple">
 <li><p>each row corresponds to a single observation,</p></li>
 <li><p>each column corresponds to a single variable, and</p></li>
 <li><p>each cell (row, column pair) correspond to a single value</p></li>
 </ul>
-</section>
 </section>
 <section id="tools-for-tidying-and-wrangling-data">
 <h3>Tools for tidying and wrangling data<a class="headerlink" href="#tools-for-tidying-and-wrangling-data" title="Permalink to this heading">#</a></h3>
@@ -1044,79 +1144,24 @@ This package has already been installed for you. Later in the course you will le
 <p>e.g. convert engagement rate to a decimal</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">mutate</span><span class="p">(</span><span class="n">insta</span><span class="p">,</span><span class="w"> </span><span class="n">eng_rate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eng_rate</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">100</span><span class="p">)</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="nf">mutate</span><span class="p">(</span><span class="n">insta</span><span class="p">,</span><span class="w"> </span><span class="n">eng_rate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eng_rate</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">100</span><span class="p">))</span><span class="w"> </span><span class="c1"># head function returns only the first 6 rows</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><table class="dataframe">
-<caption>A tibble: 200 × 7</caption>
+<caption>A tibble: 6 × 7</caption>
 <thead>
 	<tr><th scope=col>rank</th><th scope=col>name</th><th scope=col>Channel</th><th scope=col>Category</th><th scope=col>Posts</th><th scope=col>Followers</th><th scope=col>eng_rate</th></tr>
 	<tr><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
 </thead>
 <tbody>
-	<tr><td> 1</td><td>instagram      </td><td>brand </td><td>photography             </td><td> 7300</td><td>580100000</td><td>0.001</td></tr>
-	<tr><td> 2</td><td><span style=white-space:pre-wrap>cristiano      </span></td><td><span style=white-space:pre-wrap>male  </span></td><td>Health, Sports &amp; Fitness</td><td> 3400</td><td>519900000</td><td>0.014</td></tr>
-	<tr><td> 3</td><td><span style=white-space:pre-wrap>leomessi       </span></td><td><span style=white-space:pre-wrap>male  </span></td><td>Health, Sports &amp; Fitness</td><td> 1000</td><td>403700000</td><td>0.017</td></tr>
-	<tr><td> 4</td><td>kyliejenner    </td><td>female</td><td>entertainment           </td><td> 7000</td><td>375900000</td><td>0.017</td></tr>
-	<tr><td> 5</td><td>selenagomez    </td><td>female</td><td>entertainment           </td><td> 1800</td><td>365300000</td><td>0.011</td></tr>
-	<tr><td> 6</td><td>therock        </td><td>male  </td><td>entertainment           </td><td> 7000</td><td>354300000</td><td>0.003</td></tr>
-	<tr><td> 7</td><td>arianagrande   </td><td>female</td><td>entertainment           </td><td> 5000</td><td>345600000</td><td>0.014</td></tr>
-	<tr><td> 8</td><td>kimkardashian  </td><td>female</td><td>entertainment           </td><td> 5700</td><td>336300000</td><td>0.009</td></tr>
-	<tr><td> 9</td><td>beyonce        </td><td>female</td><td>entertainment           </td><td> 2100</td><td>287300000</td><td>0.010</td></tr>
-	<tr><td>10</td><td>khloekardashian</td><td>female</td><td>entertainment           </td><td> 4200</td><td>283900000</td><td>0.005</td></tr>
-	<tr><td>11</td><td>justinbieber   </td><td>male  </td><td>entertainment           </td><td> 7400</td><td>270200000</td><td>0.005</td></tr>
-	<tr><td>12</td><td><span style=white-space:pre-wrap>nike           </span></td><td>brand </td><td>Health, Sports &amp; Fitness</td><td> 1000</td><td>257600000</td><td>0.001</td></tr>
-	<tr><td>13</td><td>taylorswift    </td><td>male  </td><td>entertainment           </td><td>  562</td><td>236200000</td><td>0.013</td></tr>
-	<tr><td>14</td><td>jlo            </td><td>female</td><td>entertainment           </td><td>  220</td><td>228800000</td><td>0.005</td></tr>
-	<tr><td>15</td><td>virat.kohli    </td><td>male  </td><td>Not Available           </td><td> 1500</td><td>228000000</td><td>0.012</td></tr>
-	<tr><td>16</td><td>kendalljenner  </td><td>male  </td><td>Not Available           </td><td>  731</td><td>223400000</td><td>0.023</td></tr>
-	<tr><td>17</td><td>natgeo         </td><td>brand </td><td>entertainment           </td><td>26700</td><td>220600000</td><td>0.001</td></tr>
-	<tr><td>18</td><td>nickiminaj     </td><td>female</td><td>entertainment           </td><td> 6400</td><td>206800000</td><td>0.008</td></tr>
-	<tr><td>19</td><td>kourtneykardash</td><td>female</td><td>entertainment           </td><td> 4400</td><td>206200000</td><td>0.008</td></tr>
-	<tr><td>20</td><td>kendalljenner  </td><td>male  </td><td>Not Available           </td><td>  824</td><td>204400000</td><td>0.025</td></tr>
-	<tr><td>21</td><td><span style=white-space:pre-wrap>neymarjr       </span></td><td><span style=white-space:pre-wrap>male  </span></td><td>Health, Sports &amp; Fitness</td><td> 5400</td><td>196200000</td><td>0.015</td></tr>
-	<tr><td>22</td><td>natgeo         </td><td>male  </td><td>Not Available           </td><td>26000</td><td>196100000</td><td>0.001</td></tr>
-	<tr><td>23</td><td>mileycyrus     </td><td>female</td><td>entertainment           </td><td> 1200</td><td>189900000</td><td>0.005</td></tr>
-	<tr><td>24</td><td>katyperry      </td><td>female</td><td>entertainment           </td><td> 2100</td><td>179800000</td><td>0.003</td></tr>
-	<tr><td>25</td><td>zendaya        </td><td>female</td><td>entertainment           </td><td> 3500</td><td>161800000</td><td>0.041</td></tr>
-	<tr><td>26</td><td>kevinhart4real </td><td>male  </td><td>entertainment           </td><td> 8400</td><td>157600000</td><td>0.002</td></tr>
-	<tr><td>27</td><td>iamcardib      </td><td>male  </td><td>entertainment           </td><td> 1600</td><td>145600000</td><td>0.018</td></tr>
-	<tr><td>28</td><td>ddlovato       </td><td>female</td><td>entertainment           </td><td>   68</td><td>143500000</td><td>0.003</td></tr>
-	<tr><td>29</td><td>badgalriri     </td><td>female</td><td>entertainment           </td><td> 4900</td><td>139200000</td><td>0.027</td></tr>
-	<tr><td>30</td><td><span style=white-space:pre-wrap>kingjames      </span></td><td><span style=white-space:pre-wrap>male  </span></td><td>Health, Sports &amp; Fitness</td><td> 2400</td><td>139200000</td><td>0.009</td></tr>
-	<tr><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td></tr>
-	<tr><td>171</td><td>parineetichopra   </td><td>female       </td><td>entertainment           </td><td> 1400</td><td>39200000</td><td>0.009</td></tr>
-	<tr><td>172</td><td>anushkasen0408    </td><td>female       </td><td>entertainment           </td><td> 5500</td><td>39000000</td><td>0.015</td></tr>
-	<tr><td>173</td><td>chrissyteigen     </td><td>female       </td><td>entertainment           </td><td> 5100</td><td>38600000</td><td>0.007</td></tr>
-	<tr><td>174</td><td>hm                </td><td>brand        </td><td>fashion                 </td><td> 7500</td><td>38500000</td><td>0.001</td></tr>
-	<tr><td>175</td><td>wesleysafadao     </td><td>male         </td><td>entertainment           </td><td> 9000</td><td>38300000</td><td>0.003</td></tr>
-	<tr><td>176</td><td>marvelstudios     </td><td>community    </td><td>entertainment           </td><td> 2800</td><td>38200000</td><td>0.013</td></tr>
-	<tr><td>177</td><td>houseofhighlights </td><td><span style=white-space:pre-wrap>male         </span></td><td>Health, Sports &amp; Fitness</td><td>26900</td><td>37900000</td><td>0.008</td></tr>
-	<tr><td>178</td><td>tyga              </td><td>Not Available</td><td>entertainment           </td><td>   27</td><td>37700000</td><td>0.017</td></tr>
-	<tr><td>179</td><td>eminem            </td><td>male         </td><td>entertainment           </td><td>  721</td><td>37600000</td><td>0.024</td></tr>
-	<tr><td>180</td><td><span style=white-space:pre-wrap>sachintendulkar   </span></td><td><span style=white-space:pre-wrap>male         </span></td><td>Health, Sports &amp; Fitness</td><td> 1100</td><td>37500000</td><td>0.017</td></tr>
-	<tr><td>181</td><td><span style=white-space:pre-wrap>danialves         </span></td><td><span style=white-space:pre-wrap>male         </span></td><td>Health, Sports &amp; Fitness</td><td> 3400</td><td>37400000</td><td>0.008</td></tr>
-	<tr><td>182</td><td>gisel_la          </td><td>female       </td><td>entertainment           </td><td>10200</td><td>37400000</td><td>0.002</td></tr>
-	<tr><td>183</td><td>blakelively       </td><td>male         </td><td>entertainment           </td><td>  121</td><td>37000000</td><td>0.056</td></tr>
-	<tr><td>184</td><td><span style=white-space:pre-wrap>chelseafc         </span></td><td><span style=white-space:pre-wrap>community    </span></td><td>Health, Sports &amp; Fitness</td><td>17300</td><td>36600000</td><td>0.006</td></tr>
-	<tr><td>185</td><td>shahidkapoor      </td><td>male         </td><td>entertainment           </td><td> 1200</td><td>36600000</td><td>0.024</td></tr>
-	<tr><td>186</td><td>kimberly.loaiza   </td><td>female       </td><td>entertainment           </td><td>  578</td><td>36600000</td><td>0.044</td></tr>
-	<tr><td>187</td><td><span style=white-space:pre-wrap>toni.kr8s         </span></td><td><span style=white-space:pre-wrap>male         </span></td><td>Health, Sports &amp; Fitness</td><td> 1000</td><td>36600000</td><td>0.012</td></tr>
-	<tr><td>188</td><td><span style=white-space:pre-wrap>antogriezmann     </span></td><td><span style=white-space:pre-wrap>male         </span></td><td>Health, Sports &amp; Fitness</td><td><span style=white-space:pre-wrap>  872</span></td><td>36400000</td><td>0.018</td></tr>
-	<tr><td>189</td><td>mercedesbenz      </td><td>brand        </td><td>technology              </td><td>18500</td><td>36400000</td><td>0.003</td></tr>
-	<tr><td>190</td><td>nattinatasha      </td><td>female       </td><td>entertainment           </td><td>   54</td><td>36100000</td><td>0.013</td></tr>
-	<tr><td>191</td><td>tigerjackieshroff </td><td>male         </td><td>entertainment           </td><td> 2200</td><td>36100000</td><td>0.019</td></tr>
-	<tr><td>192</td><td>lunamaya          </td><td>female       </td><td>entertainment           </td><td> 4200</td><td>36100000</td><td>0.002</td></tr>
-	<tr><td>193</td><td><span style=white-space:pre-wrap>mancity           </span></td><td><span style=white-space:pre-wrap>male         </span></td><td>Health, Sports &amp; Fitness</td><td>19600</td><td>36000000</td><td>0.004</td></tr>
-	<tr><td>194</td><td>disney            </td><td>brand        </td><td>entertainment           </td><td> 7700</td><td>35800000</td><td>0.003</td></tr>
-	<tr><td>195</td><td><span style=white-space:pre-wrap>barackobama       </span></td><td><span style=white-space:pre-wrap>male         </span></td><td><span style=white-space:pre-wrap>News &amp; Politics         </span></td><td><span style=white-space:pre-wrap>  743</span></td><td>35500000</td><td>0.017</td></tr>
-	<tr><td>196</td><td><span style=white-space:pre-wrap>fcbayern          </span></td><td><span style=white-space:pre-wrap>male         </span></td><td>Health, Sports &amp; Fitness</td><td>16800</td><td>35400000</td><td>0.006</td></tr>
-	<tr><td>197</td><td>colesprouse       </td><td>male         </td><td>entertainment           </td><td> 1100</td><td>35300000</td><td>0.035</td></tr>
-	<tr><td>198</td><td>shaymitchell      </td><td>male         </td><td>entertainment           </td><td> 6300</td><td>35100000</td><td>0.012</td></tr>
-	<tr><td>199</td><td>ivetesangalo      </td><td>female       </td><td>entertainment           </td><td> 7800</td><td>35000000</td><td>0.004</td></tr>
-	<tr><td>200</td><td>paollaoliveirareal</td><td>female       </td><td>entertainment           </td><td> 4800</td><td>34900000</td><td>0.007</td></tr>
+	<tr><td>1</td><td>instagram  </td><td>brand </td><td>photography             </td><td>7300</td><td>580100000</td><td>0.001</td></tr>
+	<tr><td>2</td><td><span style=white-space:pre-wrap>cristiano  </span></td><td><span style=white-space:pre-wrap>male  </span></td><td>Health, Sports &amp; Fitness</td><td>3400</td><td>519900000</td><td>0.014</td></tr>
+	<tr><td>3</td><td><span style=white-space:pre-wrap>leomessi   </span></td><td><span style=white-space:pre-wrap>male  </span></td><td>Health, Sports &amp; Fitness</td><td>1000</td><td>403700000</td><td>0.017</td></tr>
+	<tr><td>4</td><td>kyliejenner</td><td>female</td><td>entertainment           </td><td>7000</td><td>375900000</td><td>0.017</td></tr>
+	<tr><td>5</td><td>selenagomez</td><td>female</td><td>entertainment           </td><td>1800</td><td>365300000</td><td>0.011</td></tr>
+	<tr><td>6</td><td>therock    </td><td>male  </td><td>entertainment           </td><td>7000</td><td>354300000</td><td>0.003</td></tr>
 </tbody>
 </table>
 </div></div>
@@ -1130,158 +1175,48 @@ This package has already been installed for you. Later in the course you will le
 <p>The <code class="docutils literal notranslate"><span class="pre">select</span></code> function is used to select a subset of columns (variables) from a dataframe.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">select</span><span class="p">(</span><span class="n">insta</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="c1"># select `name` column </span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="nf">select</span><span class="p">(</span><span class="n">insta</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">))</span><span class="w"> </span><span class="c1"># select `name` column </span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><table class="dataframe">
-<caption>A tibble: 200 × 1</caption>
+<caption>A tibble: 6 × 1</caption>
 <thead>
 	<tr><th scope=col>name</th></tr>
 	<tr><th scope=col>&lt;chr&gt;</th></tr>
 </thead>
 <tbody>
-	<tr><td>instagram      </td></tr>
-	<tr><td>cristiano      </td></tr>
-	<tr><td>leomessi       </td></tr>
-	<tr><td>kyliejenner    </td></tr>
-	<tr><td>selenagomez    </td></tr>
-	<tr><td>therock        </td></tr>
-	<tr><td>arianagrande   </td></tr>
-	<tr><td>kimkardashian  </td></tr>
-	<tr><td>beyonce        </td></tr>
-	<tr><td>khloekardashian</td></tr>
-	<tr><td>justinbieber   </td></tr>
-	<tr><td>nike           </td></tr>
-	<tr><td>taylorswift    </td></tr>
-	<tr><td>jlo            </td></tr>
-	<tr><td>virat.kohli    </td></tr>
-	<tr><td>kendalljenner  </td></tr>
-	<tr><td>natgeo         </td></tr>
-	<tr><td>nickiminaj     </td></tr>
-	<tr><td>kourtneykardash</td></tr>
-	<tr><td>kendalljenner  </td></tr>
-	<tr><td>neymarjr       </td></tr>
-	<tr><td>natgeo         </td></tr>
-	<tr><td>mileycyrus     </td></tr>
-	<tr><td>katyperry      </td></tr>
-	<tr><td>zendaya        </td></tr>
-	<tr><td>kevinhart4real </td></tr>
-	<tr><td>iamcardib      </td></tr>
-	<tr><td>ddlovato       </td></tr>
-	<tr><td>badgalriri     </td></tr>
-	<tr><td>kingjames      </td></tr>
-	<tr><td>⋮</td></tr>
-	<tr><td>parineetichopra   </td></tr>
-	<tr><td>anushkasen0408    </td></tr>
-	<tr><td>chrissyteigen     </td></tr>
-	<tr><td>hm                </td></tr>
-	<tr><td>wesleysafadao     </td></tr>
-	<tr><td>marvelstudios     </td></tr>
-	<tr><td>houseofhighlights </td></tr>
-	<tr><td>tyga              </td></tr>
-	<tr><td>eminem            </td></tr>
-	<tr><td>sachintendulkar   </td></tr>
-	<tr><td>danialves         </td></tr>
-	<tr><td>gisel_la          </td></tr>
-	<tr><td>blakelively       </td></tr>
-	<tr><td>chelseafc         </td></tr>
-	<tr><td>shahidkapoor      </td></tr>
-	<tr><td>kimberly.loaiza   </td></tr>
-	<tr><td>toni.kr8s         </td></tr>
-	<tr><td>antogriezmann     </td></tr>
-	<tr><td>mercedesbenz      </td></tr>
-	<tr><td>nattinatasha      </td></tr>
-	<tr><td>tigerjackieshroff </td></tr>
-	<tr><td>lunamaya          </td></tr>
-	<tr><td>mancity           </td></tr>
-	<tr><td>disney            </td></tr>
-	<tr><td>barackobama       </td></tr>
-	<tr><td>fcbayern          </td></tr>
-	<tr><td>colesprouse       </td></tr>
-	<tr><td>shaymitchell      </td></tr>
-	<tr><td>ivetesangalo      </td></tr>
-	<tr><td>paollaoliveirareal</td></tr>
+	<tr><td>instagram  </td></tr>
+	<tr><td>cristiano  </td></tr>
+	<tr><td>leomessi   </td></tr>
+	<tr><td>kyliejenner</td></tr>
+	<tr><td>selenagomez</td></tr>
+	<tr><td>therock    </td></tr>
 </tbody>
 </table>
 </div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">select</span><span class="p">(</span><span class="n">insta</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">Followers</span><span class="p">)</span><span class="w"> </span><span class="c1"># select `name` and `Followers` column </span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="nf">select</span><span class="p">(</span><span class="n">insta</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">Followers</span><span class="p">))</span><span class="w"> </span><span class="c1"># select `name` and `Followers` column </span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><table class="dataframe">
-<caption>A tibble: 200 × 2</caption>
+<caption>A tibble: 6 × 2</caption>
 <thead>
 	<tr><th scope=col>name</th><th scope=col>Followers</th></tr>
 	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
 </thead>
 <tbody>
-	<tr><td>instagram      </td><td>580100000</td></tr>
-	<tr><td>cristiano      </td><td>519900000</td></tr>
-	<tr><td>leomessi       </td><td>403700000</td></tr>
-	<tr><td>kyliejenner    </td><td>375900000</td></tr>
-	<tr><td>selenagomez    </td><td>365300000</td></tr>
-	<tr><td>therock        </td><td>354300000</td></tr>
-	<tr><td>arianagrande   </td><td>345600000</td></tr>
-	<tr><td>kimkardashian  </td><td>336300000</td></tr>
-	<tr><td>beyonce        </td><td>287300000</td></tr>
-	<tr><td>khloekardashian</td><td>283900000</td></tr>
-	<tr><td>justinbieber   </td><td>270200000</td></tr>
-	<tr><td>nike           </td><td>257600000</td></tr>
-	<tr><td>taylorswift    </td><td>236200000</td></tr>
-	<tr><td>jlo            </td><td>228800000</td></tr>
-	<tr><td>virat.kohli    </td><td>228000000</td></tr>
-	<tr><td>kendalljenner  </td><td>223400000</td></tr>
-	<tr><td>natgeo         </td><td>220600000</td></tr>
-	<tr><td>nickiminaj     </td><td>206800000</td></tr>
-	<tr><td>kourtneykardash</td><td>206200000</td></tr>
-	<tr><td>kendalljenner  </td><td>204400000</td></tr>
-	<tr><td>neymarjr       </td><td>196200000</td></tr>
-	<tr><td>natgeo         </td><td>196100000</td></tr>
-	<tr><td>mileycyrus     </td><td>189900000</td></tr>
-	<tr><td>katyperry      </td><td>179800000</td></tr>
-	<tr><td>zendaya        </td><td>161800000</td></tr>
-	<tr><td>kevinhart4real </td><td>157600000</td></tr>
-	<tr><td>iamcardib      </td><td>145600000</td></tr>
-	<tr><td>ddlovato       </td><td>143500000</td></tr>
-	<tr><td>badgalriri     </td><td>139200000</td></tr>
-	<tr><td>kingjames      </td><td>139200000</td></tr>
-	<tr><td>⋮</td><td>⋮</td></tr>
-	<tr><td>parineetichopra   </td><td>39200000</td></tr>
-	<tr><td>anushkasen0408    </td><td>39000000</td></tr>
-	<tr><td>chrissyteigen     </td><td>38600000</td></tr>
-	<tr><td>hm                </td><td>38500000</td></tr>
-	<tr><td>wesleysafadao     </td><td>38300000</td></tr>
-	<tr><td>marvelstudios     </td><td>38200000</td></tr>
-	<tr><td>houseofhighlights </td><td>37900000</td></tr>
-	<tr><td>tyga              </td><td>37700000</td></tr>
-	<tr><td>eminem            </td><td>37600000</td></tr>
-	<tr><td>sachintendulkar   </td><td>37500000</td></tr>
-	<tr><td>danialves         </td><td>37400000</td></tr>
-	<tr><td>gisel_la          </td><td>37400000</td></tr>
-	<tr><td>blakelively       </td><td>37000000</td></tr>
-	<tr><td>chelseafc         </td><td>36600000</td></tr>
-	<tr><td>shahidkapoor      </td><td>36600000</td></tr>
-	<tr><td>kimberly.loaiza   </td><td>36600000</td></tr>
-	<tr><td>toni.kr8s         </td><td>36600000</td></tr>
-	<tr><td>antogriezmann     </td><td>36400000</td></tr>
-	<tr><td>mercedesbenz      </td><td>36400000</td></tr>
-	<tr><td>nattinatasha      </td><td>36100000</td></tr>
-	<tr><td>tigerjackieshroff </td><td>36100000</td></tr>
-	<tr><td>lunamaya          </td><td>36100000</td></tr>
-	<tr><td>mancity           </td><td>36000000</td></tr>
-	<tr><td>disney            </td><td>35800000</td></tr>
-	<tr><td>barackobama       </td><td>35500000</td></tr>
-	<tr><td>fcbayern          </td><td>35400000</td></tr>
-	<tr><td>colesprouse       </td><td>35300000</td></tr>
-	<tr><td>shaymitchell      </td><td>35100000</td></tr>
-	<tr><td>ivetesangalo      </td><td>35000000</td></tr>
-	<tr><td>paollaoliveirareal</td><td>34900000</td></tr>
+	<tr><td>instagram  </td><td>580100000</td></tr>
+	<tr><td>cristiano  </td><td>519900000</td></tr>
+	<tr><td>leomessi   </td><td>403700000</td></tr>
+	<tr><td>kyliejenner</td><td>375900000</td></tr>
+	<tr><td>selenagomez</td><td>365300000</td></tr>
+	<tr><td>therock    </td><td>354300000</td></tr>
 </tbody>
 </table>
 </div></div>
@@ -1336,6 +1271,9 @@ This package has already been installed for you. Later in the course you will le
 </table>
 </div></div>
 </div>
+<blockquote>
+<div><p>Note the usage of two equals signs <code class="docutils literal notranslate"><span class="pre">==</span></code>. In coding, two equals signs evaluates equality between two values and returns either <code class="docutils literal notranslate"><span class="pre">TRUE</span></code> or <code class="docutils literal notranslate"><span class="pre">FALSE</span></code>. This is different than the use of one equals sign which is used to assign values.</p>
+</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Two conditions</span>
@@ -1359,15 +1297,114 @@ This package has already been installed for you. Later in the course you will le
 </table>
 </div></div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">### Example ###</span>
+
+<span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Pancakes&quot;</span><span class="w"> </span><span class="c1"># assigns the value &quot;Pancakes&quot; to &quot;a&quot; </span>
+
+<span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Pancakes&quot;</span><span class="w"> </span><span class="c1"># returns TRUE</span>
+
+<span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Waffles&quot;</span><span class="w"> </span><span class="c1"># returns FALSE</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">TRUE</div><div class="output text_html">FALSE</div></div>
+</div>
+<p>You can also use the <code class="docutils literal notranslate"><span class="pre">|</span></code> symbol in place of the word “or”. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">filter</span><span class="p">(</span><span class="n">insta</span><span class="p">,</span><span class="w"> </span><span class="n">Category</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;photography&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Category</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;fashion&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 12 × 7</caption>
+<thead>
+	<tr><th scope=col>rank</th><th scope=col>name</th><th scope=col>Channel</th><th scope=col>Category</th><th scope=col>Posts</th><th scope=col>Followers</th><th scope=col>eng_rate</th></tr>
+	<tr><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>  1</td><td>instagram      </td><td>brand        </td><td>photography</td><td> 7300</td><td>580100000</td><td> 0.1</td></tr>
+	<tr><td> 49</td><td>gigihadid      </td><td>female       </td><td>fashion    </td><td> 3300</td><td> 76400000</td><td> 3.4</td></tr>
+	<tr><td> 51</td><td>victoriassecret</td><td>brand        </td><td>fashion    </td><td> 3100</td><td> 73800000</td><td> 0.1</td></tr>
+	<tr><td> 93</td><td>zara           </td><td>brand        </td><td>fashion    </td><td> 3900</td><td> 55200000</td><td> 0.1</td></tr>
+	<tr><td>113</td><td>louisvuitton   </td><td>brand        </td><td>fashion    </td><td> 6600</td><td> 50100000</td><td> 0.2</td></tr>
+	<tr><td>116</td><td>gucci          </td><td>brand        </td><td>fashion    </td><td> 9200</td><td> 49800000</td><td> 0.2</td></tr>
+	<tr><td>134</td><td>natgeotravel   </td><td>brand        </td><td>photography</td><td>17200</td><td> 46000000</td><td> 0.2</td></tr>
+	<tr><td>148</td><td>uarmyhope      </td><td>Not Available</td><td>fashion    </td><td>  171</td><td> 42200000</td><td>18.5</td></tr>
+	<tr><td>149</td><td>georginagio    </td><td>female       </td><td>fashion    </td><td>  778</td><td> 42200000</td><td> 5.7</td></tr>
+	<tr><td>153</td><td>voguemagazine  </td><td>brand        </td><td>fashion    </td><td>11000</td><td> 41800000</td><td> 0.3</td></tr>
+	<tr><td>156</td><td>virginia       </td><td>female       </td><td>fashion    </td><td> 2000</td><td> 41400000</td><td> 4.0</td></tr>
+	<tr><td>174</td><td>hm             </td><td>brand        </td><td>fashion    </td><td> 7500</td><td> 38500000</td><td> 0.1</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
 </section>
+<section id="slice">
+<h3>2.1.4 Slice<a class="headerlink" href="#slice" title="Permalink to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">slice</span></code> function allows us to extract certain rows from our data set. For example, we may want to look at the 60th row of our data set (corresponding to the 60th most followed instagram account):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">slice</span><span class="p">(</span><span class="n">insta</span><span class="p">,</span><span class="w"> </span><span class="m">60</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 1 × 7</caption>
+<thead>
+	<tr><th scope=col>rank</th><th scope=col>name</th><th scope=col>Channel</th><th scope=col>Category</th><th scope=col>Posts</th><th scope=col>Followers</th><th scope=col>eng_rate</th></tr>
+	<tr><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>60</td><td>emmawatson</td><td>female</td><td>entertainment</td><td>417</td><td>68800000</td><td>1.1</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<p>You could also slice over a range of rows, say rows 60-70.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">slice</span><span class="p">(</span><span class="n">insta</span><span class="p">,</span><span class="w"> </span><span class="m">60</span><span class="o">:</span><span class="m">70</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 11 × 7</caption>
+<thead>
+	<tr><th scope=col>rank</th><th scope=col>name</th><th scope=col>Channel</th><th scope=col>Category</th><th scope=col>Posts</th><th scope=col>Followers</th><th scope=col>eng_rate</th></tr>
+	<tr><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>60</td><td>emmawatson      </td><td>female   </td><td>entertainment           </td><td>  417</td><td>68800000</td><td>1.1</td></tr>
+	<tr><td>61</td><td><span style=white-space:pre-wrap>ronaldinho      </span></td><td><span style=white-space:pre-wrap>male     </span></td><td>Health, Sports &amp; Fitness</td><td> 3000</td><td>68300000</td><td>1.0</td></tr>
+	<tr><td>62</td><td>tomholland2013  </td><td>male     </td><td>entertainment           </td><td> 1200</td><td>67700000</td><td>9.9</td></tr>
+	<tr><td>63</td><td>justintimberlake</td><td>male     </td><td>entertainment           </td><td>  790</td><td>67500000</td><td>0.7</td></tr>
+	<tr><td>64</td><td>marvel          </td><td>community</td><td>entertainment           </td><td> 7400</td><td>67000000</td><td>0.4</td></tr>
+	<tr><td>65</td><td>sooyaaa__       </td><td>female   </td><td>entertainment           </td><td>  900</td><td>66600000</td><td>8.0</td></tr>
+	<tr><td>66</td><td>raffinagita1717 </td><td>male     </td><td>entertainment           </td><td>18300</td><td>66000000</td><td>0.4</td></tr>
+	<tr><td>67</td><td>camila_cabello  </td><td>female   </td><td>entertainment           </td><td> 3000</td><td>65800000</td><td>1.8</td></tr>
+	<tr><td>68</td><td>roses_are_rosie </td><td>female   </td><td>entertainment           </td><td>  879</td><td>65200000</td><td>8.3</td></tr>
+	<tr><td>69</td><td>jacquelinef143  </td><td>female   </td><td>entertainment           </td><td> 2500</td><td>64300000</td><td>1.1</td></tr>
+	<tr><td>70</td><td>akshaykumar     </td><td>male     </td><td>entertainment           </td><td> 2000</td><td>63600000</td><td>2.0</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
 </section>
-<section id="many-operations-in-the-same-sequence">
-<h2>Many operations in the same sequence<a class="headerlink" href="#many-operations-in-the-same-sequence" title="Permalink to this heading">#</a></h2>
+<section id="pipe-operator">
+<h3>2.1.4 Pipe Operator<a class="headerlink" href="#pipe-operator" title="Permalink to this heading">#</a></h3>
 <p>When you need to type out a long sequence of operations on data, you could either:</p>
 <p>(A) Save intermediate objects</p>
 <p>(B) Compose function</p>
 <p>(C) Use the pipe operator <code class="docutils literal notranslate"><span class="pre">|&gt;</span></code></p>
 <p>Let’s look closer at each one of these:</p>
+</section>
 <section id="a-save-intermediate-objects">
 <h3>(A) Save intermediate objects<a class="headerlink" href="#a-save-intermediate-objects" title="Permalink to this heading">#</a></h3>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">insta_1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">mutate</span><span class="p">(</span><span class="n">insta</span><span class="p">,</span><span class="w"> </span><span class="n">eng_rate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eng_rate</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">100</span><span class="p">)</span>
@@ -1456,12 +1493,12 @@ This package has already been installed for you. Later in the course you will le
 </section>
 </section>
 <section id="grouping-and-summarizing-via-group-by-summarize">
-<h3>2.1.4 Grouping and summarizing via <code class="docutils literal notranslate"><span class="pre">group_by</span></code> + <code class="docutils literal notranslate"><span class="pre">summarize</span></code><a class="headerlink" href="#grouping-and-summarizing-via-group-by-summarize" title="Permalink to this heading">#</a></h3>
+<h3>2.1.5 Grouping and summarizing via <code class="docutils literal notranslate"><span class="pre">group_by</span></code> + <code class="docutils literal notranslate"><span class="pre">summarize</span></code><a class="headerlink" href="#grouping-and-summarizing-via-group-by-summarize" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Grouping is when you split data into groups based on the value of a column.</p></li>
 <li><p>Sumarizing is when you combine data into fewer summary values.</p></li>
 </ul>
-<p>For example computing the average particle pollution per city (source <a class="reference external" href="https://info201.github.io/dplyr.html">https://info201.github.io/dplyr.html</a>):</p>
+<p>For example computing the average particle pollution per city (source https://info201.github.io/dplyr.html):</p>
 <p><img alt="" src="https://info201.github.io/img/dplyr/group_by.png" /></p>
 <ul class="simple">
 <li><p>Another example, splitting the <code class="docutils literal notranslate"><span class="pre">insta</span></code> data into one group per <code class="docutils literal notranslate"><span class="pre">species</span></code>, and then summarizing the values within each group e.g. reporting the average <code class="docutils literal notranslate"><span class="pre">Followers</span></code> per account category.</p></li>
@@ -1551,13 +1588,14 @@ summarize(avg_followers = mean(Followers))</p>
 </div>
 </section>
 </section>
-<section id="data-visualization">
-<h2>3. Data Visualization<a class="headerlink" href="#data-visualization" title="Permalink to this heading">#</a></h2>
-<img src="https://raw.githubusercontent.com/allisonhorst/stats-illustrations/main/rstats-artwork/ggplot2_exploratory.png" width="500"/>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="data-visualization">
+<h1>3. Data Visualization<a class="headerlink" href="#data-visualization" title="Permalink to this heading">#</a></h1>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/allisonhorst/stats-illustrations/main/rstats-artwork/ggplot2_exploratory.png"><img alt="https://raw.githubusercontent.com/allisonhorst/stats-illustrations/main/rstats-artwork/ggplot2_exploratory.png" src="https://raw.githubusercontent.com/allisonhorst/stats-illustrations/main/rstats-artwork/ggplot2_exploratory.png" style="width: 500px;" /></a>
 <p><strong>Attribution:</strong> images that are not accompanied by code mostly come from <br><a class="reference external" href="https://clauswilke.com/dataviz/">The Fundamentals of Data Visualization by Claus O. Wilke</a></p>
 <p><em>Artwork by &#64;allison_horst</em></p>
 <section id="designing-a-visualization-ask-a-question-then-answer-it">
-<h3>Designing a visualization: ask a question, then answer it<a class="headerlink" href="#designing-a-visualization-ask-a-question-then-answer-it" title="Permalink to this heading">#</a></h3>
+<h2>Designing a visualization: ask a question, then answer it<a class="headerlink" href="#designing-a-visualization-ask-a-question-then-answer-it" title="Permalink to this heading">#</a></h2>
 <p>The purpose of a visualization is to <em>answer a question</em> about a dataset of interest.</p>
 <p>A good visualization answers the question clearly. A <em>great</em> visualization also hints at the question itself.</p>
 <p>Visualizations alone help us answer two types of questions:</p>
@@ -1572,7 +1610,7 @@ summarize(avg_followers = mean(Followers))</p>
 <p>(we need more tools + visualizations to answer the others)</p>
 </section>
 <section id="creating-visualizations-in-r">
-<h3>Creating visualizations in R<a class="headerlink" href="#creating-visualizations-in-r" title="Permalink to this heading">#</a></h3>
+<h2>3.1 Creating visualizations in R<a class="headerlink" href="#creating-visualizations-in-r" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>It’s an iterative procedure. Try things, make mistakes, and refine!</p></li>
 <li><p>We will use <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code>. There are three key aspects of plots in <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code>:</p>
@@ -1584,7 +1622,6 @@ summarize(avg_followers = mean(Followers))</p>
 </li>
 <li><p>Add these one by one using <code class="docutils literal notranslate"><span class="pre">+</span></code></p></li>
 </ul>
-</section>
 <section id="types-of-variables">
 <h3>Types of variables<a class="headerlink" href="#types-of-variables" title="Permalink to this heading">#</a></h3>
 <p>A <strong>variable</strong> refers to a characteristic of interest and can be:</p>
@@ -1598,7 +1635,7 @@ summarize(avg_followers = mean(Followers))</p>
 <p>Looking at the Instgram data set, identify each variable as either categorical or quantitative.</p>
 </section>
 <section id="histograms">
-<h3>Histograms<a class="headerlink" href="#histograms" title="Permalink to this heading">#</a></h3>
+<h3>3.1.1 Histograms<a class="headerlink" href="#histograms" title="Permalink to this heading">#</a></h3>
 <p>To visualize the distribution of a single quantitative variable</p>
 <p>e.g. What does the distribution of the number of posts look like?</p>
 <div class="cell docutils container">
@@ -1636,7 +1673,7 @@ summarize(avg_followers = mean(Followers))</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/43e2d6c94cbc8336e77fd3a98a95e2a4812cf0d339721983e5e689a81d5494f9.png" src="../../_images/43e2d6c94cbc8336e77fd3a98a95e2a4812cf0d339721983e5e689a81d5494f9.png" />
+<img alt="../../_images/ceeba0b460260a1198bd59bc0d79191669f24c89dab76f8dbcc262fc4e8b4b92.png" src="../../_images/ceeba0b460260a1198bd59bc0d79191669f24c89dab76f8dbcc262fc4e8b4b92.png" />
 </div>
 </div>
 <p>You can also creating multiple separate histograms (e.g., for each channel):</p>
@@ -1650,12 +1687,12 @@ summarize(avg_followers = mean(Followers))</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/afd714f46fa9f5dd981e7e366d68f4d6cb582ea9bf1e057f1aa92d05c3bfbedb.png" src="../../_images/afd714f46fa9f5dd981e7e366d68f4d6cb582ea9bf1e057f1aa92d05c3bfbedb.png" />
+<img alt="../../_images/96d6e9d111299decf7347796075cbfbd04b01d415110dca788033bb6f9b2ab7c.png" src="../../_images/96d6e9d111299decf7347796075cbfbd04b01d415110dca788033bb6f9b2ab7c.png" />
 </div>
 </div>
 </section>
 <section id="scatter-plots">
-<h3>Scatter Plots<a class="headerlink" href="#scatter-plots" title="Permalink to this heading">#</a></h3>
+<h3>3.1.2 Scatter Plots<a class="headerlink" href="#scatter-plots" title="Permalink to this heading">#</a></h3>
 <p>To visualize the relationship between two quantitative variables</p>
 <p>e.g. Is there a relationship between number of posts and number of followers?</p>
 <div class="cell docutils container">
@@ -1670,7 +1707,7 @@ summarize(avg_followers = mean(Followers))</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/d0a94dcc777661ee84228ae80dd0124513d2d057314a09416474a76e228a0856.png" src="../../_images/d0a94dcc777661ee84228ae80dd0124513d2d057314a09416474a76e228a0856.png" />
+<img alt="../../_images/59c566e0283883835dcfef3d7ff9737c0b91f0af9aa3efe439b0deda24ace30a.png" src="../../_images/59c566e0283883835dcfef3d7ff9737c0b91f0af9aa3efe439b0deda24ace30a.png" />
 </div>
 </div>
 <p>Let’s take a look at accounts that have over 10000 posts.</p>
@@ -1700,12 +1737,12 @@ summarize(avg_followers = mean(Followers))</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/c89c275e6d6949fa57aa46351f51f278281299b15ca1f7781973e0d2ef48bd25.png" src="../../_images/c89c275e6d6949fa57aa46351f51f278281299b15ca1f7781973e0d2ef48bd25.png" />
+<img alt="../../_images/353b83b0149a254d9ace44fd30e3dc51c1e146c13ee7585e8541cbca84da1f5d.png" src="../../_images/353b83b0149a254d9ace44fd30e3dc51c1e146c13ee7585e8541cbca84da1f5d.png" />
 </div>
 </div>
 </section>
 <section id="bar-plots">
-<h3>Bar Plots<a class="headerlink" href="#bar-plots" title="Permalink to this heading">#</a></h3>
+<h3>3.1.3 Bar Plots<a class="headerlink" href="#bar-plots" title="Permalink to this heading">#</a></h3>
 <p>To visualize the comparison of amounts</p>
 <p>e.g. Out of the top 200 instagram accounts, which are the 2 most followed categories?</p>
 <div class="cell docutils container">
@@ -1750,7 +1787,7 @@ summarize(avg_followers = mean(Followers))</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/e6d3751e950b142338e5230be1381de97d4e4f6a374ac16eba3fbe33c446f935.png" src="../../_images/e6d3751e950b142338e5230be1381de97d4e4f6a374ac16eba3fbe33c446f935.png" />
+<img alt="../../_images/9f9e61e3fc5c7451616e7ca591f0f7ccb63b07aa9dcf10898af1c6beb89afae8.png" src="../../_images/9f9e61e3fc5c7451616e7ca591f0f7ccb63b07aa9dcf10898af1c6beb89afae8.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1763,7 +1800,7 @@ summarize(avg_followers = mean(Followers))</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/e2d5fc568cc9d79d498c671c3c6f4a938b2909d1eb19f2931d694bdcd6913c37.png" src="../../_images/e2d5fc568cc9d79d498c671c3c6f4a938b2909d1eb19f2931d694bdcd6913c37.png" />
+<img alt="../../_images/c1f41c2df0af6cd6dfafc9b3bbe9bd2a0878ef706b71e03f19075d454892013b.png" src="../../_images/c1f41c2df0af6cd6dfafc9b3bbe9bd2a0878ef706b71e03f19075d454892013b.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1777,26 +1814,29 @@ summarize(avg_followers = mean(Followers))</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/ee5029c31169fe470bfd6acf1ce97e16c9faabd2231f50df61b3e9cce133d694.png" src="../../_images/ee5029c31169fe470bfd6acf1ce97e16c9faabd2231f50df61b3e9cce133d694.png" />
+<img alt="../../_images/d34aa934e35b9ab2506892e448f12d059f84f11e72cc62797bd0035a66002245.png" src="../../_images/d34aa934e35b9ab2506892e448f12d059f84f11e72cc62797bd0035a66002245.png" />
 </div>
 </div>
 <p>It is now clear that entertainment an Health, Sports and Fitness are the two most followed categories of Instagram accounts.</p>
 </section>
 </section>
-<section id="a-few-rules-of-thumb-for-creating-effective-visualizations">
-<h2>A few rules of thumb for creating effective visualizations<a class="headerlink" href="#a-few-rules-of-thumb-for-creating-effective-visualizations" title="Permalink to this heading">#</a></h2>
+<section id="rules-of-thumb">
+<h2>3.2 Rules of Thumb<a class="headerlink" href="#rules-of-thumb" title="Permalink to this heading">#</a></h2>
 <section id="rule-of-thumb-no-tables-pie-charts-3d">
 <h3>Rule of Thumb: No tables / pie charts / 3D<a class="headerlink" href="#rule-of-thumb-no-tables-pie-charts-3d" title="Permalink to this heading">#</a></h3>
-<img src="img/pie.png" width="1200" /></section>
+<a class="reference internal image-reference" href="../../_images/pie.png"><img alt="../../_images/pie.png" src="../../_images/pie.png" style="width: 1200px;" /></a>
+</section>
 <section id="id4">
 <h3>Rule of Thumb: No tables / pie charts / 3D<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
-<img align="left" src="https://clauswilke.com/dataviz/no_3d_files/figure-html/VA-death-rates-3d-1.png" width="600" />
-<img align="right" src="https://clauswilke.com/dataviz/no_3d_files/figure-html/VA-death-rates-Trellis-1.png" width="800" /></section>
+<a class="reference internal image-reference" href="https://clauswilke.com/dataviz/no_3d_files/figure-html/VA-death-rates-3d-1.png"><img alt="https://clauswilke.com/dataviz/no_3d_files/figure-html/VA-death-rates-3d-1.png" class="align-left" src="https://clauswilke.com/dataviz/no_3d_files/figure-html/VA-death-rates-3d-1.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="https://clauswilke.com/dataviz/no_3d_files/figure-html/VA-death-rates-Trellis-1.png"><img alt="https://clauswilke.com/dataviz/no_3d_files/figure-html/VA-death-rates-Trellis-1.png" class="align-right" src="https://clauswilke.com/dataviz/no_3d_files/figure-html/VA-death-rates-Trellis-1.png" style="width: 800px;" /></a>
+</section>
 <section id="rule-of-thumb-use-simple-colourblind-friendly-colour-palettes">
 <h3>Rule of Thumb: Use simple, colourblind-friendly colour palettes<a class="headerlink" href="#rule-of-thumb-use-simple-colourblind-friendly-colour-palettes" title="Permalink to this heading">#</a></h3>
-<img align="left" src="https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/popgrowth-vs-popsize-colored-1.png" width="500" />
-<img align="right" src="https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/popgrowth-vs-popsize-bw-1.png" width="800" /><ul class="simple">
-<li><p><a class="reference external" href="https://www.color-blindness.com/coblis-color-blindness-simulator/">https://www.color-blindness.com/coblis-color-blindness-simulator/</a></p></li>
+<a class="reference internal image-reference" href="https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/popgrowth-vs-popsize-colored-1.png"><img alt="https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/popgrowth-vs-popsize-colored-1.png" class="align-left" src="https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/popgrowth-vs-popsize-colored-1.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/popgrowth-vs-popsize-bw-1.png"><img alt="https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/popgrowth-vs-popsize-bw-1.png" class="align-right" src="https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/popgrowth-vs-popsize-bw-1.png" style="width: 800px;" /></a>
+<ul class="simple">
+<li><p>https://www.color-blindness.com/coblis-color-blindness-simulator/</p></li>
 </ul>
 </section>
 <section id="rule-of-thumb-include-labels-and-legends-make-them-legible">
@@ -1817,7 +1857,7 @@ summarize(avg_followers = mean(Followers))</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/23b8a11ed9b8f33ad7fa15bf46da4f201c06e54a2d1eefbc348d446ea0fdbf11.png" src="../../_images/23b8a11ed9b8f33ad7fa15bf46da4f201c06e54a2d1eefbc348d446ea0fdbf11.png" />
+<img alt="../../_images/706d8e05b7bd8ba96b9a07e7a50b2afbc2868103768fac691aa504315e749307.png" src="../../_images/706d8e05b7bd8ba96b9a07e7a50b2afbc2868103768fac691aa504315e749307.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1831,7 +1871,7 @@ summarize(avg_followers = mean(Followers))</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/1a803b2c5f55cc7f416c06b9fce9c4f606e6cefc657938280c7073e9033d4096.png" src="../../_images/1a803b2c5f55cc7f416c06b9fce9c4f606e6cefc657938280c7073e9033d4096.png" />
+<img alt="../../_images/28b3c9f679c80e8baba6d61f9af6f0d187505e9c0dc7793b086b6266fa7504d2.png" src="../../_images/28b3c9f679c80e8baba6d61f9af6f0d187505e9c0dc7793b086b6266fa7504d2.png" />
 </div>
 </div>
 </section>
@@ -1887,51 +1927,53 @@ summarize(avg_followers = mean(Followers))</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Day 1 - Girls in Data Science</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#team-introduction">Team Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ice-breaker-activity">Ice Breaker Activity</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#day-1-learning-objectives">Day 1 Learning Objectives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#we-ve-got-a-lot-to-do-let-s-get-started">We’ve got a lot to do - let’s get started!</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started-with-jupyter-r">1. Getting started with Jupyter &amp; R</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#text-cells">1.1. Text Cells</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-cells">1.2. Code Cells</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-jupyter-notebooks">1.3. Writing Jupyter Notebooks</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#day-1-learning-objectives">Day 1 Learning Objectives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#we-ve-got-a-lot-to-do-let-s-get-started">We’ve got a lot to do - let’s get started!</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">1.4. Comments</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#errors">1.5. Errors</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-your-work">1.6 Saving your work</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numbers">1.7 Numbers</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic">1.8 Arithmetic</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#names">1.9 Names</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started-with-jupyter-r">1. Getting started with Jupyter &amp; R</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#text-cells">1.1. Text Cells</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-cells">1.2. Code Cells</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-jupyter-notebooks">1.3. Writing Jupyter Notebooks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">1.4. Comments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#errors">1.5. Errors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-your-work">1.6 Saving your work</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numbers">1.7 Numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic">1.8 Arithmetic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#names">1.9 Names</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Exercise</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">1.10 Functions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#packages">1.11 Packages</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#looking-for-help">1.12 Looking for Help</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">1.10 Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#packages">1.11 Packages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#looking-for-help">1.12 Looking for Help</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-data-science">2. Introduction to Data Science</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-data-science-exactly">What <em>is</em> data science exactly?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-are-we-using-programming-languages-to-do-data-analysis">Why are we using programming languages to do data analysis?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-in-tabular-data">2.1 Reading in Tabular Data</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-importing-data">Loading/importing data</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#different-ways-to-locate-a-file-dataset">Different ways to locate a file / dataset</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-data-science">2. Introduction to Data Science</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-data-science-exactly">What <em>is</em> data science exactly?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-are-we-using-programming-languages-to-do-data-analysis">Why are we using programming languages to do data analysis?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-in-tabular-data">2.1 Reading in Tabular Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-importing-data">Loading/importing data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#different-ways-to-locate-a-file-dataset">Different ways to locate a file / dataset</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-wrangling">2.2 Data Wrangling!</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-tidy-data">What is Tidy Data?</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#true-or-false-the-instagram-data-set-is-tidy">True or False: The Instagram data set is tidy</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-wrangling">2.2 Data Wrangling!</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-tidy-data">What is Tidy Data?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#true-or-false-the-instagram-data-set-is-tidy">True or False: The Instagram data set is tidy</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-for-tidying-and-wrangling-data">Tools for tidying and wrangling data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mutate">2.1.1 Mutate</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select">2.1.2 Select</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filter">2.1.3 Filter</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#many-operations-in-the-same-sequence">Many operations in the same sequence</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#slice">2.1.4 Slice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pipe-operator">2.1.4 Pipe Operator</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-save-intermediate-objects">(A) Save intermediate objects</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#disadvantages">Disadvantages:</a></li>
 </ul>
@@ -1944,21 +1986,23 @@ summarize(avg_followers = mean(Followers))</p>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#advantage">Advantage:</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-and-summarizing-via-group-by-summarize">2.1.4 Grouping and summarizing via <code class="docutils literal notranslate"><span class="pre">group_by</span></code> + <code class="docutils literal notranslate"><span class="pre">summarize</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-and-summarizing-via-group-by-summarize">2.1.5 Grouping and summarizing via <code class="docutils literal notranslate"><span class="pre">group_by</span></code> + <code class="docutils literal notranslate"><span class="pre">summarize</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Exercise</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-visualization">3. Data Visualization</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#designing-a-visualization-ask-a-question-then-answer-it">Designing a visualization: ask a question, then answer it</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-visualizations-in-r">Creating visualizations in R</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-variables">Types of variables</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Exercise</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#histograms">Histograms</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scatter-plots">Scatter Plots</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bar-plots">Bar Plots</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-few-rules-of-thumb-for-creating-effective-visualizations">A few rules of thumb for creating effective visualizations</a><ul class="nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-visualization">3. Data Visualization</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#designing-a-visualization-ask-a-question-then-answer-it">Designing a visualization: ask a question, then answer it</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-visualizations-in-r">3.1 Creating visualizations in R</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-variables">Types of variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Exercise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#histograms">3.1.1 Histograms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scatter-plots">3.1.2 Scatter Plots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bar-plots">3.1.3 Bar Plots</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rules-of-thumb">3.2 Rules of Thumb</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rule-of-thumb-no-tables-pie-charts-3d">Rule of Thumb: No tables / pie charts / 3D</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Rule of Thumb: No tables / pie charts / 3D</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rule-of-thumb-use-simple-colourblind-friendly-colour-palettes">Rule of Thumb: Use simple, colourblind-friendly colour palettes</a></li>
@@ -1967,6 +2011,9 @@ summarize(avg_followers = mean(Followers))</p>
 </ul>
 </li>
 </ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>
@@ -1989,7 +2036,7 @@ By Katie Burak
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2024.
       <br/>
     
   </p>

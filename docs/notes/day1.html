@@ -53,7 +53,6 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -151,7 +150,15 @@ const thebe_selector_output = ".output, .cell_output"
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lectures</span></p>
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../README.html">
+                    Girls in Data Science Summer Camp
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Day 1 - Girls in Data Science</a></li>
 
@@ -204,6 +211,53 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="header-article-item">
 
 <div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/katieburak/girls-in-DS" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/katieburak/girls-in-DS/issues/new?title=Issue%20on%20page%20%2Fnotes/day1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
 
 
 
@@ -408,7 +462,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="day-1-girls-in-data-science">
 <h1>Day 1 - Girls in Data Science<a class="headerlink" href="#day-1-girls-in-data-science" title="Permalink to this heading">#</a></h1>
-<img src="img/programming_women.jpg" width=800>
+<a class="reference internal image-reference" href="../_images/programming_women1.jpg"><img alt="../_images/programming_women1.jpg" src="../_images/programming_women1.jpg" style="width: 800px;" /></a>
 <p><em>Photos/Images by #WOCinTech/#WOCinTech Chat (<a class="reference external" href="https://creativecommons.org/licenses/by/2.0/">CC-BY</a>)</em></p>
 <section id="team-introduction">
 <h2>Team Introduction<a class="headerlink" href="#team-introduction" title="Permalink to this heading">#</a></h2>
@@ -417,7 +471,7 @@ document.write(`
 <li><p>Data Science Mentors:</p></li>
 </ul>
 <p>Thank you to our sponsors!</p>
-<p><img src="img/sponsor1.png" width=100> <img src="img/sponsor2.png" width=100> <img src="img/sponsor3.png" width=100></p>
+<p><a class="reference internal" href="../_images/sponsor11.png"><img alt="../_images/sponsor11.png" src="../_images/sponsor11.png" style="width: 100px;" /></a> <a class="reference internal" href="../_images/sponsor21.png"><img alt="../_images/sponsor21.png" src="../_images/sponsor21.png" style="width: 100px;" /></a> <a class="reference internal" href="../_images/sponsor31.png"><img alt="../_images/sponsor31.png" src="../_images/sponsor31.png" style="width: 100px;" /></a></p>
 <p><img alt="" src="https://media.pims.math.ca/logos/webhorizfullsmall.png" /></p>
 </section>
 <section id="ice-breaker-activity">
@@ -437,7 +491,8 @@ document.write(`
 </ul>
 <section id="we-ve-got-a-lot-to-do-let-s-get-started">
 <h3>We’ve got a lot to do - let’s get started!<a class="headerlink" href="#we-ve-got-a-lot-to-do-let-s-get-started" title="Permalink to this heading">#</a></h3>
-<img src="https://media.giphy.com/media/6onMzNPjtFeCI/giphy.gif" width="800"></section>
+<a class="reference internal image-reference" href="https://media.giphy.com/media/6onMzNPjtFeCI/giphy.gif"><img alt="https://media.giphy.com/media/6onMzNPjtFeCI/giphy.gif" src="https://media.giphy.com/media/6onMzNPjtFeCI/giphy.gif" style="width: 800px;" /></a>
+</section>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="getting-started-with-jupyter-r">
@@ -540,7 +595,7 @@ Try running the next cell:</p>
 </div>
 </div>
 </div>
-<p><img alt="ws1_error_image.png" src="../_images/ws1_error_image.png" /></p>
+<p><img alt="ws1_error_image.png" src="../_images/ws1_error_image1.png" /></p>
 <p>There’s a lot of terminology in programming languages, but you don’t need to know it all in order to program effectively. Even though the error message can seem cryptic, if you read it carefully you’ll often find hints as to what went wrong. For example, above, you’ll see the message <code class="docutils literal notranslate"><span class="pre">unexpected</span> <span class="pre">end</span> <span class="pre">of</span> <span class="pre">input</span></code> (among a lot of other technical jargon). In other words, R reached the end of the line of code, and wasn’t expecting to reach the end – it thinks there is still something missing!</p>
 <p>Of course, even if you do your best to interpret the error message, sometimes you may get stuck figuring out what went wrong and how to fix it. In that case, ask a neighbor or a TA for help.</p>
 <p>Try to fix the code above so that you can run the cell and see the intended message instead of an error.</p>
@@ -706,15 +761,15 @@ This package has already been installed for you. Later in the course you will le
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ──────────────────────── tidyverse 2.0.0 ──
-<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dplyr    </span> 1.1.3     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">readr    </span> 2.1.4
-<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">forcats  </span> 1.0.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">stringr  </span> 1.5.0
-<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">ggplot2  </span> 3.4.4     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tibble   </span> 3.2.1
-<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">lubridate</span> 1.9.2     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tidyr    </span> 1.3.0
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ────────────────────────────────────────────────────────── tidyverse 2.0.0 ──
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dplyr    </span> 1.1.4     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">readr    </span> 2.1.5
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">forcats  </span> 1.0.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">stringr  </span> 1.5.1
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">ggplot2  </span> 3.5.1     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tibble   </span> 3.2.1
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">lubridate</span> 1.9.3     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tidyr    </span> 1.3.1
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">purrr    </span> 1.0.2     
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ────────────────────────────────────────── tidyverse_conflicts() ──
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ──────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">filter()</span> masks <span class=" -Color -Color-Blue">stats</span>::filter()
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">lag()</span>    masks <span class=" -Color -Color-Blue">stats</span>::lag()
 <span class=" -Color -Color-Cyan">ℹ</span> Use the conflicted package (<span class=" -Color -Color-Blue">&lt;http://conflicted.r-lib.org/&gt;</span>) to force all conflicts to become errors
@@ -792,10 +847,11 @@ This package has already been installed for you. Later in the course you will le
 <li><p>Using a programming language is like baking with a recipe:</p>
 <ul>
 <li><p>Ingredients = data</p>
-<img src ="https://www.thespruceeats.com/thmb/FYR4bNLrj304CEaE2aSGPYzygzY=/4680x2632/smart/filters:no_upscale()/greek-butter-cookies-1705307-step-01-5bfef717c9e77c00510e3bf9.jpg" style ="width:500px;"/>
+<img alt="https://www.thespruceeats.com/thmb/FYR4bNLrj304CEaE2aSGPYzygzY=/4680x2632/smart/filters:no_upscale()/greek-butter-cookies-1705307-step-01-5bfef717c9e77c00510e3bf9.jpg" src="https://www.thespruceeats.com/thmb/FYR4bNLrj304CEaE2aSGPYzygzY=/4680x2632/smart/filters:no_upscale()/greek-butter-cookies-1705307-step-01-5bfef717c9e77c00510e3bf9.jpg" />
 </li>
 <li><p>Recipe = code</p>
-  <img src ="https://cdn.pixabay.com/photo/2014/12/21/23/28/recipe-575434_640.png" style="width: 500px;"/></li>
+<img alt="https://cdn.pixabay.com/photo/2014/12/21/23/28/recipe-575434_640.png" src="https://cdn.pixabay.com/photo/2014/12/21/23/28/recipe-575434_640.png" />
+</li>
 </ul>
 </li>
 </ul>
@@ -882,7 +938,7 @@ This package has already been installed for you. Later in the course you will le
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">200</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">8</span>
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">────────────────────────────────────────────────────────</span>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">──────────────────────────────────────────────────────────────────────────────────────────</span>
 <span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
 <span class=" -Color -Color-Red">chr</span> (7): name, channel_Info, Category, Posts, Followers, Avg. Likes, Eng Rate
 <span class=" -Color -Color-Green">dbl</span> (1): rank
@@ -1046,7 +1102,7 @@ This package has already been installed for you. Later in the course you will le
 </section>
 <section id="data-wrangling">
 <h2>2.2 Data Wrangling!<a class="headerlink" href="#data-wrangling" title="Permalink to this heading">#</a></h2>
-<img src="https://raw.githubusercontent.com/allisonhorst/stats-illustrations/main/rstats-artwork/dplyr_wrangling.png" width="700"/>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/allisonhorst/stats-illustrations/main/rstats-artwork/dplyr_wrangling.png"><img alt="https://raw.githubusercontent.com/allisonhorst/stats-illustrations/main/rstats-artwork/dplyr_wrangling.png" src="https://raw.githubusercontent.com/allisonhorst/stats-illustrations/main/rstats-artwork/dplyr_wrangling.png" style="width: 700px;" /></a>
 <p><a class="reference external" href="https://github.com/allisonhorst/stats-illustrations/tree/main/rstats-artwork">The cartoon illustrations are by Allison Horst</a></p>
 <ul class="simple">
 <li><p>In the real world, when you get data, it’s usually <em>very messy</em></p>
@@ -1061,9 +1117,10 @@ This package has already been installed for you. Later in the course you will le
 </ul>
 <section id="what-is-tidy-data">
 <h3>What is Tidy Data?<a class="headerlink" href="#what-is-tidy-data" title="Permalink to this heading">#</a></h3>
-<img src="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/tidydata_1.jpg" width=800>
+<a class="reference internal image-reference" href="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/tidydata_1.jpg"><img alt="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/tidydata_1.jpg" src="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/tidydata_1.jpg" style="width: 800px;" /></a>
 <p><em>Illustrations from the <a class="reference external" href="https://www.openscapes.org/">Openscapes</a> blog <a class="reference external" href="https://www.openscapes.org/blog/2020/10/12/tidy-data/">Tidy Data for reproducibility, efficiency, and collaboration</a> by Julia Lowndes and Allison Horst”</em></p>
-<img src="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/tidydata_2.jpg" width=800></section>
+<a class="reference internal image-reference" href="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/tidydata_2.jpg"><img alt="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/tidydata_2.jpg" src="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/tidydata_2.jpg" style="width: 800px;" /></a>
+</section>
 <section id="true-or-false-the-instagram-data-set-is-tidy">
 <h3>True or False: The Instagram data set is tidy<a class="headerlink" href="#true-or-false-the-instagram-data-set-is-tidy" title="Permalink to this heading">#</a></h3>
 <p><strong>True!</strong></p>
@@ -1443,7 +1500,7 @@ This package has already been installed for you. Later in the course you will le
 <li><p>Grouping is when you split data into groups based on the value of a column.</p></li>
 <li><p>Sumarizing is when you combine data into fewer summary values.</p></li>
 </ul>
-<p>For example computing the average particle pollution per city (source <a class="reference external" href="https://info201.github.io/dplyr.html">https://info201.github.io/dplyr.html</a>):</p>
+<p>For example computing the average particle pollution per city (source https://info201.github.io/dplyr.html):</p>
 <p><img alt="" src="https://info201.github.io/img/dplyr/group_by.png" /></p>
 <ul class="simple">
 <li><p>Another example, splitting the <code class="docutils literal notranslate"><span class="pre">insta</span></code> data into one group per <code class="docutils literal notranslate"><span class="pre">species</span></code>, and then summarizing the values within each group e.g. reporting the average <code class="docutils literal notranslate"><span class="pre">Followers</span></code> per account category.</p></li>
@@ -1536,7 +1593,7 @@ summarize(avg_followers = mean(Followers))</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="data-visualization">
 <h1>3. Data Visualization<a class="headerlink" href="#data-visualization" title="Permalink to this heading">#</a></h1>
-<img src="https://raw.githubusercontent.com/allisonhorst/stats-illustrations/main/rstats-artwork/ggplot2_exploratory.png" width="500"/>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/allisonhorst/stats-illustrations/main/rstats-artwork/ggplot2_exploratory.png"><img alt="https://raw.githubusercontent.com/allisonhorst/stats-illustrations/main/rstats-artwork/ggplot2_exploratory.png" src="https://raw.githubusercontent.com/allisonhorst/stats-illustrations/main/rstats-artwork/ggplot2_exploratory.png" style="width: 500px;" /></a>
 <p><strong>Attribution:</strong> images that are not accompanied by code mostly come from <br><a class="reference external" href="https://clauswilke.com/dataviz/">The Fundamentals of Data Visualization by Claus O. Wilke</a></p>
 <p><em>Artwork by &#64;allison_horst</em></p>
 <section id="designing-a-visualization-ask-a-question-then-answer-it">
@@ -1618,7 +1675,7 @@ summarize(avg_followers = mean(Followers))</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/43e2d6c94cbc8336e77fd3a98a95e2a4812cf0d339721983e5e689a81d5494f9.png" src="../_images/43e2d6c94cbc8336e77fd3a98a95e2a4812cf0d339721983e5e689a81d5494f9.png" />
+<img alt="../_images/ceeba0b460260a1198bd59bc0d79191669f24c89dab76f8dbcc262fc4e8b4b92.png" src="../_images/ceeba0b460260a1198bd59bc0d79191669f24c89dab76f8dbcc262fc4e8b4b92.png" />
 </div>
 </div>
 <p>You can also creating multiple separate histograms (e.g., for each channel):</p>
@@ -1632,7 +1689,7 @@ summarize(avg_followers = mean(Followers))</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/afd714f46fa9f5dd981e7e366d68f4d6cb582ea9bf1e057f1aa92d05c3bfbedb.png" src="../_images/afd714f46fa9f5dd981e7e366d68f4d6cb582ea9bf1e057f1aa92d05c3bfbedb.png" />
+<img alt="../_images/96d6e9d111299decf7347796075cbfbd04b01d415110dca788033bb6f9b2ab7c.png" src="../_images/96d6e9d111299decf7347796075cbfbd04b01d415110dca788033bb6f9b2ab7c.png" />
 </div>
 </div>
 </section>
@@ -1652,7 +1709,7 @@ summarize(avg_followers = mean(Followers))</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d0a94dcc777661ee84228ae80dd0124513d2d057314a09416474a76e228a0856.png" src="../_images/d0a94dcc777661ee84228ae80dd0124513d2d057314a09416474a76e228a0856.png" />
+<img alt="../_images/59c566e0283883835dcfef3d7ff9737c0b91f0af9aa3efe439b0deda24ace30a.png" src="../_images/59c566e0283883835dcfef3d7ff9737c0b91f0af9aa3efe439b0deda24ace30a.png" />
 </div>
 </div>
 <p>Let’s take a look at accounts that have over 10000 posts.</p>
@@ -1682,7 +1739,7 @@ summarize(avg_followers = mean(Followers))</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c89c275e6d6949fa57aa46351f51f278281299b15ca1f7781973e0d2ef48bd25.png" src="../_images/c89c275e6d6949fa57aa46351f51f278281299b15ca1f7781973e0d2ef48bd25.png" />
+<img alt="../_images/353b83b0149a254d9ace44fd30e3dc51c1e146c13ee7585e8541cbca84da1f5d.png" src="../_images/353b83b0149a254d9ace44fd30e3dc51c1e146c13ee7585e8541cbca84da1f5d.png" />
 </div>
 </div>
 </section>
@@ -1732,7 +1789,7 @@ summarize(avg_followers = mean(Followers))</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/e6d3751e950b142338e5230be1381de97d4e4f6a374ac16eba3fbe33c446f935.png" src="../_images/e6d3751e950b142338e5230be1381de97d4e4f6a374ac16eba3fbe33c446f935.png" />
+<img alt="../_images/9f9e61e3fc5c7451616e7ca591f0f7ccb63b07aa9dcf10898af1c6beb89afae8.png" src="../_images/9f9e61e3fc5c7451616e7ca591f0f7ccb63b07aa9dcf10898af1c6beb89afae8.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1745,7 +1802,7 @@ summarize(avg_followers = mean(Followers))</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/e2d5fc568cc9d79d498c671c3c6f4a938b2909d1eb19f2931d694bdcd6913c37.png" src="../_images/e2d5fc568cc9d79d498c671c3c6f4a938b2909d1eb19f2931d694bdcd6913c37.png" />
+<img alt="../_images/c1f41c2df0af6cd6dfafc9b3bbe9bd2a0878ef706b71e03f19075d454892013b.png" src="../_images/c1f41c2df0af6cd6dfafc9b3bbe9bd2a0878ef706b71e03f19075d454892013b.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1759,7 +1816,7 @@ summarize(avg_followers = mean(Followers))</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ee5029c31169fe470bfd6acf1ce97e16c9faabd2231f50df61b3e9cce133d694.png" src="../_images/ee5029c31169fe470bfd6acf1ce97e16c9faabd2231f50df61b3e9cce133d694.png" />
+<img alt="../_images/d34aa934e35b9ab2506892e448f12d059f84f11e72cc62797bd0035a66002245.png" src="../_images/d34aa934e35b9ab2506892e448f12d059f84f11e72cc62797bd0035a66002245.png" />
 </div>
 </div>
 <p>It is now clear that entertainment an Health, Sports and Fitness are the two most followed categories of Instagram accounts.</p>
@@ -1769,16 +1826,19 @@ summarize(avg_followers = mean(Followers))</p>
 <h2>3.2 Rules of Thumb<a class="headerlink" href="#rules-of-thumb" title="Permalink to this heading">#</a></h2>
 <section id="rule-of-thumb-no-tables-pie-charts-3d">
 <h3>Rule of Thumb: No tables / pie charts / 3D<a class="headerlink" href="#rule-of-thumb-no-tables-pie-charts-3d" title="Permalink to this heading">#</a></h3>
-<img src="img/pie.png" width="1200" /></section>
+<a class="reference internal image-reference" href="../_images/pie1.png"><img alt="../_images/pie1.png" src="../_images/pie1.png" style="width: 1200px;" /></a>
+</section>
 <section id="id4">
 <h3>Rule of Thumb: No tables / pie charts / 3D<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
-<img align="left" src="https://clauswilke.com/dataviz/no_3d_files/figure-html/VA-death-rates-3d-1.png" width="600" />
-<img align="right" src="https://clauswilke.com/dataviz/no_3d_files/figure-html/VA-death-rates-Trellis-1.png" width="800" /></section>
+<a class="reference internal image-reference" href="https://clauswilke.com/dataviz/no_3d_files/figure-html/VA-death-rates-3d-1.png"><img alt="https://clauswilke.com/dataviz/no_3d_files/figure-html/VA-death-rates-3d-1.png" class="align-left" src="https://clauswilke.com/dataviz/no_3d_files/figure-html/VA-death-rates-3d-1.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="https://clauswilke.com/dataviz/no_3d_files/figure-html/VA-death-rates-Trellis-1.png"><img alt="https://clauswilke.com/dataviz/no_3d_files/figure-html/VA-death-rates-Trellis-1.png" class="align-right" src="https://clauswilke.com/dataviz/no_3d_files/figure-html/VA-death-rates-Trellis-1.png" style="width: 800px;" /></a>
+</section>
 <section id="rule-of-thumb-use-simple-colourblind-friendly-colour-palettes">
 <h3>Rule of Thumb: Use simple, colourblind-friendly colour palettes<a class="headerlink" href="#rule-of-thumb-use-simple-colourblind-friendly-colour-palettes" title="Permalink to this heading">#</a></h3>
-<img align="left" src="https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/popgrowth-vs-popsize-colored-1.png" width="500" />
-<img align="right" src="https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/popgrowth-vs-popsize-bw-1.png" width="800" /><ul class="simple">
-<li><p><a class="reference external" href="https://www.color-blindness.com/coblis-color-blindness-simulator/">https://www.color-blindness.com/coblis-color-blindness-simulator/</a></p></li>
+<a class="reference internal image-reference" href="https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/popgrowth-vs-popsize-colored-1.png"><img alt="https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/popgrowth-vs-popsize-colored-1.png" class="align-left" src="https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/popgrowth-vs-popsize-colored-1.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/popgrowth-vs-popsize-bw-1.png"><img alt="https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/popgrowth-vs-popsize-bw-1.png" class="align-right" src="https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/popgrowth-vs-popsize-bw-1.png" style="width: 800px;" /></a>
+<ul class="simple">
+<li><p>https://www.color-blindness.com/coblis-color-blindness-simulator/</p></li>
 </ul>
 </section>
 <section id="rule-of-thumb-include-labels-and-legends-make-them-legible">
@@ -1799,7 +1859,7 @@ summarize(avg_followers = mean(Followers))</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/23b8a11ed9b8f33ad7fa15bf46da4f201c06e54a2d1eefbc348d446ea0fdbf11.png" src="../_images/23b8a11ed9b8f33ad7fa15bf46da4f201c06e54a2d1eefbc348d446ea0fdbf11.png" />
+<img alt="../_images/706d8e05b7bd8ba96b9a07e7a50b2afbc2868103768fac691aa504315e749307.png" src="../_images/706d8e05b7bd8ba96b9a07e7a50b2afbc2868103768fac691aa504315e749307.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1813,7 +1873,7 @@ summarize(avg_followers = mean(Followers))</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/1a803b2c5f55cc7f416c06b9fce9c4f606e6cefc657938280c7073e9033d4096.png" src="../_images/1a803b2c5f55cc7f416c06b9fce9c4f606e6cefc657938280c7073e9033d4096.png" />
+<img alt="../_images/28b3c9f679c80e8baba6d61f9af6f0d187505e9c0dc7793b086b6266fa7504d2.png" src="../_images/28b3c9f679c80e8baba6d61f9af6f0d187505e9c0dc7793b086b6266fa7504d2.png" />
 </div>
 </div>
 </section>
@@ -1996,7 +2056,7 @@ By Katie Burak
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2024.
       <br/>
     
   </p>
