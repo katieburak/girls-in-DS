@@ -766,7 +766,7 @@ This package has already been installed for you. Later in the course you will le
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ────────────────────────────────────────────────────────── tidyverse 2.0.0 ──
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ───────────────────────────────────────────────────────────────── tidyverse 2.0.0 ──
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dplyr    </span> 1.1.4     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">readr    </span> 2.1.5
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">forcats  </span> 1.0.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">stringr  </span> 1.5.1
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">ggplot2  </span> 3.5.1     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tibble   </span> 3.2.1
@@ -774,7 +774,7 @@ This package has already been installed for you. Later in the course you will le
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">purrr    </span> 1.0.2     
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ──────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ─────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">filter()</span> masks <span class=" -Color -Color-Blue">stats</span>::filter()
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">lag()</span>    masks <span class=" -Color -Color-Blue">stats</span>::lag()
 <span class=" -Color -Color-Cyan">ℹ</span> Use the conflicted package (<span class=" -Color -Color-Blue">&lt;http://conflicted.r-lib.org/&gt;</span>) to force all conflicts to become errors
@@ -946,7 +946,7 @@ This package has already been installed for you. Later in the course you will le
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">200</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">8</span>
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">──────────────────────────────────────────────────────────────────────────────────────────</span>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">─────────────────────────────────────────────────────────────────────────────────────────────────</span>
 <span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
 <span class=" -Color -Color-Red">chr</span> (7): name, channel_Info, Category, Posts, Followers, Avg. Likes, Eng Rate
 <span class=" -Color -Color-Green">dbl</span> (1): rank
@@ -1814,16 +1814,19 @@ summarize(avg_followers = mean(Followers))</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Reorder the levels of Category based on Total Followers</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">)</span>
+
+<span class="c1"># Reorder the levels of Category based on Total Followers</span>
 
 <span class="nf">ggplot</span><span class="p">(</span><span class="n">insta_cat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Total_Followers</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">reorder</span><span class="p">(</span><span class="n">Category</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">Total_Followers</span><span class="p">)))</span><span class="w"> </span><span class="o">+</span>
 <span class="w">    </span><span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;identity&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;cornflowerblue&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
-<span class="w">    </span><span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">26</span><span class="p">))</span>
+<span class="w">    </span><span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">26</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">labs</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Total Followers&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="s">&quot;Category&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Barplot of Category by Total Followers &quot;</span><span class="p">)</span><span class="w"> </span><span class="c1"># change labels and title</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d34aa934e35b9ab2506892e448f12d059f84f11e72cc62797bd0035a66002245.png" src="../_images/d34aa934e35b9ab2506892e448f12d059f84f11e72cc62797bd0035a66002245.png" />
+<img alt="../_images/13f1ea7eb565b42b0c919634049e3c3b4f4ad2c5b9528c9d1b1760a0671a3d9f.png" src="../_images/13f1ea7eb565b42b0c919634049e3c3b4f4ad2c5b9528c9d1b1760a0671a3d9f.png" />
 </div>
 </div>
 <p>It is now clear that entertainment an Health, Sports and Fitness are the two most followed categories of Instagram accounts.</p>
@@ -1866,7 +1869,7 @@ summarize(avg_followers = mean(Followers))</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/706d8e05b7bd8ba96b9a07e7a50b2afbc2868103768fac691aa504315e749307.png" src="../_images/706d8e05b7bd8ba96b9a07e7a50b2afbc2868103768fac691aa504315e749307.png" />
+<img alt="../_images/878ef822bf3b4f1800dab18fe14bee0c68c938d5219ae19c24399afa35e6d55f.png" src="../_images/878ef822bf3b4f1800dab18fe14bee0c68c938d5219ae19c24399afa35e6d55f.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1880,7 +1883,7 @@ summarize(avg_followers = mean(Followers))</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/28b3c9f679c80e8baba6d61f9af6f0d187505e9c0dc7793b086b6266fa7504d2.png" src="../_images/28b3c9f679c80e8baba6d61f9af6f0d187505e9c0dc7793b086b6266fa7504d2.png" />
+<img alt="../_images/cf79c80071ea081601e3dabf21ebb43b9b00298889c1b475bc01ec4bc52a9470.png" src="../_images/cf79c80071ea081601e3dabf21ebb43b9b00298889c1b475bc01ec4bc52a9470.png" />
 </div>
 </div>
 </section>
