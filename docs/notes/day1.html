@@ -469,7 +469,7 @@ document.write(`
 <h2>Team Introduction<a class="headerlink" href="#team-introduction" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Lead Instructor: Katie Burak (Assistant Professor of Teaching, Department of Statistics, UBC)</p></li>
-<li><p>Data Science Mentors:</p></li>
+<li><p>Data Science Mentors: Mona Zhu (PhD, MDS), Riya Eliza Shaju (MDS)</p></li>
 </ul>
 <p>Thank you to our sponsors!</p>
 <p><a class="reference internal" href="../_images/sponsor11.png"><img alt="../_images/sponsor11.png" src="../_images/sponsor11.png" style="width: 100px;" /></a> <a class="reference internal" href="../_images/sponsor21.png"><img alt="../_images/sponsor21.png" src="../_images/sponsor21.png" style="width: 100px;" /></a> <a class="reference internal" href="../_images/sponsor31.png"><img alt="../_images/sponsor31.png" src="../_images/sponsor31.png" style="width: 100px;" /></a></p>
@@ -602,7 +602,7 @@ Try running the next cell:</p>
 </div>
 <p><img alt="ws1_error_image.png" src="../_images/ws1_error_image1.png" /></p>
 <p>There’s a lot of terminology in programming languages, but you don’t need to know it all in order to program effectively. Even though the error message can seem cryptic, if you read it carefully you’ll often find hints as to what went wrong. For example, above, you’ll see the message <code class="docutils literal notranslate"><span class="pre">unexpected</span> <span class="pre">end</span> <span class="pre">of</span> <span class="pre">input</span></code> (among a lot of other technical jargon). In other words, R reached the end of the line of code, and wasn’t expecting to reach the end – it thinks there is still something missing!</p>
-<p>Of course, even if you do your best to interpret the error message, sometimes you may get stuck figuring out what went wrong and how to fix it. In that case, ask a neighbor or a TA for help.</p>
+<p>Of course, even if you do your best to interpret the error message, sometimes you may get stuck figuring out what went wrong and how to fix it. In that case, ask someone.</p>
 <p>Try to fix the code above so that you can run the cell and see the intended message instead of an error.</p>
 </section>
 <section id="saving-your-work">
@@ -913,7 +913,7 @@ This package has already been installed for you. Later in the course you will le
 <li><p>Generally to ensure your code can be run on a different computer, you should use relative paths</p></li>
 <li><p>e.g. Alice is working inside the folder <code class="docutils literal notranslate"><span class="pre">/home/alice/project/</span></code>. To specify where to load data from in her Jupyter notebook, she uses the absolute path <code class="docutils literal notranslate"><span class="pre">/home/alice/project/data/happiness_report.csv</span></code>. What issue will arise when she shares the notebook with her collaborator Keeran who tries to read in the data on their computer?</p></li>
 </ul>
-<p><code class="docutils literal notranslate"><span class="pre">/home/keeran/-</span> <span class="pre">What</span> <span class="pre">relative</span> <span class="pre">data</span> <span class="pre">path</span> <span class="pre">could</span> <span class="pre">they</span> <span class="pre">use</span> <span class="pre">to</span> <span class="pre">collaborate</span> <span class="pre">more</span> <span class="pre">effectively?project/data/happiness_report.csv</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">/home/keeran/project/data/happiness_report.csv</span></code></p>
 <p>What relative data path could they use to collaborate more effectively?</p>
 <p><code class="docutils literal notranslate"><span class="pre">data/happiness_report.csv</span></code></p>
 <ul class="simple">
@@ -1565,35 +1565,10 @@ summarize(avg_followers = mean(Followers))</p>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">insta_wrangled</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">insta</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span>
-<span class="w">                    </span><span class="nf">select</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">Channel</span><span class="p">,</span><span class="w"> </span><span class="n">Posts</span><span class="p">,</span><span class="w"> </span><span class="n">Category</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">                    </span><span class="nf">filter</span><span class="p">(</span><span class="n">Channel</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;brand&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span>
-<span class="w">                    </span><span class="nf">group_by</span><span class="p">(</span><span class="n">Category</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span>
-<span class="w">                    </span><span class="nf">summarize</span><span class="p">(</span><span class="n">avg_posts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">Posts</span><span class="p">))</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span>
-<span class="w">                    </span><span class="nf">arrange</span><span class="p">(</span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">desc</span><span class="p">(</span><span class="n">avg_posts</span><span class="p">))</span>
-
-<span class="n">insta_wrangled</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">### YOUR CODE HERE</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><table class="dataframe">
-<caption>A tibble: 7 × 2</caption>
-<thead>
-	<tr><th scope=col>Category</th><th scope=col>avg_posts</th></tr>
-	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
-</thead>
-<tbody>
-	<tr><td>technology              </td><td>18500.000</td></tr>
-	<tr><td>entertainment           </td><td>17200.000</td></tr>
-	<tr><td>Craft/DIY               </td><td>15500.000</td></tr>
-	<tr><td>photography             </td><td>12250.000</td></tr>
-	<tr><td>fashion                 </td><td> 6883.333</td></tr>
-	<tr><td><span style=white-space:pre-wrap>Beauty &amp; Makeup         </span></td><td> 5100.000</td></tr>
-	<tr><td>Health, Sports &amp; Fitness</td><td> 1400.000</td></tr>
-</tbody>
-</table>
-</div></div>
 </div>
 </section>
 </section>
@@ -1688,7 +1663,9 @@ summarize(avg_followers = mean(Followers))</p>
 <p>You can also creating multiple separate histograms (e.g., for each channel):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">insta</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Posts</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Channel</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the default size for plot</span>
+<span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">)</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">insta</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Posts</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Channel</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
 <span class="w">    </span><span class="nf">geom_histogram</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="m">50</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
 <span class="w">    </span><span class="nf">facet_grid</span><span class="p">(</span><span class="n">rows</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">vars</span><span class="p">(</span><span class="n">Channel</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
 <span class="w">    </span><span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">26</span><span class="p">))</span><span class="w"> </span>
@@ -1696,7 +1673,7 @@ summarize(avg_followers = mean(Followers))</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/96d6e9d111299decf7347796075cbfbd04b01d415110dca788033bb6f9b2ab7c.png" src="../_images/96d6e9d111299decf7347796075cbfbd04b01d415110dca788033bb6f9b2ab7c.png" />
+<img alt="../_images/5a4a3601bfdca7c9f789d485a21c4aa4be2513edec0fc2319dd6398f94483807.png" src="../_images/5a4a3601bfdca7c9f789d485a21c4aa4be2513edec0fc2319dd6398f94483807.png" />
 </div>
 </div>
 </section>
@@ -1706,7 +1683,7 @@ summarize(avg_followers = mean(Followers))</p>
 <p>e.g. Is there a relationship between number of posts and number of followers?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the default size for all plots</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the default size for plot</span>
 <span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">)</span>
 
 <span class="nf">ggplot</span><span class="p">(</span><span class="n">insta</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Posts</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Followers</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
@@ -1723,7 +1700,7 @@ summarize(avg_followers = mean(Followers))</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">insta_posts_10000</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">insta</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">                </span><span class="nf">filter</span><span class="p">(</span><span class="n">Posts</span><span class="o">&gt;</span><span class="m">10000</span><span class="p">)</span>
+<span class="w">                        </span><span class="nf">filter</span><span class="p">(</span><span class="n">Posts</span><span class="o">&gt;</span><span class="m">10000</span><span class="p">)</span>
 
 <span class="c1"># Which of these accounts has the most followers?</span>
 <span class="n">insta_posts_10000</span><span class="o">$</span><span class="n">name</span><span class="p">[</span><span class="nf">which.max</span><span class="p">(</span><span class="n">insta_posts_10000</span><span class="o">$</span><span class="n">Followers</span><span class="p">)]</span>
