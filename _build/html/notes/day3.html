@@ -166,6 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="day2.html">Day 2 - Girls in Data Science</a></li>
 
 
+
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Day 3 - Girls in Data Science</a></li>
 
 
@@ -368,32 +369,32 @@ document.write(`
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#classification">1. Classification</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-kind-of-data-analysis-question-is-this">What kind of data analysis question is this?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#k-nearest-neighbours-classification">1.2 K-nearest neighbours classification</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#training-and-test-sets">1.2 Training and Test Sets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#golden-rule-of-machine-learning-statistics">Golden Rule of Machine Learning / Statistics:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#k-nearest-neighbours-classification">1.3 K-nearest neighbours classification</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-would-the-predicted-class-be">What would the predicted class be?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#we-can-go-beyond-2-predictors">We can go beyond 2 predictors!</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#standardizing-data">1.3 Standardizing Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#standardizing-data">1.4 Standardizing Data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nonstandardized-data-vs-standardized-data">Nonstandardized Data vs. Standardized Data</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tidymodels-package-in-r">1.4 <code class="docutils literal notranslate"><span class="pre">tidymodels</span></code> package in R</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tidymodels-package-in-r">1.5 <code class="docutils literal notranslate"><span class="pre">tidymodels</span></code> package in R</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-a-recipe-to-specify-the-predictors-response-and-preprocess-the-data">1. Make a <code class="docutils literal notranslate"><span class="pre">recipe</span></code> to specify the predictors/response and preprocess the data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-a-model-specification-model-spec-to-specify-the-model-and-training-algorithm">2. Build a model specification (<code class="docutils literal notranslate"><span class="pre">model_spec</span></code>) to specify the model and training algorithm</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#put-them-together-in-a-workflow-and-then-fit-it">3. Put them together in a workflow and then <code class="docutils literal notranslate"><span class="pre">fit</span></code> it</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#predict-a-new-class-label-using-predict">4. Predict a new class label using <code class="docutils literal notranslate"><span class="pre">predict</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-measure-classifier-performance">1.5 How to measure classifier performance?</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-measure-classifier-performance">1.6 How to measure classifier performance?</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accuracy">Accuracy</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#precision-and-recall">Precision and Recall</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-class-question">In-class Question</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#training-and-test-sets">1.6 Training and Test Sets</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#golden-rule-of-machine-learning-statistics">Golden Rule of Machine Learning / Statistics:</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#choosing-k-or-tuning-the-model">1.7 Choosing K (or, “tuning’’ the model)</a><ul class="nav section-nav flex-column">
@@ -448,20 +449,20 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ───────────────────────────────────────────────────────────────── tidyverse 2.0.0 ──
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ─────────────────────────────────────────────────────────── tidyverse 2.0.0 ──
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dplyr    </span> 1.1.4     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">readr    </span> 2.1.5
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">forcats  </span> 1.0.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">stringr  </span> 1.5.1
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">lubridate</span> 1.9.3     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tibble   </span> 3.2.1
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">purrr    </span> 1.0.2     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tidyr    </span> 1.3.1
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ─────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ───────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">filter()</span> masks <span class=" -Color -Color-Blue">stats</span>::filter()
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">lag()</span>    masks <span class=" -Color -Color-Blue">stats</span>::lag()
 <span class=" -Color -Color-Cyan">ℹ</span> Use the conflicted package (<span class=" -Color -Color-Blue">&lt;http://conflicted.r-lib.org/&gt;</span>) to force all conflicts to become errors
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching packages</span> ─────────────────────────────────────────────────────────────────────────────── tidymodels 1.2.0 ──
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching packages</span> ───────────────────────────────────────────────────────────────────────── tidymodels 1.2.0 ──
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">broom       </span> 1.0.6      <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">rsample     </span> 1.2.1 
@@ -472,14 +473,14 @@ document.write(`
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">recipes     </span> 1.0.10     
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ────────────────────────────────────────────────────────────────────────────────── tidymodels_conflicts() ──
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ──────────────────────────────────────────────────────────────────────────── tidymodels_conflicts() ──
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">scales</span>::<span class=" -Color -Color-Green">discard()</span> masks <span class=" -Color -Color-Blue">purrr</span>::discard()
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">filter()</span>   masks <span class=" -Color -Color-Blue">stats</span>::filter()
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">recipes</span>::<span class=" -Color -Color-Green">fixed()</span>  masks <span class=" -Color -Color-Blue">stringr</span>::fixed()
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">lag()</span>      masks <span class=" -Color -Color-Blue">stats</span>::lag()
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">yardstick</span>::<span class=" -Color -Color-Green">spec()</span> masks <span class=" -Color -Color-Blue">readr</span>::spec()
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">recipes</span>::<span class=" -Color -Color-Green">step()</span>   masks <span class=" -Color -Color-Blue">stats</span>::step()
-<span class=" -Color -Color-Blue">•</span> Learn how to get started at <span class=" -Color -Color-Green">https://www.tidymodels.org/start/</span>
+<span class=" -Color -Color-Blue">•</span> Use <span class=" -Color -Color-Green">tidymodels_prefer()</span> to resolve common conflicts.
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Attaching package: ‘palmerpenguins’
@@ -518,8 +519,30 @@ document.write(`
 <h2>What kind of data analysis question is this?<a class="headerlink" href="#what-kind-of-data-analysis-question-is-this" title="Permalink to this heading">#</a></h2>
 <p>Descriptive, exploratory, predictive, inferential, causal, or mechanistic?</p>
 </section>
+<section id="training-and-test-sets">
+<h2>1.2 Training and Test Sets<a class="headerlink" href="#training-and-test-sets" title="Permalink to this heading">#</a></h2>
+<p>When building a machine learning model, typically we start by dividing our data into two sets:</p>
+<ol class="arabic simple">
+<li><p>Training set</p></li>
+<li><p>Test set</p></li>
+</ol>
+<p>The <strong>training set</strong> is a subset of our data that is used is to train or teach our model to perform sort of predictive task. Then, using our <strong>test set</strong>, we can evaluate how well our model performs on unseen data.</p>
+<p>There are two important things to do when splitting data.</p>
+<ol class="arabic simple">
+<li><p><strong>Shuffling:</strong> randomly reorder the data before splitting</p></li>
+<li><p><strong>Stratification:</strong> make sure the two split subsets of data have roughly equal proportions of the different labels</p></li>
+</ol>
+<center>
+<img src="https://datasciencebook.ca/img/classification2/training_test.png" width="1100"/>
+</center>
+<section id="golden-rule-of-machine-learning-statistics">
+<h3>Golden Rule of Machine Learning / Statistics:<a class="headerlink" href="#golden-rule-of-machine-learning-statistics" title="Permalink to this heading">#</a></h3>
+<p><strong>Don’t use your testing data to train your model!</strong></p>
+<p>Showing your classifier the labels of evaluation data is like cheating on a test; it’ll look more accurate than it really is.</p>
+</section>
+</section>
 <section id="k-nearest-neighbours-classification">
-<h2>1.2 K-nearest neighbours classification<a class="headerlink" href="#k-nearest-neighbours-classification" title="Permalink to this heading">#</a></h2>
+<h2>1.3 K-nearest neighbours classification<a class="headerlink" href="#k-nearest-neighbours-classification" title="Permalink to this heading">#</a></h2>
 <p><em>Predict the label / class for a new observation using the K closest points from our dataset.</em></p>
 <ol class="arabic simple">
 <li><p>Compute the distance between the new observation and each observation in our <em>training set</em><br><br></p></li>
@@ -567,7 +590,7 @@ $\text{Distance} = \sqrt{(x_{\text{new}} - x_{\text{train}})^2 + (y_{\text{new}}
 </section>
 </section>
 <section id="standardizing-data">
-<h2>1.3 Standardizing Data<a class="headerlink" href="#standardizing-data" title="Permalink to this heading">#</a></h2>
+<h2>1.4 Standardizing Data<a class="headerlink" href="#standardizing-data" title="Permalink to this heading">#</a></h2>
 <center><img src="img/scaling_example1.png" width="600"/></center><center><img src="img/scaling_example2.png" width="600"/></center><ul class="simple">
 <li><p>When using K-nearest neighbour classification, the scale of each variable (i.e., its size and range of values) matters. e.g. Salary (10,000+) and Age (0-100)</p></li>
 <li><p>Since the classifier predicts classes by identifying observations that are nearest to it, any variables that have a large scale will have a much larger effect than variables with a small scale.</p></li>
@@ -596,7 +619,7 @@ $\text{Distance} = \sqrt{(x_{\text{new}} - x_{\text{train}})^2 + (y_{\text{new}}
 </section>
 </section>
 <section id="tidymodels-package-in-r">
-<h2>1.4 <code class="docutils literal notranslate"><span class="pre">tidymodels</span></code> package in R<a class="headerlink" href="#tidymodels-package-in-r" title="Permalink to this heading">#</a></h2>
+<h2>1.5 <code class="docutils literal notranslate"><span class="pre">tidymodels</span></code> package in R<a class="headerlink" href="#tidymodels-package-in-r" title="Permalink to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">tidymodels</span></code> is a collection of packages and handles computing distances, standardization, balancing, and prediction for us!</p>
 <center>
     <img src = "https://i0.wp.com/rviews.rstudio.com/post/2019-06-14-a-gentle-intro-to-tidymodels_files/figure-html/tidymodels.png?zoom=2&w=578&ssl=1" width="800"/>
@@ -615,7 +638,7 @@ Source: https://www.r-bloggers.com/2019/06/a-gentle-introduction-to-tidymodels/<
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">569</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">12</span>
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">─────────────────────────────────────────────────────────────────────────────────────────────────</span>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">───────────────────────────────────────────────────────────────────────────────────────────</span>
 <span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
 <span class=" -Color -Color-Red">chr</span>  (1): Class
 <span class=" -Color -Color-Green">dbl</span> (11): ID, Radius, Texture, Perimeter, Area, Smoothness, Compactness, Con...
@@ -675,7 +698,7 @@ Source: https://www.r-bloggers.com/2019/06/a-gentle-introduction-to-tidymodels/<
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Recipe</span> <span class=" -Color -Color-Cyan">───────────────────────────────────────────────────────────────────────────────────────────────────────────────</span>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Recipe</span> <span class=" -Color -Color-Cyan">─────────────────────────────────────────────────────────────────────────────────────────────────────────</span>
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
@@ -758,17 +781,17 @@ Computational engine: kknn
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>══ Workflow ═════════════════════════════════════════════════════════════════════════════════════════════════════════════
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>══ Workflow ═══════════════════════════════════════════════════════════════════════════════════════════════════════
 Preprocessor: Recipe
 Model: nearest_neighbor()
 
-── Preprocessor ─────────────────────────────────────────────────────────────────────────────────────────────────────────
+── Preprocessor ───────────────────────────────────────────────────────────────────────────────────────────────────
 2 Recipe Steps
 
 • step_center()
 • step_scale()
 
-── Model ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+── Model ──────────────────────────────────────────────────────────────────────────────────────────────────────────
 K-Nearest Neighbor Model Specification (classification)
 
 Main Arguments:
@@ -813,7 +836,7 @@ Computational engine: kknn
 </section>
 </section>
 <section id="how-to-measure-classifier-performance">
-<h2>1.5 How to measure classifier performance?<a class="headerlink" href="#how-to-measure-classifier-performance" title="Permalink to this heading">#</a></h2>
+<h2>1.6 How to measure classifier performance?<a class="headerlink" href="#how-to-measure-classifier-performance" title="Permalink to this heading">#</a></h2>
 </br>
 <section id="accuracy">
 <h3>Accuracy<a class="headerlink" href="#accuracy" title="Permalink to this heading">#</a></h3>
@@ -898,27 +921,6 @@ Computational engine: kknn
 <p>iii.) Compute performance metrics (accuracy, precision, recall, etc.) by predicting labels on testing data only</p>
 <p>We’ll now talk about these steps below.</p>
 </section>
-</section>
-</section>
-<section id="training-and-test-sets">
-<h2>1.6 Training and Test Sets<a class="headerlink" href="#training-and-test-sets" title="Permalink to this heading">#</a></h2>
-<p>When building a machine learning model, typically we start by dividing our data into two sets:</p>
-<ol class="arabic simple">
-<li><p>Training set</p></li>
-<li><p>Test set</p></li>
-</ol>
-<p>The <strong>training set</strong> is a subset of our data that is used is to train or teach our model to perform sort of predictive task. Then, using our <strong>test set</strong>, we can evaluate how well our model performs on unseen data.</p>
-<p>There are two important things to do when splitting data.</p>
-<ol class="arabic simple">
-<li><p><strong>Shuffling:</strong> randomly reorder the data before splitting</p></li>
-<li><p><strong>Stratification:</strong> make sure the two split subsets of data have roughly equal proportions of the different labels</p></li>
-</ol>
-<center>
-<img src="https://datasciencebook.ca/img/classification2/training_test.png" width="1100"/>
-</center><section id="golden-rule-of-machine-learning-statistics">
-<h3>Golden Rule of Machine Learning / Statistics:<a class="headerlink" href="#golden-rule-of-machine-learning-statistics" title="Permalink to this heading">#</a></h3>
-<p><strong>Don’t use your testing data to train your model!</strong></p>
-<p>Showing your classifier the labels of evaluation data is like cheating on a test; it’ll look more accurate than it really is.</p>
 </section>
 </section>
 <section id="choosing-k-or-tuning-the-model">
@@ -1124,17 +1126,17 @@ Computational engine: kknn
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>══ Workflow [trained] ═══════════════════════════════════════════════════════════════════════════════════════════════════
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>══ Workflow [trained] ═════════════════════════════════════════════════════════════════════════════════════════════
 Preprocessor: Recipe
 Model: nearest_neighbor()
 
-── Preprocessor ─────────────────────────────────────────────────────────────────────────────────────────────────────────
+── Preprocessor ───────────────────────────────────────────────────────────────────────────────────────────────────
 2 Recipe Steps
 
 • step_scale()
 • step_center()
 
-── Model ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+── Model ──────────────────────────────────────────────────────────────────────────────────────────────────────────
 
 Call:
 kknn::train.kknn(formula = ..y ~ ., data = data, ks = min_rows(21,     data, 5), kernel = ~&quot;rectangular&quot;)
@@ -1221,6 +1223,47 @@ Prediction  M  B
 <section id="question">
 <h3>Question<a class="headerlink" href="#question" title="Permalink to this heading">#</a></h3>
 <p>What are the precision and recall for the classifier on the test data?</p>
+<p>We can use the precision and recall functions from <code class="docutils literal notranslate"><span class="pre">tidymodels</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">tumor_test_predictions</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">precision</span><span class="p">(</span><span class="n">truth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Class</span><span class="p">,</span><span class="w"> </span><span class="n">estimate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">.pred_class</span><span class="p">,</span><span class="w"> </span><span class="n">event_level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;first&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 1 × 3</caption>
+<thead>
+	<tr><th scope=col>.metric</th><th scope=col>.estimator</th><th scope=col>.estimate</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>precision</td><td>binary</td><td>0.84</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">tumor_test_predictions</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">recall</span><span class="p">(</span><span class="n">truth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Class</span><span class="p">,</span><span class="w"> </span><span class="n">estimate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">.pred_class</span><span class="p">,</span><span class="w"> </span><span class="n">event_level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;first&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 1 × 3</caption>
+<thead>
+	<tr><th scope=col>.metric</th><th scope=col>.estimator</th><th scope=col>.estimate</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>recall</td><td>binary</td><td>0.7924528</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
 </section>
 <section id="activity">
 <h3>Activity<a class="headerlink" href="#activity" title="Permalink to this heading">#</a></h3>
@@ -1250,7 +1293,7 @@ Prediction  M  B
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">932</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">9</span>
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">─────────────────────────────────────────────────────────────────────────────────────────────────</span>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">───────────────────────────────────────────────────────────────────────────────────────────</span>
 <span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
 <span class=" -Color -Color-Red">chr</span> (3): city, zip, type
 <span class=" -Color -Color-Green">dbl</span> (6): beds, baths, sqft, price, latitude, longitude
@@ -1398,17 +1441,17 @@ Prediction  M  B
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>══ Workflow ═════════════════════════════════════════════════════════════════════════════════════════════════════════════
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>══ Workflow ═══════════════════════════════════════════════════════════════════════════════════════════════════════
 Preprocessor: Recipe
 Model: nearest_neighbor()
 
-── Preprocessor ─────────────────────────────────────────────────────────────────────────────────────────────────────────
+── Preprocessor ───────────────────────────────────────────────────────────────────────────────────────────────────
 2 Recipe Steps
 
 • step_scale()
 • step_center()
 
-── Model ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+── Model ──────────────────────────────────────────────────────────────────────────────────────────────────────────
 K-Nearest Neighbor Model Specification (regression)
 
 Main Arguments:
@@ -1598,32 +1641,32 @@ Computational engine: kknn
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#classification">1. Classification</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-kind-of-data-analysis-question-is-this">What kind of data analysis question is this?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#k-nearest-neighbours-classification">1.2 K-nearest neighbours classification</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#training-and-test-sets">1.2 Training and Test Sets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#golden-rule-of-machine-learning-statistics">Golden Rule of Machine Learning / Statistics:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#k-nearest-neighbours-classification">1.3 K-nearest neighbours classification</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-would-the-predicted-class-be">What would the predicted class be?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#we-can-go-beyond-2-predictors">We can go beyond 2 predictors!</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#standardizing-data">1.3 Standardizing Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#standardizing-data">1.4 Standardizing Data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nonstandardized-data-vs-standardized-data">Nonstandardized Data vs. Standardized Data</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tidymodels-package-in-r">1.4 <code class="docutils literal notranslate"><span class="pre">tidymodels</span></code> package in R</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tidymodels-package-in-r">1.5 <code class="docutils literal notranslate"><span class="pre">tidymodels</span></code> package in R</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-a-recipe-to-specify-the-predictors-response-and-preprocess-the-data">1. Make a <code class="docutils literal notranslate"><span class="pre">recipe</span></code> to specify the predictors/response and preprocess the data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-a-model-specification-model-spec-to-specify-the-model-and-training-algorithm">2. Build a model specification (<code class="docutils literal notranslate"><span class="pre">model_spec</span></code>) to specify the model and training algorithm</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#put-them-together-in-a-workflow-and-then-fit-it">3. Put them together in a workflow and then <code class="docutils literal notranslate"><span class="pre">fit</span></code> it</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#predict-a-new-class-label-using-predict">4. Predict a new class label using <code class="docutils literal notranslate"><span class="pre">predict</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-measure-classifier-performance">1.5 How to measure classifier performance?</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-measure-classifier-performance">1.6 How to measure classifier performance?</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accuracy">Accuracy</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#precision-and-recall">Precision and Recall</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-class-question">In-class Question</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#training-and-test-sets">1.6 Training and Test Sets</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#golden-rule-of-machine-learning-statistics">Golden Rule of Machine Learning / Statistics:</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#choosing-k-or-tuning-the-model">1.7 Choosing K (or, “tuning’’ the model)</a><ul class="nav section-nav flex-column">

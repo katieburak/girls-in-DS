@@ -22,7 +22,7 @@ Lunch will be provided each day for the participants.
 | Day 2 | Measures of central tendency and spread, statistical inference and sampling, observational studies vs. experiments | 
 | Day 3 | Machine learning fundamentals, answering predictive questions (regression, classification) | 
 
-A Jupyter notebook of the material is available [here](https://katieburak.github.io/girls-in-DS/notes/day2.html).
+A Jupyter notebook of the material is available [here](https://katieburak.github.io/girls-in-DS/README.html).
 
 ## References 
 

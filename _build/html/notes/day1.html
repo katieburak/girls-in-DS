@@ -167,6 +167,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="day2.html">Day 2 - Girls in Data Science</a></li>
 
 
+
 <li class="toctree-l1"><a class="reference internal" href="day3.html">Day 3 - Girls in Data Science</a></li>
 
 
@@ -766,7 +767,7 @@ This package has already been installed for you. Later in the course you will le
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ──────────────────────── tidyverse 2.0.0 ──
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ─────────────────────────────────────────────── tidyverse 2.0.0 ──
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dplyr    </span> 1.1.4     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">readr    </span> 2.1.5
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">forcats  </span> 1.0.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">stringr  </span> 1.5.1
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">ggplot2  </span> 3.5.1     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tibble   </span> 3.2.1
@@ -774,7 +775,7 @@ This package has already been installed for you. Later in the course you will le
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">purrr    </span> 1.0.2     
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ────────────────────────────────────────── tidyverse_conflicts() ──
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ───────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">filter()</span> masks <span class=" -Color -Color-Blue">stats</span>::filter()
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">lag()</span>    masks <span class=" -Color -Color-Blue">stats</span>::lag()
 <span class=" -Color -Color-Cyan">ℹ</span> Use the conflicted package (<span class=" -Color -Color-Blue">&lt;http://conflicted.r-lib.org/&gt;</span>) to force all conflicts to become errors
@@ -946,7 +947,7 @@ This package has already been installed for you. Later in the course you will le
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">200</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">8</span>
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">────────────────────────────────────────────────────────</span>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">───────────────────────────────────────────────────────────────────────────────</span>
 <span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
 <span class=" -Color -Color-Red">chr</span> (7): name, channel_Info, Category, Posts, Followers, Avg. Likes, Eng Rate
 <span class=" -Color -Color-Green">dbl</span> (1): rank
@@ -1549,6 +1550,40 @@ summarize(avg_followers = mean(Followers))</p>
 	<tr><td><span style=white-space:pre-wrap>Beauty &amp; Makeup         </span></td><td> 49133333</td></tr>
 	<tr><td>food                    </td><td> 46900000</td></tr>
 	<tr><td>Craft/DIY               </td><td> 46200000</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<p>Or we could count the number of accounts in each category using <code class="docutils literal notranslate"><span class="pre">n()</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">insta</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">group_by</span><span class="p">(</span><span class="n">Category</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">summarize</span><span class="p">(</span><span class="n">Count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">n</span><span class="p">())</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">arrange</span><span class="p">(</span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">desc</span><span class="p">(</span><span class="n">Count</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 12 × 2</caption>
+<thead>
+	<tr><th scope=col>Category</th><th scope=col>Count</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>entertainment           </td><td>129</td></tr>
+	<tr><td>Health, Sports &amp; Fitness</td><td> 39</td></tr>
+	<tr><td>fashion                 </td><td> 10</td></tr>
+	<tr><td>Not Available           </td><td>  7</td></tr>
+	<tr><td><span style=white-space:pre-wrap>Beauty &amp; Makeup         </span></td><td><span style=white-space:pre-wrap>  3</span></td></tr>
+	<tr><td><span style=white-space:pre-wrap>News &amp; Politics         </span></td><td><span style=white-space:pre-wrap>  3</span></td></tr>
+	<tr><td>food                    </td><td>  2</td></tr>
+	<tr><td>photography             </td><td>  2</td></tr>
+	<tr><td>technology              </td><td>  2</td></tr>
+	<tr><td>Craft/DIY               </td><td>  1</td></tr>
+	<tr><td>Finance                 </td><td>  1</td></tr>
+	<tr><td>Lifestyle               </td><td>  1</td></tr>
 </tbody>
 </table>
 </div></div>

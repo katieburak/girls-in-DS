@@ -167,6 +167,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Day 2 - Girls in Data Science</a></li>
 
 
+
 <li class="toctree-l1"><a class="reference internal" href="day3.html">Day 3 - Girls in Data Science</a></li>
 
 
@@ -415,6 +416,14 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bootstrapping">3. Bootstrapping</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-a-single-bootstrap-sample">Generating a single bootstrap sample</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bootstrap-sampling-distribution">Bootstrap Sampling Distribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sampling-vs-bootstrap-distribution">Sampling vs bootstrap distribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-bootstrap-to-calculate-a-plausible-range">Using the bootstrap to calculate a plausible range</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-bootstrap-to-calculate-a-plausible-range-of-the-mean">Using the bootstrap to calculate a plausible range of the mean</a></li>
+</ul>
+</li>
 </ul>
 
             </nav>
@@ -439,14 +448,14 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ───────────────────────────────────────────────────────────────── tidyverse 2.0.0 ──
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ─────────────────────────────────────────────── tidyverse 2.0.0 ──
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dplyr    </span> 1.1.4     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">readr    </span> 2.1.5
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">forcats  </span> 1.0.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">stringr  </span> 1.5.1
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">lubridate</span> 1.9.3     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tibble   </span> 3.2.1
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">purrr    </span> 1.0.2     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tidyr    </span> 1.3.1
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ─────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ───────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">filter()</span> masks <span class=" -Color -Color-Blue">stats</span>::filter()
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">lag()</span>    masks <span class=" -Color -Color-Blue">stats</span>::lag()
 <span class=" -Color -Color-Cyan">ℹ</span> Use the conflicted package (<span class=" -Color -Color-Blue">&lt;http://conflicted.r-lib.org/&gt;</span>) to force all conflicts to become errors
@@ -593,7 +602,7 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">200</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">8</span>
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">─────────────────────────────────────────────────────────────────────────────────────────────────</span>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">───────────────────────────────────────────────────────────────────────────────</span>
 <span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
 <span class=" -Color -Color-Red">chr</span> (7): name, channel_Info, Category, Posts, Followers, Avg. Likes, Eng Rate
 <span class=" -Color -Color-Green">dbl</span> (1): rank
@@ -760,8 +769,7 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
 <p>Why? For example, if the data is skewed, the mean gets “pulled” out in the direction of the skewness, whereas the mean is less affected. See the plot below to illustrate this concept:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">colors</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;median&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;blue&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;mean&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;red&quot;</span><span class="p">)</span>
-<span class="nf">ggplot</span><span class="p">(</span><span class="n">insta</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Posts</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">insta</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Posts</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
 <span class="w">    </span><span class="nf">geom_histogram</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="m">50</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
 <span class="w">    </span><span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">26</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
 <span class="w">    </span><span class="nf">labs</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s">&#39;Number of Posts&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="s">&#39;Count&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">title</span><span class="o">=</span><span class="s">&#39;Histogram of Posts&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
@@ -1127,6 +1135,192 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
 </section>
 </section>
 </section>
+<section class="tex2jax_ignore mathjax_ignore" id="bootstrapping">
+<h1>3. Bootstrapping<a class="headerlink" href="#bootstrapping" title="Permalink to this heading">#</a></h1>
+<p>We only have one sample… but if it’s big enough, the sample looks like the population!</p>
+<a class="reference internal image-reference" href="https://datasciencebook.ca/_main_files/figure-html/11-example-bootstrapping0-1.png"><img alt="https://datasciencebook.ca/_main_files/figure-html/11-example-bootstrapping0-1.png" src="https://datasciencebook.ca/_main_files/figure-html/11-example-bootstrapping0-1.png" style="width: 1200px;" /></a>
+<p>Let’s pretend our <em>sample</em> <strong>is</strong> our population. Then we can take many samples from our original sample (called <em>bootstrap samples</em>) to give us an approximation of the sampling distribution (the <em>bootstrap sampling distribution</em>).</p>
+<p>Note that by taking many samples from our single, observed sample, we do not obtain the true sampling distribution, but rather an approximation that we call the bootstrap distribution.</p>
+<section id="generating-a-single-bootstrap-sample">
+<h2>Generating a single bootstrap sample<a class="headerlink" href="#generating-a-single-bootstrap-sample" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Randomly draw an observation from the original sample (which was drawn from the population)</p></li>
+<li><p>Record the observation’s value</p></li>
+<li><p>Return the observation to the original sample</p></li>
+<li><p>Repeat the above the same number of times as there are observations in the original sample</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">student_sample</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A grouped_df: 40 × 4</caption>
+<thead>
+	<tr><th scope=col>replicate</th><th scope=col>student_id</th><th scope=col>age</th><th scope=col>phone_type</th></tr>
+	<tr><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;fct&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>1</td><td>45991</td><td>20</td><td>iphone</td></tr>
+	<tr><td>1</td><td>36200</td><td>19</td><td>iphone</td></tr>
+	<tr><td>1</td><td>44639</td><td>21</td><td>iphone</td></tr>
+	<tr><td>1</td><td>48967</td><td>20</td><td>iphone</td></tr>
+	<tr><td>1</td><td>33706</td><td>20</td><td>iphone</td></tr>
+	<tr><td>1</td><td>  557</td><td>21</td><td>iphone</td></tr>
+	<tr><td>1</td><td>43078</td><td>25</td><td>other </td></tr>
+	<tr><td>1</td><td> 3597</td><td>21</td><td>other </td></tr>
+	<tr><td>1</td><td>25424</td><td>19</td><td>other </td></tr>
+	<tr><td>1</td><td>40200</td><td>24</td><td>other </td></tr>
+	<tr><td>1</td><td>35834</td><td>20</td><td>iphone</td></tr>
+	<tr><td>1</td><td>20953</td><td>23</td><td>iphone</td></tr>
+	<tr><td>1</td><td>12758</td><td>24</td><td>iphone</td></tr>
+	<tr><td>1</td><td>49580</td><td>25</td><td>other </td></tr>
+	<tr><td>1</td><td> 1558</td><td>20</td><td>iphone</td></tr>
+	<tr><td>1</td><td>45629</td><td>20</td><td>iphone</td></tr>
+	<tr><td>1</td><td>38182</td><td>23</td><td>iphone</td></tr>
+	<tr><td>1</td><td>26430</td><td>19</td><td>other </td></tr>
+	<tr><td>1</td><td> 1078</td><td>19</td><td>iphone</td></tr>
+	<tr><td>1</td><td>38477</td><td>21</td><td>iphone</td></tr>
+	<tr><td>1</td><td>46567</td><td>19</td><td>other </td></tr>
+	<tr><td>1</td><td> 3750</td><td>22</td><td>iphone</td></tr>
+	<tr><td>1</td><td>40407</td><td>23</td><td>other </td></tr>
+	<tr><td>1</td><td>38819</td><td>22</td><td>other </td></tr>
+	<tr><td>1</td><td> 2935</td><td>19</td><td>iphone</td></tr>
+	<tr><td>1</td><td>40557</td><td>22</td><td>other </td></tr>
+	<tr><td>1</td><td> 4461</td><td>22</td><td>iphone</td></tr>
+	<tr><td>1</td><td>13400</td><td>23</td><td>other </td></tr>
+	<tr><td>1</td><td>34446</td><td>25</td><td>other </td></tr>
+	<tr><td>1</td><td>32991</td><td>22</td><td>iphone</td></tr>
+	<tr><td>1</td><td> 3231</td><td>22</td><td>other </td></tr>
+	<tr><td>1</td><td> 3048</td><td>18</td><td>iphone</td></tr>
+	<tr><td>1</td><td>36894</td><td>18</td><td>iphone</td></tr>
+	<tr><td>1</td><td>12332</td><td>20</td><td>other </td></tr>
+	<tr><td>1</td><td>15180</td><td>24</td><td>other </td></tr>
+	<tr><td>1</td><td>13325</td><td>24</td><td>iphone</td></tr>
+	<tr><td>1</td><td>32026</td><td>21</td><td>iphone</td></tr>
+	<tr><td>1</td><td>36825</td><td>21</td><td>iphone</td></tr>
+	<tr><td>1</td><td>30459</td><td>23</td><td>iphone</td></tr>
+	<tr><td>1</td><td> 1025</td><td>23</td><td>iphone</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">### BOOTSTRAP SAMPLE </span>
+
+<span class="n">student_sample</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">student_sample</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">                    </span><span class="nf">ungroup</span><span class="p">()</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">                    </span><span class="nf">select</span><span class="p">(</span><span class="n">phone_type</span><span class="p">)</span>
+
+<span class="nf">rep_sample_n</span><span class="p">(</span><span class="n">student_sample</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="o">=</span><span class="m">40</span><span class="p">,</span><span class="w"> </span><span class="n">replace</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">reps</span><span class="o">=</span><span class="m">10000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A grouped_df: 400000 × 2</caption>
+<thead>
+	<tr><th scope=col>replicate</th><th scope=col>phone_type</th></tr>
+	<tr><th scope=col>&lt;int&gt;</th><th scope=col>&lt;fct&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>1</td><td>other </td></tr>
+	<tr><td>1</td><td>other </td></tr>
+	<tr><td>1</td><td>iphone</td></tr>
+	<tr><td>1</td><td>iphone</td></tr>
+	<tr><td>1</td><td>iphone</td></tr>
+	<tr><td>1</td><td>iphone</td></tr>
+	<tr><td>1</td><td>other </td></tr>
+	<tr><td>1</td><td>iphone</td></tr>
+	<tr><td>1</td><td>iphone</td></tr>
+	<tr><td>1</td><td>other </td></tr>
+	<tr><td>1</td><td>other </td></tr>
+	<tr><td>1</td><td>other </td></tr>
+	<tr><td>1</td><td>other </td></tr>
+	<tr><td>1</td><td>other </td></tr>
+	<tr><td>1</td><td>other </td></tr>
+	<tr><td>1</td><td>iphone</td></tr>
+	<tr><td>1</td><td>other </td></tr>
+	<tr><td>1</td><td>iphone</td></tr>
+	<tr><td>1</td><td>other </td></tr>
+	<tr><td>1</td><td>iphone</td></tr>
+	<tr><td>1</td><td>other </td></tr>
+	<tr><td>1</td><td>other </td></tr>
+	<tr><td>1</td><td>other </td></tr>
+	<tr><td>1</td><td>iphone</td></tr>
+	<tr><td>1</td><td>other </td></tr>
+	<tr><td>1</td><td>other </td></tr>
+	<tr><td>1</td><td>iphone</td></tr>
+	<tr><td>1</td><td>other </td></tr>
+	<tr><td>1</td><td>iphone</td></tr>
+	<tr><td>1</td><td>iphone</td></tr>
+	<tr><td>⋮</td><td>⋮</td></tr>
+	<tr><td>10000</td><td>iphone</td></tr>
+	<tr><td>10000</td><td>iphone</td></tr>
+	<tr><td>10000</td><td>other </td></tr>
+	<tr><td>10000</td><td>iphone</td></tr>
+	<tr><td>10000</td><td>iphone</td></tr>
+	<tr><td>10000</td><td>other </td></tr>
+	<tr><td>10000</td><td>other </td></tr>
+	<tr><td>10000</td><td>iphone</td></tr>
+	<tr><td>10000</td><td>other </td></tr>
+	<tr><td>10000</td><td>other </td></tr>
+	<tr><td>10000</td><td>other </td></tr>
+	<tr><td>10000</td><td>iphone</td></tr>
+	<tr><td>10000</td><td>other </td></tr>
+	<tr><td>10000</td><td>other </td></tr>
+	<tr><td>10000</td><td>iphone</td></tr>
+	<tr><td>10000</td><td>other </td></tr>
+	<tr><td>10000</td><td>iphone</td></tr>
+	<tr><td>10000</td><td>iphone</td></tr>
+	<tr><td>10000</td><td>other </td></tr>
+	<tr><td>10000</td><td>iphone</td></tr>
+	<tr><td>10000</td><td>other </td></tr>
+	<tr><td>10000</td><td>iphone</td></tr>
+	<tr><td>10000</td><td>other </td></tr>
+	<tr><td>10000</td><td>other </td></tr>
+	<tr><td>10000</td><td>iphone</td></tr>
+	<tr><td>10000</td><td>iphone</td></tr>
+	<tr><td>10000</td><td>other </td></tr>
+	<tr><td>10000</td><td>other </td></tr>
+	<tr><td>10000</td><td>iphone</td></tr>
+	<tr><td>10000</td><td>iphone</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">?</span><span class="n">rep_sample_n</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="bootstrap-sampling-distribution">
+<h2>Bootstrap Sampling Distribution<a class="headerlink" href="#bootstrap-sampling-distribution" title="Permalink to this heading">#</a></h2>
+<p>Question: What would happen if we sampled without replacement? What does that mean?</p>
+</section>
+<section id="sampling-vs-bootstrap-distribution">
+<h2>Sampling vs bootstrap distribution<a class="headerlink" href="#sampling-vs-bootstrap-distribution" title="Permalink to this heading">#</a></h2>
+<p>The bootstrap mean will be centered around the mean of the intial sample rather than the true population mean (which is unknown)</p>
+</section>
+<section id="using-the-bootstrap-to-calculate-a-plausible-range">
+<h2>Using the bootstrap to calculate a plausible range<a class="headerlink" href="#using-the-bootstrap-to-calculate-a-plausible-range" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Take a bootstrap sample</p></li>
+<li><p>Calculate the bootstrap mean (or any other point estimate such as the median, proportion, slope, etc.) from that bootstrap sample</p></li>
+<li><p>Repeat steps (1) and (2) many times to create a bootstrap sampling distribution - the distribution of bootstrap point estimates</p></li>
+<li><p>Calculate the plausible range of values around our observed point estimate</p></li>
+</ol>
+</section>
+<section id="using-the-bootstrap-to-calculate-a-plausible-range-of-the-mean">
+<h2>Using the bootstrap to calculate a plausible range of the mean<a class="headerlink" href="#using-the-bootstrap-to-calculate-a-plausible-range-of-the-mean" title="Permalink to this heading">#</a></h2>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1245,6 +1439,14 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sampling-distribution">Sampling distribution</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bootstrapping">3. Bootstrapping</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-a-single-bootstrap-sample">Generating a single bootstrap sample</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bootstrap-sampling-distribution">Bootstrap Sampling Distribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sampling-vs-bootstrap-distribution">Sampling vs bootstrap distribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-bootstrap-to-calculate-a-plausible-range">Using the bootstrap to calculate a plausible range</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-bootstrap-to-calculate-a-plausible-range-of-the-mean">Using the bootstrap to calculate a plausible range of the mean</a></li>
 </ul>
 </li>
 </ul>
