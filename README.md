@@ -1,3 +1,4 @@
+
 # Girls in Data Science Summer Camp July 2024
 
 The Girls in Data Science Summer Camp at UBC aims to expose participants to a variety of topics in data science and
