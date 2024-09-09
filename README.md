@@ -1,4 +1,4 @@
-# Girls in Data Science Summer Camp
+# Girls in Data Science Summer Camp 2024
 
 The Girls in Data Science Summer Camp at UBC aims to expose participants to a variety of topics in data science and
 statistics. This camp is offered for girls and other gender minorities in grades 8-12. Participants can register by filling out this [google form](https://docs.google.com/forms/d/e/1FAIpQLSdePIjnQ_tzrCJH0_8JfGAUvUqOjp7wwYhAVWuzNJ9piOevAw/viewform). Please note that registration is free and spots are limited. 
