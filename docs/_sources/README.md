@@ -1,17 +1,17 @@
 
-# Girls in Data Science Summer Camp 2024
+# Girls in Data Science Camp 
 
 The Girls in Data Science Summer Camp at UBC aims to expose participants to a variety of topics in data science and
-statistics. This camp is offered for girls and other gender minorities in grades 8-12. Participants can register by filling out this [google form](https://docs.google.com/forms/d/e/1FAIpQLSdePIjnQ_tzrCJH0_8JfGAUvUqOjp7wwYhAVWuzNJ9piOevAw/viewform). Please note that registration is free and spots are limited. 
+statistics. This camp is offered for girls and other gender minorities in grades 8-12. Dates and registration for next year will be announced this spring. Please note that registration is free and spots are limited. 
 
 ## General Information
 
-- Dates: July 8-10, 2024
+- Dates: July 7-9, 2025
 - Time: 10am-3pm 
 - Location: [MacLeod (MCLD) - 3018](https://learningspaces.ubc.ca/classrooms/mcld-3018) (room #3018 on the third floor)
 > [Google maps link](https://www.google.com/maps/place/MacLeod+Building/@49.2624698,-123.2505937,17.44z/data=!4m6!3m5!1s0x548672ca2ddce785:0xeed9111ae157bfb6!8m2!3d49.2616108!4d-123.2494107!16s%2Fg%2F11bwnyc39c?hl=en-US&entry=ttu) to the MacLeod Building 
 - Instructor: Katie Burak (Contact: kburak@stat.ubc.ca)
-- Mentors: Mona Zhu, Riya Eliza Shaju 
+- Mentors: 
 
 Lunch will be provided each day for the participants.
 
@@ -35,7 +35,7 @@ A Jupyter notebook of the material is available [here](https://katieburak.github
 ## License
 
 License
-© 2024 Katie Burak, Jenny Lee and Mona Zhu 
+© 2025 Katie Burak, Jenny Lee and Mona Zhu 
 
 Software licensed under the MIT License, non-software content licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License. See the license file for more information.
 
