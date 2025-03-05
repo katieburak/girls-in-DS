@@ -8,9 +8,9 @@ statistics. This camp is offered for girls and other gender minorities in grades
 
 - Dates: July 7-9, 2025
 - Time: 10am-3pm 
-- Location: UBC Vancouver Campus (room TBD) 
-- Instructor: Katie Burak (Contact: kburak@stat.ubc.ca)
-- Mentors: 
+- Location: UBC Vancouver Campus
+- Instructor: [Katie Burak](https://katieburak.github.io/) (Contact: kburak@stat.ubc.ca)
+- Mentors: [Sky Sheng](https://awp.landfood.ubc.ca/people/graduate-students/kehan-sheng/)
 
 Lunch will be provided each day for the participants.
 
@@ -40,3 +40,5 @@ Software licensed under the MIT License, non-software content licensed under the
 
 
 > Thank you to UBC's Department of Statistics, Master of Data Science Program, Data Science Institute and PIMS for helping to make this event possible.
+
+![](https://media.pims.math.ca/logos/webhorizfullsmall.png)
