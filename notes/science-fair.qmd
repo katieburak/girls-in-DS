@@ -1,0 +1,160 @@
+---
+title: "UBC Science Fair"
+subtitle: "Department of Statistics"
+format: revealjs
+editor: visual
+---
+
+## 
+<div style="text-align: center;">
+  <h1>Department of Statistics</h1>
+  <img src="img/sponsor3.png" alt="Sponsor Image" style="margin-top: 30px; max-width: 80%; height: auto;">
+</div>
+
+## What is Statistics?
+
+- Statistics is the science of data, focused on collecting, analyzing, interpreting, and presenting information
+- In Statistics, we aim to uncover meaningful patterns and trends from data
+- Used in fields like healthcare, sports, business, and government to make informed decisions
+- In today’s data-driven world, Statistics help us have a  better understanding of the world around us
+
+
+
+## Scenarios
+
+:::incremental
+- What makes a sports team successful, and how can we use data to improve performance?
+- How can we forecast the weather and predict natural disasters?
+- How do we determine if a new product or advertisement will be popular with customers?
+- How can we predict housing prices based on factors like location, size, and market trends?
+:::
+
+## Classification
+
+- **Machine learning** is a field where computers learn from data and make decisions and predictions. 
+- **Classification** is a type of machine learning, where the goal is to predict a categorical class of an observation given other variables (features). For example:
+	- Classifying an email as "spam" or "not spam" 
+	- Classifying a medical test as "positive" or "negative"
+	- Classifying a bank transaction as fraudulent or not
+	
+	
+## KNN Classification
+
+- KNN (K-Nearest Neighbors) is a simple, intuitive classification algorithm.
+- It classifies new data points based on the majority class of their closest neighbors in the training data.
+- Today, we will simulate KNN in a fun and interactive way!
+
+---
+
+## Training and Test Sets
+
+When building a machine learning model, typically we start by dividing our data into two sets:
+
+- 1) Training set
+- 2) Test set
+    
+The **training set** is a subset of our data that is used is to train or teach our model to perform sort of predictive task. 
+
+Then, using our **test set**, we can evaluate how well our model performs on unseen data. 
+
+## Activity 
+
+1. Setting up the Training Data
+   - Get a coloured sticky note
+   - Place the sticky notes on their shirts and stand randomly in the room.
+   - You represent labeled training data!
+
+---
+
+## Introducing the Test Points
+
+2. Introduce the "Test Points"
+   - Select 3 students to be unlabeled test data.
+   - Stand in random positions in the room.
+---
+
+## Find the Nearest Neighbors
+
+3. Find the Nearest Neighbors
+   - Each test student identifies their 5 closest neighbors ($k=5$).
+   - Count the colour of the sticky notes of your 5 nearest neighbours.
+   - Majority Voting: The colour with the most votes determines your new classification.
+
+---
+
+## Discussion Time
+:::incremental
+- Think about how we classified the unknown data point.
+     - What happens if we use $k=1$?
+     - What if we use $k=25$?
+- What could be the challenges with ties or class imbalances?
+:::
+---
+
+## Real-World Applications
+
+   - KNN can be used in many real-life scenarios such as:
+     - Recommendation systems (e.g., recommending movies based on user preferences)
+     - Image classification (e.g., identifying objects in images)
+     - Medical diagnosis (e.g., classifying diseases based on symptoms)
+     
+---
+
+## Example
+
+![](https://datasciencebook.ca/_main_files/figure-html/05-multiknn-3-1.png)
+
+## Example
+
+We can perform classifcation using real data and computer code! 
+
+```{r}
+library(ggplot2)
+library(tidyverse)
+library(tidymodels)
+
+# Data on cancer tumors
+tumors <- read_csv("data/clean-wdbc.data.csv") |>
+    mutate(Class = as_factor(Class))
+
+head(tumors)
+```
+## 
+
+```{r, echo = TRUE}
+tumor_recipe <- recipe(Class ~ Perimeter + Concavity, data=tumors) |>
+                  step_center(all_predictors()) |>
+                  step_scale(all_predictors()) 
+
+tumor_model <- nearest_neighbor(weight_func = "rectangular", neighbors = 3) |>
+       set_engine("kknn") |>
+       set_mode("classification")
+
+tumor_workflow <- workflow() |>
+    add_recipe(tumor_recipe) |>
+    add_model(tumor_model)
+
+tumor_fit <- tumor_workflow |>
+    fit(data=tumors)
+
+new_obs <- tibble(Perimeter = 0.2, Concavity = 3.3)
+
+predict(tumor_fit, new_obs)
+```
+
+
+## Why Study Statistics?
+
+- Classification is just one example of the many tasks we can accomplish with statistics and data science.
+- With the power of statistics, we can:
+  - Analyze real-world data
+  - Make predictions
+  - Understand complex systems and phenomena
+- If you're interested in working with real data, solving meaningful problems, and making data-driven decisions, consider studying Statistics or Data Science!
+
+## 
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100%; font-size: 200px; font-weight: bold;">
+  Questions?
+</div>
+
