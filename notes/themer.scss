@@ -1,0 +1,51 @@
+/*-- scss:defaults --*/
+
+
+$primary: #54698c; 
+$secondary:#c88b8b; 
+$tertiary: #2c365e;
+$fourth-color: #1aa88c;
+$font-family-sans-serif:  "Commissioner", "Source Sans Pro", Helvetica, sans-serif, !default;
+$presentation-font-size-root: 32px;
+$body-bg: #f4f7ff;
+$presentation-heading-color: $primary;
+$link-color: $secondary;
+
+.primary {color: $primary;}
+.secondary {color: $secondary;}
+.tertiary {color: $tertiary;}
+.fourth-colour {color: $fourth-color;}
+
+.center {text-align: center;}
+
+
+/*-- scss:rules --*/
+
+
+ol {
+  padding-left: 0.5em;
+}
+
+
+ul {
+ 	list-style: none; /* Remove default bullets */
+}
+
+
+ul li::marker {
+	color: $primary;
+}
+
+dt {
+  color: $secondary;
+}
+
+
+#title-slide {
+  text-align: left;
+}
+
+#title-slide .title {
+  color: $primary;
+}
+

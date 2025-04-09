@@ -93,7 +93,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="science-fair_files/libs/revealjs/dist/theme/quarto-bbe7401fe57d4b791b917637bb662036.css">
+  <link rel="stylesheet" href="science-fair_files/libs/revealjs/dist/theme/quarto-8daefc9c83a49a1c282ade4df4fed320.css">
   <link href="science-fair_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="science-fair_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="science-fair_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -230,7 +230,7 @@ Department of Statistics
 <section id="classification" class="slide level2">
 <h2>Classification</h2>
 <ul>
-<li><strong>Machine learning</strong> is a field where computers learn from data and make decisions and predictions.</li>
+<li><strong>Machine learning</strong> is a field where computers learn from data to make decisions and predictions.</li>
 <li><strong>Classification</strong> is a type of machine learning, where the goal is to predict a categorical class of an observation given other variables (features). For example:
 <ul>
 <li>Classifying an email as “spam” or “not spam”</li>
@@ -263,35 +263,27 @@ Department of Statistics
 </section>
 <section id="activity" class="slide level2">
 <h2>Activity</h2>
+<div>
 <ol type="1">
-<li>Setting up the Training Data
+<li class="fragment"><p>Setting up the Training Data:</p>
 <ul>
-<li>Get a coloured sticky note</li>
-<li>Place the sticky notes on their shirts and stand randomly in the room.</li>
-<li>You represent labeled training data!</li>
+<li class="fragment">Come and get a coloured sticky note (except for 3 volunteers)</li>
+<li class="fragment">Place the sticky notes on your shirt and stand randomly in the room.</li>
+<li class="fragment">You represent labeled training data!</li>
+</ul></li>
+<li class="fragment"><p>Introduce the “Test Points”:</p>
+<ul>
+<li class="fragment">3 students act as unlabeled test data.</li>
+<li class="fragment">Stand in random positions in the room.</li>
+</ul></li>
+<li class="fragment"><p>Find the Nearest Neighbors:</p>
+<ul>
+<li class="fragment">Each test student identifies their 5 closest neighbors <span class="math inline">\((k=5)\)</span>.</li>
+<li class="fragment">Count the colour of the sticky notes of your 5 nearest neighbours.</li>
+<li class="fragment">Majority Vote: The colour with the most votes is your new classification!</li>
 </ul></li>
 </ol>
-</section>
-<section id="introducing-the-test-points" class="slide level2">
-<h2>Introducing the Test Points</h2>
-<ol start="2" type="1">
-<li>Introduce the “Test Points”
-<ul>
-<li>Select 3 students to be unlabeled test data.</li>
-<li>Stand in random positions in the room.</li>
-</ul></li>
-</ol>
-</section>
-<section id="find-the-nearest-neighbors" class="slide level2">
-<h2>Find the Nearest Neighbors</h2>
-<ol start="3" type="1">
-<li>Find the Nearest Neighbors
-<ul>
-<li>Each test student identifies their 5 closest neighbors (<span class="math inline">\(k=5\)</span>).</li>
-<li>Count the colour of the sticky notes of your 5 nearest neighbours.</li>
-<li>Majority Voting: The colour with the most votes determines your new classification.</li>
-</ul></li>
-</ol>
+</div>
 </section>
 <section id="discussion-time" class="slide level2">
 <h2>Discussion Time</h2>
