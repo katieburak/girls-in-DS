@@ -76,8 +76,8 @@ Then, using our **test set**, we can evaluate how well our model performs on uns
     -   Stand in random positions in the room.
 
 3.  Find the Nearest Neighbors:
-    -   Each test student identifies their 5 closest neighbors $(k=5)$.
-    -   Count the colour of the sticky notes of your 5 nearest neighbours.
+    -   Help each test student identify their 5 closest neighbors $(k=5)$.
+    -   Count the colour of the sticky notes of the 5 nearest neighbours.
     -   Majority Vote: The colour with the most votes is your new classification!
 :::
     
@@ -104,10 +104,6 @@ Then, using our **test set**, we can evaluate how well our model performs on uns
 
 ## Example
 
-![](https://datasciencebook.ca/_main_files/figure-html/05-multiknn-3-1.png)
-
-## Example
-
 We can perform classifcation using real data and computer code!
 
 ```{r}
@@ -121,6 +117,13 @@ tumors <- read_csv("data/clean-wdbc.data.csv") |>
 
 head(tumors)
 ```
+
+
+## Example
+
+![](https://datasciencebook.ca/_main_files/figure-html/05-multiknn-3-1.png)
+
+
 
 ## 
 
@@ -153,6 +156,22 @@ predict(tumor_fit, new_obs)
     -   Make predictions
     -   Understand complex systems and phenomena
 -   If you're interested in working with real data, solving meaningful problems, and making data-driven decisions, consider studying Statistics or Data Science!
+
+## UBC Girls in Data Science Camp
+
+- Dates: July 7-9, 2025
+- Time: 10am-3pm
+- Location: UBC Vancouver Campus
+- Instructor: Katie Burak (Contact: kburak@stat.ubc.ca)
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 5em;">
+  <img src="img/logo.png" alt="Logo" style="height: 200px;">
+  <img src="img/qr_code.png" alt="QR Code" style="height: 200px;">
+</div>
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 2em;">
+<https://forms.gle/i3LsjobEhaBTzCpKA>
+</div>
 
 ## 
 
