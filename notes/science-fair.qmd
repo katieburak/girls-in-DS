@@ -63,8 +63,12 @@ The **training set** is a subset of our data that is used is to train or teach o
 
 Then, using our **test set**, we can evaluate how well our model performs on unseen data.
 
-![](https://images.tpointtech.com/tutorial/machine-learning/images/train-and-test-datasets-in-machine-learning.png)
-<sub>[https://www.tpointtech.com/train-and-test-datasets-in-machine-learning](https://www.tpointtech.com/train-and-test-datasets-in-machine-learning)</sub>
+<div style="text-align: center;">
+  <img src="https://images.tpointtech.com/tutorial/machine-learning/images/train-and-test-datasets-in-machine-learning.png" alt="" width="400"/>
+  <br>
+  <sub style="font-size: 0.3em;">[https://www.tpointtech.com/train-and-test-datasets-in-machine-learning](https://www.tpointtech.com/train-and-test-datasets-in-machine-learning)</sub>
+</div>
+
 
 ## Activity
 
