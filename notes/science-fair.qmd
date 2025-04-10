@@ -1,5 +1,5 @@
 ---
-title: "UBC Science Fair"
+title: "Greater Vancouver Regional Science Fair"
 subtitle: "Department of Statistics"
 format: revealjs
 editor: visual
