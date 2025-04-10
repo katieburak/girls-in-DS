@@ -39,9 +39,10 @@ theme: [solarized, themer.scss]
     -   Classifying a bank transaction as fraudulent or not
 
 ## KNN Classification
+<br></br>
 
 -   KNN (K-Nearest Neighbors) is a simple, intuitive classification algorithm.
--   It classifies new data points based on the majority class of their closest neighbors in the training data.
+-   It classifies new data points based on the majority class of their closest neighbors.
 -   Today, we will simulate KNN in a fun and interactive way!
 
 ------------------------------------------------------------------------
@@ -62,25 +63,29 @@ The **training set** is a subset of our data that is used is to train or teach o
 
 Then, using our **test set**, we can evaluate how well our model performs on unseen data.
 
+![](https://images.tpointtech.com/tutorial/machine-learning/images/train-and-test-datasets-in-machine-learning.png)
+<sub>[https://www.tpointtech.com/train-and-test-datasets-in-machine-learning](https://www.tpointtech.com/train-and-test-datasets-in-machine-learning)</sub>
+
 ## Activity
 
-:::incremental
+::: incremental
 1.  Setting up the Training Data:
-		    
+
     -   Come and get a coloured sticky note (except for 3 volunteers)
     -   Place the sticky notes on your shirt and stand randomly in the room.
     -   You represent labeled training data!
-    
+
 2.  Introduce the "Test Points":
+
     -   3 students act as unlabeled test data.
     -   Stand in random positions in the room.
 
 3.  Find the Nearest Neighbors:
+
     -   Help each test student identify their 5 closest neighbors $(k=5)$.
     -   Count the colour of the sticky notes of the 5 nearest neighbours.
     -   Majority Vote: The colour with the most votes is your new classification!
 :::
-    
 
 ## Discussion Time
 
@@ -88,7 +93,8 @@ Then, using our **test set**, we can evaluate how well our model performs on uns
 -   Think about how we classified the unknown data point.
     -   What happens if we use $k=1$?
     -   What if we use $k=25$?
--   What could be the challenges with ties or class imbalances?
+-   What could be a potential challenge with ties? 
+- What would happen if the classes are imbalanced (i.e., one color (class) dominates the sticky notes)?
 :::
 
 ------------------------------------------------------------------------
@@ -99,8 +105,12 @@ Then, using our **test set**, we can evaluate how well our model performs on uns
     -   Recommendation systems (e.g., recommending movies based on user preferences)
     -   Image classification (e.g., identifying objects in images)
     -   Medical diagnosis (e.g., classifying diseases based on symptoms)
+    
+<img src="https://www.financialexpress.com/wp-content/uploads/2021/04/netflixmain.png?w=1024" alt="Netflix" width="600"/>
 
-------------------------------------------------------------------------
+<sub>[https://www.financialexpress.com/](https://www.financialexpress.com/)</sub>
+
+
 
 ## Example
 
@@ -117,12 +127,9 @@ tumors <- read_csv("data/clean-wdbc.data.csv") |>
 
 head(tumors)
 ```
-
-
 ## Example
 
 ![](https://datasciencebook.ca/_main_files/figure-html/05-multiknn-3-1.png)
-
 
 
 ## 
@@ -148,6 +155,7 @@ new_obs <- tibble(Perimeter = 0.2, Concavity = 3.3)
 predict(tumor_fit, new_obs)
 ```
 
+
 ## Why Study Statistics?
 
 -   Classification is just one example of the many tasks we can accomplish with statistics and data science.
@@ -159,19 +167,18 @@ predict(tumor_fit, new_obs)
 
 ## UBC Girls in Data Science Camp
 
-- Dates: July 7-9, 2025
-- Time: 10am-3pm
-- Location: UBC Vancouver Campus
-- Instructor: Katie Burak (Contact: kburak@stat.ubc.ca)
+-   Dates: July 7-9, 2025
+-   Time: 10am-3pm
+-   Location: UBC Vancouver Campus
+-   Instructor: Katie Burak (Contact: kburak\@stat.ubc.ca)
 
-<div style="display: flex; justify-content: center; align-items: center; gap: 5em;">
-  <img src="img/logo.png" alt="Logo" style="height: 200px;">
-  <img src="img/qr_code.png" alt="QR Code" style="height: 200px;">
-</div>
+::: {style="display: flex; justify-content: center; align-items: center; gap: 5em;"}
+<img src="img/logo.png" alt="Logo" style="height: 200px;"/> <img src="img/qr_code.png" alt="QR Code" style="height: 200px;"/>
+:::
 
-<div style="display: flex; justify-content: center; align-items: center; gap: 2em;">
+::: {style="display: flex; justify-content: center; align-items: center; gap: 2em;"}
 <https://forms.gle/i3LsjobEhaBTzCpKA>
-</div>
+:::
 
 ## 
 
