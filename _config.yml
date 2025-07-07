@@ -1,9 +1,9 @@
 # Book settings
 title: Girls in Data Science
 author: Katie Burak
-copyright: "2024"  # Copyright year to be placed in the footer
+copyright: "2025"  # Copyright year to be placed in the footer
 logo: notes/img/logo.png
-exclude_patterns: ["solution/*", "worksheets/*", "release/*", "lectures/teacher*", "**/.virtual_documents/*"]
+exclude_patterns: ["worksheets/*", "release/*", "lectures/teacher*", "**/.virtual_documents/*", ".virtual_documents/**"]
 
 repository:
  url: https://github.com/katieburak/girls-in-DS

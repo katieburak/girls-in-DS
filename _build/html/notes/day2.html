@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -52,7 +52,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -192,6 +192,9 @@
 
 
 <li class="toctree-l1"><a class="reference internal" href="day3.html">Day 3 - Girls in Data Science</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../solution/worksheet1_solution.html">Worksheet 1</a></li>
 
 
 </ul>
@@ -473,14 +476,14 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ─────────────────────────────────────────────────────────────────────────────── tidyverse 2.0.0 ──
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ───────────────────────────────────────────────────────────────── tidyverse 2.0.0 ──
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dplyr    </span> 1.1.4     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">readr    </span> 2.1.5
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">forcats  </span> 1.0.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">stringr  </span> 1.5.1
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">lubridate</span> 1.9.3     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tibble   </span> 3.2.1
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">purrr    </span> 1.0.2     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tidyr    </span> 1.3.1
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ───────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ─────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">filter()</span> masks <span class=" -Color -Color-Blue">stats</span>::filter()
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">lag()</span>    masks <span class=" -Color -Color-Blue">stats</span>::lag()
 <span class=" -Color -Color-Cyan">ℹ</span> Use the conflicted package (<span class=" -Color -Color-Blue">&lt;http://conflicted.r-lib.org/&gt;</span>) to force all conflicts to become errors
@@ -627,7 +630,7 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">200</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">8</span>
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">───────────────────────────────────────────────────────────────────────────────────────────────────────────────</span>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">─────────────────────────────────────────────────────────────────────────────────────────────────</span>
 <span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
 <span class=" -Color -Color-Red">chr</span> (7): name, channel_Info, Category, Posts, Followers, Avg. Likes, Eng Rate
 <span class=" -Color -Color-Green">dbl</span> (1): rank
@@ -826,9 +829,9 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
 <p><strong>Why?:</strong> It’s often expensive or not possible to measure the whole population.</p>
 <section id="e-g-we-want-to-know-the-average-width-of-a-species-of-sea-star">
 <h3>E.g.: we want to know the average width of a species of sea star<a class="headerlink" href="#e-g-we-want-to-know-the-average-width-of-a-species-of-sea-star" title="Link to this heading">#</a></h3>
-<a class="reference internal image-reference" href="../_images/intro-inf-11.png"><img alt="../_images/intro-inf-11.png" src="../_images/intro-inf-11.png" style="width: 1100px;" /></a>
-<a class="reference internal image-reference" href="../_images/intro-inf-21.png"><img alt="../_images/intro-inf-21.png" src="../_images/intro-inf-21.png" style="width: 1100px;" /></a>
-<a class="reference internal image-reference" href="../_images/intro-inf-41.png"><img alt="../_images/intro-inf-41.png" src="../_images/intro-inf-41.png" style="width: 1100px;" /></a>
+<a class="reference internal image-reference" href="../_images/intro-inf-1.png"><img alt="../_images/intro-inf-1.png" src="../_images/intro-inf-1.png" style="width: 1100px;" /></a>
+<a class="reference internal image-reference" href="../_images/intro-inf-2.png"><img alt="../_images/intro-inf-2.png" src="../_images/intro-inf-2.png" style="width: 1100px;" /></a>
+<a class="reference internal image-reference" href="../_images/intro-inf-4.png"><img alt="../_images/intro-inf-4.png" src="../_images/intro-inf-4.png" style="width: 1100px;" /></a>
 <ul class="simple">
 <li><p><strong>Population:</strong> collection of all possible observations + their frequency/count</p>
 <ul>
@@ -925,12 +928,12 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
 <p>A particular inferential problem where we try to <em>estimate a quantitative property</em> of the population</p>
 <p>This quantitative property is called a <strong>population parameter</strong></p>
 <p><strong>Question:</strong> What <em>proportion</em> (a quantitative population parameter!) of UBC  undergrads have an iphone?
-<a class="reference internal" href="../_images/sampling.0011.jpeg"><img alt="../_images/sampling.0011.jpeg" class="align-left" src="../_images/sampling.0011.jpeg" style="width: 700px;" /></a></p>
+<a class="reference internal" href="../_images/sampling.001.jpeg"><img alt="../_images/sampling.001.jpeg" class="align-left" src="../_images/sampling.001.jpeg" style="width: 700px;" /></a></p>
 <section id="id5">
 <h3>Estimation<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <p>Step 1: randomly select a subset (a <em>sample</em>) and ask them if they have an iPhone</p>
 <p>Step 2: calculate the proportion in our sample (a <em>statistic</em> or <em>point estimate</em>) and use it as an estimate of the true population proportion.</p>
-<a class="reference internal image-reference" href="../_images/sampling.0021.jpeg"><img alt="../_images/sampling.0021.jpeg" class="align-left" src="../_images/sampling.0021.jpeg" style="width: 700px;" /></a>
+<a class="reference internal image-reference" href="../_images/sampling.002.jpeg"><img alt="../_images/sampling.002.jpeg" class="align-left" src="../_images/sampling.002.jpeg" style="width: 700px;" /></a>
 </section>
 <section id="id6">
 <h3>Exercise<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
@@ -1499,7 +1502,7 @@ By Katie Burak
 
   <p class="copyright">
     
-      © Copyright 2024.
+      © Copyright 2025.
       <br/>
     
   </p>

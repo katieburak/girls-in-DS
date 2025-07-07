@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -52,7 +52,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -192,6 +192,9 @@
 
 
 <li class="toctree-l1"><a class="reference internal" href="day3.html">Day 3 - Girls in Data Science</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../solution/worksheet1_solution.html">Worksheet 1</a></li>
 
 
 </ul>
@@ -489,7 +492,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="day-1-girls-in-data-science">
 <h1>Day 1 - Girls in Data Science<a class="headerlink" href="#day-1-girls-in-data-science" title="Link to this heading">#</a></h1>
-<a class="reference internal image-reference" href="../_images/programming_women1.jpg"><img alt="../_images/programming_women1.jpg" src="../_images/programming_women1.jpg" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../_images/programming_women.jpg"><img alt="../_images/programming_women.jpg" src="../_images/programming_women.jpg" style="width: 800px;" /></a>
 <p><em>Photos/Images by #WOCinTech/#WOCinTech Chat (<a class="reference external" href="https://creativecommons.org/licenses/by/2.0/">CC-BY</a>)</em></p>
 <section id="team-introduction">
 <h2>Team Introduction<a class="headerlink" href="#team-introduction" title="Link to this heading">#</a></h2>
@@ -498,7 +501,7 @@ document.write(`
 <li><p>Data Science Mentors: <a class="reference external" href="https://awp.landfood.ubc.ca/people/graduate-students/kehan-sheng/">Sky Sheng</a>, PhD student</p></li>
 </ul>
 <p>Thank you to our sponsors!</p>
-<p><a class="reference internal" href="../_images/sponsor11.png"><img alt="../_images/sponsor11.png" src="../_images/sponsor11.png" style="width: 100px;" /></a> <a class="reference internal" href="../_images/sponsor21.png"><img alt="../_images/sponsor21.png" src="../_images/sponsor21.png" style="width: 100px;" /></a> <a class="reference internal" href="../_images/sponsor31.png"><img alt="../_images/sponsor31.png" src="../_images/sponsor31.png" style="width: 100px;" /></a></p>
+<p><a class="reference internal" href="../_images/sponsor1.png"><img alt="../_images/sponsor1.png" src="../_images/sponsor1.png" style="width: 100px;" /></a> <a class="reference internal" href="../_images/sponsor2.png"><img alt="../_images/sponsor2.png" src="../_images/sponsor2.png" style="width: 100px;" /></a> <a class="reference internal" href="../_images/sponsor3.png"><img alt="../_images/sponsor3.png" src="../_images/sponsor3.png" style="width: 100px;" /></a></p>
 <p><img alt="" src="https://media.pims.math.ca/logos/webhorizfullsmall.png" /></p>
 </section>
 <section id="camp-motivation">
@@ -511,7 +514,7 @@ document.write(`
 <ol class="arabic simple">
 <li><p><strong>What’s your favorite school subject and why do you like it?</strong></p></li>
 <li><p><strong>Where is one place you’ve always wanted to visit and what would you do there?</strong></p></li>
-<li><p><strong>What’s one thing everyone in your group has in common that <em>isn’t</em> obvious (e.g., hair colour)?</strong></p></li>
+<li><p><strong>What’s one thing everyone in your group has in common that <em>isn’t</em> obvious?</strong></p></li>
 </ol>
 </section>
 <section id="day-1-learning-objectives">
@@ -529,10 +532,10 @@ document.write(`
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="getting-started-with-jupyter-r">
 <h1>1. Getting started with Jupyter &amp; R<a class="headerlink" href="#getting-started-with-jupyter-r" title="Link to this heading">#</a></h1>
-<p>This webpage is called a Jupyter notebook. A notebook is a place to write computer code for analysis, view the results of the analysis, as well as to narrate the analysis with rich formatted text.</p>
+<p>This webpage is called a Jupyter notebook. A notebook is a place to write computer code for analysis, view the results of the analysis, as well as to narrate the analysis with rich formatted text…</p>
 <section id="text-cells">
 <h2>1.1. Text Cells<a class="headerlink" href="#text-cells" title="Link to this heading">#</a></h2>
-<p>In a notebook, each rectangle containing text or code is called a <em>cell</em>.</p>
+<p>In a notebook, <strong>each</strong> rectangle containing text or code is called a <em>cell</em>.</p>
 <p>Text cells (like this one) can be edited by double-clicking on them. They’re written in a simple format called <a class="reference external" href="http://daringfireball.net/projects/markdown/syntax">Markdown</a> to add formatting and section headings. For more practice using Markdown, try <a class="reference external" href="https://www.markdowntutorial.com/">this online tutorial</a>!</p>
 <p>After you edit a text cell, click the “run cell” button at the top that looks like ▶ to confirm any changes. (Try not to delete the instructions of the lab.)</p>
 </section>
@@ -544,17 +547,18 @@ print(“Hello, World!”)
 Try running the next cell:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;Hello, World!&quot;</span><span class="p">)</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;Hi Sky!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] &quot;Hello, World!&quot;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] &quot;Hi Sky!&quot;
 </pre></div>
 </div>
 </div>
 </div>
 <p>The above code cell contains a single line of code, but cells can also contain multiple lines of code. When you run a cell, the lines of code are executed in the order in which they appear. Every <code class="docutils literal notranslate"><span class="pre">print</span></code> expression prints a line. Run the next cell and notice the order of the output.</p>
+<p>Note to self bla bla bla…</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;First this line is printed,&quot;</span><span class="p">)</span>
@@ -622,12 +626,17 @@ Try running the next cell:</p>
 <p>We have made an error in the next cell. <strong>Remove the <code class="docutils literal notranslate"><span class="pre">#</span></code> symbol below (i.e., uncomment the line)</strong>, and then run the cell to see what happens.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># print(&quot;This line is missing something.&quot;</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;This line is missing something.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] &quot;This line is missing something.&quot;
 </pre></div>
 </div>
 </div>
 </div>
-<p><img alt="ws1_error_image.png" src="../_images/ws1_error_image1.png" /></p>
+<p><img alt="ws1_error_image.png" src="../_images/ws1_error_image.png" /></p>
 <p>There’s a lot of terminology in programming languages, but you don’t need to know it all in order to program effectively. Even though the error message can seem cryptic, if you read it carefully you’ll often find hints as to what went wrong. For example, above, you’ll see the message <code class="docutils literal notranslate"><span class="pre">unexpected</span> <span class="pre">end</span> <span class="pre">of</span> <span class="pre">input</span></code> (among a lot of other technical jargon). In other words, R reached the end of the line of code, and wasn’t expecting to reach the end – it thinks there is still something missing!</p>
 <p>Of course, even if you do your best to interpret the error message, sometimes you may get stuck figuring out what went wrong and how to fix it. In that case, ask someone.</p>
 <p>Try to fix the code above so that you can run the cell and see the intended message instead of an error.</p>
@@ -667,12 +676,12 @@ Try running the next cell:</p>
 <p>The line in the next cell performs some mathemtical operations. Run them!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="m">2.0</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1.5</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="m">2.0</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1.5</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">45</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">0.5</div></div>
+<div class="output text_html">45.5</div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -692,6 +701,15 @@ Try running the next cell:</p>
 <div class="cell_output docutils container">
 <div class="output text_html">3</div></div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">log</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">0.693147180559945</div></div>
+</div>
 <p>Many basic arithmetic operations are built in to R.  <a class="reference external" href="https://www.statmethods.net/management/operators.html">This webpage</a> describes many arithmetic operators that might be useful in this camp.</p>
 </section>
 <section id="names">
@@ -702,9 +720,12 @@ Try running the next cell:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">answer</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">3</span><span class="o">*</span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">4</span>
+<span class="n">answer</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html">10</div></div>
 </div>
 <p>When you run that cell, R first evaluates the first line.  It computes the value of the expression <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">+</span> <span class="pre">4</span></code>, which is the number 10.  Then it gives that value the name <code class="docutils literal notranslate"><span class="pre">answer</span></code>.  At that point, the code in the cell is done running.</p>
 <p>After you run that cell, the value 10 is bound to the name <code class="docutils literal notranslate"><span class="pre">answer</span></code>:</p>
@@ -729,16 +750,20 @@ Try running the next cell:</p>
 <p>Other than those rules, what you name something doesn’t matter <em>to R</em>.  For example, the next cell does the same thing as the above cell, except everything has a different name:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">840</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">answer1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">840</span>
 <span class="n">b</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">a</span>
-<span class="n">c</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">12</span>
+<span class="n">answer2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">12</span>
 <span class="n">d</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span>
 <span class="n">d</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">20160</div></div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Error</span> <span class="ow">in</span> <span class="nb">eval</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">envir</span><span class="p">,</span> <span class="n">enclos</span><span class="p">):</span> <span class="nb">object</span> <span class="s1">&#39;a&#39;</span> <span class="ow">not</span> <span class="n">found</span>
+<span class="ne">Traceback</span>:
+</pre></div>
+</div>
+</div>
 </div>
 <p>Another common pattern is that a series of lines in a single cell will build up a complex computation in stages, naming the intermediate results.</p>
 <p><strong>However</strong>, names are very important for making your code <em>readable</em> to yourself and others.  The cell above is shorter, but it’s totally useless without an explanation of what it does.</p>
@@ -751,6 +776,18 @@ Try running the next cell:</p>
 <li><p>Compute how many years will pass until 2050 by subtracting the current year from 2050 (call this object <code class="docutils literal notranslate"><span class="pre">years</span></code>).</p></li>
 <li><p>Finally, name an object <code class="docutils literal notranslate"><span class="pre">future_age</span></code> which adds together <code class="docutils literal notranslate"><span class="pre">age</span></code> and <code class="docutils literal notranslate"><span class="pre">years</span></code> to get your age in 2050.</p></li>
 </ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">age</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">16</span>
+<span class="n">years</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">2050-2025</span>
+<span class="n">future_age</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">years</span>
+<span class="n">future_age</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">41</div></div>
+</div>
 </section>
 </section>
 <section id="functions">
@@ -768,6 +805,15 @@ Try running the next cell:</p>
 <div class="output text_html">'WHY, HELLO THERE!'</div></div>
 </div>
 <p>Try using the function <code class="docutils literal notranslate"><span class="pre">tolower</span></code> now!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">tolower</span><span class="p">(</span><span class="n">greeting</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">'why, hello there!'</div></div>
+</div>
 <p>Some functions take multiple arguments, separated by commas. For example, the built-in <code class="docutils literal notranslate"><span class="pre">max</span></code> function returns the maximum argument passed to it.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -793,15 +839,13 @@ This package has already been installed for you. Later in the course you will le
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ─────────────────────────────────────────────────────────────────────────────── tidyverse 2.0.0 ──
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ──────────────────────── tidyverse 2.0.0 ──
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dplyr    </span> 1.1.4     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">readr    </span> 2.1.5
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">forcats  </span> 1.0.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">stringr  </span> 1.5.1
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">ggplot2  </span> 3.5.1     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tibble   </span> 3.2.1
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">lubridate</span> 1.9.3     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tidyr    </span> 1.3.1
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">purrr    </span> 1.0.2     
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ───────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+── <span class=" -Color -Color-Bold">Conflicts</span> ────────────────────────────────────────── tidyverse_conflicts() ──
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">filter()</span> masks <span class=" -Color -Color-Blue">stats</span>::filter()
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">lag()</span>    masks <span class=" -Color -Color-Blue">stats</span>::lag()
 <span class=" -Color -Color-Cyan">ℹ</span> Use the conflicted package (<span class=" -Color -Color-Blue">&lt;http://conflicted.r-lib.org/&gt;</span>) to force all conflicts to become errors
@@ -962,27 +1006,37 @@ This package has already been installed for you. Later in the course you will le
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">insta</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="s">&#39;data/insta.csv&#39;</span><span class="p">)</span>
-
-<span class="n">insta</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">insta</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nf">select</span><span class="p">(</span><span class="o">-</span><span class="s">&#39;Avg. Likes&#39;</span><span class="p">)</span>
-
-<span class="nf">head</span><span class="p">(</span><span class="n">insta</span><span class="p">)</span><span class="w"> </span><span class="c1"># head function prints only the first 6 rows</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">200</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">8</span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">───────────────────────────────────────────────────────────────────────────────────────────────────────────────</span>
+<span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">────────────────────────────────────────────────────────</span>
 <span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
 <span class=" -Color -Color-Red">chr</span> (7): name, channel_Info, Category, Posts, Followers, Avg. Likes, Eng Rate
 <span class=" -Color -Color-Green">dbl</span> (1): rank
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">ℹ</span> Use `spec()` to retrieve the full column specification for this data.
+
+<span class=" -Color -Color-Cyan">ℹ</span> Use `spec()` to retrieve the full column specification for this data.
 <span class=" -Color -Color-Cyan">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
 </pre></div>
 </div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">insta</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">insta</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nf">select</span><span class="p">(</span><span class="o">-</span><span class="s">&#39;Avg. Likes&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Run the following code chunk before continuing to rename/reformat some of the variables:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="n">insta</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
 <div class="output text_html"><table class="dataframe">
 <caption>A tibble: 6 × 7</caption>
 <thead>
@@ -1000,7 +1054,6 @@ This package has already been installed for you. Later in the course you will le
 </table>
 </div></div>
 </div>
-<p>Run the following code chunk before continuing to rename/reformat some of the variables:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">insta</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">suppressWarnings</span><span class="p">(</span><span class="n">insta</span><span class="w"> </span><span class="o">|&gt;</span>
@@ -1019,85 +1072,6 @@ This package has already been installed for you. Later in the course you will le
 </pre></div>
 </div>
 </div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">insta</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><table class="dataframe">
-<caption>A tibble: 200 × 7</caption>
-<thead>
-	<tr><th scope=col>rank</th><th scope=col>name</th><th scope=col>Channel</th><th scope=col>Category</th><th scope=col>Posts</th><th scope=col>Followers</th><th scope=col>eng_rate</th></tr>
-	<tr><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
-</thead>
-<tbody>
-	<tr><td> 1</td><td>instagram      </td><td>brand </td><td>photography             </td><td> 7300</td><td>580100000</td><td>0.1</td></tr>
-	<tr><td> 2</td><td><span style=white-space:pre-wrap>cristiano      </span></td><td><span style=white-space:pre-wrap>male  </span></td><td>Health, Sports &amp; Fitness</td><td> 3400</td><td>519900000</td><td>1.4</td></tr>
-	<tr><td> 3</td><td><span style=white-space:pre-wrap>leomessi       </span></td><td><span style=white-space:pre-wrap>male  </span></td><td>Health, Sports &amp; Fitness</td><td> 1000</td><td>403700000</td><td>1.7</td></tr>
-	<tr><td> 4</td><td>kyliejenner    </td><td>female</td><td>entertainment           </td><td> 7000</td><td>375900000</td><td>1.7</td></tr>
-	<tr><td> 5</td><td>selenagomez    </td><td>female</td><td>entertainment           </td><td> 1800</td><td>365300000</td><td>1.1</td></tr>
-	<tr><td> 6</td><td>therock        </td><td>male  </td><td>entertainment           </td><td> 7000</td><td>354300000</td><td>0.3</td></tr>
-	<tr><td> 7</td><td>arianagrande   </td><td>female</td><td>entertainment           </td><td> 5000</td><td>345600000</td><td>1.4</td></tr>
-	<tr><td> 8</td><td>kimkardashian  </td><td>female</td><td>entertainment           </td><td> 5700</td><td>336300000</td><td>0.9</td></tr>
-	<tr><td> 9</td><td>beyonce        </td><td>female</td><td>entertainment           </td><td> 2100</td><td>287300000</td><td>1.0</td></tr>
-	<tr><td>10</td><td>khloekardashian</td><td>female</td><td>entertainment           </td><td> 4200</td><td>283900000</td><td>0.5</td></tr>
-	<tr><td>11</td><td>justinbieber   </td><td>male  </td><td>entertainment           </td><td> 7400</td><td>270200000</td><td>0.5</td></tr>
-	<tr><td>12</td><td><span style=white-space:pre-wrap>nike           </span></td><td>brand </td><td>Health, Sports &amp; Fitness</td><td> 1000</td><td>257600000</td><td>0.1</td></tr>
-	<tr><td>13</td><td>taylorswift    </td><td>male  </td><td>entertainment           </td><td>  562</td><td>236200000</td><td>1.3</td></tr>
-	<tr><td>14</td><td>jlo            </td><td>female</td><td>entertainment           </td><td>  220</td><td>228800000</td><td>0.5</td></tr>
-	<tr><td>15</td><td>virat.kohli    </td><td>male  </td><td>Not Available           </td><td> 1500</td><td>228000000</td><td>1.2</td></tr>
-	<tr><td>16</td><td>kendalljenner  </td><td>male  </td><td>Not Available           </td><td>  731</td><td>223400000</td><td>2.3</td></tr>
-	<tr><td>17</td><td>natgeo         </td><td>brand </td><td>entertainment           </td><td>26700</td><td>220600000</td><td>0.1</td></tr>
-	<tr><td>18</td><td>nickiminaj     </td><td>female</td><td>entertainment           </td><td> 6400</td><td>206800000</td><td>0.8</td></tr>
-	<tr><td>19</td><td>kourtneykardash</td><td>female</td><td>entertainment           </td><td> 4400</td><td>206200000</td><td>0.8</td></tr>
-	<tr><td>20</td><td>kendalljenner  </td><td>male  </td><td>Not Available           </td><td>  824</td><td>204400000</td><td>2.5</td></tr>
-	<tr><td>21</td><td><span style=white-space:pre-wrap>neymarjr       </span></td><td><span style=white-space:pre-wrap>male  </span></td><td>Health, Sports &amp; Fitness</td><td> 5400</td><td>196200000</td><td>1.5</td></tr>
-	<tr><td>22</td><td>natgeo         </td><td>male  </td><td>Not Available           </td><td>26000</td><td>196100000</td><td>0.1</td></tr>
-	<tr><td>23</td><td>mileycyrus     </td><td>female</td><td>entertainment           </td><td> 1200</td><td>189900000</td><td>0.5</td></tr>
-	<tr><td>24</td><td>katyperry      </td><td>female</td><td>entertainment           </td><td> 2100</td><td>179800000</td><td>0.3</td></tr>
-	<tr><td>25</td><td>zendaya        </td><td>female</td><td>entertainment           </td><td> 3500</td><td>161800000</td><td>4.1</td></tr>
-	<tr><td>26</td><td>kevinhart4real </td><td>male  </td><td>entertainment           </td><td> 8400</td><td>157600000</td><td>0.2</td></tr>
-	<tr><td>27</td><td>iamcardib      </td><td>male  </td><td>entertainment           </td><td> 1600</td><td>145600000</td><td>1.8</td></tr>
-	<tr><td>28</td><td>ddlovato       </td><td>female</td><td>entertainment           </td><td>   68</td><td>143500000</td><td>0.3</td></tr>
-	<tr><td>29</td><td>badgalriri     </td><td>female</td><td>entertainment           </td><td> 4900</td><td>139200000</td><td>2.7</td></tr>
-	<tr><td>30</td><td><span style=white-space:pre-wrap>kingjames      </span></td><td><span style=white-space:pre-wrap>male  </span></td><td>Health, Sports &amp; Fitness</td><td> 2400</td><td>139200000</td><td>0.9</td></tr>
-	<tr><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td></tr>
-	<tr><td>171</td><td>parineetichopra   </td><td>female       </td><td>entertainment           </td><td> 1400</td><td>39200000</td><td>0.9</td></tr>
-	<tr><td>172</td><td>anushkasen0408    </td><td>female       </td><td>entertainment           </td><td> 5500</td><td>39000000</td><td>1.5</td></tr>
-	<tr><td>173</td><td>chrissyteigen     </td><td>female       </td><td>entertainment           </td><td> 5100</td><td>38600000</td><td>0.7</td></tr>
-	<tr><td>174</td><td>hm                </td><td>brand        </td><td>fashion                 </td><td> 7500</td><td>38500000</td><td>0.1</td></tr>
-	<tr><td>175</td><td>wesleysafadao     </td><td>male         </td><td>entertainment           </td><td> 9000</td><td>38300000</td><td>0.3</td></tr>
-	<tr><td>176</td><td>marvelstudios     </td><td>community    </td><td>entertainment           </td><td> 2800</td><td>38200000</td><td>1.3</td></tr>
-	<tr><td>177</td><td>houseofhighlights </td><td><span style=white-space:pre-wrap>male         </span></td><td>Health, Sports &amp; Fitness</td><td>26900</td><td>37900000</td><td>0.8</td></tr>
-	<tr><td>178</td><td>tyga              </td><td>Not Available</td><td>entertainment           </td><td>   27</td><td>37700000</td><td>1.7</td></tr>
-	<tr><td>179</td><td>eminem            </td><td>male         </td><td>entertainment           </td><td>  721</td><td>37600000</td><td>2.4</td></tr>
-	<tr><td>180</td><td><span style=white-space:pre-wrap>sachintendulkar   </span></td><td><span style=white-space:pre-wrap>male         </span></td><td>Health, Sports &amp; Fitness</td><td> 1100</td><td>37500000</td><td>1.7</td></tr>
-	<tr><td>181</td><td><span style=white-space:pre-wrap>danialves         </span></td><td><span style=white-space:pre-wrap>male         </span></td><td>Health, Sports &amp; Fitness</td><td> 3400</td><td>37400000</td><td>0.8</td></tr>
-	<tr><td>182</td><td>gisel_la          </td><td>female       </td><td>entertainment           </td><td>10200</td><td>37400000</td><td>0.2</td></tr>
-	<tr><td>183</td><td>blakelively       </td><td>male         </td><td>entertainment           </td><td>  121</td><td>37000000</td><td>5.6</td></tr>
-	<tr><td>184</td><td><span style=white-space:pre-wrap>chelseafc         </span></td><td><span style=white-space:pre-wrap>community    </span></td><td>Health, Sports &amp; Fitness</td><td>17300</td><td>36600000</td><td>0.6</td></tr>
-	<tr><td>185</td><td>shahidkapoor      </td><td>male         </td><td>entertainment           </td><td> 1200</td><td>36600000</td><td>2.4</td></tr>
-	<tr><td>186</td><td>kimberly.loaiza   </td><td>female       </td><td>entertainment           </td><td>  578</td><td>36600000</td><td>4.4</td></tr>
-	<tr><td>187</td><td><span style=white-space:pre-wrap>toni.kr8s         </span></td><td><span style=white-space:pre-wrap>male         </span></td><td>Health, Sports &amp; Fitness</td><td> 1000</td><td>36600000</td><td>1.2</td></tr>
-	<tr><td>188</td><td><span style=white-space:pre-wrap>antogriezmann     </span></td><td><span style=white-space:pre-wrap>male         </span></td><td>Health, Sports &amp; Fitness</td><td><span style=white-space:pre-wrap>  872</span></td><td>36400000</td><td>1.8</td></tr>
-	<tr><td>189</td><td>mercedesbenz      </td><td>brand        </td><td>technology              </td><td>18500</td><td>36400000</td><td>0.3</td></tr>
-	<tr><td>190</td><td>nattinatasha      </td><td>female       </td><td>entertainment           </td><td>   54</td><td>36100000</td><td>1.3</td></tr>
-	<tr><td>191</td><td>tigerjackieshroff </td><td>male         </td><td>entertainment           </td><td> 2200</td><td>36100000</td><td>1.9</td></tr>
-	<tr><td>192</td><td>lunamaya          </td><td>female       </td><td>entertainment           </td><td> 4200</td><td>36100000</td><td>0.2</td></tr>
-	<tr><td>193</td><td><span style=white-space:pre-wrap>mancity           </span></td><td><span style=white-space:pre-wrap>male         </span></td><td>Health, Sports &amp; Fitness</td><td>19600</td><td>36000000</td><td>0.4</td></tr>
-	<tr><td>194</td><td>disney            </td><td>brand        </td><td>entertainment           </td><td> 7700</td><td>35800000</td><td>0.3</td></tr>
-	<tr><td>195</td><td><span style=white-space:pre-wrap>barackobama       </span></td><td><span style=white-space:pre-wrap>male         </span></td><td><span style=white-space:pre-wrap>News &amp; Politics         </span></td><td><span style=white-space:pre-wrap>  743</span></td><td>35500000</td><td>1.7</td></tr>
-	<tr><td>196</td><td><span style=white-space:pre-wrap>fcbayern          </span></td><td><span style=white-space:pre-wrap>male         </span></td><td>Health, Sports &amp; Fitness</td><td>16800</td><td>35400000</td><td>0.6</td></tr>
-	<tr><td>197</td><td>colesprouse       </td><td>male         </td><td>entertainment           </td><td> 1100</td><td>35300000</td><td>3.5</td></tr>
-	<tr><td>198</td><td>shaymitchell      </td><td>male         </td><td>entertainment           </td><td> 6300</td><td>35100000</td><td>1.2</td></tr>
-	<tr><td>199</td><td>ivetesangalo      </td><td>female       </td><td>entertainment           </td><td> 7800</td><td>35000000</td><td>0.4</td></tr>
-	<tr><td>200</td><td>paollaoliveirareal</td><td>female       </td><td>entertainment           </td><td> 4800</td><td>34900000</td><td>0.7</td></tr>
-</tbody>
-</table>
-</div></div>
 </div>
 <p>It looks like this data set has 200 rows (observations) representing the top 200 instgram accounts and the following 8 columns (variables):</p>
 <ul class="simple">
@@ -1209,6 +1183,333 @@ This package has already been installed for you. Later in the course you will le
 <section id="select">
 <h3>2.1.2 Select<a class="headerlink" href="#select" title="Link to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">select</span></code> function is used to select a subset of columns (variables) from a dataframe.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">?</span><span class="n">select</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<table style="width: 100%;"><tr><td>select {dplyr}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Keep or drop columns using their names and types</h2>
+
+<h3>Description</h3>
+
+<p>Select (and optionally rename) variables in a data frame, using a concise
+mini-language that makes it easy to refer to variables based on their name
+(e.g. <code>a:f</code> selects all columns from <code>a</code> on the left to <code>f</code> on the
+right) or type (e.g. <code>where(is.numeric)</code> selects all numeric columns).
+</p>
+
+
+<h4>Overview of selection features</h4>
+
+<p>Tidyverse selections implement a dialect of R where operators make
+it easy to select variables:
+</p>
+
+<ul>
+<li> <p><code>:</code> for selecting a range of consecutive variables.
+</p>
+</li>
+<li> <p><code>!</code> for taking the complement of a set of variables.
+</p>
+</li>
+<li> <p><code>&amp;</code> and <code>|</code> for selecting the intersection or the union of two
+sets of variables.
+</p>
+</li>
+<li> <p><code>c()</code> for combining selections.
+</p>
+</li></ul>
+
+<p>In addition, you can use <strong>selection helpers</strong>. Some helpers select specific
+columns:
+</p>
+
+<ul>
+<li> <p><code>everything()</code>: Matches all variables.
+</p>
+</li>
+<li> <p><code>last_col()</code>: Select last variable, possibly with an offset.
+</p>
+</li>
+<li> <p><code>group_cols()</code>: Select all grouping columns.
+</p>
+</li></ul>
+
+<p>Other helpers select variables by matching patterns in their names:
+</p>
+
+<ul>
+<li> <p><code>starts_with()</code>: Starts with a prefix.
+</p>
+</li>
+<li> <p><code>ends_with()</code>: Ends with a suffix.
+</p>
+</li>
+<li> <p><code>contains()</code>: Contains a literal string.
+</p>
+</li>
+<li> <p><code>matches()</code>: Matches a regular expression.
+</p>
+</li>
+<li> <p><code>num_range()</code>: Matches a numerical range like x01, x02, x03.
+</p>
+</li></ul>
+
+<p>Or from variables stored in a character vector:
+</p>
+
+<ul>
+<li> <p><code>all_of()</code>: Matches variable names in a character vector. All
+names must be present, otherwise an out-of-bounds error is
+thrown.
+</p>
+</li>
+<li> <p><code>any_of()</code>: Same as <code>all_of()</code>, except that no error is thrown
+for names that don't exist.
+</p>
+</li></ul>
+
+<p>Or using a predicate function:
+</p>
+
+<ul>
+<li> <p><code>where()</code>: Applies a function to all variables and selects those
+for which the function returns <code>TRUE</code>.
+</p>
+</li></ul>
+
+
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>select(.data, ...)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr><td><code id=".data">.data</code></td>
+<td>
+<p>A data frame, data frame extension (e.g. a tibble), or a
+lazy data frame (e.g. from dbplyr or dtplyr). See <em>Methods</em>, below, for
+more details.</p>
+</td></tr>
+<tr><td><code id="...">...</code></td>
+<td>
+<p>&lt;<code>tidy-select</code>&gt; One or more unquoted
+expressions separated by commas. Variable names can be used as if they
+were positions in the data frame, so expressions like <code>x:y</code> can
+be used to select a range of variables.</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>An object of the same type as <code>.data</code>. The output has the following
+properties:
+</p>
+
+<ul>
+<li><p> Rows are not affected.
+</p>
+</li>
+<li><p> Output columns are a subset of input columns, potentially with a different
+order. Columns will be renamed if <code>new_name = old_name</code> form is used.
+</p>
+</li>
+<li><p> Data frame attributes are preserved.
+</p>
+</li>
+<li><p> Groups are maintained; you can't select off grouping variables.
+</p>
+</li></ul>
+
+
+
+<h3>Methods</h3>
+
+<p>This function is a <strong>generic</strong>, which means that packages can provide
+implementations (methods) for other classes. See the documentation of
+individual methods for extra arguments and differences in behaviour.
+</p>
+<p>The following methods are currently available in loaded packages:
+dplyr (<code>data.frame</code>).
+</p>
+
+
+<h3>Examples</h3>
+
+<p>Here we show the usage for the basic selection operators. See the
+specific help pages to learn about helpers like <code>starts_with()</code>.
+</p>
+<p>The selection language can be used in functions like
+<code>dplyr::select()</code> or <code>tidyr::pivot_longer()</code>. Let's first attach
+the tidyverse:
+</p>
+<div class="sourceCode r"><pre>library(tidyverse)
+
+# For better printing
+iris &lt;- as_tibble(iris)
+</pre></div>
+<p>Select variables by name:
+</p>
+<div class="sourceCode r"><pre>starwars %&gt;% select(height)
+#&gt; # A tibble: 87 x 1
+#&gt;   height
+#&gt;    &lt;int&gt;
+#&gt; 1    172
+#&gt; 2    167
+#&gt; 3     96
+#&gt; 4    202
+#&gt; # i 83 more rows
+
+iris %&gt;% pivot_longer(Sepal.Length)
+#&gt; # A tibble: 150 x 6
+#&gt;   Sepal.Width Petal.Length Petal.Width Species name         value
+#&gt;         &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt; &lt;fct&gt;   &lt;chr&gt;        &lt;dbl&gt;
+#&gt; 1         3.5          1.4         0.2 setosa  Sepal.Length   5.1
+#&gt; 2         3            1.4         0.2 setosa  Sepal.Length   4.9
+#&gt; 3         3.2          1.3         0.2 setosa  Sepal.Length   4.7
+#&gt; 4         3.1          1.5         0.2 setosa  Sepal.Length   4.6
+#&gt; # i 146 more rows
+</pre></div>
+<p>Select multiple variables by separating them with commas. Note how
+the order of columns is determined by the order of inputs:
+</p>
+<div class="sourceCode r"><pre>starwars %&gt;% select(homeworld, height, mass)
+#&gt; # A tibble: 87 x 3
+#&gt;   homeworld height  mass
+#&gt;   &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt;
+#&gt; 1 Tatooine     172    77
+#&gt; 2 Tatooine     167    75
+#&gt; 3 Naboo         96    32
+#&gt; 4 Tatooine     202   136
+#&gt; # i 83 more rows
+</pre></div>
+<p>Functions like <code>tidyr::pivot_longer()</code> don't take variables with
+dots. In this case use <code>c()</code> to select multiple variables:
+</p>
+<div class="sourceCode r"><pre>iris %&gt;% pivot_longer(c(Sepal.Length, Petal.Length))
+#&gt; # A tibble: 300 x 5
+#&gt;   Sepal.Width Petal.Width Species name         value
+#&gt;         &lt;dbl&gt;       &lt;dbl&gt; &lt;fct&gt;   &lt;chr&gt;        &lt;dbl&gt;
+#&gt; 1         3.5         0.2 setosa  Sepal.Length   5.1
+#&gt; 2         3.5         0.2 setosa  Petal.Length   1.4
+#&gt; 3         3           0.2 setosa  Sepal.Length   4.9
+#&gt; 4         3           0.2 setosa  Petal.Length   1.4
+#&gt; # i 296 more rows
+</pre></div>
+
+
+<h4>Operators:</h4>
+
+<p>The <code>:</code> operator selects a range of consecutive variables:
+</p>
+<div class="sourceCode r"><pre>starwars %&gt;% select(name:mass)
+#&gt; # A tibble: 87 x 3
+#&gt;   name           height  mass
+#&gt;   &lt;chr&gt;           &lt;int&gt; &lt;dbl&gt;
+#&gt; 1 Luke Skywalker    172    77
+#&gt; 2 C-3PO             167    75
+#&gt; 3 R2-D2              96    32
+#&gt; 4 Darth Vader       202   136
+#&gt; # i 83 more rows
+</pre></div>
+<p>The <code>!</code> operator negates a selection:
+</p>
+<div class="sourceCode r"><pre>starwars %&gt;% select(!(name:mass))
+#&gt; # A tibble: 87 x 11
+#&gt;   hair_color skin_color  eye_color birth_year sex   gender    homeworld species
+#&gt;   &lt;chr&gt;      &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;  
+#&gt; 1 blond      fair        blue            19   male  masculine Tatooine  Human  
+#&gt; 2 &lt;NA&gt;       gold        yellow         112   none  masculine Tatooine  Droid  
+#&gt; 3 &lt;NA&gt;       white, blue red             33   none  masculine Naboo     Droid  
+#&gt; 4 none       white       yellow          41.9 male  masculine Tatooine  Human  
+#&gt; # i 83 more rows
+#&gt; # i 3 more variables: films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;
+
+iris %&gt;% select(!c(Sepal.Length, Petal.Length))
+#&gt; # A tibble: 150 x 3
+#&gt;   Sepal.Width Petal.Width Species
+#&gt;         &lt;dbl&gt;       &lt;dbl&gt; &lt;fct&gt;  
+#&gt; 1         3.5         0.2 setosa 
+#&gt; 2         3           0.2 setosa 
+#&gt; 3         3.2         0.2 setosa 
+#&gt; 4         3.1         0.2 setosa 
+#&gt; # i 146 more rows
+
+iris %&gt;% select(!ends_with("Width"))
+#&gt; # A tibble: 150 x 3
+#&gt;   Sepal.Length Petal.Length Species
+#&gt;          &lt;dbl&gt;        &lt;dbl&gt; &lt;fct&gt;  
+#&gt; 1          5.1          1.4 setosa 
+#&gt; 2          4.9          1.4 setosa 
+#&gt; 3          4.7          1.3 setosa 
+#&gt; 4          4.6          1.5 setosa 
+#&gt; # i 146 more rows
+</pre></div>
+<p><code>&amp;</code> and <code>|</code> take the intersection or the union of two selections:
+</p>
+<div class="sourceCode r"><pre>iris %&gt;% select(starts_with("Petal") &amp; ends_with("Width"))
+#&gt; # A tibble: 150 x 1
+#&gt;   Petal.Width
+#&gt;         &lt;dbl&gt;
+#&gt; 1         0.2
+#&gt; 2         0.2
+#&gt; 3         0.2
+#&gt; 4         0.2
+#&gt; # i 146 more rows
+
+iris %&gt;% select(starts_with("Petal") | ends_with("Width"))
+#&gt; # A tibble: 150 x 3
+#&gt;   Petal.Length Petal.Width Sepal.Width
+#&gt;          &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;
+#&gt; 1          1.4         0.2         3.5
+#&gt; 2          1.4         0.2         3  
+#&gt; 3          1.3         0.2         3.2
+#&gt; 4          1.5         0.2         3.1
+#&gt; # i 146 more rows
+</pre></div>
+<p>To take the difference between two selections, combine the <code>&amp;</code> and
+<code>!</code> operators:
+</p>
+<div class="sourceCode r"><pre>iris %&gt;% select(starts_with("Petal") &amp; !ends_with("Width"))
+#&gt; # A tibble: 150 x 1
+#&gt;   Petal.Length
+#&gt;          &lt;dbl&gt;
+#&gt; 1          1.4
+#&gt; 2          1.4
+#&gt; 3          1.3
+#&gt; 4          1.5
+#&gt; # i 146 more rows
+</pre></div>
+
+
+
+<h3>See Also</h3>
+
+<p>Other single table verbs: 
+<code>arrange()</code>,
+<code>filter()</code>,
+<code>mutate()</code>,
+<code>reframe()</code>,
+<code>rename()</code>,
+<code>slice()</code>,
+<code>summarise()</code>
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>dplyr</em> version 1.1.4 ]</div></main>
+
+</div></div></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="nf">select</span><span class="p">(</span><span class="n">insta</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">))</span><span class="w"> </span><span class="c1"># select `name` column </span>
@@ -1626,10 +1927,60 @@ summarize(avg_followers = mean(Followers))</p>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">### YOUR CODE HERE</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="n">insta</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 6 × 7</caption>
+<thead>
+	<tr><th scope=col>rank</th><th scope=col>name</th><th scope=col>Channel</th><th scope=col>Category</th><th scope=col>Posts</th><th scope=col>Followers</th><th scope=col>eng_rate</th></tr>
+	<tr><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>1</td><td>instagram  </td><td>brand </td><td>photography             </td><td>7300</td><td>580100000</td><td>0.1</td></tr>
+	<tr><td>2</td><td><span style=white-space:pre-wrap>cristiano  </span></td><td><span style=white-space:pre-wrap>male  </span></td><td>Health, Sports &amp; Fitness</td><td>3400</td><td>519900000</td><td>1.4</td></tr>
+	<tr><td>3</td><td><span style=white-space:pre-wrap>leomessi   </span></td><td><span style=white-space:pre-wrap>male  </span></td><td>Health, Sports &amp; Fitness</td><td>1000</td><td>403700000</td><td>1.7</td></tr>
+	<tr><td>4</td><td>kyliejenner</td><td>female</td><td>entertainment           </td><td>7000</td><td>375900000</td><td>1.7</td></tr>
+	<tr><td>5</td><td>selenagomez</td><td>female</td><td>entertainment           </td><td>1800</td><td>365300000</td><td>1.1</td></tr>
+	<tr><td>6</td><td>therock    </td><td>male  </td><td>entertainment           </td><td>7000</td><td>354300000</td><td>0.3</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">### YOUR CODE HERE</span>
+
+<span class="n">insta_wrangled</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">insta</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">                    </span><span class="nf">filter</span><span class="p">(</span><span class="n">Channel</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;brand&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">                    </span><span class="nf">group_by</span><span class="p">(</span><span class="n">Category</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">summarize</span><span class="p">(</span><span class="n">avg_posts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">Posts</span><span class="p">))</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">arrange</span><span class="p">(</span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">desc</span><span class="p">(</span><span class="n">avg_posts</span><span class="p">))</span>
+
+<span class="n">insta_wrangled</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 7 × 2</caption>
+<thead>
+	<tr><th scope=col>Category</th><th scope=col>avg_posts</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>technology              </td><td>18500.000</td></tr>
+	<tr><td>entertainment           </td><td>17200.000</td></tr>
+	<tr><td>Craft/DIY               </td><td>15500.000</td></tr>
+	<tr><td>photography             </td><td>12250.000</td></tr>
+	<tr><td>fashion                 </td><td> 6883.333</td></tr>
+	<tr><td><span style=white-space:pre-wrap>Beauty &amp; Makeup         </span></td><td> 5100.000</td></tr>
+	<tr><td>Health, Sports &amp; Fitness</td><td> 1400.000</td></tr>
+</tbody>
+</table>
+</div></div>
 </div>
 </section>
 </section>
@@ -1717,7 +2068,7 @@ summarize(avg_followers = mean(Followers))</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/aa00787e72da2aa25ba747ce6f3df3c1b63faaacf98144b9d2a36dd60166e939.png"><img alt="../_images/aa00787e72da2aa25ba747ce6f3df3c1b63faaacf98144b9d2a36dd60166e939.png" src="../_images/aa00787e72da2aa25ba747ce6f3df3c1b63faaacf98144b9d2a36dd60166e939.png" style="width: 420px; height: 420px;" /></a>
+<a class="reference internal image-reference" href="../_images/c9159333437f4f9f77625dab49e9a122831c4b18144655208897224074888c68.png"><img alt="../_images/c9159333437f4f9f77625dab49e9a122831c4b18144655208897224074888c68.png" src="../_images/c9159333437f4f9f77625dab49e9a122831c4b18144655208897224074888c68.png" style="width: 720px; height: 600px;" /></a>
 </div>
 </div>
 <p>Then we can add a layer with the <code class="docutils literal notranslate"><span class="pre">+</span></code> symbol which will dictate which type of plot we want to make. There are a whole bunch of options, but in this case we are interested in a histogram so we use <code class="docutils literal notranslate"><span class="pre">geom_histogram()</span></code>.</p>
@@ -1732,7 +2083,7 @@ summarize(avg_followers = mean(Followers))</p>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="../_images/78f3f4f461699e69a6b0990dd09aeb613f5949e7bbce3fce2a2cecd798a8a064.png"><img alt="../_images/78f3f4f461699e69a6b0990dd09aeb613f5949e7bbce3fce2a2cecd798a8a064.png" src="../_images/78f3f4f461699e69a6b0990dd09aeb613f5949e7bbce3fce2a2cecd798a8a064.png" style="width: 420px; height: 420px;" /></a>
+<a class="reference internal image-reference" href="../_images/fe80c652e716dbbbe58b5c4fb35d8dd05a51ee0106d44e66d96a30626ee9c05f.png"><img alt="../_images/fe80c652e716dbbbe58b5c4fb35d8dd05a51ee0106d44e66d96a30626ee9c05f.png" src="../_images/fe80c652e716dbbbe58b5c4fb35d8dd05a51ee0106d44e66d96a30626ee9c05f.png" style="width: 720px; height: 600px;" /></a>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1740,14 +2091,14 @@ summarize(avg_followers = mean(Followers))</p>
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Adding more layers </span>
 
 <span class="nf">ggplot</span><span class="p">(</span><span class="n">insta</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Posts</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="w">    </span><span class="nf">geom_histogram</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="m">50</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="o">=</span><span class="s">&quot;lightblue&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="s">&quot;darkblue&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">geom_histogram</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="m">30</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="o">=</span><span class="s">&quot;darkturquoise&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="s">&quot;darkblue&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
 <span class="w">    </span><span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">26</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="c1"># increase text size</span>
 <span class="w">    </span><span class="nf">labs</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s">&#39;Number of Posts&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="s">&#39;Count&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">title</span><span class="o">=</span><span class="s">&#39;Histogram of Posts&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1"># rename axes and add title</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/869f3e38c87842f5bcf0351d1419cc70218b181a8539a1d948bbd7e1e311d693.png"><img alt="../_images/869f3e38c87842f5bcf0351d1419cc70218b181a8539a1d948bbd7e1e311d693.png" src="../_images/869f3e38c87842f5bcf0351d1419cc70218b181a8539a1d948bbd7e1e311d693.png" style="width: 420px; height: 420px;" /></a>
+<a class="reference internal image-reference" href="../_images/584fa8e50bfde5fc1fe008ce55a6cd08ed8e0c0e91d84ea045cf2d933c00d591.png"><img alt="../_images/584fa8e50bfde5fc1fe008ce55a6cd08ed8e0c0e91d84ea045cf2d933c00d591.png" src="../_images/584fa8e50bfde5fc1fe008ce55a6cd08ed8e0c0e91d84ea045cf2d933c00d591.png" style="width: 420px; height: 420px;" /></a>
 </div>
 </div>
 <p>You can also creating multiple separate histograms (e.g., for each channel):</p>
@@ -1758,12 +2109,14 @@ summarize(avg_followers = mean(Followers))</p>
 <span class="nf">ggplot</span><span class="p">(</span><span class="n">insta</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Posts</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Channel</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
 <span class="w">    </span><span class="nf">geom_histogram</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="m">50</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
 <span class="w">    </span><span class="nf">facet_grid</span><span class="p">(</span><span class="n">rows</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">vars</span><span class="p">(</span><span class="n">Channel</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="w">    </span><span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">26</span><span class="p">))</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">26</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">theme_minimal</span><span class="p">()</span>
+<span class="w">    </span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/5a4a3601bfdca7c9f789d485a21c4aa4be2513edec0fc2319dd6398f94483807.png"><img alt="../_images/5a4a3601bfdca7c9f789d485a21c4aa4be2513edec0fc2319dd6398f94483807.png" src="../_images/5a4a3601bfdca7c9f789d485a21c4aa4be2513edec0fc2319dd6398f94483807.png" style="width: 480px; height: 600px;" /></a>
+<a class="reference internal image-reference" href="../_images/636057665fb25194138daab64db475a0735408df0d97fc23d19e7b2bbcd7510a.png"><img alt="../_images/636057665fb25194138daab64db475a0735408df0d97fc23d19e7b2bbcd7510a.png" src="../_images/636057665fb25194138daab64db475a0735408df0d97fc23d19e7b2bbcd7510a.png" style="width: 480px; height: 600px;" /></a>
 </div>
 </div>
 </section>
@@ -1777,7 +2130,7 @@ summarize(avg_followers = mean(Followers))</p>
 <span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">)</span>
 
 <span class="nf">ggplot</span><span class="p">(</span><span class="n">insta</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Posts</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Followers</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="w">    </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="c1"># scatterplot</span>
 <span class="w">    </span><span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">26</span><span class="p">))</span><span class="w"> </span><span class="c1"># increase text size</span>
 </pre></div>
 </div>
@@ -1863,7 +2216,7 @@ summarize(avg_followers = mean(Followers))</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/9f9e61e3fc5c7451616e7ca591f0f7ccb63b07aa9dcf10898af1c6beb89afae8.png"><img alt="../_images/9f9e61e3fc5c7451616e7ca591f0f7ccb63b07aa9dcf10898af1c6beb89afae8.png" src="../_images/9f9e61e3fc5c7451616e7ca591f0f7ccb63b07aa9dcf10898af1c6beb89afae8.png" style="width: 600px; height: 480px;" /></a>
+<a class="reference internal image-reference" href="../_images/f0581c4edb8d9d06064eca5ae3e0320e719770acb958e8b2e42bd4ecd27fb9ec.png"><img alt="../_images/f0581c4edb8d9d06064eca5ae3e0320e719770acb958e8b2e42bd4ecd27fb9ec.png" src="../_images/f0581c4edb8d9d06064eca5ae3e0320e719770acb958e8b2e42bd4ecd27fb9ec.png" style="width: 600px; height: 480px;" /></a>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1876,7 +2229,7 @@ summarize(avg_followers = mean(Followers))</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/c1f41c2df0af6cd6dfafc9b3bbe9bd2a0878ef706b71e03f19075d454892013b.png"><img alt="../_images/c1f41c2df0af6cd6dfafc9b3bbe9bd2a0878ef706b71e03f19075d454892013b.png" src="../_images/c1f41c2df0af6cd6dfafc9b3bbe9bd2a0878ef706b71e03f19075d454892013b.png" style="width: 600px; height: 480px;" /></a>
+<a class="reference internal image-reference" href="../_images/7c57c30177ee2f3299d3f9903601679e3afc85c9f5131966707f0c2de4c0b763.png"><img alt="../_images/7c57c30177ee2f3299d3f9903601679e3afc85c9f5131966707f0c2de4c0b763.png" src="../_images/7c57c30177ee2f3299d3f9903601679e3afc85c9f5131966707f0c2de4c0b763.png" style="width: 600px; height: 480px;" /></a>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1886,14 +2239,14 @@ summarize(avg_followers = mean(Followers))</p>
 <span class="c1"># Reorder the levels of Category based on Total Followers</span>
 
 <span class="nf">ggplot</span><span class="p">(</span><span class="n">insta_cat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Total_Followers</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">reorder</span><span class="p">(</span><span class="n">Category</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">Total_Followers</span><span class="p">)))</span><span class="w"> </span><span class="o">+</span>
-<span class="w">    </span><span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;identity&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;cornflowerblue&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;identity&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;blue&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
 <span class="w">    </span><span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">26</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
 <span class="w">    </span><span class="nf">labs</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Total Followers&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="s">&quot;Category&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Barplot of Category by Total Followers &quot;</span><span class="p">)</span><span class="w"> </span><span class="c1"># change labels and title</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/13f1ea7eb565b42b0c919634049e3c3b4f4ad2c5b9528c9d1b1760a0671a3d9f.png"><img alt="../_images/13f1ea7eb565b42b0c919634049e3c3b4f4ad2c5b9528c9d1b1760a0671a3d9f.png" src="../_images/13f1ea7eb565b42b0c919634049e3c3b4f4ad2c5b9528c9d1b1760a0671a3d9f.png" style="width: 720px; height: 600px;" /></a>
+<a class="reference internal image-reference" href="../_images/9bb78fc329bebf5172438d69bceb59c540883913829062cc465d54a1358b0ea0.png"><img alt="../_images/9bb78fc329bebf5172438d69bceb59c540883913829062cc465d54a1358b0ea0.png" src="../_images/9bb78fc329bebf5172438d69bceb59c540883913829062cc465d54a1358b0ea0.png" style="width: 720px; height: 600px;" /></a>
 </div>
 </div>
 <p>It is now clear that entertainment an Health, Sports and Fitness are the two most followed categories of Instagram accounts.</p>
@@ -1903,7 +2256,7 @@ summarize(avg_followers = mean(Followers))</p>
 <h2>3.2 Rules of Thumb<a class="headerlink" href="#rules-of-thumb" title="Link to this heading">#</a></h2>
 <section id="rule-of-thumb-no-tables-pie-charts-3d">
 <h3>Rule of Thumb: No tables / pie charts / 3D<a class="headerlink" href="#rule-of-thumb-no-tables-pie-charts-3d" title="Link to this heading">#</a></h3>
-<a class="reference internal image-reference" href="../_images/pie1.png"><img alt="../_images/pie1.png" src="../_images/pie1.png" style="width: 1200px;" /></a>
+<a class="reference internal image-reference" href="../_images/pie.png"><img alt="../_images/pie.png" src="../_images/pie.png" style="width: 1200px;" /></a>
 </section>
 <section id="id4">
 <h3>Rule of Thumb: No tables / pie charts / 3D<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
@@ -2132,7 +2485,7 @@ By Katie Burak
 
   <p class="copyright">
     
-      © Copyright 2024.
+      © Copyright 2025.
       <br/>
     
   </p>
