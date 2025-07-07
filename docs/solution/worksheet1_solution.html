@@ -1,0 +1,1089 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Worksheet 1 &#8212; Girls in Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'solution/worksheet1_solution';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Day 3 - Girls in Data Science" href="../notes/day3.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../README.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Girls in Data Science - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Girls in Data Science - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../README.html">
+                    Girls in Data Science Camp
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Notes</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../notes/day1.html">Day 1 - Girls in Data Science</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../notes/day2.html">Day 2 - Girls in Data Science</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../notes/day3.html">Day 3 - Girls in Data Science</a></li>
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Worksheet 1</a></li>
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/katieburak/girls-in-DS" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/katieburak/girls-in-DS/issues/new?title=Issue%20on%20page%20%2Fsolution/worksheet1_solution.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/solution/worksheet1_solution.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Worksheet 1</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Worksheet 1</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#girls-in-data-science-camp">Girls in Data Science Camp</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-wrangling">Exercise 1: Wrangling</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1.1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1.2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">1.3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">1.4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">1.5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">1.6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">1.7</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">1.8</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-data-visualization">Exercise 2: Data Visualization</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">2.1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">2.2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">2.3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">2.4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge">2.5 (Challenge)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">2.6 (Challenge)</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="worksheet-1">
+<h1>Worksheet 1<a class="headerlink" href="#worksheet-1" title="Link to this heading">#</a></h1>
+<section id="girls-in-data-science-camp">
+<h2>Girls in Data Science Camp<a class="headerlink" href="#girls-in-data-science-camp" title="Link to this heading">#</a></h2>
+<p>In this worksheet, we will be using a data set obtained from the Spotify Web API the top 50 tracks from 2023 (more details can be found <a class="reference external" href="https://www.kaggle.com/datasets/yukawithdata/spotify-top-tracks-2023">here</a>).</p>
+<a class="reference internal image-reference" href="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Green.png"><img alt="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Green.png" src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Green.png" style="width: 500px;" /></a>
+<p>I have reduced the data set to include the following variables:</p>
+<ul class="simple">
+<li><p>artist_name: the artist name</p></li>
+<li><p>track_name: the title of the track</p></li>
+<li><p>album_release_date: The date when the track was released</p></li>
+<li><p>genres: A list of genres associated with the track’s artist(s)</p></li>
+<li><p>danceability: A measure from 0.0 to 1.0 indicating how suitable a track is for dancing based on a combination of musical elements</p></li>
+<li><p>energy: A measure from 0.0 to 1.0 representing a perceptual measure of intensity and activity</p></li>
+<li><p>loudness: The overall loudness of a track in decibels (dB)</p></li>
+<li><p>key: The key the track is in. Integers map to pitches using standard Pitch Class notation.</p></li>
+<li><p>tempo: The overall estimated tempo of a track in beats per minute (BPM)</p></li>
+<li><p>duration_ms: The length of the track in milliseconds</p></li>
+<li><p>time_signature: An estimated overall time signature of a track</p></li>
+<li><p>popularity: A score between 0 and 100, with 100 being the most popular</p></li>
+</ul>
+<p>I also included a new variable called <code class="docutils literal notranslate"><span class="pre">pop</span></code> which is yes if the song falls into any type of pop genre and no otherwise.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load libraries</span>
+
+<span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ───────────────────────────────────────────────────────────────── tidyverse 2.0.0 ──
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dplyr    </span> 1.1.4     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">readr    </span> 2.1.5
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">forcats  </span> 1.0.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">stringr  </span> 1.5.1
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">ggplot2  </span> 3.5.1     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tibble   </span> 3.2.1
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">lubridate</span> 1.9.3     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tidyr    </span> 1.3.1
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">purrr    </span> 1.0.2     
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ─────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">filter()</span> masks <span class=" -Color -Color-Blue">stats</span>::filter()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">lag()</span>    masks <span class=" -Color -Color-Blue">stats</span>::lag()
+<span class=" -Color -Color-Cyan">ℹ</span> Use the conflicted package (<span class=" -Color -Color-Blue">&lt;http://conflicted.r-lib.org/&gt;</span>) to force all conflicts to become errors
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read in the data</span>
+
+<span class="n">spotify</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;data/spotify_top_50_2023.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">50</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">12</span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">─────────────────────────────────────────────────────────────────────────────────────────────────</span>
+<span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
+<span class=" -Color -Color-Red">chr</span>  (3): artist_name, track_name, genres
+<span class=" -Color -Color-Green">dbl</span>  (8): danceability, energy, loudness, key, tempo, duration_ms, time_sign...
+<span class=" -Color -Color-Blue">date</span> (1): album_release_date
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">ℹ</span> Use `spec()` to retrieve the full column specification for this data.
+<span class=" -Color -Color-Cyan">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create &#39;pop&#39; column </span>
+
+<span class="n">spotify</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">spotify</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span>
+<span class="w">                </span><span class="nf">mutate</span><span class="p">(</span><span class="n">pop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">if_else</span><span class="p">(</span><span class="nf">str_detect</span><span class="p">(</span><span class="n">genres</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;pop&quot;</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;yes&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;no&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="n">spotify</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 6 × 13</caption>
+<thead>
+	<tr><th scope=col>artist_name</th><th scope=col>track_name</th><th scope=col>album_release_date</th><th scope=col>genres</th><th scope=col>danceability</th><th scope=col>energy</th><th scope=col>loudness</th><th scope=col>key</th><th scope=col>tempo</th><th scope=col>duration_ms</th><th scope=col>time_signature</th><th scope=col>popularity</th><th scope=col>pop</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;date&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Miley Cyrus   </td><td>Flowers                            </td><td>2023-08-18</td><td>['pop']                                                     </td><td>0.706</td><td>0.691</td><td>-4.775</td><td> 0</td><td>118.048</td><td>200600</td><td>4</td><td>94</td><td>yes</td></tr>
+	<tr><td><span style=white-space:pre-wrap>SZA           </span></td><td><span style=white-space:pre-wrap>Kill Bill                          </span></td><td>2022-12-08</td><td><span style=white-space:pre-wrap>['pop', 'r&amp;b', 'rap']                                       </span></td><td>0.644</td><td>0.735</td><td>-5.747</td><td> 8</td><td> 88.980</td><td>153947</td><td>4</td><td>86</td><td>yes</td></tr>
+	<tr><td>Harry Styles  </td><td>As It Was                          </td><td>2022-05-20</td><td>['pop']                                                     </td><td>0.520</td><td>0.731</td><td>-5.338</td><td> 6</td><td>173.930</td><td>167303</td><td>4</td><td>95</td><td>yes</td></tr>
+	<tr><td>Jung Kook     </td><td>Seven (feat. Latto) (Explicit Ver.)</td><td>2023-11-03</td><td>['k-pop']                                                   </td><td>0.790</td><td>0.831</td><td>-4.185</td><td>11</td><td>124.987</td><td>183551</td><td>4</td><td>90</td><td>yes</td></tr>
+	<tr><td>Eslabon Armado</td><td>Ella Baila Sola                    </td><td>2023-04-28</td><td>['corrido', 'corridos tumbados', 'sad sierreno', 'sierreno']</td><td>0.668</td><td>0.758</td><td>-5.176</td><td> 5</td><td>147.989</td><td>165671</td><td>3</td><td>86</td><td>no </td></tr>
+	<tr><td>Taylor Swift  </td><td>Cruel Summer                       </td><td>2019-08-23</td><td>['pop']                                                     </td><td>0.552</td><td>0.702</td><td>-5.707</td><td> 9</td><td>169.994</td><td>178427</td><td>4</td><td>99</td><td>yes</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="exercise-1-wrangling">
+<h1>Exercise 1: Wrangling<a class="headerlink" href="#exercise-1-wrangling" title="Link to this heading">#</a></h1>
+<section id="id1">
+<h2>1.1<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>Is the spotify data tidy? Why or why not?</p>
+<blockquote>
+<div><p>Answer: The data set is mostly tidy: each row corresponds to a single observation and each column corresponds to a single variable. However, each cell does not always correspond to a single value. For example, the genres column sometimes displays multiple genres per song (e.g., the song “Kill Bill” is clsasified as three genres: pop, r&amp;b and rap).</p>
+</div></blockquote>
+</section>
+<section id="id2">
+<h2>1.2<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>What are the dimensions of this data set (i.e., the number of rows and columns)?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">dim</span><span class="p">(</span><span class="n">spotify</span><span class="p">)</span><span class="w"> </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>50</li><li>13</li></ol>
+</div></div>
+</div>
+</section>
+<section id="id3">
+<h2>1.3<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>Without examining the entire data set, which artist and track is in the 35th row of the data set? Note that your code should return only the required variables (<code class="docutils literal notranslate"><span class="pre">artist_name</span></code> and <code class="docutils literal notranslate"><span class="pre">track_name</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">spotify</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">slice</span><span class="p">(</span><span class="m">35</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">select</span><span class="p">(</span><span class="n">artist_name</span><span class="p">,</span><span class="w"> </span><span class="n">track_name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 1 × 2</caption>
+<thead>
+	<tr><th scope=col>artist_name</th><th scope=col>track_name</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Doja Cat</td><td>Paint The Town Red</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="id4">
+<h2>1.4<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>Create a subset of the data that only includes tracks with a popularity score over 90. Assign this to an object called <code class="docutils literal notranslate"><span class="pre">pop_90</span></code>. How many songs have a popularity score over 90?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">pop_90</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">spotify</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span>
+<span class="w">            </span><span class="nf">filter</span><span class="p">(</span><span class="n">popularity</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">90</span><span class="p">)</span>
+
+<span class="n">pop_90</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 20 × 13</caption>
+<thead>
+	<tr><th scope=col>artist_name</th><th scope=col>track_name</th><th scope=col>album_release_date</th><th scope=col>genres</th><th scope=col>danceability</th><th scope=col>energy</th><th scope=col>loudness</th><th scope=col>key</th><th scope=col>tempo</th><th scope=col>duration_ms</th><th scope=col>time_signature</th><th scope=col>popularity</th><th scope=col>pop</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;date&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Miley Cyrus       </td><td>Flowers                               </td><td>2023-08-18</td><td>['pop']                                                                    </td><td>0.706</td><td>0.691</td><td> -4.775</td><td> 0</td><td>118.048</td><td>200600</td><td>4</td><td>94</td><td>yes</td></tr>
+	<tr><td>Harry Styles      </td><td>As It Was                             </td><td>2022-05-20</td><td>['pop']                                                                    </td><td>0.520</td><td>0.731</td><td> -5.338</td><td> 6</td><td>173.930</td><td>167303</td><td>4</td><td>95</td><td>yes</td></tr>
+	<tr><td>Taylor Swift      </td><td>Cruel Summer                          </td><td>2019-08-23</td><td>['pop']                                                                    </td><td>0.552</td><td>0.702</td><td> -5.707</td><td> 9</td><td>169.994</td><td>178427</td><td>4</td><td>99</td><td>yes</td></tr>
+	<tr><td><span style=white-space:pre-wrap>Metro Boomin      </span></td><td>Creepin' (with The Weeknd &amp; 21 Savage)</td><td>2022-12-02</td><td><span style=white-space:pre-wrap>['rap']                                                                    </span></td><td>0.715</td><td>0.620</td><td> -6.005</td><td> 1</td><td> 97.950</td><td>221520</td><td>4</td><td>91</td><td>no </td></tr>
+	<tr><td>Taylor Swift      </td><td>Anti-Hero                             </td><td>2022-10-21</td><td>['pop']                                                                    </td><td>0.637</td><td>0.643</td><td> -6.571</td><td> 4</td><td> 97.008</td><td>200690</td><td>4</td><td>92</td><td>yes</td></tr>
+	<tr><td>Arctic Monkeys    </td><td>I Wanna Be Yours                      </td><td>2013-09-09</td><td>['garage rock', 'modern rock', 'permanent wave', 'rock', 'sheffield indie']</td><td>0.464</td><td>0.417</td><td> -9.345</td><td> 0</td><td> 67.528</td><td>183956</td><td>4</td><td>96</td><td>no </td></tr>
+	<tr><td>David Guetta      </td><td>I'm Good (Blue)                       </td><td>2022-08-26</td><td>['big room', 'dance pop', 'edm', 'pop', 'pop dance']                       </td><td>0.561</td><td>0.965</td><td> -3.673</td><td> 7</td><td>128.040</td><td>175238</td><td>4</td><td>92</td><td>yes</td></tr>
+	<tr><td>David Kushner     </td><td>Daylight                              </td><td>2023-04-14</td><td>['gen z singer-songwriter', 'singer-songwriter pop']                       </td><td>0.508</td><td>0.430</td><td> -9.475</td><td> 2</td><td>130.090</td><td>212954</td><td>4</td><td>94</td><td>yes</td></tr>
+	<tr><td><span style=white-space:pre-wrap>The Weeknd        </span></td><td><span style=white-space:pre-wrap>Starboy                               </span></td><td>2016-11-25</td><td><span style=white-space:pre-wrap>['canadian contemporary r&amp;b', 'canadian pop', 'pop']                       </span></td><td>0.679</td><td>0.587</td><td> -7.015</td><td> 7</td><td>186.003</td><td>230453</td><td>4</td><td>95</td><td>yes</td></tr>
+	<tr><td>OneRepublic       </td><td>I Ain't Worried                       </td><td>2022-05-13</td><td>['piano rock', 'pop']                                                      </td><td>0.704</td><td>0.797</td><td> -5.927</td><td> 0</td><td>139.994</td><td>148486</td><td>4</td><td>92</td><td>yes</td></tr>
+	<tr><td>Myke Towers       </td><td>LALA                                  </td><td>2023-03-23</td><td>['reggaeton', 'trap latino', 'urbano latino']                              </td><td>0.708</td><td>0.737</td><td> -4.045</td><td> 1</td><td> 91.986</td><td>197920</td><td>4</td><td>93</td><td>no </td></tr>
+	<tr><td>Doja Cat          </td><td>Paint The Town Red                    </td><td>2023-09-20</td><td>['dance pop', 'pop']                                                       </td><td>0.864</td><td>0.556</td><td> -7.683</td><td> 2</td><td> 99.974</td><td>230480</td><td>4</td><td>93</td><td>yes</td></tr>
+	<tr><td>The Neighbourhood </td><td>Sweater Weather                       </td><td>2013-04-19</td><td>['modern alternative rock', 'modern rock', 'pop']                          </td><td>0.612</td><td>0.807</td><td> -2.810</td><td>10</td><td>124.053</td><td>240400</td><td>4</td><td>93</td><td>yes</td></tr>
+	<tr><td><span style=white-space:pre-wrap>SZA               </span></td><td><span style=white-space:pre-wrap>Snooze                                </span></td><td>2022-12-09</td><td><span style=white-space:pre-wrap>['pop', 'r&amp;b', 'rap']                                                      </span></td><td>0.559</td><td>0.551</td><td> -7.231</td><td> 5</td><td>143.008</td><td>201800</td><td>4</td><td>93</td><td>yes</td></tr>
+	<tr><td><span style=white-space:pre-wrap>The Weeknd        </span></td><td><span style=white-space:pre-wrap>Blinding Lights                       </span></td><td>2020-03-20</td><td><span style=white-space:pre-wrap>['canadian contemporary r&amp;b', 'canadian pop', 'pop']                       </span></td><td>0.514</td><td>0.730</td><td> -5.934</td><td> 1</td><td>171.005</td><td>200040</td><td>4</td><td>93</td><td>yes</td></tr>
+	<tr><td>Jimin             </td><td>Like Crazy                            </td><td>2023-03-24</td><td>['k-pop']                                                                  </td><td>0.629</td><td>0.733</td><td> -5.445</td><td> 7</td><td>120.001</td><td>212241</td><td>4</td><td>93</td><td>yes</td></tr>
+	<tr><td>Eminem            </td><td>Mockingbird                           </td><td>2004-11-12</td><td>['detroit hip hop', 'hip hop', 'rap']                                      </td><td>0.637</td><td>0.678</td><td> -3.798</td><td> 0</td><td> 84.039</td><td>250760</td><td>4</td><td>91</td><td>no </td></tr>
+	<tr><td>Olivia Rodrigo    </td><td>vampire                               </td><td>2023-09-08</td><td>['pop']                                                                    </td><td>0.511</td><td>0.532</td><td> -5.745</td><td> 5</td><td>138.005</td><td>219724</td><td>4</td><td>95</td><td>yes</td></tr>
+	<tr><td>Tyler, The Creator</td><td>See You Again (feat. Kali Uchis)      </td><td>2017-07-21</td><td>['hip hop', 'rap']                                                         </td><td>0.558</td><td>0.559</td><td> -9.222</td><td> 6</td><td> 78.558</td><td>180387</td><td>4</td><td>92</td><td>no </td></tr>
+	<tr><td>d4vd              </td><td>Romantic Homicide                     </td><td>2022-07-20</td><td>['bedroom pop']                                                            </td><td>0.571</td><td>0.544</td><td>-10.613</td><td> 6</td><td>132.052</td><td>132631</td><td>4</td><td>91</td><td>yes</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">nrow</span><span class="p">(</span><span class="n">pop_90</span><span class="p">)</span><span class="w"> </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">20</div></div>
+</div>
+<blockquote>
+<div><p>20 tracks have a popularity score over 90.</p>
+</div></blockquote>
+</section>
+<section id="id5">
+<h2>1.5<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>Now, I want to look at pop songs that have a danceability score over 0.7. Create a subset of the <code class="docutils literal notranslate"><span class="pre">spotify</span></code> data set to achieve this task, ordered from highest to lowest danceability.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">spotify</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="n">danceability</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0.7</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">pop</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;yes&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">arrange</span><span class="p">(</span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">desc</span><span class="p">(</span><span class="n">danceability</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 13 × 13</caption>
+<thead>
+	<tr><th scope=col>artist_name</th><th scope=col>track_name</th><th scope=col>album_release_date</th><th scope=col>genres</th><th scope=col>danceability</th><th scope=col>energy</th><th scope=col>loudness</th><th scope=col>key</th><th scope=col>tempo</th><th scope=col>duration_ms</th><th scope=col>time_signature</th><th scope=col>popularity</th><th scope=col>pop</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;date&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Ozuna        </td><td>Hey Mor                              </td><td>2022-10-07</td><td>['puerto rican pop', 'reggaeton', 'trap latino', 'urbano latino']                                      </td><td>0.901</td><td>0.589</td><td>-6.713</td><td> 1</td><td> 98.002</td><td>196600</td><td>4</td><td>87</td><td>yes</td></tr>
+	<tr><td>Doja Cat     </td><td>Paint The Town Red                   </td><td>2023-09-20</td><td>['dance pop', 'pop']                                                                                   </td><td>0.864</td><td>0.556</td><td>-7.683</td><td> 2</td><td> 99.974</td><td>230480</td><td>4</td><td>93</td><td>yes</td></tr>
+	<tr><td>Feid         </td><td>CLASSY 101                           </td><td>2023-03-31</td><td>['colombian pop', 'pop reggaeton', 'reggaeton', 'reggaeton colombiano', 'trap latino', 'urbano latino']</td><td>0.859</td><td>0.658</td><td>-4.790</td><td>11</td><td>100.065</td><td>195987</td><td>4</td><td>87</td><td>yes</td></tr>
+	<tr><td>Manuel Turizo</td><td>La Bachata                           </td><td>2023-03-17</td><td>['colombian pop', 'latin pop', 'reggaeton', 'reggaeton colombiano', 'trap latino', 'urbano latino']    </td><td>0.835</td><td>0.679</td><td>-5.329</td><td> 7</td><td>124.980</td><td>162638</td><td>4</td><td>85</td><td>yes</td></tr>
+	<tr><td>NewJeans     </td><td>OMG                                  </td><td>2023-01-02</td><td>['k-pop', 'k-pop girl group']                                                                          </td><td>0.804</td><td>0.771</td><td>-4.067</td><td> 9</td><td>126.956</td><td>212253</td><td>4</td><td>87</td><td>yes</td></tr>
+	<tr><td>Rema         </td><td>Calm Down (with Selena Gomez)        </td><td>2023-04-27</td><td>['afrobeats', 'nigerian pop']                                                                          </td><td>0.799</td><td>0.802</td><td>-5.196</td><td>11</td><td>107.008</td><td>239318</td><td>4</td><td>90</td><td>yes</td></tr>
+	<tr><td>Jung Kook    </td><td>Seven (feat. Latto) (Explicit Ver.)  </td><td>2023-11-03</td><td>['k-pop']                                                                                              </td><td>0.790</td><td>0.831</td><td>-4.185</td><td>11</td><td>124.987</td><td>183551</td><td>4</td><td>90</td><td>yes</td></tr>
+	<tr><td>FIFTY FIFTY  </td><td>Cupid - Twin Ver.                    </td><td>2023-09-22</td><td>['k-pop girl group']                                                                                   </td><td>0.783</td><td>0.592</td><td>-8.332</td><td>11</td><td>120.018</td><td>174253</td><td>4</td><td>75</td><td>yes</td></tr>
+	<tr><td>Bizarrap     </td><td>Shakira: Bzrp Music Sessions, Vol. 53</td><td>2023-01-11</td><td>['argentine hip hop', 'pop venezolano', 'trap argentino', 'trap latino', 'urbano latino']              </td><td>0.778</td><td>0.632</td><td>-5.600</td><td> 2</td><td>122.104</td><td>218289</td><td>4</td><td>85</td><td>yes</td></tr>
+	<tr><td>Taylor Swift </td><td>Blank Space                          </td><td>2014-10-27</td><td>['pop']                                                                                                </td><td>0.753</td><td>0.678</td><td>-5.421</td><td> 5</td><td> 96.006</td><td>231827</td><td>4</td><td>78</td><td>yes</td></tr>
+	<tr><td>Sam Smith    </td><td>Unholy (feat. Kim Petras)            </td><td>2023-01-27</td><td>['pop', 'uk pop']                                                                                      </td><td>0.712</td><td>0.463</td><td>-7.399</td><td> 2</td><td>131.199</td><td>156943</td><td>4</td><td>84</td><td>yes</td></tr>
+	<tr><td>Miley Cyrus  </td><td>Flowers                              </td><td>2023-08-18</td><td>['pop']                                                                                                </td><td>0.706</td><td>0.691</td><td>-4.775</td><td> 0</td><td>118.048</td><td>200600</td><td>4</td><td>94</td><td>yes</td></tr>
+	<tr><td>OneRepublic  </td><td>I Ain't Worried                      </td><td>2022-05-13</td><td>['piano rock', 'pop']                                                                                  </td><td>0.704</td><td>0.797</td><td>-5.927</td><td> 0</td><td>139.994</td><td>148486</td><td>4</td><td>92</td><td>yes</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="id6">
+<h2>1.6<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>What is the average danceability score for Taylor Swift songs?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Filter for only Taylor Swift songs</span>
+<span class="n">spotify</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="n">artist_name</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Taylor Swift&quot;</span><span class="p">)</span><span class="w"> </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 3 × 13</caption>
+<thead>
+	<tr><th scope=col>artist_name</th><th scope=col>track_name</th><th scope=col>album_release_date</th><th scope=col>genres</th><th scope=col>danceability</th><th scope=col>energy</th><th scope=col>loudness</th><th scope=col>key</th><th scope=col>tempo</th><th scope=col>duration_ms</th><th scope=col>time_signature</th><th scope=col>popularity</th><th scope=col>pop</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;date&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Taylor Swift</td><td>Cruel Summer</td><td>2019-08-23</td><td>['pop']</td><td>0.552</td><td>0.702</td><td>-5.707</td><td>9</td><td>169.994</td><td>178427</td><td>4</td><td>99</td><td>yes</td></tr>
+	<tr><td>Taylor Swift</td><td>Anti-Hero   </td><td>2022-10-21</td><td>['pop']</td><td>0.637</td><td>0.643</td><td>-6.571</td><td>4</td><td> 97.008</td><td>200690</td><td>4</td><td>92</td><td>yes</td></tr>
+	<tr><td>Taylor Swift</td><td>Blank Space </td><td>2014-10-27</td><td>['pop']</td><td>0.753</td><td>0.678</td><td>-5.421</td><td>5</td><td> 96.006</td><td>231827</td><td>4</td><td>78</td><td>yes</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compute the average danceability score using `summarize`</span>
+<span class="n">spotify</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="n">artist_name</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Taylor Swift&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">summarize</span><span class="p">(</span><span class="n">avg_dance_TS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">danceability</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 1 × 1</caption>
+<thead>
+	<tr><th scope=col>avg_dance_TS</th></tr>
+	<tr><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>0.6473333</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="id7">
+<h2>1.7<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>Are Taylor Swfit’s songs more danceable than The Weekend’s? <em>Hint: use <code class="docutils literal notranslate"><span class="pre">group_by</span></code></em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">spotify</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">     </span><span class="nf">group_by</span><span class="p">(</span><span class="n">artist_name</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">     </span><span class="nf">summarize</span><span class="p">(</span><span class="n">avg_dance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">danceability</span><span class="p">))</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span>
+<span class="w">     </span><span class="nf">filter</span><span class="p">(</span><span class="n">artist_name</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Taylor Swift&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">artist_name</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;The Weeknd&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 2 × 2</caption>
+<thead>
+	<tr><th scope=col>artist_name</th><th scope=col>avg_dance</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Taylor Swift</td><td>0.6473333</td></tr>
+	<tr><td>The Weeknd  </td><td>0.5885000</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="id8">
+<h2>1.8<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<p>Are pop songs more popular than other genres? Compare the average popularity scores between pop songs vs. other genres.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">spotify</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">     </span><span class="nf">group_by</span><span class="p">(</span><span class="n">pop</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">     </span><span class="nf">summarize</span><span class="p">(</span><span class="n">avg_popularity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">popularity</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 2 × 2</caption>
+<thead>
+	<tr><th scope=col>pop</th><th scope=col>avg_popularity</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>no </td><td>87.75000</td></tr>
+	<tr><td>yes</td><td>88.26471</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="exercise-2-data-visualization">
+<h1>Exercise 2: Data Visualization<a class="headerlink" href="#exercise-2-data-visualization" title="Link to this heading">#</a></h1>
+<section id="id9">
+<h2>2.1<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>Using a histogram, visualize the distribution of popularity scores for Spotify’s top 50 tracks from 2023. Describe what you see.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">spotify</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">popularity</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">geom_histogram</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="m">25</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;cornflowerblue&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;black&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">26</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="c1"># increase text size</span>
+<span class="w">    </span><span class="nf">labs</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s">&#39;Popularity Score&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="s">&#39;Count&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">title</span><span class="o">=</span><span class="s">&#39;Popularity Score&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/855f6b00faadfddfd334ace9f017485d8aeeb96e0df7c62e7682a46f194fcdab.png"><img alt="../_images/855f6b00faadfddfd334ace9f017485d8aeeb96e0df7c62e7682a46f194fcdab.png" src="../_images/855f6b00faadfddfd334ace9f017485d8aeeb96e0df7c62e7682a46f194fcdab.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<blockquote>
+<div><p>The popularity scores are distributed from about 72-99, with two main points of concentration around approximately 85 and 95.</p>
+</div></blockquote>
+</section>
+<section id="id10">
+<h2>2.2<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<p>Are pop songs more popular than other genres? You answered this in question 1.8 using summary statistics, but now use histograms to visualize the popularity groups for the two groups on the same graph. Do you notice anything different?</p>
+<blockquote>
+<div><p>Hint: use <code class="docutils literal notranslate"><span class="pre">facet_grid</span></code></p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">spotify</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">popularity</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pop</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">geom_histogram</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="m">25</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;black&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">facet_grid</span><span class="p">(</span><span class="n">rows</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">vars</span><span class="p">(</span><span class="n">pop</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">26</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">labs</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s">&#39;Popularity Score&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="s">&#39;Count&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">title</span><span class="o">=</span><span class="s">&#39;Histogram of Popularity Score &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/a5b8a20c8ccbd0bacd9415c16bdf5f44a52d7e181057dff8db1f32ca7823ddf2.png"><img alt="../_images/a5b8a20c8ccbd0bacd9415c16bdf5f44a52d7e181057dff8db1f32ca7823ddf2.png" src="../_images/a5b8a20c8ccbd0bacd9415c16bdf5f44a52d7e181057dff8db1f32ca7823ddf2.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<blockquote>
+<div><p>While the center of the two distributions are very similar (both around 88), we can see that the distribution of popularity scores for pop songs has more variability and a wider spread than songs that are not classified as pop.</p>
+</div></blockquote>
+</section>
+<section id="id11">
+<h2>2.3<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<p>Create a barplot comparing the counts of pop songs vs. non-pop songs.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">spotify</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pop</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">geom_bar</span><span class="p">(</span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;cornflowerblue&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;black&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">26</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">labs</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;Pop&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;Count&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;Barplot of Pop vs. Non-Pop Songs&#39;</span><span class="p">)</span><span class="w"> </span>
+<span class="w">  </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/f254d5bc77ae94b8d672226755a4fcae6bb191c71a229dc77620262c2c4a5fe0.png"><img alt="../_images/f254d5bc77ae94b8d672226755a4fcae6bb191c71a229dc77620262c2c4a5fe0.png" src="../_images/f254d5bc77ae94b8d672226755a4fcae6bb191c71a229dc77620262c2c4a5fe0.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+</section>
+<section id="id12">
+<h2>2.4<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<p>Is there a relationship between how loud a song is in decibels and its popularity? Visualize the relationship between loudness and popularity with a scatterplot, plotting loudness on the <span class="math notranslate nohighlight">\(y\)</span>-axis and popularity on the <span class="math notranslate nohighlight">\(x\)</span>-axis. What do you notice?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">)</span>
+
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">spotify</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">popularity</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loudness</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">26</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">labs</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s">&#39;Popularity Score&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="s">&#39;Loudness (dB)&#39;</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s">&#39;Scatterplot of Loudness vs. Popularity&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1"># rename axes and add title</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/4fcb330a4feb6c5066c8dcba14210ce3b4927559ff4c30a9044c37bcb4919fd7.png"><img alt="../_images/4fcb330a4feb6c5066c8dcba14210ce3b4927559ff4c30a9044c37bcb4919fd7.png" src="../_images/4fcb330a4feb6c5066c8dcba14210ce3b4927559ff4c30a9044c37bcb4919fd7.png" style="width: 600px; height: 480px;" /></a>
+</div>
+</div>
+<blockquote>
+<div><p>It seems like there is a relatively weak positive relationship between loudness and popularity score.</p>
+</div></blockquote>
+</section>
+<section id="challenge">
+<h2>2.5 (Challenge)<a class="headerlink" href="#challenge" title="Link to this heading">#</a></h2>
+<p>Find the song that has the highest popularity score, but a relatively moderate loudness. Highlight the point on the graph and label it.</p>
+<blockquote>
+<div><p>Hint: Use the <code class="docutils literal notranslate"><span class="pre">annotate</span></code> function to highlight a point</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">spotify</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">popularity</span><span class="p">))</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">slice</span><span class="p">(</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">select</span><span class="p">(</span><span class="n">artist_name</span><span class="p">,</span><span class="w"> </span><span class="n">track_name</span><span class="p">,</span><span class="w"> </span><span class="n">popularity</span><span class="p">,</span><span class="w"> </span><span class="n">loudness</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 1 × 4</caption>
+<thead>
+	<tr><th scope=col>artist_name</th><th scope=col>track_name</th><th scope=col>popularity</th><th scope=col>loudness</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Taylor Swift</td><td>Cruel Summer</td><td>99</td><td>-5.707</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">)</span>
+
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">spotify</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">popularity</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loudness</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">annotate</span><span class="p">(</span><span class="s">&quot;point&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">99</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">-5.707</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;violet&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">geom_text</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">98</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">-5.4</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Cruel Summer&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;violet&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="c1"># add text to plot</span>
+<span class="w">    </span><span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">26</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">labs</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s">&#39;Popularity Score&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="s">&#39;Loudness (dB)&#39;</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s">&#39;Scatterplot of Loudness vs. Popularity&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1"># rename axes and add title</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/fd8eebda917e516e06b9df5eeaacc1796b32c2d16f0492ea10e50c09a4ddb280.png"><img alt="../_images/fd8eebda917e516e06b9df5eeaacc1796b32c2d16f0492ea10e50c09a4ddb280.png" src="../_images/fd8eebda917e516e06b9df5eeaacc1796b32c2d16f0492ea10e50c09a4ddb280.png" style="width: 600px; height: 480px;" /></a>
+</div>
+</div>
+</section>
+<section id="id13">
+<h2>2.6 (Challenge)<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<p>List the artists who have more than one track in the top 50. For each artist, show the number of tracks and their average popularity score.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">popular_artists</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">spotify</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">group_by</span><span class="p">(</span><span class="n">artist_name</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">summarize</span><span class="p">(</span><span class="n">track_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">n</span><span class="p">(),</span><span class="w"> </span><span class="n">avg_popularity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">popularity</span><span class="p">))</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="n">track_count</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
+
+<span class="n">popular_artists</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 6 × 3</caption>
+<thead>
+	<tr><th scope=col>artist_name</th><th scope=col>track_count</th><th scope=col>avg_popularity</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Bad Bunny   </td><td>2</td><td>86.50000</td></tr>
+	<tr><td>Bizarrap    </td><td>2</td><td>86.50000</td></tr>
+	<tr><td>SZA         </td><td>2</td><td>89.50000</td></tr>
+	<tr><td>Taylor Swift</td><td>3</td><td>89.66667</td></tr>
+	<tr><td>The Weeknd  </td><td>4</td><td>89.50000</td></tr>
+	<tr><td>d4vd        </td><td>2</td><td>90.50000</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "r"
+        },
+        kernelOptions: {
+            name: "ir",
+            path: "./solution"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'ir'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../notes/day3.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Day 3 - Girls in Data Science</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Worksheet 1</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#girls-in-data-science-camp">Girls in Data Science Camp</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-wrangling">Exercise 1: Wrangling</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1.1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1.2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">1.3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">1.4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">1.5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">1.6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">1.7</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">1.8</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-data-visualization">Exercise 2: Data Visualization</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">2.1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">2.2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">2.3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">2.4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge">2.5 (Challenge)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">2.6 (Challenge)</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Katie Burak
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
