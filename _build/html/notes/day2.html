@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -433,7 +433,6 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation">2.4 Estimation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Estimation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Exercise</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-simulation-experiment">Virtual simulation experiment</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#our-virtual-ubc-students-population">Our virtual UBC students (population)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#drawing-a-single-sample-of-size-40">Drawing a single sample of size 40</a></li>
@@ -526,7 +525,7 @@ vs. skewed) and <strong>outliers</strong>.</p>
 <h3>Modality<a class="headerlink" href="#modality" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">set.seed</span><span class="p">(</span><span class="m">930</span><span class="p">)</span><span class="w"> </span><span class="c1"># Setting the seed allows us to get reproducible results</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">set.seed</span><span class="p">(</span><span class="m">2000</span><span class="p">)</span><span class="w"> </span><span class="c1"># Setting the seed allows us to get reproducible results</span>
 
 <span class="c1"># Generate data</span>
 <span class="n">data_tibble</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">tibble</span><span class="p">(</span><span class="n">var1</span><span class="o">=</span><span class="nf">rnorm</span><span class="p">(</span><span class="m">1500</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">var2</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="nf">rnorm</span><span class="p">(</span><span class="m">750</span><span class="p">,</span><span class="m">-5</span><span class="p">,</span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="nf">rnorm</span><span class="p">(</span><span class="m">750</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">2</span><span class="p">)),</span>
@@ -557,7 +556,7 @@ vs. skewed) and <strong>outliers</strong>.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/9350df4161f25f48ca9182d4414895f7ce286b5e46bfedeb0689f107258eedb7.png"><img alt="../_images/9350df4161f25f48ca9182d4414895f7ce286b5e46bfedeb0689f107258eedb7.png" src="../_images/9350df4161f25f48ca9182d4414895f7ce286b5e46bfedeb0689f107258eedb7.png" style="width: 600px; height: 480px;" /></a>
+<a class="reference internal image-reference" href="../_images/dd9fba1467f9d869dfe3245059d112c47941e294b556a958ccbb91ecfd98875d.png"><img alt="../_images/dd9fba1467f9d869dfe3245059d112c47941e294b556a958ccbb91ecfd98875d.png" src="../_images/dd9fba1467f9d869dfe3245059d112c47941e294b556a958ccbb91ecfd98875d.png" style="width: 600px; height: 480px;" /></a>
 </div>
 </div>
 </section>
@@ -604,6 +603,44 @@ vs. skewed) and <strong>outliers</strong>.</p>
 <h3>Outliers<a class="headerlink" href="#outliers" title="Link to this heading">#</a></h3>
 <p>Outliers can seriously influence a variable’s distribution. An outlier is an observation that lies away from the
 other data points. Recall our scatterplot of Followers vs. Posts for the Instagram data set:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">insta</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="s">&#39;data/insta.csv&#39;</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">insta</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">200</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">8</span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">─────────────────────────────────────────────────────────────────────────────────────────────────</span>
+<span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
+<span class=" -Color -Color-Red">chr</span> (7): name, channel_Info, Category, Posts, Followers, Avg. Likes, Eng Rate
+<span class=" -Color -Color-Green">dbl</span> (1): rank
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">ℹ</span> Use `spec()` to retrieve the full column specification for this data.
+<span class=" -Color -Color-Cyan">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
+</pre></div>
+</div>
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 6 × 8</caption>
+<thead>
+	<tr><th scope=col>rank</th><th scope=col>name</th><th scope=col>channel_Info</th><th scope=col>Category</th><th scope=col>Posts</th><th scope=col>Followers</th><th scope=col>Avg. Likes</th><th scope=col>Eng Rate</th></tr>
+	<tr><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>1</td><td>instagram  </td><td>brand </td><td>photography             </td><td>7.3K</td><td>580.1M</td><td>7.31K</td><td>0.1%</td></tr>
+	<tr><td>2</td><td><span style=white-space:pre-wrap>cristiano  </span></td><td><span style=white-space:pre-wrap>male  </span></td><td>Health, Sports &amp; Fitness</td><td>3.4K</td><td>519.9M</td><td>3.41K</td><td>1.4%</td></tr>
+	<tr><td>3</td><td><span style=white-space:pre-wrap>leomessi   </span></td><td><span style=white-space:pre-wrap>male  </span></td><td>Health, Sports &amp; Fitness</td><td><span style=white-space:pre-wrap>1K  </span></td><td>403.7M</td><td>0.97K</td><td>1.7%</td></tr>
+	<tr><td>4</td><td>kyliejenner</td><td>female</td><td>entertainment           </td><td>7K  </td><td>375.9M</td><td>7.02K</td><td>1.7%</td></tr>
+	<tr><td>5</td><td>selenagomez</td><td>female</td><td>entertainment           </td><td>1.8K</td><td>365.3M</td><td>1.85K</td><td>1.1%</td></tr>
+	<tr><td>6</td><td>therock    </td><td>male  </td><td>entertainment           </td><td>7K  </td><td>354.3M</td><td>7.03K</td><td>0.3%</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load in/wrangle data</span>
@@ -934,15 +971,6 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
 <p>Step 1: randomly select a subset (a <em>sample</em>) and ask them if they have an iPhone</p>
 <p>Step 2: calculate the proportion in our sample (a <em>statistic</em> or <em>point estimate</em>) and use it as an estimate of the true population proportion.</p>
 <a class="reference internal image-reference" href="../_images/sampling.002.jpeg"><img alt="../_images/sampling.002.jpeg" class="align-left" src="../_images/sampling.002.jpeg" style="width: 700px;" /></a>
-</section>
-<section id="id6">
-<h3>Exercise<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
-<p>In groups, take a “population” of candies from the front of the room.</p>
-<ul class="simple">
-<li><p>Take a sample of size <span class="math notranslate nohighlight">\(n=5\)</span> and record the fraction of red candies you observe.</p></li>
-<li><p>Now, repeat the process many times and keep recording the fraction of red candies you observe each time.</p></li>
-<li><p>What do you notice about the samples?</p></li>
-</ul>
 <p>The variability from sample to sample is described as <strong>sampling variability</strong>.</p>
 </section>
 <section id="virtual-simulation-experiment">
@@ -974,12 +1002,31 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">set.seed</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
 <span class="n">virtual_ugrads</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">tibble</span><span class="p">(</span><span class="n">student_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">seq</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">50000</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">),</span>
-<span class="w">                     </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sample</span><span class="p">(</span><span class="m">18</span><span class="o">:</span><span class="m">25</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="o">=</span><span class="m">50000</span><span class="p">,</span><span class="w"> </span><span class="n">replace</span><span class="o">=</span><span class="bp">T</span><span class="p">),</span>
+<span class="w">                     </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sample</span><span class="p">(</span><span class="m">18</span><span class="o">:</span><span class="m">25</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="o">=</span><span class="m">50000</span><span class="p">,</span><span class="w"> </span><span class="n">replace</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">),</span>
 <span class="w">                     </span><span class="n">phone_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="nf">rbinom</span><span class="p">(</span><span class="m">50000</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0.63</span><span class="p">),</span>
 <span class="w">                     </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;other&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;iphone&quot;</span><span class="p">)))</span>
+
+<span class="nf">head</span><span class="p">(</span><span class="n">virtual_ugrads</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 6 × 3</caption>
+<thead>
+	<tr><th scope=col>student_id</th><th scope=col>age</th><th scope=col>phone_type</th></tr>
+	<tr><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;fct&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>1</td><td>18</td><td>iphone</td></tr>
+	<tr><td>2</td><td>21</td><td>other </td></tr>
+	<tr><td>3</td><td>24</td><td>iphone</td></tr>
+	<tr><td>4</td><td>18</td><td>iphone</td></tr>
+	<tr><td>5</td><td>19</td><td>other </td></tr>
+	<tr><td>6</td><td>22</td><td>iphone</td></tr>
+</tbody>
+</table>
+</div></div>
 </div>
 </section>
 <section id="drawing-a-single-sample-of-size-40">
@@ -1320,13 +1367,6 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
 </table>
 </div></div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">?</span><span class="n">rep_sample_n</span>
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 <section id="bootstrap-sampling-distribution">
 <h2>Bootstrap Sampling Distribution<a class="headerlink" href="#bootstrap-sampling-distribution" title="Link to this heading">#</a></h2>
@@ -1458,7 +1498,6 @@ other data points. Recall our scatterplot of Followers vs. Posts for the Instagr
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation">2.4 Estimation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Estimation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Exercise</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-simulation-experiment">Virtual simulation experiment</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#our-virtual-ubc-students-population">Our virtual UBC students (population)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#drawing-a-single-sample-of-size-40">Drawing a single sample of size 40</a></li>

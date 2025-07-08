@@ -1,0 +1,991 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Worksheet 2 &#8212; Girls in Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'solution/worksheet2_solution';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Worksheet 1" href="worksheet1_solution.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../README.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Girls in Data Science - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Girls in Data Science - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../README.html">
+                    Girls in Data Science Camp
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Notes</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../notes/day1.html">Day 1 - Girls in Data Science</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../notes/day2.html">Day 2 - Girls in Data Science</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../notes/day3.html">Day 3 - Girls in Data Science</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="worksheet1_solution.html">Worksheet 1</a></li>
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Worksheet 2</a></li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/katieburak/girls-in-DS" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/katieburak/girls-in-DS/issues/new?title=Issue%20on%20page%20%2Fsolution/worksheet2_solution.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/solution/worksheet2_solution.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Worksheet 2</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Worksheet 2</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#girls-in-data-science-camp">Girls in Data Science Camp</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-creating-scatter-plots">Exercise 1: Creating scatter plots</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">1.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge">1.4 (Challenge)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-understanding-distributions">Exercise 2: Understanding Distributions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">2.3</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-sampling">Exercise 3: Sampling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">3.1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">3.2</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">3.3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">3.4</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="worksheet-2">
+<h1>Worksheet 2<a class="headerlink" href="#worksheet-2" title="Link to this heading">#</a></h1>
+<section id="girls-in-data-science-camp">
+<h2>Girls in Data Science Camp<a class="headerlink" href="#girls-in-data-science-camp" title="Link to this heading">#</a></h2>
+<p>In this worksheet, we will be working with the <a class="reference external" href="https://www.kaggle.com/datasets/rounakbanik/pokemon/data">Pokemon dataset</a>, which contains 800+ Pokemon from all seven generations!</p>
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png"><img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png" style="width: 500px;" /></a>
+<p>The dataset has been reduced with some columns removed. The dataset we will be working with contains the following information:</p>
+<ul class="simple">
+<li><p><strong>name:</strong> The English name of the Pokemon</p></li>
+<li><p><strong>pokedex_number:</strong> The entry number of the Pokemon in the National Pokedex</p></li>
+<li><p><strong>percentage_male:</strong> The percentage of the species that are male. Blank if the Pokemon is genderless.</p></li>
+<li><p><strong>type1:</strong> The Primary Type of the Pokemon</p></li>
+<li><p><strong>type2:</strong> The Secondary Type of the Pokemon</p></li>
+<li><p><strong>classification:</strong> The Classification of the Pokemon as described by the Sun and Moon Pokedex</p></li>
+<li><p><strong>capture_rate:</strong> Capture Rate of the Pokemon</p></li>
+<li><p><strong>height_m:</strong> Height of the Pokemon in metres</p></li>
+<li><p><strong>weight_kg:</strong> The Weight of the Pokemon in kilograms</p></li>
+<li><p><strong>hp:</strong> The Base HP of the Pokemon</p></li>
+<li><p><strong>attack:</strong> The Base Attack of the Pokemon</p></li>
+<li><p><strong>defense:</strong> The Base Defense of the Pokemon</p></li>
+<li><p><strong>speed:</strong> The Base Speed of the Pokemon</p></li>
+<li><p><strong>generation:</strong> The numbered generation which the Pokemon was first introduced</p></li>
+<li><p><strong>is_legendary:</strong> Denotes if the Pokemon is legendary.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load libraries</span>
+<span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="s">&quot;pacman&quot;</span><span class="p">))</span><span class="w"> </span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;pacman&quot;</span><span class="p">)</span>
+<span class="n">pacman</span><span class="o">::</span><span class="nf">p_load</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">,</span><span class="w"> </span><span class="n">infer</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loading required package: pacman
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read in the data</span>
+<span class="n">pokemon</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;data/pokemon.csv&quot;</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">pokemon</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">801</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">15</span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">─────────────────────────────────────────────────────────────────────────────────────────────────</span>
+<span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
+<span class=" -Color -Color-Red">chr</span>  (5): name, type1, type2, classfication, is_legendary
+<span class=" -Color -Color-Green">dbl</span> (10): pokedex_number, percentage_male, capture_rate, height_m, weight_kg...
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">ℹ</span> Use `spec()` to retrieve the full column specification for this data.
+<span class=" -Color -Color-Cyan">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
+</pre></div>
+</div>
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 6 × 15</caption>
+<thead>
+	<tr><th scope=col>name</th><th scope=col>pokedex_number</th><th scope=col>percentage_male</th><th scope=col>type1</th><th scope=col>type2</th><th scope=col>classfication</th><th scope=col>capture_rate</th><th scope=col>height_m</th><th scope=col>weight_kg</th><th scope=col>hp</th><th scope=col>attack</th><th scope=col>defense</th><th scope=col>speed</th><th scope=col>generation</th><th scope=col>is_legendary</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Bulbasaur </td><td>1</td><td>88.1</td><td>grass</td><td>poison</td><td>Seed Pokemon  </td><td>45</td><td>0.7</td><td>  6.9</td><td>45</td><td> 49</td><td> 49</td><td> 45</td><td>1</td><td>No</td></tr>
+	<tr><td>Ivysaur   </td><td>2</td><td>88.1</td><td>grass</td><td>poison</td><td>Seed Pokemon  </td><td>45</td><td>1.0</td><td> 13.0</td><td>60</td><td> 62</td><td> 63</td><td> 60</td><td>1</td><td>No</td></tr>
+	<tr><td>Venusaur  </td><td>3</td><td>88.1</td><td>grass</td><td>poison</td><td>Seed Pokemon  </td><td>45</td><td>2.0</td><td>100.0</td><td>80</td><td>100</td><td>123</td><td> 80</td><td>1</td><td>No</td></tr>
+	<tr><td>Charmander</td><td>4</td><td>88.1</td><td>fire </td><td>NA    </td><td>Lizard Pokemon</td><td>45</td><td>0.6</td><td>  8.5</td><td>39</td><td> 52</td><td> 43</td><td> 65</td><td>1</td><td>No</td></tr>
+	<tr><td>Charmeleon</td><td>5</td><td>88.1</td><td>fire </td><td>NA    </td><td>Flame Pokemon </td><td>45</td><td>1.1</td><td> 19.0</td><td>58</td><td> 64</td><td> 58</td><td> 80</td><td>1</td><td>No</td></tr>
+	<tr><td>Charizard </td><td>6</td><td>88.1</td><td>fire </td><td>flying</td><td>Flame Pokemon </td><td>45</td><td>1.7</td><td> 90.5</td><td>78</td><td>104</td><td> 78</td><td>100</td><td>1</td><td>No</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="exercise-1-creating-scatter-plots">
+<h2>Exercise 1: Creating scatter plots<a class="headerlink" href="#exercise-1-creating-scatter-plots" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3>1.1<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>How does the weight of the Pokemon change as they increase in height?</p>
+<p>Create a scatter plot of the Pokemon in the data set, with <code class="docutils literal notranslate"><span class="pre">height_m</span></code> on the x-axis and <code class="docutils literal notranslate"><span class="pre">weight_kg</span></code> on the y-axis.</p>
+<p>What pattern do you observe in the data? Answer in 1-2 sentences.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">pokemon</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">height_m</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">weight_kg</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">       </span><span class="nf">geom_point</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
+“Removed 20 rows containing missing values or values outside the scale range (`geom_point()`).”
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/bc52c2e9c835695c162bac4e579576e3ecc6545bab2b3e92297b8002866d8adf.png"><img alt="../_images/bc52c2e9c835695c162bac4e579576e3ecc6545bab2b3e92297b8002866d8adf.png" src="../_images/bc52c2e9c835695c162bac4e579576e3ecc6545bab2b3e92297b8002866d8adf.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<blockquote>
+<div><p><strong>Answer:</strong> As a Pokemon’s height increases, the weight of the Pokemon also tends to increase.</p>
+</div></blockquote>
+</section>
+<section id="id2">
+<h3>1.2<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>Let’s clean up the plot further and make it more “human readable”.</p>
+<p>Change the x- and y-axis by capitalizing the variable names; put any unit information inside brackets.</p>
+<p>In addition, add a title to the plot. The title should <strong>concisely</strong> describe to the audience what the plot is showing (hint: what observation did more make in the previous exercise?)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">pokemon</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">height_m</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">weight_kg</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">        </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">        </span><span class="nf">labs</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Height (m)&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">             </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Weight (kg)&quot;</span><span class="p">,</span>
+<span class="w">             </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Correlation between Height and Weight of Pokemons&quot;</span>
+<span class="w">        </span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
+“Removed 20 rows containing missing values or values outside the scale range (`geom_point()`).”
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/c442e090a713f42681b51d2138f3f576ec8497c3e9a7bd11804bafbfaefcb500.png"><img alt="../_images/c442e090a713f42681b51d2138f3f576ec8497c3e9a7bd11804bafbfaefcb500.png" src="../_images/c442e090a713f42681b51d2138f3f576ec8497c3e9a7bd11804bafbfaefcb500.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+</section>
+<section id="id3">
+<h3>1.3<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>Make <strong>at least 1</strong> additional adjustments to the plot. This could be changing the size/colour/shape of the circles inside the scatter plot, changing the font size of the axis labels or title, overall look-and-feel of the plot aesthetics, etc.</p>
+<p>You can reference the below resources (or make use of Google if you want to try something else):</p>
+<ol class="arabic simple">
+<li><p>Changing plot colour: http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/</p>
+<ul class="simple">
+<li><p>Colour Cheat Sheet: https://sape.inf.usi.ch/sites/default/files/ggplot2-colour-names.png</p></li>
+</ul>
+</li>
+<li><p>Changing the shape/size of the point: http://www.cookbook-r.com/Graphs/Shapes_and_line_types/</p></li>
+<li><p>Changing the overall aesthetic of the plot: https://book.rfortherestofus.com/themes</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">pokemon</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">height_m</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">weight_kg</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">        </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;salmon&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">        </span><span class="nf">labs</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Height (m)&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">             </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Weight (kg)&quot;</span><span class="p">,</span>
+<span class="w">             </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Correlation between Height and Weight of Pokemons&quot;</span>
+<span class="w">        </span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">        </span><span class="nf">theme_bw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
+“Removed 20 rows containing missing values or values outside the scale range (`geom_point()`).”
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/37d7b9489fc580e52bbe07af0f6b5fd37f2c8d1c01a79ce75d306abf86cf302e.png"><img alt="../_images/37d7b9489fc580e52bbe07af0f6b5fd37f2c8d1c01a79ce75d306abf86cf302e.png" src="../_images/37d7b9489fc580e52bbe07af0f6b5fd37f2c8d1c01a79ce75d306abf86cf302e.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+</section>
+<section id="challenge">
+<h3>1.4 (Challenge)<a class="headerlink" href="#challenge" title="Link to this heading">#</a></h3>
+<p>Is the relationship between height and weight different for legendary vs non-legendary Pokemon? How could you inspect this visually?</p>
+<p>(<strong>Hint:</strong> you can group your dataset by having 1 colour for the legendary Pokemon and 1 colour for the non-legendary ones.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">pokemon</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">height_m</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">weight_kg</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="n">is_legendary</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">        </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.4</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">        </span><span class="nf">labs</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Height (m)&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">             </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Weight (kg)&quot;</span><span class="p">,</span>
+<span class="w">             </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Scatterplot of Weight vs. Height of Pokemons&quot;</span>
+<span class="w">        </span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">        </span><span class="nf">theme_bw</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">        </span><span class="c1"># you can also customize the plot further</span>
+<span class="w">        </span><span class="nf">scale_colour_manual</span><span class="p">(</span><span class="s">&quot;Is the Pokemon\nLegendary?&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">values</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;#F1BB7B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#7294D4&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
+“Removed 20 rows containing missing values or values outside the scale range (`geom_point()`).”
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/0e5a808c350b8f59153f2e23c296e4e6113c73af77f1a46e502431c4fdecba18.png"><img alt="../_images/0e5a808c350b8f59153f2e23c296e4e6113c73af77f1a46e502431c4fdecba18.png" src="../_images/0e5a808c350b8f59153f2e23c296e4e6113c73af77f1a46e502431c4fdecba18.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+</section>
+</section>
+<section id="exercise-2-understanding-distributions">
+<h2>Exercise 2: Understanding Distributions<a class="headerlink" href="#exercise-2-understanding-distributions" title="Link to this heading">#</a></h2>
+<section id="id4">
+<h3>2.1<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>What is the distribution of <strong>hp points</strong> of all Pokemon in this dataset?</p>
+<p>Plot a histogram of this information using a <code class="docutils literal notranslate"><span class="pre">binwidth</span></code> of 10 units. Make sure that the x- and y-axes are human readable and make sure to include a title.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">pokemon</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hp</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="nf">geom_histogram</span><span class="p">(</span><span class="n">binwidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;white&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">        </span><span class="nf">labs</span><span class="p">(</span>
+<span class="w">            </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;HP Points&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">            </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Count&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Distribution of HP points of Pokemon&quot;</span>
+<span class="w">        </span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/c22dddc5746d76a2f4002b7f0aa673bb47913fed9af8d1648267ea74cbfcbc9b.png"><img alt="../_images/c22dddc5746d76a2f4002b7f0aa673bb47913fed9af8d1648267ea74cbfcbc9b.png" src="../_images/c22dddc5746d76a2f4002b7f0aa673bb47913fed9af8d1648267ea74cbfcbc9b.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+</section>
+<section id="id5">
+<h3>2.2<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>What is the mean and standard deviation of Pokemons’ HP points?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">pokemon</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">summarise</span><span class="p">(</span>
+<span class="w">        </span><span class="n">Mean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">hp</span><span class="p">),</span>
+<span class="w">        </span><span class="n">SD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sd</span><span class="p">(</span><span class="n">hp</span><span class="p">)</span>
+<span class="w">    </span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 1 × 2</caption>
+<thead>
+	<tr><th scope=col>Mean</th><th scope=col>SD</th></tr>
+	<tr><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>68.9588</td><td>26.57601</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="id6">
+<h3>2.3<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>Is this distribution symmetric? Are there any outliers in the data? How did you determine if there were or weren’t outliers (e.g., did you use a numeric cutoff, inspect the data visually, etc)?</p>
+<blockquote>
+<div><p><strong>Answer:</strong> No, the distribution is not symmetric; there is positive skew (i.e., a longer tail to the distribution in higher values).</p>
+<p>In looking at the distribution, it does look like there are potential outliers in the data. If we consider outliers to be Pokemon whose HP points are 5 standard deviations above the mean, we see that there are 4 Pokemon that meet this criteria.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">outlier_criteria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">pokemon</span><span class="o">$</span><span class="n">hp</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">sd</span><span class="p">(</span><span class="n">pokemon</span><span class="o">$</span><span class="n">hp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">pokemon</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="n">hp</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">outlier_criteria</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">select</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">hp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 4 × 2</caption>
+<thead>
+	<tr><th scope=col>name</th><th scope=col>hp</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Chansey </td><td>250</td></tr>
+	<tr><td>Blissey </td><td>255</td></tr>
+	<tr><td>Zygarde </td><td>216</td></tr>
+	<tr><td>Guzzlord</td><td>223</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+</section>
+<section id="exercise-3-sampling">
+<h2>Exercise 3: Sampling<a class="headerlink" href="#exercise-3-sampling" title="Link to this heading">#</a></h2>
+<p>Run the following cell - we will be using this data frame for the remaining questions in this worksheet.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">set.seed</span><span class="p">(</span><span class="m">930</span><span class="p">)</span><span class="w"> </span><span class="c1"># ensures that the sampling is reproducible</span>
+<span class="n">pokemon_encounters</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">pokemon</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">drop_na</span><span class="p">(</span><span class="n">capture_rate</span><span class="p">,</span><span class="w"> </span><span class="n">weight_kg</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">uncount</span><span class="p">(</span><span class="n">weights</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">capture_rate</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">slice</span><span class="p">(</span><span class="nf">sample</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="nf">n</span><span class="p">()))</span><span class="w"> </span>
+
+<span class="nf">head</span><span class="p">(</span><span class="n">pokemon_encounters</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 6 × 14</caption>
+<thead>
+	<tr><th scope=col>name</th><th scope=col>pokedex_number</th><th scope=col>percentage_male</th><th scope=col>type1</th><th scope=col>type2</th><th scope=col>classfication</th><th scope=col>height_m</th><th scope=col>weight_kg</th><th scope=col>hp</th><th scope=col>attack</th><th scope=col>defense</th><th scope=col>speed</th><th scope=col>generation</th><th scope=col>is_legendary</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Eevee   </td><td>133</td><td>88.1</td><td>normal</td><td>NA    </td><td>Evolution Pokemon  </td><td>0.3</td><td> 6.5</td><td>55</td><td>55</td><td>50</td><td>55</td><td>1</td><td>No</td></tr>
+	<tr><td>Oddish  </td><td> 43</td><td>50.0</td><td>grass </td><td>poison</td><td>Weed Pokemon       </td><td>0.5</td><td> 5.4</td><td>45</td><td>50</td><td>55</td><td>30</td><td>1</td><td>No</td></tr>
+	<tr><td>Venipede</td><td>543</td><td>50.0</td><td>bug   </td><td>poison</td><td>Centipede Pokemon  </td><td>0.4</td><td> 5.3</td><td>30</td><td>45</td><td>59</td><td>57</td><td>5</td><td>No</td></tr>
+	<tr><td>Starly  </td><td>396</td><td>50.0</td><td>normal</td><td>flying</td><td>Starling Pokemon   </td><td>0.3</td><td> 2.0</td><td>40</td><td>55</td><td>30</td><td>60</td><td>4</td><td>No</td></tr>
+	<tr><td>Remoraid</td><td>223</td><td>50.0</td><td>water </td><td>NA    </td><td>Jet Pokemon        </td><td>0.6</td><td>12.0</td><td>35</td><td>65</td><td>35</td><td>65</td><td>2</td><td>No</td></tr>
+	<tr><td>Spinarak</td><td>167</td><td>50.0</td><td>bug   </td><td>poison</td><td>String Spit Pokemon</td><td>0.5</td><td> 8.5</td><td>40</td><td>60</td><td>40</td><td>30</td><td>2</td><td>No</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<section id="id7">
+<h3>3.1<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>Assume the above dataframe represents a <strong>population</strong> of Pokemon in a given region.</p>
+<p>Imagine if you were to encounter and capture a random sample of <strong>30 Pokemon</strong> in this region. Create this sample using code and stored it in a new data frame called <code class="docutils literal notranslate"><span class="pre">pokemon_sample_30</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">set.seed</span><span class="p">(</span><span class="m">930</span><span class="p">)</span><span class="w"> </span><span class="c1"># ensures that the sampling is reproducible</span>
+<span class="n">pokemon_sample_30</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">pokemon_encounters</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span>
+<span class="w">                        </span><span class="nf">rep_sample_n</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">30</span><span class="p">)</span><span class="w"> </span>
+
+<span class="nf">head</span><span class="p">(</span><span class="n">pokemon_sample_30</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A grouped_df: 6 × 15</caption>
+<thead>
+	<tr><th scope=col>replicate</th><th scope=col>name</th><th scope=col>pokedex_number</th><th scope=col>percentage_male</th><th scope=col>type1</th><th scope=col>type2</th><th scope=col>classfication</th><th scope=col>height_m</th><th scope=col>weight_kg</th><th scope=col>hp</th><th scope=col>attack</th><th scope=col>defense</th><th scope=col>speed</th><th scope=col>generation</th><th scope=col>is_legendary</th></tr>
+	<tr><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>1</td><td>Mudbray  </td><td>749</td><td>50.0</td><td>ground</td><td>NA    </td><td>Donkey Pokemon   </td><td>1.0</td><td>110.0</td><td>70</td><td>100</td><td> 70</td><td>45</td><td>7</td><td>No</td></tr>
+	<tr><td>1</td><td>Igglybuff</td><td>174</td><td>24.6</td><td>normal</td><td>fairy </td><td>Balloon Pokemon  </td><td>0.3</td><td>  1.0</td><td>90</td><td> 30</td><td> 15</td><td>15</td><td>2</td><td>No</td></tr>
+	<tr><td>1</td><td>Spiritomb</td><td>442</td><td>50.0</td><td>ghost </td><td>dark  </td><td>Forbidden Pokemon</td><td>1.0</td><td>108.0</td><td>50</td><td> 92</td><td>108</td><td>35</td><td>4</td><td>No</td></tr>
+	<tr><td>1</td><td>Cherrim  </td><td>421</td><td>50.0</td><td>grass </td><td>NA    </td><td>Blossom Pokemon  </td><td>0.5</td><td>  9.3</td><td>70</td><td> 60</td><td> 70</td><td>85</td><td>4</td><td>No</td></tr>
+	<tr><td>1</td><td>Meganium </td><td>154</td><td>88.1</td><td>grass </td><td>NA    </td><td>Herb Pokemon     </td><td>1.8</td><td>100.5</td><td>80</td><td> 82</td><td>100</td><td>80</td><td>2</td><td>No</td></tr>
+	<tr><td>1</td><td>Gloom    </td><td> 44</td><td>50.0</td><td>grass </td><td>poison</td><td>Weed Pokemon     </td><td>0.8</td><td>  8.6</td><td>60</td><td> 65</td><td> 70</td><td>40</td><td>1</td><td>No</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id8">
+<h1>3.2<a class="headerlink" href="#id8" title="Link to this heading">#</a></h1>
+<p>Plot a histogram of the <strong>weight</strong> of this sample of Pokemon. Use a <code class="docutils literal notranslate"><span class="pre">binwidth</span></code> of 15.</p>
+<p>Compare the <strong>average weight of this sample of 30 Pokemon</strong> with the <strong>average weight of all Pokemon in this region</strong> by drawing 2 vertical lines on the graph:</p>
+<ol class="arabic simple">
+<li><p>A solid red line that represents the average weight of the sample of 30 Pokemon</p></li>
+<li><p>A dotted blue line that represents the average weight lf all Pokemon in this region</p></li>
+</ol>
+<p>Make sure that your axes are properly labelled and choose an appropriate title for the plot.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">pokemon_sample_30</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">weight_kg</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="nf">geom_histogram</span><span class="p">(</span><span class="n">binwidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">25</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;white&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">        </span><span class="nf">labs</span><span class="p">(</span>
+<span class="w">            </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Weight (kg)&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">            </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Count&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Distribution of the weight of a sample of 30 Pokemon&quot;</span>
+<span class="w">        </span><span class="p">)</span><span class="o">+</span>
+<span class="w">        </span><span class="nf">geom_vline</span><span class="p">(</span><span class="n">xintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">pokemon_sample_30</span><span class="o">$</span><span class="n">weight_kg</span><span class="p">),</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">        </span><span class="nf">geom_vline</span><span class="p">(</span><span class="n">xintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">pokemon_encounters</span><span class="o">$</span><span class="n">weight_kg</span><span class="p">),</span><span class="w"> </span><span class="n">linetype</span><span class="o">=</span><span class="s">&quot;dotdash&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="s">&quot;blue&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/a6148f79d6f4145d79391704da38a5439b8da2493499c2d397e3cf24bd711b5e.png"><img alt="../_images/a6148f79d6f4145d79391704da38a5439b8da2493499c2d397e3cf24bd711b5e.png" src="../_images/a6148f79d6f4145d79391704da38a5439b8da2493499c2d397e3cf24bd711b5e.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<section id="id9">
+<h2>3.3<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>What do you notice about the two means? Is the sample mean higher or lower compared to the population mean?</p>
+<blockquote>
+<div><p><strong>Answer:</strong> The sample mean is HIGHER than the population mean, meaning that in the sample, we’ve over estimated the population mean</p>
+</div></blockquote>
+</section>
+<section id="id10">
+<h2>3.4<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<p>Now, if you were take take a bigger sample of <strong>100 Pokemon</strong> from this region. What would the distribution look like? How does the mean of this sample compare to the population mean?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">set.seed</span><span class="p">(</span><span class="m">930</span><span class="p">)</span><span class="w"> </span><span class="c1"># ensures that the sampling is reproducible</span>
+<span class="n">pokemon_encounters</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">rep_sample_n</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">pokemon_sample_100</span>
+
+<span class="n">pokemon_sample_100</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">weight_kg</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="nf">geom_histogram</span><span class="p">(</span><span class="n">binwidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">25</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;white&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">        </span><span class="nf">labs</span><span class="p">(</span>
+<span class="w">            </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Weight (kg)&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">            </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Count&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Distribution of the weight of a sample of 100 Pokemon&quot;</span>
+<span class="w">        </span><span class="p">)</span><span class="o">+</span>
+<span class="w">        </span><span class="nf">geom_vline</span><span class="p">(</span><span class="n">xintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">pokemon_sample_100</span><span class="o">$</span><span class="n">weight_kg</span><span class="p">),</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">        </span><span class="nf">geom_vline</span><span class="p">(</span><span class="n">xintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">pokemon_encounters</span><span class="o">$</span><span class="n">weight_kg</span><span class="p">),</span><span class="w"> </span><span class="n">linetype</span><span class="o">=</span><span class="s">&quot;dotdash&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="s">&quot;blue&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/a3d1b794bfd3ccdb9c5dd755db45cc4488eea05ed89c1711e744a3aec59adf92.png"><img alt="../_images/a3d1b794bfd3ccdb9c5dd755db45cc4488eea05ed89c1711e744a3aec59adf92.png" src="../_images/a3d1b794bfd3ccdb9c5dd755db45cc4488eea05ed89c1711e744a3aec59adf92.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+<blockquote>
+<div><p><strong>Answer:</strong> The sample mean is now much closer to the population mean.</p>
+</div></blockquote>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "r"
+        },
+        kernelOptions: {
+            name: "ir",
+            path: "./solution"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'ir'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="worksheet1_solution.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Worksheet 1</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Worksheet 2</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#girls-in-data-science-camp">Girls in Data Science Camp</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-creating-scatter-plots">Exercise 1: Creating scatter plots</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">1.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge">1.4 (Challenge)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-understanding-distributions">Exercise 2: Understanding Distributions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">2.3</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-sampling">Exercise 3: Sampling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">3.1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">3.2</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">3.3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">3.4</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Katie Burak
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
