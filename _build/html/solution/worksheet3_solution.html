@@ -1,0 +1,1103 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Worksheet 3. Machine Learning &#8212; Girls in Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'solution/worksheet3_solution';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Worksheet 2" href="worksheet2_solution.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../README.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Girls in Data Science - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Girls in Data Science - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../README.html">
+                    Girls in Data Science Camp
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Notes</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../notes/day1.html">Day 1 - Girls in Data Science</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../notes/day2.html">Day 2 - Girls in Data Science</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../notes/day3.html">Day 3 - Girls in Data Science</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="worksheet1_solution.html">Worksheet 1</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="worksheet2_solution.html">Worksheet 2</a></li>
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Worksheet 3. Machine Learning</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/katieburak/girls-in-DS" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/katieburak/girls-in-DS/issues/new?title=Issue%20on%20page%20%2Fsolution/worksheet3_solution.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/solution/worksheet3_solution.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Worksheet 3. Machine Learning</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#girls-in-data-science-camp">Girls in Data Science Camp</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-0-knowledge-check">Exercise 0: Knowledge Check</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-performing-explanatory-data-analysis">Exercise 1: Performing Explanatory Data Analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#inspecting-columns-in-data">1.1 Inspecting Columns In Data</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#removing-unwanted-columns">1.2 Removing Unwanted Columns</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#look-into-distinct-categories">1.3 Look into Distinct Categories</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-to-percentage">1.4 Converting to Percentage</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-bar-chart">1.5 Creating a Bar Chart</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-building-machine-learning-model">Exercise 2. Building Machine Learning Model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#train-test-and-split">2.1 Train, Test and Split</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#building-model-and-recipe">2.2 Building Model and Recipe</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fit-the-data-into-the-workflow">Fit the Data into the Workflow</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-model-accuracy">2.3 Calculate Model Accuracy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-best-k-value">2.4 Find the Best <span class="math notranslate nohighlight">\(k\)</span>-Value</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#predicting-the-category-of-the-mystery-item">2.5 Predicting the Category of the Mystery Item</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="worksheet-3-machine-learning">
+<h1>Worksheet 3. Machine Learning<a class="headerlink" href="#worksheet-3-machine-learning" title="Link to this heading">#</a></h1>
+<section id="girls-in-data-science-camp">
+<h2>Girls in Data Science Camp<a class="headerlink" href="#girls-in-data-science-camp" title="Link to this heading">#</a></h2>
+<p>In this worksheet, we will be working with the <a class="reference external" href="https://www.kaggle.com/datasets/mcdonalds/nutrition-facts?resource=download">Nutrition Facts for McDonald’s Menu</a> data, which contains information about items sold at McDonald across 9 food categories.
+<br>
+<img alt="Logo" src="../_images/logo.png" />
+From the original dataset, we will be excluding the <code class="docutils literal notranslate"><span class="pre">Item</span></code> and <code class="docutils literal notranslate"><span class="pre">Serving</span> <span class="pre">Size</span></code> columns, as they are not relevant to the machine learning model we are about to build. Integrating these columns with the predictors used in this worksheet is beyond the scope of this camp.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load libraries</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">tidymodels</span><span class="p">)</span>
+<span class="nf">set.seed</span><span class="p">(</span><span class="m">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ───────────────────────────────────────────────────────────────── tidyverse 2.0.0 ──
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dplyr    </span> 1.1.4     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">readr    </span> 2.1.5
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">forcats  </span> 1.0.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">stringr  </span> 1.5.1
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">ggplot2  </span> 3.5.1     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tibble   </span> 3.2.1
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">lubridate</span> 1.9.3     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tidyr    </span> 1.3.1
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">purrr    </span> 1.0.2     
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ─────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">filter()</span> masks <span class=" -Color -Color-Blue">stats</span>::filter()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">lag()</span>    masks <span class=" -Color -Color-Blue">stats</span>::lag()
+<span class=" -Color -Color-Cyan">ℹ</span> Use the conflicted package (<span class=" -Color -Color-Blue">&lt;http://conflicted.r-lib.org/&gt;</span>) to force all conflicts to become errors
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching packages</span> ─────────────────────────────────────────────────────────────────────────────── tidymodels 1.2.0 ──
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">broom       </span> 1.0.6     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">rsample     </span> 1.2.1
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dials       </span> 1.3.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tune        </span> 1.2.1
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">infer       </span> 1.0.7     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">workflows   </span> 1.1.4
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">modeldata   </span> 1.4.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">workflowsets</span> 1.1.0
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">parsnip     </span> 1.2.1     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">yardstick   </span> 1.3.1
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">recipes     </span> 1.1.0     
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ────────────────────────────────────────────────────────────────────────────────── tidymodels_conflicts() ──
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">scales</span>::<span class=" -Color -Color-Green">discard()</span> masks <span class=" -Color -Color-Blue">purrr</span>::discard()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">filter()</span>   masks <span class=" -Color -Color-Blue">stats</span>::filter()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">recipes</span>::<span class=" -Color -Color-Green">fixed()</span>  masks <span class=" -Color -Color-Blue">stringr</span>::fixed()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">lag()</span>      masks <span class=" -Color -Color-Blue">stats</span>::lag()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">yardstick</span>::<span class=" -Color -Color-Green">spec()</span> masks <span class=" -Color -Color-Blue">readr</span>::spec()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">recipes</span>::<span class=" -Color -Color-Green">step()</span>   masks <span class=" -Color -Color-Blue">stats</span>::step()
+<span class=" -Color -Color-Blue">•</span> Use suppressPackageStartupMessages() to eliminate package startup messages
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">mcdonalds</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;data/menu.csv&quot;</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">mcdonalds</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">)</span>
+<span class="nf">dim</span><span class="p">(</span><span class="n">mcdonalds</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">260</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">24</span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">─────────────────────────────────────────────────────────────────────────────────────────────────</span>
+<span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
+<span class=" -Color -Color-Red">chr</span>  (3): Category, Item, Serving Size
+<span class=" -Color -Color-Green">dbl</span> (21): Calories, Calories from Fat, Total Fat, Total Fat (% Daily Value),...
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">ℹ</span> Use `spec()` to retrieve the full column specification for this data.
+<span class=" -Color -Color-Cyan">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
+</pre></div>
+</div>
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 5 × 24</caption>
+<thead>
+	<tr><th scope=col>Category</th><th scope=col>Item</th><th scope=col>Serving Size</th><th scope=col>Calories</th><th scope=col>Calories from Fat</th><th scope=col>Total Fat</th><th scope=col>Total Fat (% Daily Value)</th><th scope=col>Saturated Fat</th><th scope=col>Saturated Fat (% Daily Value)</th><th scope=col>Trans Fat</th><th scope=col>⋯</th><th scope=col>Carbohydrates</th><th scope=col>Carbohydrates (% Daily Value)</th><th scope=col>Dietary Fiber</th><th scope=col>Dietary Fiber (% Daily Value)</th><th scope=col>Sugars</th><th scope=col>Protein</th><th scope=col>Vitamin A (% Daily Value)</th><th scope=col>Vitamin C (% Daily Value)</th><th scope=col>Calcium (% Daily Value)</th><th scope=col>Iron (% Daily Value)</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>⋯</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Breakfast</td><td>Egg McMuffin                    </td><td>4.8 oz (136 g)</td><td>300</td><td>120</td><td>13</td><td>20</td><td> 5</td><td>25</td><td>0</td><td>⋯</td><td>31</td><td>10</td><td>4</td><td>17</td><td>3</td><td>17</td><td>10</td><td>0</td><td>25</td><td>15</td></tr>
+	<tr><td>Breakfast</td><td>Egg White Delight               </td><td>4.8 oz (135 g)</td><td>250</td><td> 70</td><td> 8</td><td>12</td><td> 3</td><td>15</td><td>0</td><td>⋯</td><td>30</td><td>10</td><td>4</td><td>17</td><td>3</td><td>18</td><td> 6</td><td>0</td><td>25</td><td> 8</td></tr>
+	<tr><td>Breakfast</td><td>Sausage McMuffin                </td><td>3.9 oz (111 g)</td><td>370</td><td>200</td><td>23</td><td>35</td><td> 8</td><td>42</td><td>0</td><td>⋯</td><td>29</td><td>10</td><td>4</td><td>17</td><td>2</td><td>14</td><td> 8</td><td>0</td><td>25</td><td>10</td></tr>
+	<tr><td>Breakfast</td><td>Sausage McMuffin with Egg       </td><td>5.7 oz (161 g)</td><td>450</td><td>250</td><td>28</td><td>43</td><td>10</td><td>52</td><td>0</td><td>⋯</td><td>30</td><td>10</td><td>4</td><td>17</td><td>2</td><td>21</td><td>15</td><td>0</td><td>30</td><td>15</td></tr>
+	<tr><td>Breakfast</td><td>Sausage McMuffin with Egg Whites</td><td>5.7 oz (161 g)</td><td>400</td><td>210</td><td>23</td><td>35</td><td> 8</td><td>42</td><td>0</td><td>⋯</td><td>30</td><td>10</td><td>4</td><td>17</td><td>2</td><td>21</td><td> 6</td><td>0</td><td>25</td><td>10</td></tr>
+</tbody>
+</table>
+</div><div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>260</li><li>24</li></ol>
+</div></div>
+</div>
+<p>Each row in this dataset represents a specific item sold at McDonald’s. For instance, the first row contains the nutritional information for “Egg McMuffin”, categorized under “Breakfast” according to its <code class="docutils literal notranslate"><span class="pre">Category</span></code>.</p>
+<section id="exercise-0-knowledge-check">
+<h3>Exercise 0: Knowledge Check<a class="headerlink" href="#exercise-0-knowledge-check" title="Link to this heading">#</a></h3>
+<p>For each of the cases below, determine whether it is more suitable to use <strong>classification</strong> or <strong>regression</strong>.</p>
+<ul class="simple">
+<li><p>Predicting whether an email is spam or not: <em>Classification</em></p></li>
+<li><p>Predicting the price of a house based on its features (e.g., size, location, number of rooms): <em>Regression</em></p></li>
+<li><p>Identifying different species of animals based on their physical characteristics: <em>Classification</em></p></li>
+<li><p>Determining whether a movie character belongs to a Pixar film or a Disney film: <em>Classfication</em></p></li>
+</ul>
+</section>
+<section id="exercise-1-performing-explanatory-data-analysis">
+<h3>Exercise 1: Performing Explanatory Data Analysis<a class="headerlink" href="#exercise-1-performing-explanatory-data-analysis" title="Link to this heading">#</a></h3>
+<section id="inspecting-columns-in-data">
+<h4>1.1 Inspecting Columns In Data<a class="headerlink" href="#inspecting-columns-in-data" title="Link to this heading">#</a></h4>
+<p>Before proceeding further, let’s perform a brief inspection of the columns in our dataset. We will investigate the class of each column and list all the columns present in the data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">### YOUR CODE HERE</span>
+<span class="nf">glimpse</span><span class="p">(</span><span class="n">mcdonalds</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Rows: 260
+Columns: 24
+$ Category                        &lt;chr&gt; &quot;Breakfast&quot;, &quot;Breakfast&quot;, &quot;Breakfast&quot;,…
+$ Item                            &lt;chr&gt; &quot;Egg McMuffin&quot;, &quot;Egg White Delight&quot;, &quot;…
+$ `Serving Size`                  &lt;chr&gt; &quot;4.8 oz (136 g)&quot;, &quot;4.8 oz (135 g)&quot;, &quot;3…
+$ Calories                        &lt;dbl&gt; 300, 250, 370, 450, 400, 430, 460, 520…
+$ `Calories from Fat`             &lt;dbl&gt; 120, 70, 200, 250, 210, 210, 230, 270,…
+$ `Total Fat`                     &lt;dbl&gt; 13, 8, 23, 28, 23, 23, 26, 30, 20, 25,…
+$ `Total Fat (% Daily Value)`     &lt;dbl&gt; 20, 12, 35, 43, 35, 36, 40, 47, 32, 38…
+$ `Saturated Fat`                 &lt;dbl&gt; 5, 3, 8, 10, 8, 9, 13, 14, 11, 12, 12,…
+$ `Saturated Fat (% Daily Value)` &lt;dbl&gt; 25, 15, 42, 52, 42, 46, 65, 68, 56, 59…
+$ `Trans Fat`                     &lt;dbl&gt; 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0…
+$ Cholesterol                     &lt;dbl&gt; 260, 25, 45, 285, 50, 300, 250, 250, 3…
+$ `Cholesterol (% Daily Value)`   &lt;dbl&gt; 87, 8, 15, 95, 16, 100, 83, 83, 11, 11…
+$ Sodium                          &lt;dbl&gt; 750, 770, 780, 860, 880, 960, 1300, 14…
+$ `Sodium (% Daily Value)`        &lt;dbl&gt; 31, 32, 33, 36, 37, 40, 54, 59, 54, 59…
+$ Carbohydrates                   &lt;dbl&gt; 31, 30, 29, 30, 30, 31, 38, 43, 36, 42…
+$ `Carbohydrates (% Daily Value)` &lt;dbl&gt; 10, 10, 10, 10, 10, 10, 13, 14, 12, 14…
+$ `Dietary Fiber`                 &lt;dbl&gt; 4, 4, 4, 4, 4, 4, 2, 3, 2, 3, 2, 3, 2,…
+$ `Dietary Fiber (% Daily Value)` &lt;dbl&gt; 17, 17, 17, 17, 17, 18, 7, 12, 7, 12, …
+$ Sugars                          &lt;dbl&gt; 3, 3, 2, 2, 2, 3, 3, 4, 3, 4, 2, 3, 2,…
+$ Protein                         &lt;dbl&gt; 17, 18, 14, 21, 21, 26, 19, 19, 20, 20…
+$ `Vitamin A (% Daily Value)`     &lt;dbl&gt; 10, 6, 8, 15, 6, 15, 10, 15, 2, 6, 0, …
+$ `Vitamin C (% Daily Value)`     &lt;dbl&gt; 0, 0, 0, 0, 0, 2, 8, 8, 8, 8, 0, 0, 0,…
+$ `Calcium (% Daily Value)`       &lt;dbl&gt; 25, 25, 25, 30, 25, 30, 15, 20, 15, 15…
+$ `Iron (% Daily Value)`          &lt;dbl&gt; 15, 8, 10, 15, 10, 20, 15, 20, 10, 15,…
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="removing-unwanted-columns">
+<h4>1.2 Removing Unwanted Columns<a class="headerlink" href="#removing-unwanted-columns" title="Link to this heading">#</a></h4>
+<p>As discussed, let’s exclude the <code class="docutils literal notranslate"><span class="pre">Item</span></code> and <code class="docutils literal notranslate"><span class="pre">Serving</span> <span class="pre">Size</span></code> columns from the dataset for the upcoming activities. Additionally, we will convert the <code class="docutils literal notranslate"><span class="pre">Category</span></code> column to the <em>factor</em> class.</p>
+<p>Explain the distinctions between the <code class="docutils literal notranslate"><span class="pre">factor</span></code> and <code class="docutils literal notranslate"><span class="pre">character</span></code> classes in R, and illustrate the advantages of converting the <code class="docutils literal notranslate"><span class="pre">Category</span></code> column into a <code class="docutils literal notranslate"><span class="pre">factor</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">### YOUR CODE HERE</span>
+<span class="n">mcdonalds</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">mcdonalds</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">select</span><span class="p">(</span><span class="o">-</span><span class="n">Item</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">`Serving Size`</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">mutate</span><span class="p">(</span><span class="n">Category</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">as_factor</span><span class="p">(</span><span class="n">Category</span><span class="p">))</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">mcdonalds</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 5 × 22</caption>
+<thead>
+	<tr><th scope=col>Category</th><th scope=col>Calories</th><th scope=col>Calories from Fat</th><th scope=col>Total Fat</th><th scope=col>Total Fat (% Daily Value)</th><th scope=col>Saturated Fat</th><th scope=col>Saturated Fat (% Daily Value)</th><th scope=col>Trans Fat</th><th scope=col>Cholesterol</th><th scope=col>Cholesterol (% Daily Value)</th><th scope=col>⋯</th><th scope=col>Carbohydrates</th><th scope=col>Carbohydrates (% Daily Value)</th><th scope=col>Dietary Fiber</th><th scope=col>Dietary Fiber (% Daily Value)</th><th scope=col>Sugars</th><th scope=col>Protein</th><th scope=col>Vitamin A (% Daily Value)</th><th scope=col>Vitamin C (% Daily Value)</th><th scope=col>Calcium (% Daily Value)</th><th scope=col>Iron (% Daily Value)</th></tr>
+	<tr><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>⋯</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Breakfast</td><td>300</td><td>120</td><td>13</td><td>20</td><td> 5</td><td>25</td><td>0</td><td>260</td><td>87</td><td>⋯</td><td>31</td><td>10</td><td>4</td><td>17</td><td>3</td><td>17</td><td>10</td><td>0</td><td>25</td><td>15</td></tr>
+	<tr><td>Breakfast</td><td>250</td><td> 70</td><td> 8</td><td>12</td><td> 3</td><td>15</td><td>0</td><td> 25</td><td> 8</td><td>⋯</td><td>30</td><td>10</td><td>4</td><td>17</td><td>3</td><td>18</td><td> 6</td><td>0</td><td>25</td><td> 8</td></tr>
+	<tr><td>Breakfast</td><td>370</td><td>200</td><td>23</td><td>35</td><td> 8</td><td>42</td><td>0</td><td> 45</td><td>15</td><td>⋯</td><td>29</td><td>10</td><td>4</td><td>17</td><td>2</td><td>14</td><td> 8</td><td>0</td><td>25</td><td>10</td></tr>
+	<tr><td>Breakfast</td><td>450</td><td>250</td><td>28</td><td>43</td><td>10</td><td>52</td><td>0</td><td>285</td><td>95</td><td>⋯</td><td>30</td><td>10</td><td>4</td><td>17</td><td>2</td><td>21</td><td>15</td><td>0</td><td>30</td><td>15</td></tr>
+	<tr><td>Breakfast</td><td>400</td><td>210</td><td>23</td><td>35</td><td> 8</td><td>42</td><td>0</td><td> 50</td><td>16</td><td>⋯</td><td>30</td><td>10</td><td>4</td><td>17</td><td>2</td><td>21</td><td> 6</td><td>0</td><td>25</td><td>10</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<blockquote>
+<div><p>In R, the <code class="docutils literal notranslate"><span class="pre">character</span></code> class is used for strings or text data, while the <code class="docutils literal notranslate"><span class="pre">factor</span></code> class is used for categorical data with some levels (whether it is ordinal or nominal). Converting the <code class="docutils literal notranslate"><span class="pre">Category</span></code> column to a <code class="docutils literal notranslate"><span class="pre">factor</span></code> will lead to more organized data analysis by providing explicit categories that are easier to manage and analyze, while optimizing both memory usage and statistical operations in R.</p>
+</div></blockquote>
+</section>
+<section id="look-into-distinct-categories">
+<h4>1.3 Look into Distinct Categories<a class="headerlink" href="#look-into-distinct-categories" title="Link to this heading">#</a></h4>
+<p>Given that each row in this dataset represents distinct items sold at McDonald’s, let’s determine the count of items belonging to each food category.</p>
+<p><strong><span style='color:orange'>Hint:</span></strong> Start by grouping all items by their <code class="docutils literal notranslate"><span class="pre">Category</span></code> and then count how many items fall into each <code class="docutils literal notranslate"><span class="pre">Category</span></code>. Your final data frame should have two columns: <code class="docutils literal notranslate"><span class="pre">Category</span></code> and <code class="docutils literal notranslate"><span class="pre">Count</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">### YOUR CODE HERE</span>
+<span class="n">mcdonalds_category</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">mcdonalds</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">group_by</span><span class="p">(</span><span class="n">Category</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">summarize</span><span class="p">(</span><span class="n">Count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">n</span><span class="p">())</span>
+<span class="n">mcdonalds_category</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 9 × 2</caption>
+<thead>
+	<tr><th scope=col>Category</th><th scope=col>Count</th></tr>
+	<tr><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Breakfast         </td><td>42</td></tr>
+	<tr><td><span style=white-space:pre-wrap>Beef &amp; Pork       </span></td><td>15</td></tr>
+	<tr><td><span style=white-space:pre-wrap>Chicken &amp; Fish    </span></td><td>27</td></tr>
+	<tr><td>Salads            </td><td> 6</td></tr>
+	<tr><td><span style=white-space:pre-wrap>Snacks &amp; Sides    </span></td><td>13</td></tr>
+	<tr><td>Desserts          </td><td> 7</td></tr>
+	<tr><td>Beverages         </td><td>27</td></tr>
+	<tr><td><span style=white-space:pre-wrap>Coffee &amp; Tea      </span></td><td>95</td></tr>
+	<tr><td>Smoothies &amp; Shakes</td><td>28</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="converting-to-percentage">
+<h4>1.4 Converting to Percentage<a class="headerlink" href="#converting-to-percentage" title="Link to this heading">#</a></h4>
+<p>Let’s add a new column named <code class="docutils literal notranslate"><span class="pre">Percentage</span></code> to indicate the proportion of items in each <code class="docutils literal notranslate"><span class="pre">Category</span></code>. Make sure that the final dataframe is sorted in descending order based on these percentages (e.g., From the highest percentage to the lowest percentage).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">### YOUR CODE HERE</span>
+<span class="n">mcdonalds_category</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">mcdonalds_category</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">mutate</span><span class="p">(</span><span class="n">Percentage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="n">Count</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">Count</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">))</span>
+<span class="n">mcdonalds_category</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 9 × 3</caption>
+<thead>
+	<tr><th scope=col>Category</th><th scope=col>Count</th><th scope=col>Percentage</th></tr>
+	<tr><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Breakfast         </td><td>42</td><td>16.15</td></tr>
+	<tr><td><span style=white-space:pre-wrap>Beef &amp; Pork       </span></td><td>15</td><td> 5.77</td></tr>
+	<tr><td><span style=white-space:pre-wrap>Chicken &amp; Fish    </span></td><td>27</td><td>10.38</td></tr>
+	<tr><td>Salads            </td><td> 6</td><td> 2.31</td></tr>
+	<tr><td><span style=white-space:pre-wrap>Snacks &amp; Sides    </span></td><td>13</td><td> 5.00</td></tr>
+	<tr><td>Desserts          </td><td> 7</td><td> 2.69</td></tr>
+	<tr><td>Beverages         </td><td>27</td><td>10.38</td></tr>
+	<tr><td><span style=white-space:pre-wrap>Coffee &amp; Tea      </span></td><td>95</td><td>36.54</td></tr>
+	<tr><td>Smoothies &amp; Shakes</td><td>28</td><td>10.77</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="creating-a-bar-chart">
+<h4>1.5 Creating a Bar Chart<a class="headerlink" href="#creating-a-bar-chart" title="Link to this heading">#</a></h4>
+<p>Let’s create a bar chart that shows the distribution of each food category sold at McDonald’s.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">)</span>
+<span class="c1">### YOUR CODE HERE</span>
+
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">mcdonalds_category</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Count</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">reorder</span><span class="p">(</span><span class="n">Category</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">Count</span><span class="p">)))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;identity&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;cornflowerblue&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">26</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">labs</span><span class="p">(</span>
+<span class="w">        </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Count&quot;</span><span class="p">,</span><span class="w">                     </span>
+<span class="w">        </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Category&quot;</span><span class="p">,</span><span class="w">                            </span>
+<span class="w">        </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Barplot of Food Category&quot;</span>
+<span class="w">    </span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/a4d98beb4c5c1b3546db0a96a16d90593f21c75ebaf354de3bc53be2ae03bc91.png"><img alt="../_images/a4d98beb4c5c1b3546db0a96a16d90593f21c75ebaf354de3bc53be2ae03bc91.png" src="../_images/a4d98beb4c5c1b3546db0a96a16d90593f21c75ebaf354de3bc53be2ae03bc91.png" style="width: 600px; height: 480px;" /></a>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="exercise-2-building-machine-learning-model">
+<h2>Exercise 2. Building Machine Learning Model<a class="headerlink" href="#exercise-2-building-machine-learning-model" title="Link to this heading">#</a></h2>
+<p>In this exercise, we will build a classification model for Chef Ronald, who works at McDonald’s headquarters. Ronald is preparing to launch his new “Mystery Item”, but needs help classifying it into a specific food category. We will develop a machine learning model to classify this new item based on its nutritional information.</p>
+<br>
+<img src="img/chef.png" alt="Chef" style="width: 300px; display: block; margin-left: auto; margin-right: auto;"/><section id="train-test-and-split">
+<h3>2.1 Train, Test and Split<a class="headerlink" href="#train-test-and-split" title="Link to this heading">#</a></h3>
+<p>Let’s use the “Train, Test, and Split” method to divide our <code class="docutils literal notranslate"><span class="pre">mcdonalds</span></code> dataset into training and testing data called <code class="docutils literal notranslate"><span class="pre">mcdonalds_train</span></code> and <code class="docutils literal notranslate"><span class="pre">mcdonalds_test</span></code>, respectively. Set the split ratio (initial_split) to <span class="math notranslate nohighlight">\(80\)</span>%. How many rows and columns of data do we have in each set?</p>
+<p>Why do we need to split our data into train and test sets? Explain in one or two sentences.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">### YOUR CODE HERE</span>
+<span class="nf">set.seed</span><span class="p">(</span><span class="m">2026</span><span class="p">)</span>
+
+<span class="n">mcdonalds_split</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">initial_split</span><span class="p">(</span><span class="n">mcdonalds</span><span class="p">,</span><span class="w"> </span><span class="n">prop</span><span class="o">=</span><span class="m">0.8</span><span class="p">)</span>
+<span class="n">mcdonalds_train</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">training</span><span class="p">(</span><span class="n">mcdonalds_split</span><span class="p">)</span>
+<span class="n">mcdonalds_test</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">testing</span><span class="p">(</span><span class="n">mcdonalds_split</span><span class="p">)</span>
+
+<span class="nf">cat</span><span class="p">(</span><span class="nf">paste0</span><span class="p">(</span><span class="s">&quot;Dimensions of the training set are: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">paste</span><span class="p">(</span><span class="nf">dim</span><span class="p">(</span><span class="n">mcdonalds_train</span><span class="p">),</span><span class="w"> </span><span class="n">collapse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot; x &quot;</span><span class="p">)),</span><span class="w"> </span><span class="s">&quot;\n&quot;</span><span class="p">)</span>
+<span class="nf">cat</span><span class="p">(</span><span class="nf">paste0</span><span class="p">(</span><span class="s">&quot;Dimensions of the testing set are: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">paste</span><span class="p">(</span><span class="nf">dim</span><span class="p">(</span><span class="n">mcdonalds_test</span><span class="p">),</span><span class="w"> </span><span class="n">collapse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot; x &quot;</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dimensions of the training set are: 208 x 22 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dimensions of the testing set are: 52 x 22
+</pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<div><p>Training data is specifically reserved for building and refining the model. Using test data for training compromises the model’s ability to generalize to new, unseen data, potentially leading to overfitting and reduced performance in real-world applications. Therefore, it’s crucial to maintain the separation of training and test datasets to accurately assess and improve the model’s generalizability.</p>
+</div></blockquote>
+</section>
+<section id="building-model-and-recipe">
+<h3>2.2 Building Model and Recipe<a class="headerlink" href="#building-model-and-recipe" title="Link to this heading">#</a></h3>
+<p>Let’s create a classification model using the k-Nearest Neighbor (k-NN) approach with <span class="math notranslate nohighlight">\(k=3\)</span>, following these guidelines:</p>
+<ul class="simple">
+<li><p><strong>Recipe</strong>: Utilize all predictors in the dataset, excluding the <code class="docutils literal notranslate"><span class="pre">Category</span></code> column, which serves as our target variable.</p></li>
+<li><p><strong>Modeling</strong>:  Initialize the modeling strategy with <code class="docutils literal notranslate"><span class="pre">weight_func=&quot;rectangular&quot;</span></code>, use “kknn” as the engine, and set “classification” as the mode.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">### YOUR CODE HERE</span>
+<span class="n">mcdonalds_recipe</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">recipe</span><span class="p">(</span><span class="n">Category</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="n">mcdonalds_train</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">step_scale</span><span class="p">(</span><span class="nf">all_predictors</span><span class="p">())</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">step_center</span><span class="p">(</span><span class="nf">all_predictors</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">knn_spec</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">nearest_neighbor</span><span class="p">(</span><span class="n">weight_func</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;rectangular&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">neighbors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">set_engine</span><span class="p">(</span><span class="s">&quot;kknn&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">set_mode</span><span class="p">(</span><span class="s">&quot;classification&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="fit-the-data-into-the-workflow">
+<h3>Fit the Data into the Workflow<a class="headerlink" href="#fit-the-data-into-the-workflow" title="Link to this heading">#</a></h3>
+<p>Let’s combine the recipe and model we previously defined to fit our <code class="docutils literal notranslate"><span class="pre">mcdonalds_train</span></code> data into a workflow. Follow these steps:</p>
+<ol class="arabic simple">
+<li><p>Initialize the workflow.</p></li>
+<li><p>Specify the recipe.</p></li>
+<li><p>Incloude the model.</p></li>
+<li><p>Fit the training data.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">### YOUR CODE HERE</span>
+<span class="n">knn_fit</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">workflow</span><span class="p">()</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">add_recipe</span><span class="p">(</span><span class="n">mcdonalds_recipe</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">add_model</span><span class="p">(</span><span class="n">knn_spec</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">fit</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">mcdonalds_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="calculate-model-accuracy">
+<h3>2.3 Calculate Model Accuracy<a class="headerlink" href="#calculate-model-accuracy" title="Link to this heading">#</a></h3>
+<p>Now, we will determine how accurate our model is. First, we will add a new column in our <code class="docutils literal notranslate"><span class="pre">mcdonalds_test</span></code> dataset that contains predictions made by our model. Then, we will calculate the model accuracy by evaluating how well these predictions match the actual Category values in the dataset. This accuracy assessment helps us understand how effectively our model can classify new items based on the training data it learned from.</p>
+<p>This section of the worksheet needs you to fill in the blanks with the right answers or code. Uncomment the code and replace all <code class="docutils literal notranslate"><span class="pre">...</span></code> with what you think is the right answer.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">### REPLACE ALL ...</span>
+<span class="n">validation</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">predict</span><span class="p">(</span><span class="n">knn_fit</span><span class="p">,</span><span class="w"> </span><span class="n">mcdonalds_test</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">bind_cols</span><span class="p">(</span><span class="n">mcdonalds_test</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">rename</span><span class="p">(</span><span class="n">Category_pred</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">.pred_class</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">validation</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 5 × 23</caption>
+<thead>
+	<tr><th scope=col>Category_pred</th><th scope=col>Category</th><th scope=col>Calories</th><th scope=col>Calories from Fat</th><th scope=col>Total Fat</th><th scope=col>Total Fat (% Daily Value)</th><th scope=col>Saturated Fat</th><th scope=col>Saturated Fat (% Daily Value)</th><th scope=col>Trans Fat</th><th scope=col>Cholesterol</th><th scope=col>⋯</th><th scope=col>Carbohydrates</th><th scope=col>Carbohydrates (% Daily Value)</th><th scope=col>Dietary Fiber</th><th scope=col>Dietary Fiber (% Daily Value)</th><th scope=col>Sugars</th><th scope=col>Protein</th><th scope=col>Vitamin A (% Daily Value)</th><th scope=col>Vitamin C (% Daily Value)</th><th scope=col>Calcium (% Daily Value)</th><th scope=col>Iron (% Daily Value)</th></tr>
+	<tr><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>⋯</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Breakfast  </td><td>Breakfast</td><td>410</td><td>180</td><td>20</td><td>32</td><td>11</td><td>56</td><td>0.0</td><td> 35</td><td>⋯</td><td>36</td><td>12</td><td>2</td><td> 7</td><td> 3</td><td>20</td><td> 2</td><td> 8</td><td>15</td><td>10</td></tr>
+	<tr><td>Breakfast  </td><td>Breakfast</td><td>520</td><td>280</td><td>32</td><td>49</td><td>13</td><td>65</td><td>0.0</td><td> 35</td><td>⋯</td><td>40</td><td>13</td><td>3</td><td>11</td><td> 3</td><td>18</td><td> 4</td><td> 0</td><td> 8</td><td>15</td></tr>
+	<tr><td>Breakfast  </td><td>Breakfast</td><td>500</td><td>230</td><td>26</td><td>40</td><td>10</td><td>52</td><td>0.0</td><td> 50</td><td>⋯</td><td>46</td><td>15</td><td>2</td><td> 9</td><td>15</td><td>21</td><td> 2</td><td> 0</td><td>20</td><td>10</td></tr>
+	<tr><td>Breakfast  </td><td>Breakfast</td><td>620</td><td>280</td><td>31</td><td>48</td><td>11</td><td>56</td><td>0.5</td><td>275</td><td>⋯</td><td>57</td><td>19</td><td>3</td><td>11</td><td> 7</td><td>30</td><td>20</td><td>15</td><td>20</td><td>20</td></tr>
+	<tr><td>Beef &amp; Pork</td><td>Breakfast</td><td>670</td><td>310</td><td>35</td><td>53</td><td>13</td><td>63</td><td>1.5</td><td>295</td><td>⋯</td><td>56</td><td>19</td><td>3</td><td>12</td><td> 7</td><td>33</td><td>20</td><td> 4</td><td>25</td><td>25</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">### REPLACE ALL ...</span>
+<span class="n">acc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">validation</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">metrics</span><span class="p">(</span><span class="n">truth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Category</span><span class="p">,</span><span class="w"> </span><span class="n">estimate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Category_pred</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">.metric</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;accuracy&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">select</span><span class="p">(</span><span class="n">.estimate</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">pull</span><span class="p">()</span>
+
+<span class="n">acc</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">0.865384615384615</div></div>
+</div>
+</section>
+<section id="find-the-best-k-value">
+<h3>2.4 Find the Best <span class="math notranslate nohighlight">\(k\)</span>-Value<a class="headerlink" href="#find-the-best-k-value" title="Link to this heading">#</a></h3>
+<p>Previously, our model was constructed using <span class="math notranslate nohighlight">\(k=3\)</span> Now, let’s explore how different values of <span class="math notranslate nohighlight">\(k\)</span> affect our model’s performance.</p>
+<ol class="arabic simple">
+<li><p>Start by running the cell below to establish our initial model.</p></li>
+<li><p>In the subsequent cell, vary the first argument to test other <span class="math notranslate nohighlight">\(k\)</span> values. For example:</p></li>
+</ol>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">run_model</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">mcdonalds_train</span><span class="p">,</span><span class="w"> </span><span class="n">mcdonalds_test</span><span class="p">)</span>
+<span class="nf">run_model</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">mcdonalds_train</span><span class="p">,</span><span class="w"> </span><span class="n">mcdonalds_test</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Identify and report the <span class="math notranslate nohighlight">\(k\)</span> value that returns the highest accuracy. This will help us determine the optimal <span class="math notranslate nohighlight">\(k\)</span> value for our classification model.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">### RUN THIS CELL</span>
+
+<span class="n">run_model</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">k_value</span><span class="p">,</span><span class="w"> </span><span class="n">train_data</span><span class="p">,</span><span class="w"> </span><span class="n">test_data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">mcdonalds_recipe</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">recipe</span><span class="p">(</span><span class="n">Category</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="n">train_data</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">            </span><span class="nf">step_scale</span><span class="p">(</span><span class="nf">all_predictors</span><span class="p">())</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">            </span><span class="nf">step_center</span><span class="p">(</span><span class="nf">all_predictors</span><span class="p">())</span>
+
+<span class="w">      </span><span class="n">knn_spec</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">nearest_neighbor</span><span class="p">(</span><span class="n">weight_func</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;rectangular&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">neighbors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k_value</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">            </span><span class="nf">set_engine</span><span class="p">(</span><span class="s">&quot;kknn&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">            </span><span class="nf">set_mode</span><span class="p">(</span><span class="s">&quot;classification&quot;</span><span class="p">)</span>
+
+<span class="w">      </span><span class="n">knn_fit</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">workflow</span><span class="p">()</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">            </span><span class="nf">add_recipe</span><span class="p">(</span><span class="n">mcdonalds_recipe</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">            </span><span class="nf">add_model</span><span class="p">(</span><span class="n">knn_spec</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">            </span><span class="nf">fit</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">mcdonalds_train</span><span class="p">)</span>
+
+<span class="w">      </span><span class="n">validation</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">predict</span><span class="p">(</span><span class="n">knn_fit</span><span class="p">,</span><span class="w"> </span><span class="n">mcdonalds_test</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">            </span><span class="nf">bind_cols</span><span class="p">(</span><span class="n">mcdonalds_test</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">            </span><span class="nf">rename</span><span class="p">(</span><span class="n">Category_pred</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">.pred_class</span><span class="p">)</span>
+
+<span class="w">      </span><span class="n">acc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">validation</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">            </span><span class="nf">metrics</span><span class="p">(</span><span class="n">truth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Category</span><span class="p">,</span><span class="w"> </span><span class="n">estimate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Category_pred</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">            </span><span class="nf">filter</span><span class="p">(</span><span class="n">.metric</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;accuracy&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">            </span><span class="nf">select</span><span class="p">(</span><span class="n">.estimate</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">            </span><span class="nf">pull</span><span class="p">()</span>
+<span class="w">      </span>
+<span class="w">      </span><span class="n">acc</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">### TRY CHANGING THE FIRST ARGUMENT TO DIFFERENT NUMBERS</span>
+
+<span class="nf">run_model</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">mcdonalds_train</span><span class="p">,</span><span class="w"> </span><span class="n">mcdonalds_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">0.865384615384615</div></div>
+</div>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(k=2\)</span> yields the highest accuracy.</p>
+</div></blockquote>
+</section>
+<section id="predicting-the-category-of-the-mystery-item">
+<h3>2.5 Predicting the Category of the Mystery Item<a class="headerlink" href="#predicting-the-category-of-the-mystery-item" title="Link to this heading">#</a></h3>
+<p>Now, it’s finally time to make predictions on the Mystery Item! Using the model we defined in section 2.3, we will utilize the nutritional information of the Mystery Item to determine its <code class="docutils literal notranslate"><span class="pre">Category</span></code>. Uncomment and run the code chunks below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">### Extracting column names from `mcdonalds_train`</span>
+<span class="n">predictors_names</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">colnames</span><span class="p">(</span><span class="n">mcdonalds_train</span><span class="p">)</span>
+<span class="n">col_names</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predictors_names</span><span class="p">[</span><span class="n">predictors_names</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">&quot;Category&quot;</span><span class="p">]</span>
+<span class="n">col_names</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.list</span><span class="p">(</span><span class="n">col_names</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">### Randomly generating 21 numeric values to be used as the nutritional information of the new recipe</span>
+<span class="nf">set.seed</span><span class="p">(</span><span class="m">100</span><span class="p">)</span>
+<span class="n">mystery_item</span><span class="w"> </span><span class="o">&lt;-</span><span class="w">  </span><span class="nf">data.frame</span><span class="p">(</span><span class="nf">t</span><span class="p">(</span><span class="nf">runif</span><span class="p">(</span><span class="m">21</span><span class="p">,</span><span class="w"> </span><span class="n">min</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20</span><span class="p">)))</span>
+<span class="nf">colnames</span><span class="p">(</span><span class="n">mystery_item</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">col_names</span>
+<span class="n">mystery_item</span><span class="w"> </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.frame: 1 × 21</caption>
+<thead>
+	<tr><th scope=col>Calories</th><th scope=col>Calories from Fat</th><th scope=col>Total Fat</th><th scope=col>Total Fat (% Daily Value)</th><th scope=col>Saturated Fat</th><th scope=col>Saturated Fat (% Daily Value)</th><th scope=col>Trans Fat</th><th scope=col>Cholesterol</th><th scope=col>Cholesterol (% Daily Value)</th><th scope=col>Sodium</th><th scope=col>⋯</th><th scope=col>Carbohydrates</th><th scope=col>Carbohydrates (% Daily Value)</th><th scope=col>Dietary Fiber</th><th scope=col>Dietary Fiber (% Daily Value)</th><th scope=col>Sugars</th><th scope=col>Protein</th><th scope=col>Vitamin A (% Daily Value)</th><th scope=col>Vitamin C (% Daily Value)</th><th scope=col>Calcium (% Daily Value)</th><th scope=col>Iron (% Daily Value)</th></tr>
+	<tr><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>⋯</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>6.155322</td><td>5.15345</td><td>11.04645</td><td>1.127663</td><td>9.370986</td><td>9.675415</td><td>16.24805</td><td>7.406411</td><td>10.93117</td><td>3.405241</td><td>⋯</td><td>17.64331</td><td>5.607077</td><td>7.969758</td><td>15.25102</td><td>13.38043</td><td>4.092243</td><td>7.150497</td><td>7.189502</td><td>13.80581</td><td>10.71622</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<p>What is the category of our new mysterious recipe?</p>
+<blockquote>
+<div><p>The <code class="docutils literal notranslate"><span class="pre">Category</span></code> of our new mysterious recipe is “Beef &amp; Pork”.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">predict</span><span class="p">(</span><span class="n">knn_fit</span><span class="p">,</span><span class="w"> </span><span class="n">new_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mystery_item</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 1 × 1</caption>
+<thead>
+	<tr><th scope=col>.pred_class</th></tr>
+	<tr><th scope=col>&lt;fct&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Beef &amp; Pork</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "r"
+        },
+        kernelOptions: {
+            name: "ir",
+            path: "./solution"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'ir'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="worksheet2_solution.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Worksheet 2</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#girls-in-data-science-camp">Girls in Data Science Camp</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-0-knowledge-check">Exercise 0: Knowledge Check</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-performing-explanatory-data-analysis">Exercise 1: Performing Explanatory Data Analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#inspecting-columns-in-data">1.1 Inspecting Columns In Data</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#removing-unwanted-columns">1.2 Removing Unwanted Columns</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#look-into-distinct-categories">1.3 Look into Distinct Categories</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-to-percentage">1.4 Converting to Percentage</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-bar-chart">1.5 Creating a Bar Chart</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-building-machine-learning-model">Exercise 2. Building Machine Learning Model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#train-test-and-split">2.1 Train, Test and Split</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#building-model-and-recipe">2.2 Building Model and Recipe</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fit-the-data-into-the-workflow">Fit the Data into the Workflow</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-model-accuracy">2.3 Calculate Model Accuracy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-best-k-value">2.4 Find the Best <span class="math notranslate nohighlight">\(k\)</span>-Value</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#predicting-the-category-of-the-mystery-item">2.5 Predicting the Category of the Mystery Item</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Katie Burak
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
