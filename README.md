@@ -5,6 +5,8 @@ The Girls in Data Science Summer Camp at UBC aims to expose participants to a va
 statistics. This camp is offered for girls and other gender minorities in grades 8-12. Please complete the [registration form](https://forms.gle/i3LsjobEhaBTzCpKA) and <a href="https://secure.touchnet.net/C20435_ustores/web/product_detail.jsp?PRODUCTID=1730&SINGLESTORE=true" target="_blank">pay the $20 registration fee</a>
 to confirm your spot in the camp.  
 
+After the  camp, please fill out the [anonymous exit survey](https://docs.google.com/forms/d/e/1FAIpQLScFZ1f7AwCKAtF7XrIQjJCddArxOIZi7FuZhdFrb0vPrWWujA/viewform?usp=sharing&ouid=109061180545892036619)!
+
 ## General Information
 
 - Dates: July 7-9, 2025
