@@ -2,7 +2,7 @@
 # Girls in Data Science Camp 
 
 The Girls in Data Science Summer Camp at UBC aims to expose participants to a variety of topics in data science and
-statistics. This camp is offered for girls and other gender minorities in grades 8-12. 
+statistics. This camp is offered for girls and other gender minorities in grades 8-12. All material is open source and is available at [https://github.com/katieburak/girls-in-DS](https://github.com/katieburak/girls-in-DS).
 
 ![](notes/img/group-photo-2025.png)
 
