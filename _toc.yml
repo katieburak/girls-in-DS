@@ -6,7 +6,7 @@ parts:
   - file: notes/day1.ipynb
   - file: notes/day2.ipynb
   - file: notes/day3.ipynb
-  - file: solution/worksheet1_solution.ipynb
-  - file: solution/worksheet2_solution.ipynb
-  - file: solution/worksheet3_solution.ipynb
+#  - file: solution/worksheet1_solution.ipynb
+#  - file: solution/worksheet2_solution.ipynb
+#  - file: solution/worksheet3_solution.ipynb
 
