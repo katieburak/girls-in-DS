@@ -915,7 +915,7 @@ It is now clear that entertainment an Health, Sports and Fitness are the two mos
 
 ### Rule of Thumb: No tables / pie charts / 3D
 
-<img src="img/pie.png" width="1200" />
+<img src="img/pie.png" width="100%" />
 
 ### Rule of Thumb: No tables / pie charts / 3D
 

@@ -262,11 +262,11 @@ Statistical inference is the process of using a *sample* to make conclusions abo
 
 #### E.g.: we want to know the average width of a species of sea star
 
-<img src="img/intro-inf-1.png" width=1100>
+<img src="img/intro-inf-1.png" width="100%">
 
-<img src="img/intro-inf-2.png" width=1100>
+<img src="img/intro-inf-2.png" width="100%">
 
-<img src="img/intro-inf-4.png" width=1100>
+<img src="img/intro-inf-4.png" width="100%">
 
 - **Population:** collection of all possible observations + their frequency/count
     - e.g. the widths of the entire population of sea stars
@@ -499,7 +499,7 @@ To summarize:
 
 We only have one sample... but if it's big enough, the sample looks like the population!
 
-<img src="https://datasciencebook.ca/_main_files/figure-html/11-example-bootstrapping0-1.png" width=1200>
+<img src="https://datasciencebook.ca/_main_files/figure-html/11-example-bootstrapping0-1.png" width="100%">
 
 Let's pretend our *sample* **is** our population. Then we can take many samples from our original sample (called *bootstrap samples*) to give us an approximation of the sampling distribution (the *bootstrap sampling distribution*).
 
@@ -530,7 +530,7 @@ rep_sample_n(student_sample, size=40, replace=TRUE, reps=10000)
 ```
 
 ## Bootstrap Sampling Distribution
-<img src="https://ubc-dsci.github.io/introduction-to-datascience/_main_files/figure-html/11-bootstrapping7-1.png" width=1300/>
+<img src="https://ubc-dsci.github.io/introduction-to-datascience/_main_files/figure-html/11-bootstrapping7-1.png" width="100%"/>
 
 Question: What would happen if we sampled without replacement? What does that mean?
 
@@ -538,7 +538,7 @@ Question: What would happen if we sampled without replacement? What does that me
 
 The bootstrap mean will be centered around the mean of the intial sample rather than the true population mean (which is unknown) 
 
-<img src="https://datasciencebook.ca/_main_files/figure-html/11-bootstrapping6-1.png" width=1400/>
+<img src="https://datasciencebook.ca/_main_files/figure-html/11-bootstrapping6-1.png" width="100%"/>
 
 ## Using the bootstrap to calculate a plausible range 
 
@@ -549,5 +549,5 @@ The bootstrap mean will be centered around the mean of the intial sample rather 
 
 ## Using the bootstrap to calculate a plausible range of the mean
 
-<img src="https://datasciencebook.ca/_main_files/figure-html/11-bootstrapping9-1.png" width=1400/>
+<img src="https://datasciencebook.ca/_main_files/figure-html/11-bootstrapping9-1.png" width="100%"/>
 

@@ -54,7 +54,7 @@ There are two important things to do when splitting data.
 2. **Stratification:** make sure the two split subsets of data have roughly equal proportions of the different labels
 
 <center>
-<img src="https://datasciencebook.ca/img/classification2/training_test.png" width="1100"/>
+<img src="https://datasciencebook.ca/img/classification2/training_test.png" width="100%"/>
 </center>
 
 #### Golden Rule of Machine Learning / Statistics:
@@ -138,7 +138,7 @@ What if one variable is much larger than the other?
 
 <br>
 <center>
-<img src="https://ubc-dsci.github.io/introduction-to-datascience/_main_files/figure-html/05-scaling-plt-1.png" width="1200"/>
+<img src="https://ubc-dsci.github.io/introduction-to-datascience/_main_files/figure-html/05-scaling-plt-1.png" width="100%"/>
 </center>
 
 
@@ -373,7 +373,7 @@ We'll now talk about these steps below.
 We can get a better estimate of performance by splitting *multiple ways* and *averaging*. Here's an example:
 
 <center>
-<img src="https://datasciencebook.ca/img/classification2/cv.png" width="1000"/>
+<img src="https://datasciencebook.ca/img/classification2/cv.png" width="100%"/>
 </center>
 
 ### Underfitting & Overfitting
@@ -385,7 +385,7 @@ We can get a better estimate of performance by splitting *multiple ways* and *av
 
 
 <center>
-<img width="1000" src="img/under_over_fitting.png">
+<img width="100%" src="img/under_over_fitting.png">
 </center>
 
 Source: http://kerckhoffs.schaathun.net/FPIA/Slides/09OF.pdf
@@ -395,7 +395,7 @@ Source: http://kerckhoffs.schaathun.net/FPIA/Slides/09OF.pdf
 Which of these are under-, over-, and good fits? 
 
 <center>
-<img width="1000px" src="https://datasciencebook.ca/_main_files/figure-html/06-decision-grid-K-1.png"/>
+<img width="100%" src="https://datasciencebook.ca/_main_files/figure-html/06-decision-grid-K-1.png"/>
 </center>
 
 
@@ -411,13 +411,13 @@ For KNN: small K overfits, large K underfits, both result in lower accuracy
 The role of the test data:
 
 <center>
-<img src="https://datasciencebook.ca/img/classification2/ML-paradigm-test.png" width="1700"/>
+<img src="https://datasciencebook.ca/img/classification2/ML-paradigm-test.png" width="100%"/>
 </center>
 
 #### The Big Picture
 
 <center>
-<img align="left" src="https://datasciencebook.ca/img/classification2/train-test-overview.png" width="1200"/></center>
+<img align="left" src="https://datasciencebook.ca/img/classification2/train-test-overview.png" width="100%"/></center>
 
 Now, let's put it all together and look into how to go about this process in R. First let's split our data into training and test sets:
 
