@@ -356,7 +356,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="code-cells">1.2. Code Cells</h2>
 <p>Other cells contain code in the R language. Running a code cell will execute all of the code it contains.</p>
 <p>To run the code in a cell, first click on that cell to activate it. It will be highlighted with a blue rectangle to the left of it when activated. Next, either press Run ▶ or hold down the <code>shift</code> key and press <code>return</code> or <code>enter</code>. print(“Hello, World!”) Try running the next cell:</p>
-<div id="d0bc5f67" class="cell" data-tags="[]" data-execution_count="1">
+<div id="c58a0433" class="cell" data-tags="[]" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"Hi Sky!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Hi Sky!"</code></pre>
@@ -364,7 +364,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>The above code cell contains a single line of code, but cells can also contain multiple lines of code. When you run a cell, the lines of code are executed in the order in which they appear. Every <code>print</code> expression prints a line. Run the next cell and notice the order of the output.</p>
 <p>Note to self bla bla bla…</p>
-<div id="bd80f341" class="cell" data-tags="[]" data-execution_count="2">
+<div id="5b8af2f0" class="cell" data-tags="[]" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"First this line is printed,"</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"and then this one."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -391,7 +391,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code># Test cell; please do not change!</code></pre>
 <p>That is called a <em>comment</em>. It doesn’t make anything happen in R; R ignores anything on a line after a #. Instead, it’s there to communicate something about the code to you, the human reader. Comments are extremely useful and can help increase how readable our code is.</p>
 <p>The below code cell contains comments (one at the start of a line, and one after some other code). Run the cell. You will see that everything after a comment symbol <code>#</code> is ignored by R.</p>
-<div id="87199ee4" class="cell" data-tags="[]" data-execution_count="3">
+<div id="0e41faa5" class="cell" data-tags="[]" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># you can use comments to document your code, or make R ignore some code without deleting it entirely</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># print("this is a commented line that R will ignore. You won't see this text in the output!")</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -407,7 +407,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Whenever you write code, you’ll make mistakes (everyone who writes code does, even your course instructor!). When you run a code cell that has errors, R will sometimes produce error messages to tell you what you did wrong.</p>
 <p>Errors are totally okay; even experienced programmers make many errors. It’s a natural part of the coding process. When you make an error, you just have to find the source of the problem, fix it, and move on.</p>
 <p>We have made an error in the next cell. <strong>Remove the <code>#</code> symbol below (i.e., uncomment the line)</strong>, and then run the cell to see what happens.</p>
-<div id="165941d8" class="cell" data-tags="[]" data-execution_count="4">
+<div id="4d12c8e1" class="cell" data-tags="[]" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"This line is missing something."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "This line is missing something."</code></pre>
@@ -430,14 +430,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="numbers" class="level2">
 <h2 class="anchored" data-anchor-id="numbers">1.7 Numbers</h2>
 <p>Quantitative information arises everywhere in data science. In addition to representing commands to print out lines, our R code can represent numbers and methods of combining numbers. The expression <code>3.2500</code> evaluates to the number 3.25. (Run the cell and see.)</p>
-<div id="369ae6fb" class="cell" data-execution_count="5">
+<div id="e0ffb18a" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fl">3.2500</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 3.25
 </div>
 </div>
 <p>Notice that we didn’t have to write <code>print()</code>. When you run a notebook cell, Jupyter helpfully prints out that value for you.</p>
-<div id="bbdf797c" class="cell" data-tags="[]" data-execution_count="6">
+<div id="84c12fe9" class="cell" data-tags="[]" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -456,25 +456,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="arithmetic" class="level2">
 <h2 class="anchored" data-anchor-id="arithmetic">1.8 Arithmetic</h2>
 <p>The line in the next cell performs some mathemtical operations. Run them!</p>
-<div id="72127b74" class="cell" data-tags="[]" data-execution_count="7">
+<div id="7a201a87" class="cell" data-tags="[]" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fl">2.0</span> <span class="sc">-</span> <span class="fl">1.5</span> <span class="sc">+</span> <span class="dv">45</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 45.5
 </div>
 </div>
-<div id="f734662f" class="cell" data-tags="[]" data-execution_count="8">
+<div id="b8572118" class="cell" data-tags="[]" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="sc">*</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 4
 </div>
 </div>
-<div id="9b16f8a5" class="cell" data-tags="[]" data-execution_count="9">
+<div id="0f3042ca" class="cell" data-tags="[]" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="dv">6</span><span class="sc">/</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 3
 </div>
 </div>
-<div id="e47854d9" class="cell" data-execution_count="10">
+<div id="fff2eadc" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 0.693147180559945
@@ -487,7 +487,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>In natural language, we have terminology that lets us quickly reference very complicated concepts. We don’t say, “That’s a large mammal with brown fur and sharp teeth!” Instead, we just say, “Bear!”</p>
 <p>Similarly, an effective strategy for writing code is to define names for data as we compute it, like a lawyer would define terms for complex ideas at the start of a legal document to simplify the rest of the writing.</p>
 <p>In R, we do this with <em>objects</em>. An object has a name on the left side of an <code>&lt;-</code> sign and an expression to be evaluated on the right.</p>
-<div id="8b9b96cb" class="cell" data-tags="[]" data-execution_count="11">
+<div id="c1580a6e" class="cell" data-tags="[]" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>answer <span class="ot">&lt;-</span> <span class="dv">3</span><span class="sc">*</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">4</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>answer</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -496,7 +496,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>When you run that cell, R first evaluates the first line. It computes the value of the expression <code>3 * 2 + 4</code>, which is the number 10. Then it gives that value the name <code>answer</code>. At that point, the code in the cell is done running.</p>
 <p>After you run that cell, the value 10 is bound to the name <code>answer</code>:</p>
-<div id="dae5eb05" class="cell" data-tags="[]" data-execution_count="12">
+<div id="7a6dcead" class="cell" data-tags="[]" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>answer</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 10
@@ -508,7 +508,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>When naming objects in R there are some rules: 1. Names in R can have letters (upper- and lower-case letters are both okay and count as different letters e.g.&nbsp;“Answer” and “answer” will be treated as different objects), underscores, dots, and numbers. 2. The first character can’t be a number (otherwise a name might look like a number).<br>
 3. Names can’t contain spaces, since spaces are used to separate pieces of code from each other.</p>
 <p>Other than those rules, what you name something doesn’t matter <em>to R</em>. For example, the next cell does the same thing as the above cell, except everything has a different name:</p>
-<div id="f6df5262" class="cell" data-tags="[]" data-execution_count="13">
+<div id="ce335ca4" class="cell" data-tags="[]" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">3</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> a <span class="sc">+</span> <span class="dv">4</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -528,7 +528,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Compute how many years will pass until 2050 by subtracting the current year from 2050 (call this object <code>years</code>).</li>
 <li>Finally, name an object <code>future_age</code> which adds together <code>age</code> and <code>years</code> to get your age in 2050.</li>
 </ul>
-<div id="a302f667" class="cell" data-execution_count="14">
+<div id="66c66ba8" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>age <span class="ot">&lt;-</span> <span class="dv">16</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>years <span class="ot">&lt;-</span> <span class="dv">2050-2025</span></span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>future_age <span class="ot">&lt;-</span> age <span class="sc">+</span> years</span>
@@ -543,7 +543,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="functions">1.10 Functions</h2>
 <p>The most common way to combine or manipulate values in R is by calling functions. R comes with many built-in functions that perform common operations.</p>
 <p>We used a function <code>print()</code> at the beginning of this notebook when we printed text from a code cell. Here we’ll demonstrate using another function <code>toupper()</code> that converts text to uppercase:</p>
-<div id="364df496" class="cell" data-tags="[]" data-execution_count="15">
+<div id="fbec74d8" class="cell" data-tags="[]" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>greeting <span class="ot">&lt;-</span> <span class="fu">toupper</span>(<span class="st">"Why, hello there!"</span>)</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>greeting</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -551,14 +551,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Try using the function <code>tolower</code> now!</p>
-<div id="0daa6e53" class="cell" data-execution_count="16">
+<div id="90a91c6f" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tolower</span>(greeting)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 'why, hello there!'
 </div>
 </div>
 <p>Some functions take multiple arguments, separated by commas. For example, the built-in <code>max</code> function returns the maximum argument passed to it.</p>
-<div id="f9666b11" class="cell" data-tags="[]" data-execution_count="17">
+<div id="ca5c1c9d" class="cell" data-tags="[]" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>biggest <span class="ot">&lt;-</span> <span class="fu">max</span>(<span class="dv">4</span>,<span class="dv">7</span>,<span class="dv">23</span>,<span class="dv">1</span>,<span class="dv">5</span>)</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>biggest</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -571,7 +571,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="packages">1.11 Packages</h2>
 <p>R has many built-in functions, but we can also use functions that are stored within packages created by other R users. We are going to use a package, called <code>tidyverse</code>, to load, modify and plot data. This package has already been installed for you. Later in the course you will learn how to install packages so you are free to bring in other tools as you need them for your data analysis.</p>
 <p>To use the functions from a package you first need to load it using the <code>library</code> function. This needs to be done once per notebook (and a good rule of thumb is to do this at the very top of your notebook so it is easy to see what packages your R code depends on).</p>
-<div id="2f025d70" class="cell" data-tags="[]" data-execution_count="18">
+<div id="3c9e2dc8" class="cell" data-tags="[]" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
@@ -594,7 +594,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="looking-for-help">1.12 Looking for Help</h2>
 <p>No one, even experienced, professional programmers remember what every function does, nor do they remember every possible function argument/option. So both experienced and new programmers (like you!) need to look things up, A LOT!</p>
 <p>One of the most efficient places to look for help on how a function works is the <strong>R help files</strong>. Let’s say we wanted to pull up the help file for the <code>toupper()</code> function. We can do this by typing a question mark in front of the function we want to know more about. Remove the hashtag and run the cell below to find out more about <code>toupper()</code>.</p>
-<div id="c8ab5aa9" class="cell" data-tags="[]" data-execution_count="19">
+<div id="133e47a1" class="cell" data-tags="[]" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ?toupper</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>At the very top of the file, you will see the function itself and the package it is in (in this case, it is base). Next is a description of what the function does. You’ll find that the most helpful sections on this page are “Usage”, “Arguments” and “Examples”.</p>
@@ -706,7 +706,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>Please note that data comes in many forms and there are a wide variety of functions and approaches to loading in your data, but in this camp we will be focusing on reading in tabular data using <code>read_csv</code>.</p>
 <p>We will now look at an <a href="https://www.kaggle.com/datasets/faisaljanjua0555/top-200-most-followed-instagram-accounts-2023">Instagram data set</a> focusing on 200 of the most popular instagram accounts. Let’s try reading it in with <code>read_csv</code> using a relative path!</p>
-<div id="50dcdcd3" class="cell" data-tags="[]" data-execution_count="20">
+<div id="59f186cd" class="cell" data-tags="[]" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>insta <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">'data/insta.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 200 Columns: 8
@@ -719,11 +719,11 @@ dbl (1): rank
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
 </div>
-<div id="3dba52ef" class="cell" data-execution_count="21">
+<div id="35565f37" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>insta <span class="ot">&lt;-</span> insta <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="sc">-</span><span class="st">'Avg. Likes'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Run the following code chunk before continuing to rename/reformat some of the variables:</p>
-<div id="5c24a80e" class="cell" data-execution_count="22">
+<div id="3dceb62a" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(insta)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
@@ -807,7 +807,7 @@ dbl (1): rank
 </table>
 </div>
 </div>
-<div id="88fc9b44" class="cell" data-tags="[]" data-execution_count="23">
+<div id="159af0cb" class="cell" data-tags="[]" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>insta <span class="ot">&lt;-</span> <span class="fu">suppressWarnings</span>(insta <span class="sc">|&gt;</span></span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>              <span class="fu">mutate</span>(<span class="at">Followers =</span> <span class="fu">as.numeric</span>(<span class="fu">str_replace</span>(Followers, <span class="st">"M"</span>, <span class="st">""</span>))<span class="sc">*</span><span class="fl">1e6</span>) <span class="sc">|&gt;</span> </span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>              <span class="fu">rename</span>(<span class="at">Channel =</span> channel_Info, <span class="at">eng_rate =</span> <span class="st">'Eng Rate'</span>) <span class="sc">|&gt;</span> </span>
@@ -824,7 +824,7 @@ dbl (1): rank
 </div>
 <p>It looks like this data set has 200 rows (observations) representing the top 200 instgram accounts and the following 8 columns (variables): - rank (1-200) - name (Instagram handle) - channel (brief description of the account) - category - posts - followers - Eng Rate (calculates the account’s engagement rate by dividing the total number of likes and comments received by the total number of followers, expressed as a percentage).</p>
 <p>Without looking at the entire data set, we can find out attributes of our data such as the number of rows, columns, or overall dimension.</p>
-<div id="642c439f" class="cell" data-execution_count="24">
+<div id="bfbd3723" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Number of rows</span></span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(insta)</span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -892,7 +892,7 @@ dbl (1): rank
 <h3 class="anchored" data-anchor-id="mutate">2.1.1 Mutate</h3>
 <p>The <code>mutate</code> function transforms old columns to add new columns.</p>
 <p>e.g.&nbsp;convert engagement rate to a decimal</p>
-<div id="e652e5b9" class="cell" data-tags="[]" data-execution_count="25">
+<div id="8e7b8895" class="cell" data-tags="[]" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">mutate</span>(insta, <span class="at">eng_rate =</span> eng_rate <span class="sc">/</span> <span class="dv">100</span>)) <span class="co"># head function returns only the first 6 rows</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
@@ -983,10 +983,10 @@ dbl (1): rank
 <section id="select" class="level3">
 <h3 class="anchored" data-anchor-id="select">2.1.2 Select</h3>
 <p>The <code>select</code> function is used to select a subset of columns (variables) from a dataframe.</p>
-<div id="f2e11b37" class="cell" data-execution_count="26">
+<div id="c5ffd702" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>?select</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="5b260626" class="cell" data-tags="[]" data-execution_count="27">
+<div id="f2a118ea" class="cell" data-tags="[]" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">select</span>(insta, name)) <span class="co"># select `name` column </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
@@ -1022,7 +1022,7 @@ dbl (1): rank
 </table>
 </div>
 </div>
-<div id="1b3db4d6" class="cell" data-tags="[]" data-execution_count="28">
+<div id="4014d2e4" class="cell" data-tags="[]" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">select</span>(insta, name, Followers)) <span class="co"># select `name` and `Followers` column </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
@@ -1071,7 +1071,7 @@ dbl (1): rank
 <h3 class="anchored" data-anchor-id="filter">2.1.3 Filter</h3>
 <p>The <code>filter</code> function is used to choose a subset of rows (observations) in a dataframe.</p>
 <p>e.g.&nbsp;filter to only include instagram accounts with more than 150 million followers</p>
-<div id="cf8935fc" class="cell" data-tags="[]" data-execution_count="29">
+<div id="16e1d9da" class="cell" data-tags="[]" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># One condition</span></span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(insta, Followers <span class="sc">&gt;</span> <span class="dv">150000000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -1339,7 +1339,7 @@ dbl (1): rank
 <blockquote class="blockquote">
 <p>Note the usage of two equals signs <code>==</code>. In coding, two equals signs evaluates equality between two values and returns either <code>TRUE</code> or <code>FALSE</code>. This is different than the use of one equals sign which is used to assign values.</p>
 </blockquote>
-<div id="d79019dc" class="cell" data-tags="[]" data-execution_count="30">
+<div id="9da07719" class="cell" data-tags="[]" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Two conditions</span></span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(insta, Followers <span class="sc">&gt;</span> <span class="dv">150000000</span> <span class="sc">&amp;</span> Category <span class="sc">==</span> <span class="st">"Health, Sports &amp; Fitness"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -1406,7 +1406,7 @@ dbl (1): rank
 </table>
 </div>
 </div>
-<div id="0c8f528f" class="cell" data-tags="[]" data-execution_count="31">
+<div id="fb5c0256" class="cell" data-tags="[]" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="do">### Example </span><span class="al">###</span></span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>a <span class="ot">=</span> <span class="st">"Pancakes"</span> <span class="co"># assigns the value "Pancakes" to "a" </span></span>
@@ -1422,7 +1422,7 @@ FALSE
 </div>
 </div>
 <p>You can also use the <code>|</code> symbol in place of the word “or”. For example:</p>
-<div id="db593d2e" class="cell" data-tags="[]" data-execution_count="32">
+<div id="39a3cc75" class="cell" data-tags="[]" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(insta, Category <span class="sc">==</span> <span class="st">"photography"</span> <span class="sc">|</span> Category <span class="sc">==</span> <span class="st">"fashion"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
@@ -1564,7 +1564,7 @@ FALSE
 <section id="slice" class="level3">
 <h3 class="anchored" data-anchor-id="slice">2.1.4 Slice</h3>
 <p>The <code>slice</code> function allows us to extract certain rows from our data set. For example, we may want to look at the 60th row of our data set (corresponding to the 60th most followed instagram account):</p>
-<div id="c739bc7a" class="cell" data-tags="[]" data-execution_count="33">
+<div id="1c632b84" class="cell" data-tags="[]" data-execution_count="33">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">slice</span>(insta, <span class="dv">60</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
@@ -1604,7 +1604,7 @@ FALSE
 </div>
 </div>
 <p>You could also slice over a range of rows, say rows 60-70.</p>
-<div id="88283d78" class="cell" data-tags="[]" data-execution_count="34">
+<div id="3fffb35c" class="cell" data-tags="[]" data-execution_count="34">
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">slice</span>(insta, <span class="dv">60</span><span class="sc">:</span><span class="dv">70</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
@@ -1794,7 +1794,7 @@ FALSE
 <li>Pipes make code much more readable when you need to do a long sequence of operations on data.</li>
 <li>No intermediatery variables created</li>
 </ul>
-<div id="ef0c9641" class="cell" data-tags="[]" data-execution_count="35">
+<div id="59da3baa" class="cell" data-tags="[]" data-execution_count="35">
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>insta_piped <span class="ot">&lt;-</span> insta <span class="sc">|&gt;</span></span>
 <span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(insta, <span class="at">eng_rate =</span> eng_rate <span class="sc">/</span> <span class="dv">100</span>) <span class="sc">|&gt;</span></span>
 <span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(Followers <span class="sc">&gt;</span> <span class="dv">150000000</span>) <span class="sc">|&gt;</span></span>
@@ -1878,7 +1878,7 @@ FALSE
 <li>You might be interested in arranging this dataframe from smallest to largest number of followers.</li>
 <li>The <code>arrange</code> function allows us to order the rows of a data frame by the values of a particular column (in descending order, for example):</li>
 </ul>
-<div id="2b42a331" class="cell" data-tags="[]" data-execution_count="36">
+<div id="16ffbe78" class="cell" data-tags="[]" data-execution_count="36">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>insta <span class="sc">|&gt;</span> </span>
 <span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(Category) <span class="sc">|&gt;</span></span>
 <span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarize</span>(<span class="at">avg_followers =</span> <span class="fu">mean</span>(Followers)) <span class="sc">|&gt;</span> </span>
@@ -1950,7 +1950,7 @@ FALSE
 </div>
 </div>
 <p>Or we could count the number of accounts in each category using <code>n()</code>:</p>
-<div id="e282c0be" class="cell" data-execution_count="37">
+<div id="9955c1de" class="cell" data-execution_count="37">
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>insta <span class="sc">|&gt;</span> </span>
 <span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(Category) <span class="sc">|&gt;</span></span>
 <span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarize</span>(<span class="at">Count =</span> <span class="fu">n</span>()) <span class="sc">|&gt;</span> </span>
@@ -2025,7 +2025,7 @@ FALSE
 <section id="exercise-2" class="level3">
 <h3 class="anchored" data-anchor-id="exercise-2">Exercise</h3>
 <p>Let’s practice what we’ve learned and try to answer the question “Which category of brand accounts have the most total Posts?” Using the pipe operator, return a dataframe based on the following criteria: - Include the name of the account, the channel information, the category, and how many posts they have made - Filter to include only accounts that are brands - Grouping by category, compute the average total posts (call it <code>avg_posts</code>) and arrange the dataframe in descending order based on the average posts. - Finally, make sure to assign this wrangled data to an object called <code>insta_wrangled</code>.</p>
-<div id="15e99cd5" class="cell" data-execution_count="38">
+<div id="77e64fbe" class="cell" data-execution_count="38">
 <div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(insta)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
@@ -2109,7 +2109,7 @@ FALSE
 </table>
 </div>
 </div>
-<div id="a8972e8f" class="cell" data-tags="[]" data-execution_count="39">
+<div id="79d85120" class="cell" data-tags="[]" data-execution_count="39">
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="do">### YOUR CODE HERE</span></span>
 <span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>insta_wrangled <span class="ot">&lt;-</span> insta <span class="sc">|&gt;</span></span>
@@ -2217,7 +2217,7 @@ FALSE
 <h3 class="anchored" data-anchor-id="histograms">3.1.1 Histograms</h3>
 <p>To visualize the distribution of a single quantitative variable</p>
 <p>e.g.&nbsp;What does the distribution of the number of posts look like?</p>
-<div id="2f84cc15" class="cell" data-tags="[]" data-execution_count="40">
+<div id="fdb4333e" class="cell" data-tags="[]" data-execution_count="40">
 <div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Inspect the data</span></span>
 <span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(insta)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -2303,7 +2303,7 @@ FALSE
 </div>
 </div>
 <p>We will be plotting with <code>ggplot()</code>, which is all about building a plot up based on layers. We know we want to make a plot of <code>Posts</code> based on the <code>insta</code> data set. This line of code initiates a layer which acts as a “blank canvas” for us to plot over.</p>
-<div id="9dd6c09d" class="cell" data-execution_count="41">
+<div id="116a9b19" class="cell" data-execution_count="41">
 <div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(insta, <span class="fu">aes</span>(<span class="at">x =</span> Posts))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -2314,7 +2314,7 @@ FALSE
 </div>
 </div>
 <p>Then we can add a layer with the <code>+</code> symbol which will dictate which type of plot we want to make. There are a whole bunch of options, but in this case we are interested in a histogram so we use <code>geom_histogram()</code>.</p>
-<div id="a3e3f768" class="cell" data-execution_count="42">
+<div id="a610122d" class="cell" data-execution_count="42">
 <div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(insta, <span class="fu">aes</span>(<span class="at">x =</span> Posts)) <span class="sc">+</span></span>
 <span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -2328,7 +2328,7 @@ FALSE
 </div>
 </div>
 </div>
-<div id="f086295f" class="cell" data-tags="[]" data-execution_count="43">
+<div id="bd85fd2c" class="cell" data-tags="[]" data-execution_count="43">
 <div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Adding more layers </span></span>
 <span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(insta, <span class="fu">aes</span>(<span class="at">x =</span> Posts)) <span class="sc">+</span></span>
@@ -2344,7 +2344,7 @@ FALSE
 </div>
 </div>
 <p>You can also creating multiple separate histograms (e.g., for each channel):</p>
-<div id="aad5ed65" class="cell" data-tags="[]" data-execution_count="44">
+<div id="3337ebaa" class="cell" data-tags="[]" data-execution_count="44">
 <div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the default size for plot</span></span>
 <span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repr.plot.width =</span> <span class="dv">8</span>, <span class="at">repr.plot.height =</span> <span class="dv">10</span>)</span>
 <span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(insta, <span class="fu">aes</span>(<span class="at">x =</span> Posts, <span class="at">fill =</span> Channel)) <span class="sc">+</span></span>
@@ -2365,7 +2365,7 @@ FALSE
 <h3 class="anchored" data-anchor-id="scatter-plots">3.1.2 Scatter Plots</h3>
 <p>To visualize the relationship between two quantitative variables</p>
 <p>e.g.&nbsp;Is there a relationship between number of posts and number of followers?</p>
-<div id="711a232d" class="cell" data-tags="[]" data-execution_count="45">
+<div id="82d03f95" class="cell" data-tags="[]" data-execution_count="45">
 <div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the default size for plot</span></span>
 <span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repr.plot.width =</span> <span class="dv">10</span>, <span class="at">repr.plot.height =</span> <span class="dv">8</span>)</span>
 <span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -2381,7 +2381,7 @@ FALSE
 </div>
 </div>
 <p>Let’s take a look at accounts that have over 10000 posts.</p>
-<div id="0022a65b" class="cell" data-tags="[]" data-execution_count="46">
+<div id="d61411b2" class="cell" data-tags="[]" data-execution_count="46">
 <div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>insta_posts_10000 <span class="ot">&lt;-</span> insta <span class="sc">|&gt;</span></span>
 <span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>                        <span class="fu">filter</span>(Posts<span class="sc">&gt;</span><span class="dv">10000</span>)</span>
 <span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -2391,7 +2391,7 @@ FALSE
 'natgeo'
 </div>
 </div>
-<div id="59846278" class="cell" data-tags="[]" data-execution_count="47">
+<div id="7b95d0d5" class="cell" data-tags="[]" data-execution_count="47">
 <div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repr.plot.width =</span> <span class="dv">10</span>, <span class="at">repr.plot.height =</span> <span class="dv">8</span>)</span>
 <span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(insta_posts_10000, <span class="fu">aes</span>(<span class="at">x =</span> Posts, <span class="at">y =</span> Followers, <span class="at">color =</span> Channel)) <span class="sc">+</span> <span class="co"># color by channel info</span></span>
@@ -2412,7 +2412,7 @@ FALSE
 <h3 class="anchored" data-anchor-id="bar-plots">3.1.3 Bar Plots</h3>
 <p>To visualize the comparison of amounts</p>
 <p>e.g.&nbsp;Out of the top 200 instagram accounts, which are the 2 most followed categories?</p>
-<div id="3fdbf054" class="cell" data-tags="[]" data-execution_count="48">
+<div id="f80c7655" class="cell" data-tags="[]" data-execution_count="48">
 <div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>insta_cat <span class="ot">&lt;-</span> insta <span class="sc">|&gt;</span></span>
 <span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Category) <span class="sc">|&gt;</span></span>
 <span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">Total_Followers =</span> <span class="fu">sum</span>(Followers))</span>
@@ -2483,7 +2483,7 @@ FALSE
 </table>
 </div>
 </div>
-<div id="33ea0bcd" class="cell" data-tags="[]" data-execution_count="49">
+<div id="1bf28d30" class="cell" data-tags="[]" data-execution_count="49">
 <div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(insta_cat, <span class="fu">aes</span>(<span class="at">x =</span> Category, <span class="at">y =</span> Total_Followers)) <span class="sc">+</span></span>
 <span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">'identity'</span>) <span class="sc">+</span></span>
 <span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">26</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2495,7 +2495,7 @@ FALSE
 </div>
 </div>
 </div>
-<div id="1a8f0468" class="cell" data-tags="[]" data-execution_count="50">
+<div id="eed42434" class="cell" data-tags="[]" data-execution_count="50">
 <div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(insta_cat, <span class="fu">aes</span>(<span class="at">x =</span> Category, <span class="at">y =</span> Total_Followers)) <span class="sc">+</span></span>
 <span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">'identity'</span>) <span class="sc">+</span></span>
 <span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">26</span>))<span class="sc">+</span></span>
@@ -2508,7 +2508,7 @@ FALSE
 </div>
 </div>
 </div>
-<div id="9003dd9b" class="cell" data-tags="[]" data-execution_count="51">
+<div id="3dcb4352" class="cell" data-tags="[]" data-execution_count="51">
 <div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repr.plot.width =</span> <span class="dv">12</span>, <span class="at">repr.plot.height =</span> <span class="dv">10</span>)</span>
 <span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Reorder the levels of Category based on Total Followers</span></span>
@@ -2532,7 +2532,7 @@ FALSE
 <h2 class="anchored" data-anchor-id="rules-of-thumb">3.2 Rules of Thumb</h2>
 <section id="rule-of-thumb-no-tables-pie-charts-3d" class="level3">
 <h3 class="anchored" data-anchor-id="rule-of-thumb-no-tables-pie-charts-3d">Rule of Thumb: No tables / pie charts / 3D</h3>
-<p><img src="img/pie.png" width="1200"></p>
+<p><img src="img/pie.png" width="100%"></p>
 </section>
 <section id="rule-of-thumb-no-tables-pie-charts-3d-1" class="level3">
 <h3 class="anchored" data-anchor-id="rule-of-thumb-no-tables-pie-charts-3d-1">Rule of Thumb: No tables / pie charts / 3D</h3>
@@ -2552,7 +2552,7 @@ FALSE
 <section id="rule-of-thumb-avoid-overplotting" class="level3">
 <h3 class="anchored" data-anchor-id="rule-of-thumb-avoid-overplotting">Rule of Thumb: avoid overplotting</h3>
 <p>Less is more!</p>
-<div id="87cf264b" class="cell" data-tags="[]" data-execution_count="52">
+<div id="3da68bca" class="cell" data-tags="[]" data-execution_count="52">
 <div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>diamond_plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price)) <span class="sc">+</span></span>
 <span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb65-3"><a href="#cb65-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">"Size (carat)"</span>) <span class="sc">+</span></span>
@@ -2566,7 +2566,7 @@ FALSE
 </div>
 </div>
 </div>
-<div id="84828322" class="cell" data-tags="[]" data-execution_count="53">
+<div id="f5383343" class="cell" data-tags="[]" data-execution_count="53">
 <div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>diamond_plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price)) <span class="sc">+</span></span>
 <span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">alpha=</span><span class="fl">0.2</span>) <span class="sc">+</span> <span class="co"># alpha sets the transparency of points</span></span>
 <span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">"Size (carat)"</span>) <span class="sc">+</span></span>

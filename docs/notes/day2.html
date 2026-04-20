@@ -320,7 +320,7 @@ window.Quarto = {
 </header>
 
 
-<div id="a47dda17" class="cell" data-tags="[]" data-execution_count="1">
+<div id="e5612eea" class="cell" data-tags="[]" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load libraries</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
@@ -369,7 +369,7 @@ The following object is masked from ‘package:lubridate’:
 <p>To assess the shape of a distribution, we can consider the <strong>modality</strong> (number of peaks), <strong>symmetry</strong> (symmetric vs.&nbsp;skewed) and <strong>outliers</strong>.</p>
 <section id="modality" class="level3">
 <h3 class="anchored" data-anchor-id="modality">Modality</h3>
-<div id="852ebb2c" class="cell" data-tags="[]" data-execution_count="2">
+<div id="8d06d612" class="cell" data-tags="[]" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2000</span>) <span class="co"># Setting the seed allows us to get reproducible results</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate data</span></span>
@@ -380,7 +380,7 @@ The following object is masked from ‘package:lubridate’:
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>data_tibble <span class="ot">&lt;-</span> data_tibble <span class="sc">|&gt;</span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="fu">setNames</span>(<span class="fu">names</span>(data_tibble), variable_names))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="ab6b5d6c" class="cell" data-tags="[]" data-execution_count="3">
+<div id="f8acb541" class="cell" data-tags="[]" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repr.plot.width =</span> <span class="dv">10</span>, <span class="at">repr.plot.height =</span> <span class="dv">8</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create histograms for each variable</span></span>
@@ -405,7 +405,7 @@ The following object is masked from ‘package:lubridate’:
 <section id="symmetry" class="level3">
 <h3 class="anchored" data-anchor-id="symmetry">Symmetry</h3>
 <p>Distributions can be symmetric or skewed (left-skewed or right-skewed).</p>
-<div id="a5434b79" class="cell" data-tags="[]" data-execution_count="4">
+<div id="235f5770" class="cell" data-tags="[]" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">930</span>) <span class="co"># Setting the seed allows us to get reproducible results</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate data</span></span>
@@ -415,7 +415,7 @@ The following object is masked from ‘package:lubridate’:
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>data_tibble <span class="ot">&lt;-</span> data_tibble <span class="sc">|&gt;</span></span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="fu">setNames</span>(<span class="fu">names</span>(data_tibble), variable_names))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="e4dfa113" class="cell" data-tags="[]" data-execution_count="5">
+<div id="9fe6f630" class="cell" data-tags="[]" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repr.plot.width =</span> <span class="dv">10</span>, <span class="at">repr.plot.height =</span> <span class="dv">10</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create histograms for each variable</span></span>
@@ -440,7 +440,7 @@ The following object is masked from ‘package:lubridate’:
 <section id="outliers" class="level3">
 <h3 class="anchored" data-anchor-id="outliers">Outliers</h3>
 <p>Outliers can seriously influence a variable’s distribution. An outlier is an observation that lies away from the other data points. Recall our scatterplot of Followers vs.&nbsp;Posts for the Instagram data set:</p>
-<div id="4be52c85" class="cell" data-execution_count="6">
+<div id="8264f1da" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>insta <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">'data/insta.csv'</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(insta)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -543,7 +543,7 @@ dbl (1): rank
 </table>
 </div>
 </div>
-<div id="4534e39b" class="cell" data-tags="[]" data-execution_count="7">
+<div id="8e7fa162" class="cell" data-tags="[]" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load in/wrangle data</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>insta <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">'data/insta.csv'</span>)</span>
@@ -572,7 +572,7 @@ dbl (1): rank
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
 </div>
-<div id="ce1f98eb" class="cell" data-tags="[]" data-execution_count="8">
+<div id="8a5e7a36" class="cell" data-tags="[]" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(insta, <span class="fu">aes</span>(<span class="at">x =</span> Posts, <span class="at">y =</span> Followers)) <span class="sc">+</span> </span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">4</span>) <span class="sc">+</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">26</span>)) <span class="sc">+</span></span>
@@ -589,13 +589,13 @@ dbl (1): rank
 </div>
 </div>
 </div>
-<div id="73f76cd9" class="cell" data-tags="[]" data-execution_count="9">
+<div id="a07c5a85" class="cell" data-tags="[]" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>insta<span class="sc">$</span>name[<span class="fu">which.max</span>(insta<span class="sc">$</span>Posts)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 'worldstar'
 </div>
 </div>
-<div id="f0c510d2" class="cell" data-tags="[]" data-execution_count="10">
+<div id="9b2b2017" class="cell" data-tags="[]" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>g1 <span class="ot">&lt;-</span> <span class="fu">subset</span>(insta, name <span class="sc">==</span> <span class="st">"worldstar"</span>)</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>g2 <span class="ot">&lt;-</span> <span class="fu">subset</span>(insta, name <span class="sc">==</span> <span class="st">"instagram"</span>)</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -624,7 +624,7 @@ dbl (1): rank
 <section id="exercise" class="level3">
 <h3 class="anchored" data-anchor-id="exercise">Exercise</h3>
 <p>Going back to the histogram we made of “Posts”, comment on its shape. Be sure to reference the modality, symmetry and outliers (if any).</p>
-<div id="aa73eef7" class="cell" data-tags="[]" data-execution_count="11">
+<div id="743f75fb" class="cell" data-tags="[]" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(insta, <span class="fu">aes</span>(<span class="at">x =</span> Posts)) <span class="sc">+</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins=</span><span class="dv">50</span>) <span class="sc">+</span> </span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">26</span>)) <span class="sc">+</span> <span class="co"># increase text size</span></span>
@@ -650,7 +650,7 @@ dbl (1): rank
 <p>Note: If the variable is categorical, you can report the mode (most common/frequent observation)</p>
 </blockquote>
 <p>We can extract these values by using the <code>summarize</code> function:</p>
-<div id="d92c8f7b" class="cell" data-tags="[]" data-execution_count="12">
+<div id="b444a691" class="cell" data-tags="[]" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>insta <span class="sc">|&gt;</span> </span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarize</span>(<span class="at">avg_ER =</span> <span class="fu">mean</span>(eng_rate), </span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">median_ER =</span> <span class="fu">median</span>(eng_rate))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -680,7 +680,7 @@ dbl (1): rank
 <section id="spread" class="level2">
 <h2 class="anchored" data-anchor-id="spread">1.3 Spread</h2>
 <p>The spread refers to how much variability there is in the data.</p>
-<div id="0e5290bc" class="cell" data-tags="[]" data-execution_count="13">
+<div id="d9ed3054" class="cell" data-tags="[]" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">930</span>)</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>data_small <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)  <span class="co"># Small spread</span></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>data_large <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">2</span>)  <span class="co"># Large spread</span></span>
@@ -707,7 +707,7 @@ dbl (1): rank
 </div>
 <p>When looking at the spread of a distribution, we can use the standard deviation, interquartile range (IQR) or range (difference between maximum and minimum observation).</p>
 <p>Quartiles divide a distribution into four equal parts. The Interquartile Range (IQR) is the distance between the first quartile (Q1) and the third quartile (Q3) (i.e., the middle 50% of the data). The second quartile (Q2) is actually the median!</p>
-<div id="97f6292c" class="cell" data-tags="[]" data-execution_count="14">
+<div id="59404f45" class="cell" data-tags="[]" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>insta <span class="sc">|&gt;</span> </span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarize</span>(<span class="at">sd_ER =</span> <span class="fu">sd</span>(eng_rate), </span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">IQR_ER =</span> <span class="fu">IQR</span>(eng_rate),</span>
@@ -742,7 +742,7 @@ dbl (1): rank
 <p>The mean and the standard deviation are typical measures for center and spread. However, they are not resistant to skewness and outliers. A general rule of thumb is:</p>
 <p>• If the distribution is roughly symmetric, we use the mean and standard deviation as measures of center and spread. • If the distribution is skewed or has a lot of outliers, we use the median and IQR as measures of center and spread.</p>
 <p>Why? For example, if the data is skewed, the mean gets “pulled” out in the direction of the skewness, whereas the mean is less affected. See the plot below to illustrate this concept:</p>
-<div id="00cf2500" class="cell" data-tags="[]" data-execution_count="15">
+<div id="f3fe5ea8" class="cell" data-tags="[]" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(insta, <span class="fu">aes</span>(<span class="at">x =</span> Posts)) <span class="sc">+</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">bins=</span><span class="dv">50</span>) <span class="sc">+</span> </span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">26</span>)) <span class="sc">+</span> </span>
@@ -776,9 +776,9 @@ dbl (1): rank
 <p><strong>Why?:</strong> It’s often expensive or not possible to measure the whole population.</p>
 <section id="e.g.-we-want-to-know-the-average-width-of-a-species-of-sea-star" class="level4">
 <h4 class="anchored" data-anchor-id="e.g.-we-want-to-know-the-average-width-of-a-species-of-sea-star">E.g.: we want to know the average width of a species of sea star</h4>
-<p><img src="img/intro-inf-1.png" width="1100"></p>
-<p><img src="img/intro-inf-2.png" width="1100"></p>
-<p><img src="img/intro-inf-4.png" width="1100"></p>
+<p><img src="img/intro-inf-1.png" width="100%"></p>
+<p><img src="img/intro-inf-2.png" width="100%"></p>
+<p><img src="img/intro-inf-4.png" width="100%"></p>
 <ul>
 <li><strong>Population:</strong> collection of all possible observations + their frequency/count
 <ul>
@@ -896,12 +896,12 @@ dbl (1): rank
 <section id="our-virtual-ubc-students-population" class="level4">
 <h4 class="anchored" data-anchor-id="our-virtual-ubc-students-population">Our virtual UBC students (population)</h4>
 <p>Let’s examine our population of 50,000 students. Remember that the true proportion of iPhone users is 63%.</p>
-<div id="6f57b273" class="cell" data-tags="[]" data-execution_count="16">
+<div id="56e55430" class="cell" data-tags="[]" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load libraries for wrangling and plotting</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(infer) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="74cd5c10" class="cell" data-tags="[]" data-execution_count="17">
+<div id="546533e1" class="cell" data-tags="[]" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1</span>)</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>virtual_ugrads <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">student_id =</span> <span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">50000</span>, <span class="at">by =</span> <span class="dv">1</span>),</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>                     <span class="at">age =</span> <span class="fu">sample</span>(<span class="dv">18</span><span class="sc">:</span><span class="dv">25</span>, <span class="at">size=</span><span class="dv">50000</span>, <span class="at">replace=</span><span class="cn">TRUE</span>),</span>
@@ -963,7 +963,7 @@ dbl (1): rank
 <section id="drawing-a-single-sample-of-size-40" class="level4">
 <h4 class="anchored" data-anchor-id="drawing-a-single-sample-of-size-40">Drawing a single sample of size 40</h4>
 <p>Let’s simulate taking one random sample from our virtual undergrad population. We will use the <code>rep_sample_n</code> function from the <code>infer</code> package:</p>
-<div id="fb83f884" class="cell" data-tags="[]" data-execution_count="18">
+<div id="b502c038" class="cell" data-tags="[]" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>student_sample <span class="ot">&lt;-</span> <span class="fu">rep_sample_n</span>(virtual_ugrads, <span class="at">size =</span> <span class="dv">40</span>)</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>student_sample</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -1229,7 +1229,7 @@ dbl (1): rank
 </div>
 </div>
 <p>What is the proportion of iPhone users in our sample? Is it close to the population proportion?</p>
-<div id="07627d69" class="cell" data-tags="[]" data-execution_count="19">
+<div id="a745b12f" class="cell" data-tags="[]" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>iphone_estimate_1 <span class="ot">&lt;-</span> <span class="fu">summarize</span>(student_sample,</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>                               <span class="at">count =</span> <span class="fu">sum</span>(phone_type <span class="sc">==</span> <span class="st">"iphone"</span>),</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>                               <span class="at">prop =</span> <span class="fu">sum</span>(phone_type <span class="sc">==</span> <span class="st">"iphone"</span>) <span class="sc">/</span> <span class="dv">40</span>)</span>
@@ -1260,7 +1260,7 @@ dbl (1): rank
 </div>
 </div>
 <p>What happens if we were to take another sample? Would the sample proportion be the same?</p>
-<div id="fe8c6728" class="cell" data-tags="[]" data-execution_count="20">
+<div id="0ef0a39e" class="cell" data-tags="[]" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>iphone_estimate_2 <span class="ot">&lt;-</span> <span class="fu">rep_sample_n</span>(virtual_ugrads, <span class="at">size =</span> <span class="dv">40</span>) <span class="sc">|&gt;</span> </span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarize</span>(<span class="at">count =</span> <span class="fu">sum</span>(phone_type <span class="sc">==</span> <span class="st">"iphone"</span>),</span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">prop =</span> <span class="fu">sum</span>(phone_type <span class="sc">==</span> <span class="st">"iphone"</span>) <span class="sc">/</span> <span class="dv">40</span>)</span>
@@ -1291,7 +1291,7 @@ dbl (1): rank
 </div>
 </div>
 <p>And again?</p>
-<div id="e59ef4cb" class="cell" data-tags="[]" data-execution_count="21">
+<div id="d40a4d25" class="cell" data-tags="[]" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>iphone_estimate_3 <span class="ot">&lt;-</span> <span class="fu">rep_sample_n</span>(virtual_ugrads, <span class="at">size =</span> <span class="dv">40</span>) <span class="sc">|&gt;</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarize</span>(<span class="at">count =</span> <span class="fu">sum</span>(phone_type <span class="sc">==</span> <span class="st">"iphone"</span>),</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">prop =</span> <span class="fu">sum</span>(phone_type <span class="sc">==</span> <span class="st">"iphone"</span>) <span class="sc">/</span> <span class="dv">40</span>)</span>
@@ -1328,7 +1328,7 @@ dbl (1): rank
 <p>The <em>distribution</em> of estimates you get by taking many samples <em>of a fixed sample size</em> is called the <strong>sampling distribution</strong>.</p>
 <p>How did we do? How reliable is our sample estimate? Should we do anything to change it?</p>
 <p>Let’s simulate this process <span class="math inline">\(10000\)</span> times to see what happens:</p>
-<div id="de07cde7" class="cell" data-tags="[]" data-execution_count="22">
+<div id="352310eb" class="cell" data-tags="[]" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>replicates <span class="ot">&lt;-</span> <span class="fu">rep_sample_n</span>(virtual_ugrads, <span class="at">size =</span> <span class="dv">40</span>, <span class="at">reps =</span> <span class="dv">10000</span>) <span class="sc">|&gt;</span></span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>   <span class="fu">group_by</span>(replicate)  <span class="sc">|&gt;</span> </span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>   <span class="fu">summarize</span>(<span class="at">proportion =</span> <span class="fu">sum</span>(phone_type <span class="sc">==</span> <span class="st">"iphone"</span>)<span class="sc">/</span><span class="dv">40</span>)</span>
@@ -1346,7 +1346,7 @@ dbl (1): rank
 </div>
 </div>
 <p>Ok, so we noticed that there is variability from sample to sample. But what if we were to increase the sample size from <span class="math inline">\(40\)</span> to <span class="math inline">\(400\)</span>? What do we think will happen?</p>
-<div id="ee861163" class="cell" data-tags="[]" data-execution_count="23">
+<div id="d3333443" class="cell" data-tags="[]" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>replicates <span class="ot">&lt;-</span> <span class="fu">rep_sample_n</span>(virtual_ugrads, <span class="at">size =</span> <span class="dv">400</span>, <span class="at">reps =</span> <span class="dv">10000</span>) <span class="sc">|&gt;</span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>   <span class="fu">group_by</span>(replicate)  <span class="sc">|&gt;</span> </span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>   <span class="fu">summarize</span>(<span class="at">proportion =</span> <span class="fu">sum</span>(phone_type <span class="sc">==</span> <span class="st">"iphone"</span>)<span class="sc">/</span><span class="dv">400</span>)</span>
@@ -1374,7 +1374,7 @@ dbl (1): rank
 <section id="bootstrapping" class="level1">
 <h1>3. Bootstrapping</h1>
 <p>We only have one sample… but if it’s big enough, the sample looks like the population!</p>
-<p><img src="https://datasciencebook.ca/_main_files/figure-html/11-example-bootstrapping0-1.png" width="1200"></p>
+<p><img src="https://datasciencebook.ca/_main_files/figure-html/11-example-bootstrapping0-1.png" width="100%"></p>
 <p>Let’s pretend our <em>sample</em> <strong>is</strong> our population. Then we can take many samples from our original sample (called <em>bootstrap samples</em>) to give us an approximation of the sampling distribution (the <em>bootstrap sampling distribution</em>).</p>
 <p>Note that by taking many samples from our single, observed sample, we do not obtain the true sampling distribution, but rather an approximation that we call the bootstrap distribution.</p>
 <section id="generating-a-single-bootstrap-sample" class="level2">
@@ -1385,7 +1385,7 @@ dbl (1): rank
 <li><p>Return the observation to the original sample</p></li>
 <li><p>Repeat the above the same number of times as there are observations in the original sample</p></li>
 </ol>
-<div id="bd827ca2" class="cell" data-execution_count="24">
+<div id="9b3057ec" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>student_sample</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
@@ -1649,7 +1649,7 @@ dbl (1): rank
 </table>
 </div>
 </div>
-<div id="da01fd45" class="cell" data-execution_count="25">
+<div id="d5d8a17f" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="do">### BOOTSTRAP SAMPLE </span></span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>student_sample <span class="ot">&lt;-</span> student_sample <span class="sc">|&gt;</span></span>
@@ -1922,13 +1922,13 @@ dbl (1): rank
 </section>
 <section id="bootstrap-sampling-distribution" class="level2">
 <h2 class="anchored" data-anchor-id="bootstrap-sampling-distribution">Bootstrap Sampling Distribution</h2>
-<p><img src="https://ubc-dsci.github.io/introduction-to-datascience/_main_files/figure-html/11-bootstrapping7-1.png" width="1300/"></p>
+<p><img src="https://ubc-dsci.github.io/introduction-to-datascience/_main_files/figure-html/11-bootstrapping7-1.png" width="100%"></p>
 <p>Question: What would happen if we sampled without replacement? What does that mean?</p>
 </section>
 <section id="sampling-vs-bootstrap-distribution" class="level2">
 <h2 class="anchored" data-anchor-id="sampling-vs-bootstrap-distribution">Sampling vs bootstrap distribution</h2>
 <p>The bootstrap mean will be centered around the mean of the intial sample rather than the true population mean (which is unknown)</p>
-<p><img src="https://datasciencebook.ca/_main_files/figure-html/11-bootstrapping6-1.png" width="1400/"></p>
+<p><img src="https://datasciencebook.ca/_main_files/figure-html/11-bootstrapping6-1.png" width="100%"></p>
 </section>
 <section id="using-the-bootstrap-to-calculate-a-plausible-range" class="level2">
 <h2 class="anchored" data-anchor-id="using-the-bootstrap-to-calculate-a-plausible-range">Using the bootstrap to calculate a plausible range</h2>
@@ -1941,7 +1941,7 @@ dbl (1): rank
 </section>
 <section id="using-the-bootstrap-to-calculate-a-plausible-range-of-the-mean" class="level2">
 <h2 class="anchored" data-anchor-id="using-the-bootstrap-to-calculate-a-plausible-range-of-the-mean">Using the bootstrap to calculate a plausible range of the mean</h2>
-<p><img src="https://datasciencebook.ca/_main_files/figure-html/11-bootstrapping9-1.png" width="1400/"></p>
+<p><img src="https://datasciencebook.ca/_main_files/figure-html/11-bootstrapping9-1.png" width="100%"></p>
 
 
 </section>

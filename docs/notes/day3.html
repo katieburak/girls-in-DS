@@ -309,7 +309,7 @@ window.Quarto = {
 </header>
 
 
-<div id="99fe1e30" class="cell" data-tags="[]" data-execution_count="1">
+<div id="9a3411a9" class="cell" data-tags="[]" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load libraries</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
@@ -396,7 +396,7 @@ The following objects are masked from ‘package:datasets’:
 <li><strong>Stratification:</strong> make sure the two split subsets of data have roughly equal proportions of the different labels</li>
 </ol>
 <center>
-<img src="https://datasciencebook.ca/img/classification2/training_test.png" width="1100">
+<img src="https://datasciencebook.ca/img/classification2/training_test.png" width="100%">
 </center>
 <section id="golden-rule-of-machine-learning-statistics" class="level4">
 <h4 class="anchored" data-anchor-id="golden-rule-of-machine-learning-statistics">Golden Rule of Machine Learning / Statistics:</h4>
@@ -474,7 +474,7 @@ The following objects are masked from ‘package:datasets’:
 <p><em>Standardize:</em> shift and scale so that the average is 0 and the standard deviation is 1.</p>
 <br>
 <center>
-<img src="https://ubc-dsci.github.io/introduction-to-datascience/_main_files/figure-html/05-scaling-plt-1.png" width="1200">
+<img src="https://ubc-dsci.github.io/introduction-to-datascience/_main_files/figure-html/05-scaling-plt-1.png" width="100%">
 </center>
 <ul>
 <li><p>Standardization: when all variables in a data set have a mean (center) of 0 and a standard deviation (scale) of 1, we say that the data have been standardized.</p></li>
@@ -491,7 +491,7 @@ The following objects are masked from ‘package:datasets’:
 <img src="https://i0.wp.com/rviews.rstudio.com/post/2019-06-14-a-gentle-intro-to-tidymodels_files/figure-html/tidymodels.png?zoom=2&amp;w=578&amp;ssl=1" width="800">
 </center>
 <p>Source: https://www.r-bloggers.com/2019/06/a-gentle-introduction-to-tidymodels/</p>
-<div id="8709ddd2" class="cell" data-tags="[]" data-execution_count="2">
+<div id="db4bcce4" class="cell" data-tags="[]" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Data on cancer tumors</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>tumors <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/clean-wdbc.data.csv"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">Class =</span> <span class="fu">as_factor</span>(Class))</span>
@@ -646,7 +646,7 @@ dbl (11): ID, Radius, Texture, Perimeter, Area, Smoothness, Compactness, Con...
 <li><p>The <code>bake()</code> function takes a recipe and applies it to data and returns data</p></li>
 <li><p>visit https://recipes.tidymodels.org/reference/index.html to see all the preprocessing steps</p></li>
 </ul>
-<div id="a101418e" class="cell" data-tags="[]" data-execution_count="3">
+<div id="8ac05782" class="cell" data-tags="[]" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Standardize the data</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>tumor_recipe <span class="ot">&lt;-</span> <span class="fu">recipe</span>(Class <span class="sc">~</span> Perimeter <span class="sc">+</span> Concavity, <span class="at">data=</span>tumors) <span class="sc">|&gt;</span></span>
@@ -686,7 +686,7 @@ predictor: 2
 <li><p><strong>engine</strong>: underlying package the model should come from</p></li>
 <li><p><strong>mode</strong>: type of prediction (some packages can do both classification and regression)</p></li>
 </ol>
-<div id="ba00547d" class="cell" data-tags="[]" data-execution_count="4">
+<div id="d9d3cb98" class="cell" data-tags="[]" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Build a model specification using nearest_neighbor</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>tumor_model <span class="ot">&lt;-</span> <span class="fu">nearest_neighbor</span>(<span class="at">weight_func =</span> <span class="st">"rectangular"</span>, <span class="at">neighbors =</span> <span class="dv">3</span>) <span class="sc">|&gt;</span></span>
@@ -708,7 +708,7 @@ Computational engine: kknn </code></pre>
 <section id="put-them-together-in-a-workflow-and-then-fit-it" class="level3">
 <h3 class="anchored" data-anchor-id="put-them-together-in-a-workflow-and-then-fit-it">3. Put them together in a workflow and then <code>fit</code> it</h3>
 <p>We may want to use our recipe across several steps as we train and test our model. To simplify this process, we can use a model workflow, which pairs a model and recipe together.</p>
-<div id="0b95e54f" class="cell" data-tags="[]" data-execution_count="5">
+<div id="264108ea" class="cell" data-tags="[]" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a workflow</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>tumor_workflow <span class="ot">&lt;-</span> <span class="fu">workflow</span>() <span class="sc">|&gt;</span></span>
@@ -742,7 +742,7 @@ Computational engine: kknn
 <section id="predict-a-new-class-label-using-predict" class="level3">
 <h3 class="anchored" data-anchor-id="predict-a-new-class-label-using-predict">4. Predict a new class label using <code>predict</code></h3>
 <p><code>predict()</code> applies the recipe to the new data, then passes them to the fitted model.</p>
-<div id="ffaeecfb" class="cell" data-tags="[]" data-execution_count="6">
+<div id="cef0239a" class="cell" data-tags="[]" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>new_obs <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">Perimeter =</span> <span class="fl">0.2</span>, <span class="at">Concavity =</span> <span class="fl">3.3</span>)</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">predict</span>(tumor_fit, new_obs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -864,7 +864,7 @@ Computational engine: kknn
 <h3 class="anchored" data-anchor-id="cross-validation">Cross-Validation</h3>
 <p>We can get a better estimate of performance by splitting <em>multiple ways</em> and <em>averaging</em>. Here’s an example:</p>
 <center>
-<img src="https://datasciencebook.ca/img/classification2/cv.png" width="1000">
+<img src="https://datasciencebook.ca/img/classification2/cv.png" width="100%">
 </center>
 </section>
 <section id="underfitting-overfitting" class="level3">
@@ -872,7 +872,7 @@ Computational engine: kknn
 <p><strong>Overfitting:</strong> when your model is too sensitive to your training data; noise can influence predictions!</p>
 <p><strong>Underfitting:</strong> when your model isn’t sensitive enough to training data; useful information is ignored!</p>
 <center>
-<img width="1000" src="img/under_over_fitting.png">
+<img width="100%" src="img/under_over_fitting.png">
 </center>
 <p>Source: http://kerckhoffs.schaathun.net/FPIA/Slides/09OF.pdf</p>
 </section>
@@ -880,7 +880,7 @@ Computational engine: kknn
 <h3 class="anchored" data-anchor-id="underfitting-overfitting-1">Underfitting &amp; Overfitting</h3>
 <p>Which of these are under-, over-, and good fits?</p>
 <center>
-<img width="1000px" src="https://datasciencebook.ca/_main_files/figure-html/06-decision-grid-K-1.png">
+<img width="100%" src="https://datasciencebook.ca/_main_files/figure-html/06-decision-grid-K-1.png">
 </center>
 </section>
 <section id="underfitting-overfitting-2" class="level3">
@@ -895,15 +895,15 @@ Computational engine: kknn
 <h2 class="anchored" data-anchor-id="compute-performance-metrics">1.8 Compute performance metrics</h2>
 <p>The role of the test data:</p>
 <center>
-<img src="https://datasciencebook.ca/img/classification2/ML-paradigm-test.png" width="1700">
+<img src="https://datasciencebook.ca/img/classification2/ML-paradigm-test.png" width="100%">
 </center>
 <section id="the-big-picture" class="level4">
 <h4 class="anchored" data-anchor-id="the-big-picture">The Big Picture</h4>
 <center>
-<img align="left" src="https://datasciencebook.ca/img/classification2/train-test-overview.png" width="1200">
+<img align="left" src="https://datasciencebook.ca/img/classification2/train-test-overview.png" width="100%">
 </center>
 <p>Now, let’s put it all together and look into how to go about this process in R. First let’s split our data into training and test sets:</p>
-<div id="11c59018" class="cell" data-tags="[]" data-execution_count="7">
+<div id="632ca51d" class="cell" data-tags="[]" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Split data</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1</span>) <span class="co"># set seed for reproducibility</span></span>
@@ -913,7 +913,7 @@ Computational engine: kknn
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>tumor_test <span class="ot">&lt;-</span> <span class="fu">testing</span>(tumor_split) <span class="co"># testing set </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>What is the proportion of malignant tumors in our training set?</p>
-<div id="2f825ec8" class="cell" data-tags="[]" data-execution_count="8">
+<div id="d3ac350f" class="cell" data-tags="[]" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>tumor_proportions <span class="ot">&lt;-</span> tumor_train <span class="sc">|&gt;</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>                      <span class="fu">group_by</span>(Class) <span class="sc">|&gt;</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>                      <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">n</span>()) <span class="sc">|&gt;</span></span>
@@ -953,7 +953,7 @@ Computational engine: kknn
 <ul>
 <li>Standardize the <strong>training</strong> data:</li>
 </ul>
-<div id="ef289e80" class="cell" data-tags="[]" data-execution_count="9">
+<div id="e65f4031" class="cell" data-tags="[]" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>tumor_recipe <span class="ot">&lt;-</span> <span class="fu">recipe</span>(Class <span class="sc">~</span> Smoothness <span class="sc">+</span> Concavity, <span class="at">data =</span> tumor_train) <span class="sc">|&gt;</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_scale</span>(<span class="fu">all_predictors</span>()) <span class="sc">|&gt;</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_center</span>(<span class="fu">all_predictors</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -961,14 +961,14 @@ Computational engine: kknn
 <ul>
 <li>Instead of specifying <span class="math inline">\(K\)</span> in our model specification, we can set <code>neighbors = tune()</code> to later select the optimal <span class="math inline">\(K\)</span> using cross-validation.</li>
 </ul>
-<div id="1ca49c90" class="cell" data-tags="[]" data-execution_count="10">
+<div id="12dae2a8" class="cell" data-tags="[]" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>tumor_model <span class="ot">&lt;-</span> <span class="fu">nearest_neighbor</span>(<span class="at">weight_func =</span> <span class="st">"rectangular"</span>,</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>                              <span class="at">neighbors =</span> <span class="fu">tune</span>()) <span class="sc">|&gt;</span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">set_engine</span>(<span class="st">"kknn"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">set_mode</span>(<span class="st">"classification"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>After, we can use the <code>tune_grid</code> function in our workflow for a range of potential values for <span class="math inline">\(K\)</span> and fit the model with the training data.</p>
-<div id="55f94a07" class="cell" data-tags="[]" data-execution_count="11">
+<div id="7d03ef16" class="cell" data-tags="[]" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>tumor_vfold <span class="ot">&lt;-</span> <span class="fu">vfold_cv</span>(tumor_train, <span class="at">v =</span> <span class="dv">5</span>, <span class="at">strata =</span> Class)</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>k_vals <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">neighbors =</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">1</span>, <span class="at">to =</span> <span class="dv">100</span>, <span class="at">by =</span> <span class="dv">5</span>))</span>
@@ -1065,7 +1065,7 @@ Computational engine: kknn
 </table>
 </div>
 </div>
-<div id="17eaf5af" class="cell" data-tags="[]" data-execution_count="12">
+<div id="7f3e5e86" class="cell" data-tags="[]" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>accuracy_vs_k <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(accuracies, <span class="fu">aes</span>(<span class="at">x =</span> neighbors, <span class="at">y =</span> mean)) <span class="sc">+</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
@@ -1081,7 +1081,7 @@ Computational engine: kknn
 </div>
 </div>
 </div>
-<div id="44421c9a" class="cell" data-tags="[]" data-execution_count="13">
+<div id="3253d900" class="cell" data-tags="[]" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>best_k <span class="ot">&lt;-</span> accuracies <span class="sc">|&gt;</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">arrange</span>(<span class="fu">desc</span>(mean)) <span class="sc">|&gt;</span></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">head</span>(<span class="dv">1</span>) <span class="sc">|&gt;</span></span>
@@ -1095,7 +1095,7 @@ Computational engine: kknn
 <blockquote class="blockquote">
 <p><em>Note: In the worksheet, we will provide you with a <span class="math inline">\(K\)</span> value to use and you won’t need to perform cross-validation, but it is still good to understand the motivation behind it!</em></p>
 </blockquote>
-<div id="cd35cac9" class="cell" data-tags="[]" data-execution_count="14">
+<div id="8b914633" class="cell" data-tags="[]" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>tumor_model <span class="ot">&lt;-</span> <span class="fu">nearest_neighbor</span>(<span class="at">weight_func =</span> <span class="st">"rectangular"</span>, <span class="at">neighbors =</span> best_k) <span class="sc">|&gt;</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">"kknn"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_mode</span>(<span class="st">"classification"</span>)</span>
@@ -1128,7 +1128,7 @@ Best k: 66</pre>
 <ul>
 <li>Now, we can make predictions on our test set!</li>
 </ul>
-<div id="0fca0e11" class="cell" data-tags="[]" data-execution_count="15">
+<div id="9e81082b" class="cell" data-tags="[]" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>tumor_test_predictions <span class="ot">&lt;-</span> <span class="fu">predict</span>(tumor_fit, tumor_test) <span class="sc">|&gt;</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_cols</span>(tumor_test)</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1264,7 +1264,7 @@ Best k: 66</pre>
 </div>
 </div>
 <p>Finally, we can look at evaluation measures for our model such as accuracy.</p>
-<div id="7a719e3c" class="cell" data-tags="[]" data-execution_count="16">
+<div id="53d83fdd" class="cell" data-tags="[]" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>tumor_test_predictions <span class="sc">|&gt;</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">metrics</span>(<span class="at">truth =</span> Class, <span class="at">estimate =</span> .pred_class) <span class="sc">|&gt;</span></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(.metric <span class="sc">==</span> <span class="st">"accuracy"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1294,7 +1294,7 @@ Best k: 66</pre>
 </div>
 </div>
 <p>Take a look at the confusion matrix below. Using the table, verify that the accuracy was computed correctly.</p>
-<div id="33863e33" class="cell" data-tags="[]" data-execution_count="17">
+<div id="0ebde15d" class="cell" data-tags="[]" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>confusion <span class="ot">&lt;-</span> tumor_test_predictions <span class="sc">|&gt;</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>             <span class="fu">conf_mat</span>(<span class="at">truth =</span> Class, <span class="at">estimate =</span> .pred_class)</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>confusion</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1310,7 +1310,7 @@ Prediction  M  B
 <h4 class="anchored" data-anchor-id="question">Question</h4>
 <p>What are the precision and recall for the classifier on the test data?</p>
 <p>We can use the precision and recall functions from <code>tidymodels</code>.</p>
-<div id="a7bb101f" class="cell" data-execution_count="18">
+<div id="ee2ab27f" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>tumor_test_predictions <span class="sc">|&gt;</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">precision</span>(<span class="at">truth =</span> Class, <span class="at">estimate =</span> .pred_class, <span class="at">event_level =</span> <span class="st">"first"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -1338,7 +1338,7 @@ Prediction  M  B
 </table>
 </div>
 </div>
-<div id="993ac1ff" class="cell" data-execution_count="19">
+<div id="38caab8b" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>tumor_test_predictions <span class="sc">|&gt;</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">recall</span>(<span class="at">truth =</span> Class, <span class="at">estimate =</span> .pred_class, <span class="at">event_level =</span> <span class="st">"first"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -1381,7 +1381,7 @@ Prediction  M  B
 <section id="regression" class="level1">
 <h1>2. Regression</h1>
 <p>What if we want to predict a quantitative value instead of a class label? Say, the sale price of a home.</p>
-<div id="3f362b36" class="cell" data-tags="[]" data-execution_count="20">
+<div id="64990d9b" class="cell" data-tags="[]" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in the data</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>housing <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/housing.csv"</span>)</span>
@@ -1495,7 +1495,7 @@ dbl (6): beds, baths, sqft, price, latitude, longitude
 </table>
 </div>
 </div>
-<div id="173654af" class="cell" data-tags="[]" data-execution_count="21">
+<div id="ad925dcc" class="cell" data-tags="[]" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(housing, <span class="fu">aes</span>(<span class="at">x =</span> sqft, <span class="at">y =</span> price)) <span class="sc">+</span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.4</span>) <span class="sc">+</span></span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"House size (square feet)"</span>) <span class="sc">+</span></span>
@@ -1588,7 +1588,7 @@ dbl (6): beds, baths, sqft, price, latitude, longitude
 <li><p>Evaluate how good the predictions are using the test data</p></li>
 </ol>
 <p>The process is very similar to what we learned for classification, except for a few minor changes to our model:</p>
-<div id="1a4eddb7" class="cell" data-tags="[]" data-execution_count="22">
+<div id="52e30235" class="cell" data-tags="[]" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Split the data</span></span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
@@ -1643,7 +1643,7 @@ Computational engine: kknn
 <ul>
 <li>Using cross-validation, we search a grid of potential values for <span class="math inline">\(K\)</span> between 1 and 200:</li>
 </ul>
-<div id="0a5031fe" class="cell" data-tags="[]" data-execution_count="23">
+<div id="07d3e92e" class="cell" data-tags="[]" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>gridvals <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">neighbors =</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">1</span>, <span class="at">to =</span> <span class="dv">200</span>, <span class="at">by =</span> <span class="dv">3</span>))</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>housing_results <span class="ot">&lt;-</span> housing_wkflw <span class="sc">|&gt;</span></span>
@@ -1694,7 +1694,7 @@ Computational engine: kknn
 </div>
 </div>
 <p>It looks like <span class="math inline">\(K=52\)</span> gives us the lowest RMSE! Now, let’s evaluate how our model performs on unseen testing data using RMSPE:</p>
-<div id="a3102cfd" class="cell" data-tags="[]" data-execution_count="24">
+<div id="17cfba58" class="cell" data-tags="[]" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>kmin <span class="ot">&lt;-</span> <span class="dv">52</span></span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>housing_spec <span class="ot">&lt;-</span> <span class="fu">nearest_neighbor</span>(<span class="at">weight_func =</span> <span class="st">"rectangular"</span>, <span class="at">neighbors =</span> kmin) <span class="sc">|&gt;</span></span>
@@ -1738,7 +1738,7 @@ Computational engine: kknn
 </table>
 </div>
 </div>
-<div id="7c34adee" class="cell" data-tags="[]" data-execution_count="25">
+<div id="bae12a00" class="cell" data-tags="[]" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Predicted values on our test data</span></span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>housing_preds <span class="ot">&lt;-</span> <span class="fu">predict</span>(housing_fit, housing_test) <span class="sc">|&gt;</span></span>
